@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bethel Worship Center | Worship</title>
+  <meta name="description" content="Worship at Bethel Worship Center. From gathering to presence to response." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="frame nav__grid">
+      <div class="nav__left">
+        <a class="brand" href="/">
+          <span class="brand__mark" aria-hidden="true"></span>
+          <span class="brand__text">
+            <span class="brand__name">Bethel Worship Center</span>
+            <span class="brand__sub">IPC / Spirit-filled / Word-centered</span>
+          </span>
+        </a>
+      </div>
+
+      <nav class="nav__center" aria-label="Primary">
+        <a href="/">Bethel</a>
+        <a href="/worship/" aria-current="page">Worship</a>
+        <a href="/prayer/">Prayer and Altar</a>
+        <a href="/messages/">Messages</a>
+        <a href="/serve/">Serve / Go</a>
+        <a href="/visit/">Visit</a>
+      </nav>
+
+      <div class="nav__right">
+        <a class="btn btn--primary btn--small" href="/visit/">Plan a Visit</a>
+        <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="nav__mobile" hidden>
+      <div class="frame nav__mobileInner">
+        <a href="/">Bethel</a>
+        <a href="/worship/" aria-current="page">Worship</a>
+        <a href="/prayer/">Prayer and Altar</a>
+        <a href="/messages/">Messages</a>
+        <a href="/serve/">Serve / Go</a>
+        <a href="/visit/">Visit</a>
+        <a class="btn btn--primary" href="/visit/">Plan a Visit</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="stage stage--hero" id="arrival">
+      <div class="hero__media" aria-hidden="true">
+        <img class="hero__image" src="/assets/hero.svg" alt="" width="1600" height="900" loading="eager" decoding="async" />
+      </div>
+      <div class="hero__overlay" aria-hidden="true"></div>
+
+      <div class="frame grid arrival__grid">
+        <div class="arrival__text">
+          <p class="kicker">Arrival</p>
+          <h1 class="display">We gather because God is here.</h1>
+
+          <div class="scripture-block scripture-block--light">
+            <span class="scripture-block__bar" aria-hidden="true"></span>
+            <p class="scripture-block__text">
+              "He inhabits the praises of His people."
+              <span class="scripture-block__ref">Psalm 22:3</span>
+            </p>
+          </div>
+
+          <p>Come with expectation. Leave with His peace.</p>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="/messages/">Watch the latest</a>
+            <a class="btn btn--ghost-light" href="/visit/">Come in person</a>
+          </div>
+        </div>
+
+        <div class="arrival__media">
+          <img src="/assets/fire.svg" alt="Ember flame illustration" width="280" height="460" loading="lazy" decoding="async" />
+        </div>
+      </div>
+    </section>
+
+    <section class="stage stage--stone" id="progression">
+      <div class="frame grid progression">
+        <article class="movement movement--left" data-reveal>
+          <p class="kicker">Gathering</p>
+          <h3 class="h3">We come together as one body.</h3>
+          <p>We sing, pray, and listen for His voice.</p>
+          <p class="movement__ref">Hebrews 10:25</p>
+          <details class="drawer drawer--inline">
+            <summary>Read more</summary>
+            <div class="drawer__content">
+              <p>Expect worship, Scripture, and room to respond.</p>
+            </div>
+          </details>
+        </article>
+
+        <article class="movement movement--center" data-reveal>
+          <p class="kicker">Presence</p>
+          <h3 class="h3">The Spirit meets us in worship.</h3>
+          <p>Freedom, healing, and peace are possible.</p>
+          <p class="movement__ref">2 Corinthians 3:17</p>
+          <details class="drawer drawer--inline">
+            <summary>Read more</summary>
+            <div class="drawer__content">
+              <p>We make space for prayer and ministry.</p>
+            </div>
+          </details>
+        </article>
+
+        <article class="movement movement--right" data-reveal>
+          <p class="kicker">Response</p>
+          <h3 class="h3">We answer with surrender and joy.</h3>
+          <p>Worship sends us into the week changed.</p>
+          <p class="movement__ref">Romans 12:1</p>
+          <details class="drawer drawer--inline">
+            <summary>Read more</summary>
+            <div class="drawer__content">
+              <p>Stay after service if you need prayer.</p>
+            </div>
+          </details>
+        </article>
+      </div>
+    </section>
+
+    <section class="stage stage--dark" id="resolution">
+      <div class="frame grid resolution">
+        <div class="arrival__text">
+          <p class="kicker">Invitation</p>
+          <h2 class="h2">Come worship with us.</h2>
+          <p>We will pray with you at the altar.</p>
+
+          <div class="scripture-block scripture-block--light">
+            <span class="scripture-block__bar" aria-hidden="true"></span>
+            <p class="scripture-block__text">
+              "Let everything that has breath praise the Lord."
+              <span class="scripture-block__ref">Psalm 150:6</span>
+            </p>
+          </div>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="/visit/">Plan a visit</a>
+            <a class="btn btn--ghost-light" href="/prayer/">Prayer and altar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="frame footer__grid">
+      <div>
+        <div class="brand__name">Bethel Worship Center</div>
+        <div class="brand__sub">IPC / House of God / Gate of Heaven</div>
+      </div>
+      <div class="footer__links">
+        <a href="/">Bethel</a>
+        <a href="/prayer/">Prayer</a>
+        <a href="/messages/">Messages</a>
+        <a href="/visit/">Visit</a>
+      </div>
+    </div>
+    <div class="frame footer__fine">
+      <span>(c) <span id="year"></span> Bethel Worship Center. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>

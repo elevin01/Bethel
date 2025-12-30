@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="160" viewBox="0 0 240 160" role="img" aria-label="Stone marker illustration">
+  <rect width="240" height="160" fill="#EFEAE1" rx="24" />
+  <path d="M40 110 L70 60 L140 50 L190 90 L160 130 L80 130 Z" fill="#C9A24D" opacity="0.35" />
+  <path d="M48 108 L72 66 L132 58 L176 90 L152 122 L84 124 Z" fill="#E7E2D8" />
+  <path d="M70 84 L102 74 L136 78" fill="none" stroke="#0F172A" stroke-opacity="0.2" stroke-width="2" />
+  <circle cx="72" cy="56" r="6" fill="#E86A33" opacity="0.5" />
+</svg>

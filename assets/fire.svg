@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="280" height="460" viewBox="0 0 280 460" role="img" aria-label="Ember flame illustration">
+  <rect width="280" height="460" fill="#0F172A" rx="28" />
+  <path d="M140 60 C170 120 210 150 210 230 C210 320 180 380 140 400 C100 380 70 320 70 230 C70 150 110 120 140 60 Z" fill="#E86A33" opacity="0.9" />
+  <path d="M140 110 C160 150 176 170 176 230 C176 280 162 320 140 330 C118 320 104 280 104 230 C104 170 120 150 140 110 Z" fill="#C9A24D" />
+  <circle cx="140" cy="210" r="50" fill="#FAFAFA" opacity="0.15" />
+</svg>

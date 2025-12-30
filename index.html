@@ -2,376 +2,266 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bethel Worship Center | A Place Where Heaven Meets Earth</title>
-  <meta name="description" content="Bethel Worship Center (IPC) — Scripture-centered, Spirit-filled worship, prayer, and mission." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bethel Worship Center | Bethel</title>
+  <meta name="description" content="Bethel Worship Center (IPC) - Encounter, transformation, sending. Plan a visit and step into Bethel." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Elegant headings + readable body -->
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="/styles.css" />
 </head>
-
 <body>
-  <!-- Top Nav -->
   <header class="nav">
-    <div class="container nav__inner">
-      <a class="brand" href="#">
-        <span class="brand__mark" aria-hidden="true"></span>
-        <span class="brand__text">
-          <span class="brand__name">Bethel Worship Center</span>
-          <span class="brand__sub">IPC • Spirit-Filled • Word-Centered</span>
-        </span>
-      </a>
+    <div class="frame nav__grid">
+      <div class="nav__left">
+        <a class="brand" href="/">
+          <span class="brand__mark" aria-hidden="true"></span>
+          <span class="brand__text">
+            <span class="brand__name">Bethel Worship Center</span>
+            <span class="brand__sub">IPC / Spirit-filled / Word-centered</span>
+          </span>
+        </a>
+      </div>
 
-      <nav class="nav__links" aria-label="Primary">
-        <a href="#bethel">Bethel</a>
-        <a href="#who">Who We Are</a>
-        <a href="#worship">Worship</a>
-        <a href="#altar">The Altar</a>
-        <a href="#missions">Missions</a>
-        <a href="#visit" class="btn btn--small btn--primary">Plan a Visit</a>
+      <nav class="nav__center" aria-label="Primary">
+        <a href="/" aria-current="page">Bethel</a>
+        <a href="/worship/">Worship</a>
+        <a href="/prayer/">Prayer and Altar</a>
+        <a href="/messages/">Messages</a>
+        <a href="/serve/">Serve / Go</a>
+        <a href="/visit/">Visit</a>
       </nav>
 
-      <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="nav__right">
+        <a class="btn btn--primary btn--small" href="/visit/">Plan a Visit</a>
+        <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
 
     <div id="mobileMenu" class="nav__mobile" hidden>
-      <div class="container nav__mobileInner">
-        <a href="#bethel">Bethel</a>
-        <a href="#who">Who We Are</a>
-        <a href="#worship">Worship</a>
-        <a href="#altar">The Altar</a>
-        <a href="#missions">Missions</a>
-        <a href="#visit" class="btn btn--primary">Plan a Visit</a>
+      <div class="frame nav__mobileInner">
+        <a href="/" aria-current="page">Bethel</a>
+        <a href="/worship/">Worship</a>
+        <a href="/prayer/">Prayer and Altar</a>
+        <a href="/messages/">Messages</a>
+        <a href="/serve/">Serve / Go</a>
+        <a href="/visit/">Visit</a>
+        <a class="btn btn--primary" href="/visit/">Plan a Visit</a>
       </div>
     </div>
   </header>
 
-  <!-- HERO -->
   <main>
-    <section class="hero">
-      <div class="hero__bg" aria-hidden="true"></div>
+    <section class="stage stage--hero" id="threshold">
+      <div class="hero__media" aria-hidden="true">
+        <img
+          class="hero__image"
+          src="/assets/hero.svg"
+          srcset="/assets/hero.svg 1200w, /assets/hero.svg 1800w"
+          sizes="100vw"
+          alt=""
+          width="1600"
+          height="900"
+          loading="eager"
+          decoding="async"
+          fetchpriority="high"
+        />
+      </div>
       <div class="hero__overlay" aria-hidden="true"></div>
-      <div class="hero__embers" aria-hidden="true"></div>
+      <div class="hero__line" aria-hidden="true"></div>
+      <div class="hero__base" aria-hidden="true"></div>
 
-      <div class="container hero__content">
-        <p class="kicker">A Place Where Heaven Meets Earth</p>
+      <div class="frame grid hero__grid">
+        <div class="hero__intro">
+          <p class="hero__eyebrow">Bethel Worship Center / IPC</p>
+          <p class="hero__identity">Spirit-filled / Word-centered / Mission-focused</p>
+          <h1 class="display">Surely the Lord is in this place.</h1>
 
-        <h1 class="display">
-          Surely the Lord is in this place.
-        </h1>
-
-        <div class="scripture">
-          <span class="scripture__bar" aria-hidden="true"></span>
-          <p class="scripture__text">
-            “How awesome is this place! This is none other than the house of God, and this is the gate of heaven.”
-            <span class="scripture__ref">Genesis 28:17</span>
-          </p>
-        </div>
-
-        <p class="lead">
-          Bethel is more than a name—it’s an encounter. We gather for His presence, anchored in Scripture,
-          empowered by the Holy Spirit, and sent to serve our city and the nations.
-        </p>
-
-        <div class="hero__actions">
-          <a class="btn btn--primary" href="#visit">Encounter God With Us</a>
-          <a class="btn btn--ghost" href="#messages">Watch Services</a>
-        </div>
-
-        <div class="hero__meta">
-          <div class="metaCard">
-            <div class="metaCard__title">Service Times</div>
-            <div class="metaCard__value">Sundays • 10:30 AM</div>
-            <div class="metaCard__sub">Midweek Prayer • Wed 7:00 PM</div>
-          </div>
-          <div class="metaCard">
-            <div class="metaCard__title">Location</div>
-            <div class="metaCard__value">Your City, NY</div>
-            <div class="metaCard__sub">All are welcome</div>
-          </div>
-        </div>
-      </div>
-
-      <a class="scrollHint" href="#bethel" aria-label="Scroll to next section">
-        <span class="scrollHint__dot"></span>
-      </a>
-    </section>
-
-    <!-- BETHEL STORY -->
-    <section id="bethel" class="section section--stone">
-      <div class="container split">
-        <div class="split__text">
-          <h2 class="h2">What is Bethel?</h2>
-          <p class="story">
-            Bethel was not built—it was discovered. A moment where God met a person,
-            and a place became holy ground. The name means <strong>“House of God.”</strong>
-          </p>
-
-          <div class="scripture scripture--stone">
-            <span class="scripture__bar" aria-hidden="true"></span>
-            <p class="scripture__text">
-              “Surely the Lord is in this place, and I did not know it.”
-              <span class="scripture__ref">Genesis 28:16</span>
+          <div class="scripture-block scripture-block--light">
+            <span class="scripture-block__bar" aria-hidden="true"></span>
+            <p class="scripture-block__text">
+              "How awesome is this place! This is the gate of heaven."
+              <span class="scripture-block__ref">Genesis 28:16-17</span>
             </p>
           </div>
 
-          <p class="muted">
-            Our prayer is simple: that every visitor would find an encounter that transforms,
-            a community that strengthens, and a calling that sends.
-          </p>
-
-          <div class="pillRow">
-            <span class="pill">Encounter</span>
-            <span class="pill">Transformation</span>
-            <span class="pill">Sending</span>
-          </div>
-        </div>
-
-        <div class="split__visual">
-          <div class="visualCard">
-            <div class="visualCard__ladder" aria-hidden="true"></div>
-            <div class="visualCard__inner">
-              <h3 class="h3">The Ladder & the Altar</h3>
-              <p class="muted">
-                A design language inspired by Jacob’s dream and the altars of Bethel:
-                heaven reaching earth, and hearts returning to God.
-              </p>
-              <a class="link" href="#altar">See the Altar →</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- WHO WE ARE -->
-    <section id="who" class="section">
-      <div class="container">
-        <div class="sectionHead">
-          <h2 class="h2">Who We Are</h2>
-          <p class="muted">
-            We are part of the <strong>International Pentecostal Church (IPC)</strong>—
-            devoted to the Word, alive in the Spirit, committed to the Great Commission.
-          </p>
-        </div>
-
-        <div class="grid3">
-          <article class="card">
-            <div class="icon icon--fire" aria-hidden="true"></div>
-            <h3 class="h3">Spirit-Filled Worship</h3>
-            <p class="muted">We don’t gather for a program. We gather for His presence.</p>
-            <p class="miniRef">John 4:23–24</p>
-          </article>
-
-          <article class="card">
-            <div class="icon icon--word" aria-hidden="true"></div>
-            <h3 class="h3">Word-Centered Faith</h3>
-            <p class="muted">Scripture shapes our doctrine, our discipleship, and our decisions.</p>
-            <p class="miniRef">2 Timothy 3:16–17</p>
-          </article>
-
-          <article class="card">
-            <div class="icon icon--world" aria-hidden="true"></div>
-            <h3 class="h3">Mission-Driven Church</h3>
-            <p class="muted">An encounter with God is never meant to end with us.</p>
-            <p class="miniRef">Matthew 28:19–20</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- WORSHIP -->
-    <section id="worship" class="section section--dark">
-      <div class="container split split--reverse">
-        <div class="split__text">
-          <h2 class="h2">Worship That Encounters God</h2>
-
-          <div class="scripture scripture--dark">
-            <span class="scripture__bar" aria-hidden="true"></span>
-            <p class="scripture__text">
-              “Where the Spirit of the Lord is, there is freedom.”
-              <span class="scripture__ref">2 Corinthians 3:17</span>
-            </p>
-          </div>
-
-          <p class="lead">
-            Expect sincere worship, Spirit-led prayer, and a Christ-centered message.
-            Come as you are—leave changed.
-          </p>
+          <p class="hero__invite">Encounter to transformation to sending.</p>
 
           <div class="hero__actions">
-            <a class="btn btn--primary" href="#messages">Watch Latest Message</a>
-            <a class="btn btn--ghost" href="#visit">Plan a Visit</a>
+            <a class="link link--light" href="/prayer/">Prayer Request</a>
           </div>
         </div>
 
-        <div class="split__visual">
-          <div class="mediaFrame">
-            <div class="mediaFrame__glow" aria-hidden="true"></div>
-            <div class="mediaFrame__placeholder">
-              <div class="play" aria-hidden="true"></div>
-              <p class="muted">Replace this with a worship photo or YouTube embed.</p>
-            </div>
+        <div class="glance hero__glance invitation-panel" aria-label="Quick glance">
+          <p class="glance__title">Join us at Bethel</p>
+          <p class="glance__item glance__item--soft">We will worship together.</p>
+          <p class="glance__item">Sundays 10:30 AM</p>
+          <p class="glance__item">Wednesday Prayer 7:00 PM</p>
+          <p class="glance__item">Your City, NY</p>
+          <div class="glance__actions">
+            <a class="btn btn--primary btn--small" href="/visit/">Plan a Visit</a>
           </div>
         </div>
       </div>
+
+      <a class="scrollCue" href="#reveal">Scroll to walk the story of Bethel</a>
     </section>
 
-    <!-- ALTAR -->
-    <section id="altar" class="section section--stone">
-      <div class="container">
-        <div class="sectionHead">
-          <h2 class="h2">The Altar Still Matters</h2>
-          <p class="muted">
-            We believe in the work of the Holy Spirit today—salvation, sanctification, healing,
-            and renewal through prayer and surrender.
-          </p>
-        </div>
+    <section class="stage stage--stone" id="reveal">
+      <div class="frame grid story__grid">
+        <div class="story__sticky">
+          <p class="kicker">Bethel Revealed</p>
+          <h2 class="h2">A place becomes holy when God meets us.</h2>
+          <p class="story__line" data-default="Bethel means &quot;House of God.&quot;">Bethel means "House of God."</p>
 
-        <div class="grid2">
-          <article class="quoteCard">
-            <p class="quoteCard__quote">
-              “Come near to God and He will come near to you.”
-            </p>
-            <p class="quoteCard__ref">James 4:8</p>
-          </article>
-
-          <article class="quoteCard">
-            <p class="quoteCard__quote">
-              “If My people… will humble themselves and pray… I will heal their land.”
-            </p>
-            <p class="quoteCard__ref">2 Chronicles 7:14</p>
-          </article>
-        </div>
-
-        <div class="ctaRow">
-          <a class="btn btn--primary" href="#visit">Submit a Prayer Request</a>
-          <a class="btn btn--ghost" href="#missions">Serve With Us</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- MISSIONS -->
-    <section id="missions" class="section">
-      <div class="container split">
-        <div class="split__text">
-          <h2 class="h2">From Bethel to the Nations</h2>
-          <p class="lead">
-            Encounter leads to transformation—and transformation leads to sending.
-            We serve our neighborhoods and support missions beyond our walls.
-          </p>
-
-          <ul class="list">
-            <li><span class="dot" aria-hidden="true"></span> Local outreach & community care</li>
-            <li><span class="dot" aria-hidden="true"></span> Discipleship & leadership development</li>
-            <li><span class="dot" aria-hidden="true"></span> Global missions partnerships</li>
-          </ul>
-
-          <a class="link" href="#visit">Join the story →</a>
-        </div>
-
-        <div class="split__visual">
-          <div class="mapCard">
-            <div class="mapCard__pulse" aria-hidden="true"></div>
-            <div class="mapCard__inner">
-              <h3 class="h3">A Light That Reaches Out</h3>
-              <p class="muted">Swap this graphic for a map image or mission points.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- MESSAGES (simple placeholder) -->
-    <section id="messages" class="section section--dark">
-      <div class="container">
-        <div class="sectionHead">
-          <h2 class="h2">Messages from the House of God</h2>
-          <p class="muted">Latest sermon, scripture focus, and worship replay.</p>
-        </div>
-
-        <div class="grid3">
-          <article class="card card--dark">
-            <p class="tag">This Week</p>
-            <h3 class="h3">The God Who Meets Us</h3>
-            <p class="muted">Genesis 28:10–22</p>
-            <a class="btn btn--primary btn--small" href="#">Watch</a>
-          </article>
-
-          <article class="card card--dark">
-            <p class="tag">Series</p>
-            <h3 class="h3">Altars & Awakenings</h3>
-            <p class="muted">Romans 12:1–2</p>
-            <a class="btn btn--ghost btn--small" href="#">Browse</a>
-          </article>
-
-          <article class="card card--dark">
-            <p class="tag">Prayer</p>
-            <h3 class="h3">Midweek Prayer Night</h3>
-            <p class="muted">James 5:16</p>
-            <a class="btn btn--ghost btn--small" href="#">Details</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- VISIT -->
-    <section id="visit" class="section section--stone">
-      <div class="container">
-        <div class="visit">
-          <div class="visit__left">
-            <h2 class="h2">Your encounter is waiting.</h2>
-            <p class="lead">
-              We’d love to welcome you. Come worship with us, bring your family,
-              and let God meet you right where you are.
-            </p>
-
-            <div class="visit__buttons">
-              <a class="btn btn--primary" href="#">Plan a Visit</a>
-              <a class="btn btn--ghost" href="#">Prayer Request</a>
-            </div>
-
-            <p class="muted tiny">
-              Tip: Replace buttons with links to your forms (Google Form, Tally, etc.) and your location page.
+          <div class="scripture-block">
+            <span class="scripture-block__bar" aria-hidden="true"></span>
+            <p class="scripture-block__text">
+              "Surely the Lord is in this place."
+              <span class="scripture-block__ref">Genesis 28:16-17</span>
             </p>
           </div>
 
-          <div class="visit__right">
-            <div class="infoCard">
-              <h3 class="h3">Quick Info</h3>
-              <div class="infoRow"><span>Sunday Service</span><span>10:30 AM</span></div>
-              <div class="infoRow"><span>Prayer Night</span><span>Wed 7:00 PM</span></div>
-              <div class="infoRow"><span>Address</span><span>Your Address</span></div>
-              <div class="infoRow"><span>Contact</span><span>(000) 000-0000</span></div>
-            </div>
-          </div>
+          <a class="btn btn--ghost" href="/prayer/">Prayer and altar</a>
+        </div>
+
+        <div class="story__reveals">
+          <article class="reveal-card" data-reveal data-line="God marks the place.">
+            <img src="/assets/stone.svg" alt="Stone marker illustration" width="140" height="100" loading="lazy" decoding="async" />
+            <h3 class="h3">Stone</h3>
+            <p class="reveal-card__text">He set a stone and marked the moment.</p>
+            <p class="reveal-card__ref">Genesis 28:18-19</p>
+            <details class="drawer drawer--inline reveal-more">
+              <summary>Read more</summary>
+              <div class="reveal-panel">
+                <p class="reveal-panel__scripture">Genesis 28:18-19 - Jacob set the stone and named the place Bethel.</p>
+                <p class="reveal-panel__meaning">Bethel begins when a moment with God is marked, not forgotten.</p>
+                <p class="reveal-panel__connection">We return to Bethel when we remember where God met us.</p>
+                <a class="reveal-panel__link" href="/prayer/">Go to Prayer and Altar</a>
+              </div>
+            </details>
+          </article>
+
+          <article class="reveal-card" data-reveal data-line="God opens heaven.">
+            <img src="/assets/ladder.svg" alt="Ladder of light illustration" width="140" height="100" loading="lazy" decoding="async" />
+            <h3 class="h3">Ladder and Light</h3>
+            <p class="reveal-card__text">He saw heaven open and light reaching down.</p>
+            <p class="reveal-card__ref">Genesis 28:12</p>
+            <details class="drawer drawer--inline reveal-more">
+              <summary>Read more</summary>
+              <div class="reveal-panel">
+                <p class="reveal-panel__scripture">Genesis 28:12 - A ladder reached heaven and angels ascended and descended.</p>
+                <p class="reveal-panel__meaning">God opens heaven and meets us in the ordinary.</p>
+                <p class="reveal-panel__connection">We look for His presence in our daily lives.</p>
+                <a class="reveal-panel__link" href="/worship/">Go to Worship</a>
+              </div>
+            </details>
+          </article>
+
+          <article class="reveal-card" data-reveal data-line="God invites response.">
+            <img src="/assets/oil.svg" alt="Oil and altar illustration" width="140" height="100" loading="lazy" decoding="async" />
+            <h3 class="h3">Oil and Altar</h3>
+            <p class="reveal-card__text">He poured oil and worshiped the Lord.</p>
+            <p class="reveal-card__ref">Genesis 28:18</p>
+            <details class="drawer drawer--inline reveal-more">
+              <summary>Read more</summary>
+              <div class="reveal-panel">
+                <p class="reveal-panel__scripture">Genesis 28:18 - He poured oil on the stone and worshiped.</p>
+                <p class="reveal-panel__meaning">Encounter invites response and consecration.</p>
+                <p class="reveal-panel__connection">We still come to the altar with open hands.</p>
+                <a class="reveal-panel__link" href="/prayer/">Go to Prayer and Altar</a>
+              </div>
+            </details>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-      <div class="container footer__inner">
-        <div>
-          <div class="footer__brand">Bethel Worship Center</div>
-          <div class="footer__sub">IPC • House of God • Gate of Heaven</div>
+    <section class="stage stage--dark" id="presence">
+      <div class="frame grid worship__grid">
+        <div class="worship__text">
+          <p class="kicker">Worship and Presence</p>
+          <h2 class="h2">Where the Spirit is, there is freedom.</h2>
+
+          <div class="scripture-block scripture-block--light">
+            <span class="scripture-block__bar" aria-hidden="true"></span>
+            <p class="scripture-block__text">
+              "Where the Spirit of the Lord is, there is freedom."
+              <span class="scripture-block__ref">2 Corinthians 3:17</span>
+            </p>
+          </div>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="/messages/">Watch latest message</a>
+            <a class="btn btn--ghost-light" href="/worship/">What worship is like</a>
+          </div>
         </div>
-        <div class="footer__links">
-          <a href="#bethel">Bethel</a>
-          <a href="#who">Who We Are</a>
-          <a href="#messages">Messages</a>
-          <a href="#visit">Visit</a>
+
+        <div class="worship__media">
+          <img src="/assets/fire.svg" alt="Ember flame illustration" width="280" height="460" loading="lazy" decoding="async" />
         </div>
       </div>
-      <div class="container footer__fine">
-        <span>© <span id="year"></span> Bethel Worship Center. All rights reserved.</span>
+    </section>
+
+    <section class="stage stage--light" id="invitation">
+      <div class="frame grid invitation__grid">
+        <div class="invitation__text">
+          <p class="kicker">Invitation</p>
+          <h2 class="h2">Your encounter is waiting.</h2>
+
+          <div class="scripture-block">
+            <span class="scripture-block__bar" aria-hidden="true"></span>
+            <p class="scripture-block__text">
+              "Draw near to God, and He will draw near to you."
+              <span class="scripture-block__ref">James 4:8</span>
+            </p>
+          </div>
+
+          <p>Step in this Sunday. We will be glad you came.</p>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="/visit/">Plan a visit</a>
+            <a class="btn btn--ghost" href="/prayer/">Prayer request</a>
+            <a class="link" href="/messages/">Hear the Word</a>
+          </div>
+        </div>
+
+        <div class="invitation__panel">
+          <p class="panel__label">When you come</p>
+          <p class="panel__value">We will worship together.</p>
+          <p class="panel__value">Sunday 10:30 AM</p>
+          <p class="panel__value">Midweek Prayer Wed 7:00 PM</p>
+          <p class="panel__value">123 Bethel Way, Your City, NY</p>
+          <p class="panel__value panel__value--soft">We will pray with you if you need prayer.</p>
+        </div>
       </div>
-    </footer>
+
+      <div class="frame">
+        <p class="invitation__closing">Bethel is still a place where God meets people.</p>
+      </div>
+    </section>
   </main>
 
-  <script src="app.js"></script>
+  <footer class="footer">
+    <div class="frame footer__grid">
+      <div>
+        <div class="brand__name">Bethel Worship Center</div>
+        <div class="brand__sub">IPC / House of God / Gate of Heaven</div>
+      </div>
+      <div class="footer__links">
+        <a href="/worship/">Worship</a>
+        <a href="/prayer/">Prayer</a>
+        <a href="/messages/">Messages</a>
+        <a href="/visit/">Visit</a>
+      </div>
+    </div>
+    <div class="frame footer__fine">
+      <span>(c) <span id="year"></span> Bethel Worship Center. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script src="/app.js"></script>
 </body>
 </html>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="160" viewBox="0 0 240 160" role="img" aria-label="Ladder of light illustration">
+  <rect width="240" height="160" fill="#0F172A" rx="24" />
+  <rect x="70" y="30" width="8" height="100" fill="#C9A24D" />
+  <rect x="162" y="30" width="8" height="100" fill="#C9A24D" />
+  <rect x="74" y="40" width="92" height="6" fill="#E7E2D8" />
+  <rect x="74" y="62" width="92" height="6" fill="#E7E2D8" />
+  <rect x="74" y="84" width="92" height="6" fill="#E7E2D8" />
+  <rect x="74" y="106" width="92" height="6" fill="#E7E2D8" />
+  <circle cx="120" cy="30" r="26" fill="#E86A33" opacity="0.35" />
+  <circle cx="120" cy="30" r="14" fill="#C9A24D" opacity="0.55" />
+</svg>

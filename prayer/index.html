@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bethel Worship Center | Prayer and Altar</title>
+  <meta name="description" content="Prayer and altar ministry at Bethel Worship Center. Bring your need and meet God in prayer." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="frame nav__grid">
+      <div class="nav__left">
+        <a class="brand" href="/">
+          <span class="brand__mark" aria-hidden="true"></span>
+          <span class="brand__text">
+            <span class="brand__name">Bethel Worship Center</span>
+            <span class="brand__sub">IPC / Spirit-filled / Word-centered</span>
+          </span>
+        </a>
+      </div>
+
+      <nav class="nav__center" aria-label="Primary">
+        <a href="/">Bethel</a>
+        <a href="/worship/">Worship</a>
+        <a href="/prayer/" aria-current="page">Prayer and Altar</a>
+        <a href="/messages/">Messages</a>
+        <a href="/serve/">Serve / Go</a>
+        <a href="/visit/">Visit</a>
+      </nav>
+
+      <div class="nav__right">
+        <a class="btn btn--primary btn--small" href="/visit/">Plan a Visit</a>
+        <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="nav__mobile" hidden>
+      <div class="frame nav__mobileInner">
+        <a href="/">Bethel</a>
+        <a href="/worship/">Worship</a>
+        <a href="/prayer/" aria-current="page">Prayer and Altar</a>
+        <a href="/messages/">Messages</a>
+        <a href="/serve/">Serve / Go</a>
+        <a href="/visit/">Visit</a>
+        <a class="btn btn--primary" href="/visit/">Plan a Visit</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="stage stage--hero" id="arrival">
+      <div class="hero__media" aria-hidden="true">
+        <img class="hero__image" src="/assets/hero.svg" alt="" width="1600" height="900" loading="eager" decoding="async" />
+      </div>
+      <div class="hero__overlay" aria-hidden="true"></div>
+
+      <div class="frame grid arrival__grid">
+        <div class="arrival__text">
+          <p class="kicker">Arrival</p>
+          <h1 class="display">Bring your need to the altar.</h1>
+
+          <div class="scripture-block scripture-block--light">
+            <span class="scripture-block__bar" aria-hidden="true"></span>
+            <p class="scripture-block__text">
+              "Draw near to God, and He will draw near to you."
+              <span class="scripture-block__ref">James 4:8</span>
+            </p>
+          </div>
+
+          <p>We pray with faith and expect God to meet us.</p>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#prayer-form">Submit a prayer request</a>
+            <a class="btn btn--ghost-light" href="/visit/">Come in person</a>
+          </div>
+        </div>
+
+        <div class="arrival__media form-panel">
+          <img src="/assets/oil.svg" alt="Oil and altar illustration" width="240" height="160" loading="lazy" decoding="async" />
+        </div>
+      </div>
+    </section>
+
+    <section class="stage stage--stone" id="journey">
+      <div class="frame grid altar-journey__grid">
+        <div class="altar-journey__intro">
+          <p class="kicker">Progression</p>
+          <h2 class="h2">From need to surrender to transformation.</h2>
+          <p>Prayer is where God rearranges the heart.</p>
+
+          <div class="scripture-block">
+            <span class="scripture-block__bar" aria-hidden="true"></span>
+            <p class="scripture-block__text">
+              "Call to Me and I will answer you."
+              <span class="scripture-block__ref">Jeremiah 33:3</span>
+            </p>
+          </div>
+
+          <img class="altar-journey__image" src="/assets/stone.svg" alt="Stone marker illustration" width="200" height="140" loading="lazy" decoding="async" />
+        </div>
+
+        <div class="altar-journey__interactive js-only" aria-label="Prayer themes">
+          <div class="altar-journey__layout">
+            <div class="altar-journey__tabs">
+              <div class="altar-tabs" role="tablist" aria-label="Prayer themes">
+                <button class="altar-tab" type="button" role="tab" aria-selected="true" aria-controls="panel-prayer" id="tab-prayer" tabindex="0">Prayer</button>
+                <button class="altar-tab" type="button" role="tab" aria-selected="false" aria-controls="panel-salvation" id="tab-salvation" tabindex="-1">Salvation</button>
+                <button class="altar-tab" type="button" role="tab" aria-selected="false" aria-controls="panel-healing" id="tab-healing" tabindex="-1">Healing</button>
+                <button class="altar-tab" type="button" role="tab" aria-selected="false" aria-controls="panel-freedom" id="tab-freedom" tabindex="-1">Freedom</button>
+                <button class="altar-tab" type="button" role="tab" aria-selected="false" aria-controls="panel-consecration" id="tab-consecration" tabindex="-1">Consecration</button>
+              </div>
+            </div>
+
+            <div class="altar-journey__panels">
+              <div class="altar-panels">
+                <div class="altar-panel" role="tabpanel" id="panel-prayer" aria-labelledby="tab-prayer">
+                  <p class="altar-panel__verse">James 5:16</p>
+                  <p class="altar-panel__text">We pray with faith for healing and peace.</p>
+                  <p class="altar-panel__quote">"God met me at the altar."</p>
+                  <a class="link" href="#prayer-form">Submit a prayer request</a>
+                </div>
+                <div class="altar-panel" role="tabpanel" id="panel-salvation" aria-labelledby="tab-salvation" hidden>
+                  <p class="altar-panel__verse">Romans 10:9</p>
+                  <p class="altar-panel__text">Jesus saves and makes all things new.</p>
+                  <p class="altar-panel__quote">"I found hope here."</p>
+                  <a class="link" href="/messages/">Hear the Word</a>
+                </div>
+                <div class="altar-panel" role="tabpanel" id="panel-healing" aria-labelledby="tab-healing" hidden>
+                  <p class="altar-panel__verse">James 5:14-15</p>
+                  <p class="altar-panel__text">We anoint with oil and trust God's power.</p>
+                  <p class="altar-panel__quote">"Strength returned as we prayed."</p>
+                  <a class="link" href="#prayer-form">Ask for healing prayer</a>
+                </div>
+                <div class="altar-panel" role="tabpanel" id="panel-freedom" aria-labelledby="tab-freedom" hidden>
+                  <p class="altar-panel__verse">John 8:36</p>
+                  <p class="altar-panel__text">Christ breaks chains and brings freedom.</p>
+                  <p class="altar-panel__quote">"I walked out lighter."</p>
+                  <a class="link" href="/visit/">Come for prayer</a>
+                </div>
+                <div class="altar-panel" role="tabpanel" id="panel-consecration" aria-labelledby="tab-consecration" hidden>
+                  <p class="altar-panel__verse">Romans 12:1</p>
+                  <p class="altar-panel__text">Offer your life as worship and surrender.</p>
+                  <p class="altar-panel__quote">"God redirected my path."</p>
+                  <a class="link" href="/serve/">Serve and go</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="altar-accordion no-js" aria-label="Prayer themes">
+          <details open>
+            <summary>Prayer</summary>
+            <div class="altar-panel">
+              <p class="altar-panel__verse">James 5:16</p>
+              <p class="altar-panel__text">We pray with faith for healing and peace.</p>
+              <p class="altar-panel__quote">"God met me at the altar."</p>
+              <a class="link" href="#prayer-form">Submit a prayer request</a>
+            </div>
+          </details>
+          <details>
+            <summary>Salvation</summary>
+            <div class="altar-panel">
+              <p class="altar-panel__verse">Romans 10:9</p>
+              <p class="altar-panel__text">Jesus saves and makes all things new.</p>
+              <p class="altar-panel__quote">"I found hope here."</p>
+              <a class="link" href="/messages/">Hear the Word</a>
+            </div>
+          </details>
+          <details>
+            <summary>Healing</summary>
+            <div class="altar-panel">
+              <p class="altar-panel__verse">James 5:14-15</p>
+              <p class="altar-panel__text">We anoint with oil and trust God's power.</p>
+              <p class="altar-panel__quote">"Strength returned as we prayed."</p>
+              <a class="link" href="#prayer-form">Ask for healing prayer</a>
+            </div>
+          </details>
+          <details>
+            <summary>Freedom</summary>
+            <div class="altar-panel">
+              <p class="altar-panel__verse">John 8:36</p>
+              <p class="altar-panel__text">Christ breaks chains and brings freedom.</p>
+              <p class="altar-panel__quote">"I walked out lighter."</p>
+              <a class="link" href="/visit/">Come for prayer</a>
+            </div>
+          </details>
+          <details>
+            <summary>Consecration</summary>
+            <div class="altar-panel">
+              <p class="altar-panel__verse">Romans 12:1</p>
+              <p class="altar-panel__text">Offer your life as worship and surrender.</p>
+              <p class="altar-panel__quote">"God redirected my path."</p>
+              <a class="link" href="/serve/">Serve and go</a>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="stage stage--light" id="prayer-form">
+      <div class="frame grid resolution">
+        <div class="arrival__text">
+          <p class="kicker">Resolution</p>
+          <h2 class="h2">We will pray with you.</h2>
+          <p>Share your request and we will respond.</p>
+
+          <div class="scripture-block">
+            <span class="scripture-block__bar" aria-hidden="true"></span>
+            <p class="scripture-block__text">
+              "The prayer of faith will save the one who is sick."
+              <span class="scripture-block__ref">James 5:15</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="arrival__media">
+          <form class="prayer-form" action="#" method="post">
+            <label for="prayer-name">Name</label>
+            <input id="prayer-name" name="name" type="text" autocomplete="name" />
+
+            <label for="prayer-email">Email</label>
+            <input id="prayer-email" name="email" type="email" autocomplete="email" />
+
+            <label for="prayer-request">How can we pray?</label>
+            <textarea id="prayer-request" name="request" rows="4" required></textarea>
+
+            <button class="btn btn--primary" type="submit">Send prayer request</button>
+          </form>
+
+          <p><a class="link" href="/visit/">Plan a visit and pray in person</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="frame footer__grid">
+      <div>
+        <div class="brand__name">Bethel Worship Center</div>
+        <div class="brand__sub">IPC / House of God / Gate of Heaven</div>
+      </div>
+      <div class="footer__links">
+        <a href="/">Bethel</a>
+        <a href="/worship/">Worship</a>
+        <a href="/messages/">Messages</a>
+        <a href="/visit/">Visit</a>
+      </div>
+    </div>
+    <div class="frame footer__fine">
+      <span>(c) <span id="year"></span> Bethel Worship Center. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>

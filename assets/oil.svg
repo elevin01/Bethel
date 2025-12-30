@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="160" viewBox="0 0 240 160" role="img" aria-label="Oil and altar illustration">
+  <rect width="240" height="160" fill="#FAFAFA" rx="24" />
+  <path d="M70 120 L170 120 L150 140 L90 140 Z" fill="#0F172A" opacity="0.08" />
+  <path d="M80 112 L160 112 L146 128 L94 128 Z" fill="#E7E2D8" />
+  <path d="M120 34 C140 58 148 74 148 90 C148 110 136 124 120 124 C104 124 92 110 92 90 C92 74 100 58 120 34 Z" fill="#C9A24D" />
+  <circle cx="120" cy="88" r="22" fill="#E86A33" opacity="0.3" />
+</svg>

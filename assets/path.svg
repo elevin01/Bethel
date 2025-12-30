@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="420" viewBox="0 0 320 420" role="img" aria-label="Path with three markers">
+  <rect width="320" height="420" fill="#EFEAE1" rx="28" />
+  <path d="M160 50 C140 120 180 180 160 250 C140 320 180 360 160 370" fill="none" stroke="#C9A24D" stroke-width="6" stroke-linecap="round" />
+  <circle cx="160" cy="70" r="16" fill="#0F172A" />
+  <circle cx="160" cy="210" r="16" fill="#0F172A" />
+  <circle cx="160" cy="350" r="16" fill="#0F172A" />
+  <circle cx="160" cy="70" r="7" fill="#E86A33" />
+  <circle cx="160" cy="210" r="7" fill="#E86A33" />
+  <circle cx="160" cy="350" r="7" fill="#E86A33" />
+</svg>

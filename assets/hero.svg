@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Night sky texture with warm glow">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0F172A" />
+      <stop offset="1" stop-color="#0A1124" />
+    </linearGradient>
+    <radialGradient id="gold" cx="0.3" cy="0.2" r="0.6">
+      <stop offset="0" stop-color="#C9A24D" stop-opacity="0.35" />
+      <stop offset="1" stop-color="#C9A24D" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="ember" cx="0.8" cy="0.1" r="0.5">
+      <stop offset="0" stop-color="#E86A33" stop-opacity="0.28" />
+      <stop offset="1" stop-color="#E86A33" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)" />
+  <rect width="1600" height="900" fill="url(#gold)" />
+  <rect width="1600" height="900" fill="url(#ember)" />
+  <path d="M0 620 C 320 560, 520 680, 820 640 C 1120 600, 1280 520, 1600 560 L 1600 900 L 0 900 Z" fill="#E7E2D8" opacity="0.06" />
+  <path d="M0 420 C 280 380, 520 460, 820 430 C 1100 400, 1300 320, 1600 360" fill="none" stroke="#C9A24D" stroke-opacity="0.18" stroke-width="3" />
+  <circle cx="260" cy="180" r="90" fill="#C9A24D" opacity="0.12" />
+  <circle cx="1280" cy="130" r="70" fill="#E86A33" opacity="0.14" />
+  <circle cx="1040" cy="420" r="120" fill="#C9A24D" opacity="0.08" />
+  <rect x="120" y="240" width="140" height="180" rx="18" fill="#FAFAFA" opacity="0.03" />
+  <rect x="1320" y="520" width="180" height="220" rx="24" fill="#FAFAFA" opacity="0.03" />
+</svg>

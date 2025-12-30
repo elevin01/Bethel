@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bethel Worship Center | Serve and Go</title>
+  <meta name="description" content="Serve and go with Bethel Worship Center. From Bethel to neighborhood to nations." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="frame nav__grid">
+      <div class="nav__left">
+        <a class="brand" href="/">
+          <span class="brand__mark" aria-hidden="true"></span>
+          <span class="brand__text">
+            <span class="brand__name">Bethel Worship Center</span>
+            <span class="brand__sub">IPC / Spirit-filled / Word-centered</span>
+          </span>
+        </a>
+      </div>
+
+      <nav class="nav__center" aria-label="Primary">
+        <a href="/">Bethel</a>
+        <a href="/worship/">Worship</a>
+        <a href="/prayer/">Prayer and Altar</a>
+        <a href="/messages/">Messages</a>
+        <a href="/serve/" aria-current="page">Serve / Go</a>
+        <a href="/visit/">Visit</a>
+      </nav>
+
+      <div class="nav__right">
+        <a class="btn btn--primary btn--small" href="/visit/">Plan a Visit</a>
+        <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="nav__mobile" hidden>
+      <div class="frame nav__mobileInner">
+        <a href="/">Bethel</a>
+        <a href="/worship/">Worship</a>
+        <a href="/prayer/">Prayer and Altar</a>
+        <a href="/messages/">Messages</a>
+        <a href="/serve/" aria-current="page">Serve / Go</a>
+        <a href="/visit/">Visit</a>
+        <a class="btn btn--primary" href="/visit/">Plan a Visit</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="stage stage--hero" id="arrival">
+      <div class="hero__media" aria-hidden="true">
+        <img class="hero__image" src="/assets/hero.svg" alt="" width="1600" height="900" loading="eager" decoding="async" />
+      </div>
+      <div class="hero__overlay" aria-hidden="true"></div>
+
+      <div class="frame grid arrival__grid">
+        <div class="arrival__text">
+          <p class="kicker">Arrival</p>
+          <h1 class="display">From encounter to obedience to mission.</h1>
+
+          <div class="scripture-block scripture-block--light">
+            <span class="scripture-block__bar" aria-hidden="true"></span>
+            <p class="scripture-block__text">
+              "Go and make disciples of all nations."
+              <span class="scripture-block__ref">Matthew 28:19-20</span>
+            </p>
+          </div>
+
+          <p>The encounter never ends with us.</p>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#path">Step into a team</a>
+            <a class="btn btn--ghost-light" href="/prayer/">Pray with us</a>
+          </div>
+        </div>
+
+        <div class="arrival__media">
+          <img src="/assets/path.svg" alt="Illustrated path with three markers" width="320" height="420" loading="lazy" decoding="async" />
+        </div>
+      </div>
+    </section>
+
+    <section class="stage stage--stone" id="path">
+      <div class="frame grid path__grid">
+        <div class="path__intro">
+          <p class="kicker">Progression</p>
+          <h2 class="h2">Bethel to neighborhood to nations.</h2>
+          <p>Move with us in worship, service, and mission.</p>
+
+          <div class="scripture-block">
+            <span class="scripture-block__bar" aria-hidden="true"></span>
+            <p class="scripture-block__text">
+              "You will receive power to be My witnesses."
+              <span class="scripture-block__ref">Acts 1:8</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="path__map">
+          <img src="/assets/path.svg" alt="Illustrated path with three markers" width="320" height="420" loading="lazy" decoding="async" />
+          <div class="path__nodes" role="list">
+            <button class="path__node is-active" type="button" data-target="bethel" aria-pressed="true">Bethel</button>
+            <button class="path__node" type="button" data-target="neighborhood" aria-pressed="false">Neighborhood</button>
+            <button class="path__node" type="button" data-target="nations" aria-pressed="false">Nations</button>
+          </div>
+        </div>
+
+        <div class="path__drawers">
+          <div class="path__drawer is-active" data-panel="bethel">
+            <p>Worship, discipleship, small groups.</p>
+            <p>Grow strong in the house of God.</p>
+            <a class="link" href="/worship/">Worship with us</a>
+          </div>
+          <div class="path__drawer" data-panel="neighborhood">
+            <p>Food pantry, neighborhood prayer walks.</p>
+            <p>Serve your city with compassion.</p>
+            <a class="link" href="/visit/">Plan a visit</a>
+          </div>
+          <div class="path__drawer" data-panel="nations">
+            <p>Support missionaries and global partners.</p>
+            <p>Pray, give, and go when called.</p>
+            <a class="link" href="/messages/">Hear the Word</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="frame path__details">
+        <details class="drawer">
+          <summary>Serve teams and outreach</summary>
+          <div class="drawer__content">
+            <p>Hospitality, worship, kids, prayer team.</p>
+            <p>Community care, missions support, local outreach.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="stage stage--light" id="resolution">
+      <div class="frame grid resolution">
+        <div class="arrival__text">
+          <p class="kicker">Resolution</p>
+          <h2 class="h2">Say yes to the call.</h2>
+          <p>We will help you find your place to serve.</p>
+
+          <div class="scripture-block">
+            <span class="scripture-block__bar" aria-hidden="true"></span>
+            <p class="scripture-block__text">
+              "Here am I. Send me."
+              <span class="scripture-block__ref">Isaiah 6:8</span>
+            </p>
+          </div>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="/visit/">Plan a visit</a>
+            <a class="btn btn--ghost" href="/prayer/">Prayer and altar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="frame footer__grid">
+      <div>
+        <div class="brand__name">Bethel Worship Center</div>
+        <div class="brand__sub">IPC / House of God / Gate of Heaven</div>
+      </div>
+      <div class="footer__links">
+        <a href="/">Bethel</a>
+        <a href="/worship/">Worship</a>
+        <a href="/prayer/">Prayer</a>
+        <a href="/visit/">Visit</a>
+      </div>
+    </div>
+    <div class="frame footer__fine">
+      <span>(c) <span id="year"></span> Bethel Worship Center. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>
