@@ -58,10 +58,10 @@
       <div class="hero__media" aria-hidden="true">
         <img
           class="hero__image"
-          src="assets/hero.svg"
-          srcset="assets/hero.svg 1200w, /assets/hero.svg 1800w"
+          src="assets/BethelBackpng.png"
+          srcset="assets/BethelBackpng.png 1200w, assets/BethelBackpng.png 1800w"
           sizes="100vw"
-          alt="
+          alt=""
           width="1600"
           height="900"
           loading="eager"
@@ -76,7 +76,7 @@
           <p class="hero__eyebrow">Bethel Worship Center / IPC</p>
           <h1 class="display">Surely the Lord is in this place.</h1>
 
-          <div class="scripture-block scripture-block--light">
+          <div class="scripture-block scripture-block--light scripture-block--stacked">
             <span class="scripture-block__bar" aria-hidden="true"></span>
             <p class="scripture-block__text">
               "How awesome is this place..."
@@ -162,6 +162,56 @@
       </div>
     </section>
 
+    <section class="stage stage--light weekly-section" id="weekly">
+      <div class="frame grid weekly__grid">
+        <div class="weekly__panel weekly__panel--join">
+          <p class="panel__label">How to Join</p>
+          <p class="panel__value">Weekly gatherings happen on Zoom.</p>
+          <p class="panel__value panel__value--soft">Listen, pray, or join in.</p>
+          <button class="btn btn--primary" type="button" data-dialog-open="zoomDialog">Join Online</button>
+        </div>
+
+        <div class="weekly__text">
+          <p class="kicker">Weekly Services</p>
+          <h2 class="h2">Weekly Prayer & Bible Gatherings</h2>
+          <p>Join us throughout the week for prayer, Scripture, and shared worship.</p>
+
+          <div class="weekly__list">
+            <div class="weekly__item">
+              <h3 class="h3">Bible Study</h3>
+              <p class="weekly__time">Monday / 7:30 PM</p>
+              <p>Delve into Scripture together and grow in faith.</p>
+            </div>
+            <div class="weekly__item">
+              <h3 class="h3">Prayer Lines</h3>
+              <p class="weekly__time">Tuesday and Wednesday / 8:00 PM</p>
+              <p>Malayalam and English prayer gatherings for reflection and intercession.</p>
+            </div>
+            <div class="weekly__item">
+              <h3 class="h3">Common Prayer</h3>
+              <p class="weekly__time">Saturday / 8:00 PM</p>
+              <p>A shared time of prayer and praise as a community.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <dialog class="zoom-dialog" id="zoomDialog" aria-labelledby="zoomTitle">
+        <div class="zoom-dialog__inner">
+          <div class="zoom-dialog__header">
+            <h3 class="h3" id="zoomTitle">Join Online</h3>
+            <button class="zoom-dialog__close" type="button" data-dialog-close>Close</button>
+          </div>
+          <p class="panel__value">Zoom ID 543 267 7916</p>
+          <p class="panel__value">Password 1234</p>
+          <p class="panel__value panel__value--soft">Open Zoom and enter the ID and password.</p>
+          <div class="zoom-dialog__actions">
+            <a class="btn btn--primary" href="https://zoom.us/j/5432677916" target="_blank" rel="noreferrer">Open Zoom</a>
+          </div>
+        </div>
+      </dialog>
+    </section>
+
     <section class="stage stage--dark" id="presence">
       <div class="frame grid worship__grid">
         <div class="worship__text">
@@ -183,7 +233,7 @@
         </div>
 
         <div class="worship__media">
-          <img src="assets/fire.svg" alt="Ember flame illustration" width="280" height="460" loading="lazy" decoding="async" />
+          <img src="assets/fire.jpg" alt="Ember flame image" loading="lazy" decoding="async" />
         </div>
       </div>
     </section>

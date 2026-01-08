@@ -27,6 +27,40 @@ if (year) {
 
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+// Dialogs
+const dialogButtons = document.querySelectorAll("[data-dialog-open]");
+dialogButtons.forEach((button) => {
+  const dialogId = button.getAttribute("data-dialog-open");
+  const dialog = dialogId ? document.getElementById(dialogId) : null;
+  if (!dialog) {
+    return;
+  }
+
+  button.addEventListener("click", () => {
+    if (typeof dialog.showModal === "function") {
+      dialog.showModal();
+    } else {
+      dialog.setAttribute("open", "");
+    }
+  });
+
+  dialog.addEventListener("click", (event) => {
+    if (event.target === dialog && typeof dialog.close === "function") {
+      dialog.close();
+    }
+  });
+
+  dialog.querySelectorAll("[data-dialog-close]").forEach((close) => {
+    close.addEventListener("click", () => {
+      if (typeof dialog.close === "function") {
+        dialog.close();
+      } else {
+        dialog.removeAttribute("open");
+      }
+    });
+  });
+});
+
 // Reveal cards
 const revealItems = document.querySelectorAll("[data-reveal]");
 if (revealItems.length) {
