@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Bethel Worship Center | Worship</title>
-  <meta name="description" content="Worship at Bethel Worship Center. From gathering to presence to response." />
+  <meta name="description" content="Worship at Bethel Worship Center. We gather because God is here." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
@@ -54,18 +54,29 @@
   </header>
 
   <main>
+
+    <!-- Hero: fire background, centered text -->
     <section class="stage stage--hero" id="arrival">
       <div class="hero__media" aria-hidden="true">
-        <img class="hero__image" src="../assets/hero.svg" alt=" width="1600" height="900" loading="eager" decoding="async" />
+        <img
+          class="hero__image"
+          src="../assets/fire.jpg"
+          alt=""
+          width="1600"
+          height="900"
+          loading="eager"
+          decoding="async"
+          fetchpriority="high"
+        />
       </div>
       <div class="hero__overlay" aria-hidden="true"></div>
 
-      <div class="frame grid arrival__grid">
-        <div class="arrival__text">
-          <p class="kicker">Arrival</p>
+      <div class="frame grid hero__grid">
+        <div class="hero__center">
+          <p class="hero__eyebrow">Worship</p>
           <h1 class="display">We gather because God is here.</h1>
 
-          <div class="scripture-block scripture-block--light">
+          <div class="scripture-block scripture-block--light scripture-block--stacked">
             <span class="scripture-block__bar" aria-hidden="true"></span>
             <p class="scripture-block__text">
               "He inhabits the praises of His people."
@@ -73,85 +84,85 @@
             </p>
           </div>
 
-          <p>Come with expectation. Leave with His peace.</p>
-
           <div class="hero__actions">
-            <a class="btn btn--primary" href="../messages/">Watch the latest</a>
+            <a class="btn btn--primary" href="../messages/">Watch the latest message</a>
             <a class="btn btn--ghost-light" href="../visit/">Come in person</a>
           </div>
         </div>
-
-        <div class="arrival__media">
-          <img src="../assets/fire.jpg" alt="Ember flame image" loading="lazy" decoding="async" />
-        </div>
       </div>
     </section>
 
-    <section class="stage stage--stone" id="progression">
-      <div class="frame grid progression">
-        <article class="movement movement--left" data-reveal>
-          <p class="kicker">Gathering</p>
-          <h3 class="h3">We come together as one body.</h3>
-          <p>We sing, pray, and listen for His voice.</p>
-          <p class="movement__ref">Hebrews 10:25</p>
-          <details class="drawer drawer--inline">
-            <summary>Read more</summary>
-            <div class="drawer__content">
-              <p>Expect worship, Scripture, and room to respond.</p>
+    <!-- Liturgy: three-movement centered column -->
+    <section class="stage stage--stone" id="order">
+      <div class="frame">
+        <div class="liturgy">
+
+          <div class="liturgy__moment" data-reveal>
+            <p class="liturgy__step">I — Gathering</p>
+            <h2 class="h2">We come as one body.</h2>
+            <p>We sing, pray, and open our hearts together. Come with expectation and leave room for God.</p>
+            <div class="scripture-block">
+              <span class="scripture-block__bar" aria-hidden="true"></span>
+              <p class="scripture-block__text">
+                "Not forsaking the assembling of ourselves together, as is the manner of some."
+                <span class="scripture-block__ref">Hebrews 10:25</span>
+              </p>
             </div>
-          </details>
-        </article>
-
-        <article class="movement movement--center" data-reveal>
-          <p class="kicker">Presence</p>
-          <h3 class="h3">The Spirit meets us in worship.</h3>
-          <p>Freedom, healing, and peace are possible.</p>
-          <p class="movement__ref">2 Corinthians 3:17</p>
-          <details class="drawer drawer--inline">
-            <summary>Read more</summary>
-            <div class="drawer__content">
-              <p>We make space for prayer and ministry.</p>
-            </div>
-          </details>
-        </article>
-
-        <article class="movement movement--right" data-reveal>
-          <p class="kicker">Response</p>
-          <h3 class="h3">We answer with surrender and joy.</h3>
-          <p>Worship sends us into the week changed.</p>
-          <p class="movement__ref">Romans 12:1</p>
-          <details class="drawer drawer--inline">
-            <summary>Read more</summary>
-            <div class="drawer__content">
-              <p>Stay after service if you need prayer.</p>
-            </div>
-          </details>
-        </article>
-      </div>
-    </section>
-
-    <section class="stage stage--dark" id="resolution">
-      <div class="frame grid resolution">
-        <div class="arrival__text">
-          <p class="kicker">Invitation</p>
-          <h2 class="h2">Come worship with us.</h2>
-          <p>We will pray with you at the altar.</p>
-
-          <div class="scripture-block scripture-block--light">
-            <span class="scripture-block__bar" aria-hidden="true"></span>
-            <p class="scripture-block__text">
-              "Let everything that has breath praise the Lord."
-              <span class="scripture-block__ref">Psalm 150:6</span>
-            </p>
           </div>
 
-          <div class="hero__actions">
+          <div class="liturgy__divider" aria-hidden="true"></div>
+
+          <div class="liturgy__moment" data-reveal>
+            <p class="liturgy__step">II — Presence</p>
+            <h2 class="h2">The Spirit moves among us.</h2>
+            <p>Freedom, healing, and peace are available right here. We make room for the Spirit to work.</p>
+            <div class="scripture-block">
+              <span class="scripture-block__bar" aria-hidden="true"></span>
+              <p class="scripture-block__text">
+                "Where the Spirit of the Lord is, there is freedom."
+                <span class="scripture-block__ref">2 Corinthians 3:17</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="liturgy__divider" aria-hidden="true"></div>
+
+          <div class="liturgy__moment" data-reveal>
+            <p class="liturgy__step">III — Response</p>
+            <h2 class="h2">We answer with open hands.</h2>
+            <p>Worship sends us into the week transformed. Stay after — the altar is always open.</p>
+            <div class="scripture-block">
+              <span class="scripture-block__bar" aria-hidden="true"></span>
+              <p class="scripture-block__text">
+                "Offer your bodies as a living sacrifice, holy and pleasing to God."
+                <span class="scripture-block__ref">Romans 12:1</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="liturgy__actions">
+            <a class="btn btn--ghost" href="../prayer/">Go to the altar</a>
             <a class="btn btn--primary" href="../visit/">Plan a visit</a>
-            <a class="btn btn--ghost-light" href="../prayer/">Prayer and altar</a>
           </div>
+
         </div>
       </div>
     </section>
+
+    <!-- Verse monolith -->
+    <section class="stage stage--dark" id="invitation">
+      <div class="frame">
+        <p class="verse-monolith" data-reveal>
+          "Let everything that has breath praise the Lord."
+          <span class="verse-monolith__ref">Psalm 150:6</span>
+        </p>
+        <div class="monolith-actions">
+          <a class="btn btn--primary" href="../visit/">Plan a visit</a>
+          <a class="btn btn--ghost-light" href="../prayer/">Prayer and altar</a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer class="footer">

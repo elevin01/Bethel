@@ -7,7 +7,7 @@
   <meta name="description" content="Messages from Bethel Worship Center. The Word reveals Jesus and shapes our lives." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
@@ -54,50 +54,47 @@
   </header>
 
   <main>
+
+    <!-- Hero: dark, centered editorial header -->
     <section class="stage stage--hero" id="arrival">
       <div class="hero__media" aria-hidden="true">
-        <img class="hero__image" src="../assets/hero.svg" alt=" width="1600" height="900" loading="eager" decoding="async" />
+        <img class="hero__image" src="../assets/hero.svg" alt="" width="1600" height="900" loading="eager" decoding="async" fetchpriority="high" />
       </div>
       <div class="hero__overlay" aria-hidden="true"></div>
 
-      <div class="frame grid arrival__grid">
-        <div class="arrival__text">
-          <p class="kicker">Arrival</p>
+      <div class="frame grid hero__grid">
+        <div class="hero__center">
+          <p class="hero__eyebrow">Messages</p>
           <h1 class="display">The Word reveals Jesus.</h1>
 
-          <div class="scripture-block scripture-block--light">
+          <div class="scripture-block scripture-block--light scripture-block--stacked">
             <span class="scripture-block__bar" aria-hidden="true"></span>
             <p class="scripture-block__text">
-              "All Scripture is breathed out by God."
-              <span class="scripture-block__ref">2 Timothy 3:16-17</span>
+              "All Scripture is breathed out by God and profitable for teaching."
+              <span class="scripture-block__ref">2 Timothy 3:16</span>
             </p>
           </div>
-
-          <p>Listen with faith. Apply with courage.</p>
 
           <div class="hero__actions">
             <a class="btn btn--primary" href="#current">Watch the current word</a>
             <a class="btn btn--ghost-light" href="../worship/">Join worship</a>
           </div>
         </div>
-
-        <div class="arrival__media">
-          <img src="../assets/ladder.svg" alt="Ladder of light illustration" width="240" height="160" loading="lazy" decoding="async" />
-        </div>
       </div>
     </section>
 
+    <!-- Featured message: stone, editorial split -->
     <section class="stage stage--stone" id="current">
       <div class="frame grid message-feature__grid">
         <div class="message-feature__text">
           <p class="kicker">Current Word</p>
           <h2 class="h2">The God Who Meets Us</h2>
-          <p>Genesis 28 in one sentence: God is near.</p>
+          <p>God is not distant. He crossed the threshold first. Genesis 28 in a single sentence: He is near.</p>
 
           <div class="scripture-block">
             <span class="scripture-block__bar" aria-hidden="true"></span>
             <p class="scripture-block__text">
-              "Surely the Lord is in this place."
+              "Surely the Lord is in this place, and I did not know it."
               <span class="scripture-block__ref">Genesis 28:16</span>
             </p>
           </div>
@@ -109,65 +106,83 @@
         </div>
 
         <div class="message-feature__media">
-          <div class="media-embed" role="group" aria-label="Message player placeholder">
-            <div class="media-embed__frame">Embed YouTube player here.</div>
+          <div class="media-embed" role="group" aria-label="Message player">
+            <div class="media-embed__frame">
+              <p style="font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:1.1rem;padding:40px 20px;">
+                YouTube embed goes here.
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="stage stage--light" id="library">
+    <!-- Message archive: dark, editorial list -->
+    <section class="stage stage--dark" id="library">
       <div class="frame">
-        <p class="kicker">Progression</p>
-        <h2 class="h2">More messages to carry with you.</h2>
-        <div class="message-list">
-          <div class="message-row">
+        <p class="kicker">The library</p>
+        <h2 class="h2">More words to carry with you.</h2>
+
+        <div class="message-archive" style="margin-top:44px;">
+
+          <div class="message-archive__row" data-reveal>
             <div>
-              <h3 class="h3">Altars and Awakenings</h3>
-              <p class="message-row__ref">Romans 12:1-2</p>
+              <h3 class="message-archive__title">Altars and Awakenings</h3>
+              <p class="message-archive__ref">Romans 12:1–2</p>
             </div>
-            <a class="btn btn--ghost" href="https://www.youtube.com" target="_blank" rel="noreferrer">Watch</a>
+            <a class="btn btn--ghost-light btn--small" href="https://www.youtube.com" target="_blank" rel="noreferrer">Watch</a>
           </div>
-          <div class="message-row">
+
+          <div class="message-archive__row" data-reveal>
             <div>
-              <h3 class="h3">The Freedom of the Spirit</h3>
-              <p class="message-row__ref">2 Corinthians 3:17</p>
+              <h3 class="message-archive__title">The Freedom of the Spirit</h3>
+              <p class="message-archive__ref">2 Corinthians 3:17</p>
             </div>
-            <a class="btn btn--ghost" href="https://www.youtube.com" target="_blank" rel="noreferrer">Watch</a>
+            <a class="btn btn--ghost-light btn--small" href="https://www.youtube.com" target="_blank" rel="noreferrer">Watch</a>
           </div>
-          <div class="message-row">
+
+          <div class="message-archive__row" data-reveal>
             <div>
-              <h3 class="h3">Send Me</h3>
-              <p class="message-row__ref">Matthew 28:19-20</p>
+              <h3 class="message-archive__title">Send Me</h3>
+              <p class="message-archive__ref">Isaiah 6:8</p>
             </div>
-            <a class="btn btn--ghost" href="https://www.youtube.com" target="_blank" rel="noreferrer">Watch</a>
+            <a class="btn btn--ghost-light btn--small" href="https://www.youtube.com" target="_blank" rel="noreferrer">Watch</a>
           </div>
+
+          <div class="message-archive__row" data-reveal>
+            <div>
+              <h3 class="message-archive__title">The Stone and the Promise</h3>
+              <p class="message-archive__ref">Genesis 28:18–22</p>
+            </div>
+            <a class="btn btn--ghost-light btn--small" href="https://www.youtube.com" target="_blank" rel="noreferrer">Watch</a>
+          </div>
+
+          <div class="message-archive__row" data-reveal>
+            <div>
+              <h3 class="message-archive__title">Called and Kept</h3>
+              <p class="message-archive__ref">Jude 1:1</p>
+            </div>
+            <a class="btn btn--ghost-light btn--small" href="https://www.youtube.com" target="_blank" rel="noreferrer">Watch</a>
+          </div>
+
         </div>
       </div>
     </section>
 
-    <section class="stage stage--dark" id="resolution">
-      <div class="frame grid resolution">
-        <div class="arrival__text">
-          <p class="kicker">Resolution</p>
-          <h2 class="h2">Let the Word shape your next step.</h2>
-          <p>Come to worship or ask for prayer.</p>
-
-          <div class="scripture-block scripture-block--light">
-            <span class="scripture-block__bar" aria-hidden="true"></span>
-            <p class="scripture-block__text">
-              "Be doers of the word."
-              <span class="scripture-block__ref">James 1:22</span>
-            </p>
-          </div>
-
-          <div class="hero__actions">
-            <a class="btn btn--primary" href="../visit/">Plan a visit</a>
-            <a class="btn btn--ghost-light" href="../prayer/">Prayer and altar</a>
-          </div>
+    <!-- Closing: verse monolith on stone -->
+    <section class="stage stage--stone" id="resolution">
+      <div class="frame">
+        <p class="verse-monolith" style="color:rgba(16,22,38,0.88);" data-reveal>
+          "Be doers of the word, and not hearers only."
+          <span class="verse-monolith__ref">James 1:22</span>
+        </p>
+        <div class="monolith-actions">
+          <a class="btn btn--primary" href="../visit/">Plan a visit</a>
+          <a class="btn btn--ghost" href="../prayer/">Prayer and altar</a>
         </div>
       </div>
     </section>
+
   </main>
 
   <footer class="footer">

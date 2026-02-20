@@ -7,7 +7,7 @@
   <meta name="description" content="Plan your visit to Bethel Worship Center. Service times, location, and what to expect." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
@@ -54,18 +54,37 @@
   </header>
 
   <main>
+
+    <!-- Hero: full-bleed centered, info strip at base -->
     <section class="stage stage--hero" id="arrival">
       <div class="hero__media" aria-hidden="true">
-        <img class="hero__image" src="../assets/hero.svg" alt="" width="1600" height="900" loading="eager" decoding="async" />
+        <img class="hero__image" src="../assets/hero.svg" alt="" width="1600" height="900" loading="eager" decoding="async" fetchpriority="high" />
       </div>
       <div class="hero__overlay" aria-hidden="true"></div>
 
-      <div class="frame grid arrival__grid">
-        <div class="arrival__text">
-          <p class="kicker">Arrival</p>
-          <h1 class="display">We will be glad you came.</h1>
+      <div class="hero__beams" aria-hidden="true">
+        <div class="hero__beam"></div>
+        <div class="hero__beam"></div>
+        <div class="hero__beam"></div>
+        <div class="hero__beam"></div>
+      </div>
 
-          <div class="scripture-block scripture-block--light">
+      <div class="hero__particles" aria-hidden="true">
+        <span class="particle" style="--x:11%;--delay:1s;--duration:13s;--drift:16px;--size:1.5px"></span>
+        <span class="particle" style="--x:28%;--delay:4s;--duration:11s;--drift:-20px;--size:2px"></span>
+        <span class="particle" style="--x:45%;--delay:0s;--duration:14s;--drift:18px;--size:1px"></span>
+        <span class="particle" style="--x:62%;--delay:6s;--duration:10s;--drift:-14px;--size:2px"></span>
+        <span class="particle" style="--x:79%;--delay:2.5s;--duration:12s;--drift:22px;--size:1.5px"></span>
+        <span class="particle" style="--x:36%;--delay:8s;--duration:15s;--drift:-18px;--size:1px"></span>
+        <span class="particle" style="--x:54%;--delay:3.5s;--duration:11s;--drift:14px;--size:2px"></span>
+      </div>
+
+      <div class="frame grid hero__grid">
+        <div class="hero__center">
+          <p class="hero__eyebrow">Visit Us</p>
+          <h1 class="display">We will be glad<br>you came.</h1>
+
+          <div class="scripture-block scripture-block--light scripture-block--stacked">
             <span class="scripture-block__bar" aria-hidden="true"></span>
             <p class="scripture-block__text">
               "Welcome one another as Christ has welcomed you."
@@ -73,85 +92,96 @@
             </p>
           </div>
 
-          <p>We want you to feel at home and know what to expect.</p>
+          <p style="color:rgba(250,250,250,0.76);margin-top:6px;">Come as you are. A seat, a word, and a prayer are waiting for you.</p>
 
           <div class="hero__actions">
-            <a class="btn btn--primary" href="#plan">Plan a visit</a>
-            <a class="btn btn--ghost-light" href="../index.html">Back to Bethel</a>
+            <a class="btn btn--primary" href="#plan">See what to expect</a>
+            <a class="btn btn--ghost-light" href="https://maps.google.com/?q=123+Bethel+Way+Your+City+NY" target="_blank" rel="noreferrer">Get directions</a>
           </div>
         </div>
+      </div>
 
-        <div class="arrival__media arrival__media--spotlight">
-          <div class="glance glance--spotlight">
-            <div class="glance__row">
-              <span class="glance__label">Service Times</span>
-              <span class="glance__value">Sundays 10:30 AM / Wed Prayer 7:00 PM</span>
+      <!-- Practical info strip pinned to bottom -->
+      <div class="visit-strip" aria-label="Service information">
+        <div class="frame">
+          <div class="visit-strip__inner">
+            <div class="visit-strip__item">
+              <span class="visit-strip__label">Sunday Worship</span>
+              <span class="visit-strip__value">10:30 AM</span>
             </div>
-            <div class="glance__row">
-              <span class="glance__label">Location</span>
-              <span class="glance__value">123 Bethel Way, Your City, NY</span>
-              <a class="glance__link" href="https://maps.google.com/?q=123+Bethel+Way+Your+City+NY" target="_blank" rel="noreferrer">Get directions</a>
+            <span class="visit-strip__sep" aria-hidden="true"></span>
+            <div class="visit-strip__item">
+              <span class="visit-strip__label">Wednesday Prayer</span>
+              <span class="visit-strip__value">7:00 PM</span>
             </div>
-            <div class="glance__row">
-              <span class="glance__label">Contact</span>
-              <span class="glance__value">(000) 000-0000 / hello@bethelwc.org</span>
+            <span class="visit-strip__sep" aria-hidden="true"></span>
+            <div class="visit-strip__item">
+              <span class="visit-strip__label">Location</span>
+              <span class="visit-strip__value">123 Bethel Way, Your City, NY</span>
             </div>
+            <span class="visit-strip__sep" aria-hidden="true"></span>
+            <div class="visit-strip__item">
+              <span class="visit-strip__label">Contact</span>
+              <span class="visit-strip__value">hello@bethelwc.org</span>
+            </div>
+            <a class="btn btn--ghost-light btn--small visit-strip__cta" href="https://maps.google.com/?q=123+Bethel+Way+Your+City+NY" target="_blank" rel="noreferrer">Open in Maps →</a>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="stage stage--stone" id="plan">
-      <div class="frame grid progression">
-        <article class="movement movement--left" data-reveal>
-          <p class="kicker">Comfort</p>
-          <h3 class="h3">What to expect</h3>
-          <p>Warm welcome, worship, Bible-centered message.</p>
-          <p class="movement__ref">Psalm 122:1</p>
-          <details class="drawer drawer--inline">
-            <summary>Read more</summary>
-            <div class="drawer__content">
-              <p>Service lasts about 90 minutes.</p>
-            </div>
-          </details>
-        </article>
+    <!-- Info tiles: dark, three cards -->
+    <section class="stage stage--dark" id="plan">
+      <div class="frame">
+        <p class="kicker">What to know</p>
+        <h2 class="h2">Everything you need before you arrive.</h2>
 
-        <article class="movement movement--center" data-reveal>
-          <p class="kicker">Families</p>
-          <h3 class="h3">Kids and students</h3>
-          <p>Secure check-in opens at 10:15 AM.</p>
-          <p class="movement__ref">Mark 10:14</p>
-          <details class="drawer drawer--inline">
-            <summary>Read more</summary>
-            <div class="drawer__content">
-              <p>Nursery through elementary classes during service.</p>
-            </div>
-          </details>
-        </article>
+        <div class="info-tiles" style="margin-top:40px;">
 
-        <article class="movement movement--right" data-reveal>
-          <p class="kicker">Arrival</p>
-          <h3 class="h3">Parking and access</h3>
-          <p>Main lot behind the building, overflow on Elm St.</p>
-          <p class="movement__ref">Proverbs 3:5-6</p>
-          <details class="drawer drawer--inline">
-            <summary>Read more</summary>
-            <div class="drawer__content">
-              <p>Accessible entrance on the north side.</p>
+          <div class="info-tile" data-reveal>
+            <p class="info-tile__label">What to Expect</p>
+            <p class="info-tile__value">Warm welcome, Spirit-led worship, Bible-centered message, and room to respond.</p>
+            <p class="info-tile__sub">Service lasts about 90 minutes. Prayer is available after.</p>
+            <div class="scripture-block scripture-block--light" style="margin-top:8px;max-width:100%;">
+              <span class="scripture-block__bar" aria-hidden="true"></span>
+              <p class="scripture-block__text" style="font-size:0.92rem;">"I rejoiced when they said to me, 'Let us go to the house of the Lord.'"
+                <span class="scripture-block__ref">Psalm 122:1</span>
+              </p>
             </div>
-          </details>
-        </article>
+          </div>
+
+          <div class="info-tile" data-reveal>
+            <p class="info-tile__label">Kids and Students</p>
+            <p class="info-tile__value">Secure check-in opens at 10:15 AM. Age-appropriate classes through elementary.</p>
+            <p class="info-tile__sub">Nursery available from birth. Middle and high school meet separately.</p>
+            <div class="scripture-block scripture-block--light" style="margin-top:8px;max-width:100%;">
+              <span class="scripture-block__bar" aria-hidden="true"></span>
+              <p class="scripture-block__text" style="font-size:0.92rem;">"Let the children come to me and do not hinder them."
+                <span class="scripture-block__ref">Mark 10:14</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="info-tile" data-reveal>
+            <p class="info-tile__label">Parking and Access</p>
+            <p class="info-tile__value">Main lot behind the building, overflow parking on Elm Street.</p>
+            <p class="info-tile__sub">Accessible entrance on the north side. All are welcome here.</p>
+            <a class="info-tile__link" href="https://maps.google.com/?q=123+Bethel+Way+Your+City+NY" target="_blank" rel="noreferrer">Open in Maps →</a>
+          </div>
+
+        </div>
       </div>
     </section>
 
-    <section class="stage stage--light" id="resolution">
-      <div class="frame grid resolution">
-        <div class="arrival__text">
-          <p class="kicker">Resolution</p>
+    <!-- Welcome close: stone, centered invitation -->
+    <section class="stage stage--stone" id="welcome">
+      <div class="frame">
+        <div class="welcome-close">
+          <p class="kicker">The invitation</p>
           <h2 class="h2">Your seat is waiting.</h2>
-          <p>Come as you are. We will be glad you came.</p>
+          <p>Bethel is still a place where God meets people. We believe you will feel it the moment you walk in.</p>
 
-          <div class="scripture-block">
+          <div class="scripture-block" style="justify-content:center;">
             <span class="scripture-block__bar" aria-hidden="true"></span>
             <p class="scripture-block__text">
               "Taste and see that the Lord is good."
@@ -159,13 +189,14 @@
             </p>
           </div>
 
-          <div class="hero__actions">
+          <div class="hero__actions" style="justify-content:center;">
             <a class="btn btn--primary" href="https://maps.google.com/?q=123+Bethel+Way+Your+City+NY" target="_blank" rel="noreferrer">Get directions</a>
             <a class="btn btn--ghost" href="../prayer/">Need prayer</a>
           </div>
         </div>
       </div>
     </section>
+
   </main>
 
   <footer class="footer">

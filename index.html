@@ -7,7 +7,7 @@
   <meta name="description" content="Bethel Worship Center (IPC) - Encounter, transformation, sending. Plan a visit and step into Bethel." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -71,6 +71,30 @@
       </div>
       <div class="hero__overlay" aria-hidden="true"></div>
 
+      <div class="hero__beams" aria-hidden="true">
+        <div class="hero__beam"></div>
+        <div class="hero__beam"></div>
+        <div class="hero__beam"></div>
+        <div class="hero__beam"></div>
+      </div>
+
+      <div class="hero__particles" aria-hidden="true">
+        <span class="particle" style="--x:7%;--delay:0s;--duration:11s;--drift:18px;--size:2px"></span>
+        <span class="particle" style="--x:14%;--delay:3s;--duration:14s;--drift:-20px;--size:1.5px"></span>
+        <span class="particle" style="--x:24%;--delay:6s;--duration:10s;--drift:24px;--size:2px"></span>
+        <span class="particle" style="--x:33%;--delay:1.5s;--duration:13s;--drift:-16px;--size:1px"></span>
+        <span class="particle" style="--x:42%;--delay:4s;--duration:12s;--drift:20px;--size:2.5px"></span>
+        <span class="particle" style="--x:50%;--delay:0.8s;--duration:15s;--drift:-22px;--size:1.5px"></span>
+        <span class="particle" style="--x:58%;--delay:7s;--duration:11s;--drift:16px;--size:2px"></span>
+        <span class="particle" style="--x:67%;--delay:2.5s;--duration:14s;--drift:-14px;--size:1px"></span>
+        <span class="particle" style="--x:76%;--delay:5s;--duration:10s;--drift:22px;--size:2px"></span>
+        <span class="particle" style="--x:85%;--delay:1s;--duration:13s;--drift:-18px;--size:1.5px"></span>
+        <span class="particle" style="--x:20%;--delay:8.5s;--duration:12s;--drift:12px;--size:1px"></span>
+        <span class="particle" style="--x:46%;--delay:9.5s;--duration:11s;--drift:-24px;--size:2px"></span>
+        <span class="particle" style="--x:62%;--delay:3.8s;--duration:13s;--drift:14px;--size:1.5px"></span>
+        <span class="particle" style="--x:90%;--delay:6.5s;--duration:10s;--drift:-12px;--size:1px"></span>
+      </div>
+
       <div class="frame grid hero__grid">
         <div class="hero__intro">
           <p class="hero__eyebrow">Bethel Worship Center / IPC</p>
@@ -88,7 +112,10 @@
       </div>
 
       <a class="threshold" href="#reveal">
-        <span class="threshold__label">Step into Bethel</span>
+        <span class="threshold__label">
+          Step into Bethel
+          <span class="threshold__arrow" aria-hidden="true">↓</span>
+        </span>
       </a>
     </section>
 
