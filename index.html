@@ -2,33 +2,32 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Bethel Worship Center | Bethel</title>
-  <meta name="description" content="Bethel Worship Center (IPC) - Encounter, transformation, sending. Plan a visit and step into Bethel." />
+  <meta name="description" content="Bethel Worship Center (IPC) - A Spirit-filled, Word-centered family. Worship with us this Sunday." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/BethelBackpng.png" fetchpriority="high" />
+  <link rel="icon" type="image/png" href="assets/LogoSmallCircle.png" />
+  <link rel="apple-touch-icon" href="assets/LogoSmallCircle.png" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="nav">
     <div class="frame nav__grid">
       <div class="nav__left">
-        <a class="brand" href="index.html">
+        <a class="brand" href="index.html" aria-current="page">
           <span class="brand__mark" aria-hidden="true"></span>
-          <span class="brand__text">
-            <span class="brand__name">Bethel Worship Center</span>
-            <span class="brand__sub">IPC / Spirit-filled / Word-centered</span>
-          </span>
         </a>
       </div>
 
       <nav class="nav__center" aria-label="Primary">
-        <a href="index.html" aria-current="page">Bethel</a>
-        <a href="worship/">Worship</a>
-        <a href="prayer/">Prayer and Altar</a>
         <a href="messages/">Messages</a>
-        <a href="serve/">Serve / Go</a>
+        <a href="events/">Events</a>
+        <a href="youth/">Youth</a>
+        <a href="prayer/">Prayer</a>
+        <a href="serve/">Serve</a>
         <a href="visit/">Visit</a>
       </nav>
 
@@ -42,11 +41,11 @@
 
     <div id="mobileMenu" class="nav__mobile" hidden>
       <div class="frame nav__mobileInner">
-        <a href="index.html" aria-current="page">Bethel</a>
-        <a href="worship/">Worship</a>
-        <a href="prayer/">Prayer and Altar</a>
         <a href="messages/">Messages</a>
-        <a href="serve/">Serve / Go</a>
+        <a href="events/">Events</a>
+        <a href="youth/">Youth</a>
+        <a href="prayer/">Prayer</a>
+        <a href="serve/">Serve</a>
         <a href="visit/">Visit</a>
         <a class="btn btn--primary" href="visit/">Plan a Visit</a>
       </div>
@@ -54,257 +53,438 @@
   </header>
 
   <main>
-    <section class="stage stage--hero" id="threshold">
-      <div class="hero__media" aria-hidden="true">
-        <img
-          class="hero__image"
-          src="assets/BethelBackpng.png"
-          srcset="assets/BethelBackpng.png 1200w, assets/BethelBackpng.png 1800w"
-          sizes="100vw"
-          alt=""
-          width="1600"
-          height="900"
-          loading="eager"
-          decoding="async"
-          fetchpriority="high"
-        />
+    <!-- ============================================================
+         HERO — full-bleed photo background
+         ============================================================ -->
+    <section class="stage stage--hero hero--photo" id="top">
+      <!-- Slideshow: rotates every 7s. Add/remove .hero__slide blocks to change rotation. -->
+      <div class="hero__media hero__slideshow" aria-hidden="true">
+        <div class="hero__slide is-active">
+          <img
+            class="hero__image"
+            src="assets/BethelBackpng.png"
+            alt=""
+            width="1600"
+            height="900"
+            loading="eager"
+            decoding="async"
+            fetchpriority="high"
+          />
+        </div>
+        <div class="hero__slide">
+          <img
+            class="hero__image"
+            src="assets/fire.jpg"
+            alt=""
+            width="1600"
+            height="900"
+            loading="eager"
+            decoding="async"
+          />
+        </div>
+        <!-- TODO: drop in more real photos as additional <div class="hero__slide"><img...></div> blocks -->
       </div>
-      <div class="hero__overlay" aria-hidden="true"></div>
+      <div class="hero__overlay hero__overlay--photo" aria-hidden="true"></div>
 
-      <div class="hero__beams" aria-hidden="true">
-        <div class="hero__beam"></div>
-        <div class="hero__beam"></div>
-        <div class="hero__beam"></div>
-        <div class="hero__beam"></div>
-      </div>
-
-      <div class="hero__particles" aria-hidden="true">
-        <span class="particle" style="--x:7%;--delay:0s;--duration:11s;--drift:18px;--size:2px"></span>
-        <span class="particle" style="--x:14%;--delay:3s;--duration:14s;--drift:-20px;--size:1.5px"></span>
-        <span class="particle" style="--x:24%;--delay:6s;--duration:10s;--drift:24px;--size:2px"></span>
-        <span class="particle" style="--x:33%;--delay:1.5s;--duration:13s;--drift:-16px;--size:1px"></span>
-        <span class="particle" style="--x:42%;--delay:4s;--duration:12s;--drift:20px;--size:2.5px"></span>
-        <span class="particle" style="--x:50%;--delay:0.8s;--duration:15s;--drift:-22px;--size:1.5px"></span>
-        <span class="particle" style="--x:58%;--delay:7s;--duration:11s;--drift:16px;--size:2px"></span>
-        <span class="particle" style="--x:67%;--delay:2.5s;--duration:14s;--drift:-14px;--size:1px"></span>
-        <span class="particle" style="--x:76%;--delay:5s;--duration:10s;--drift:22px;--size:2px"></span>
-        <span class="particle" style="--x:85%;--delay:1s;--duration:13s;--drift:-18px;--size:1.5px"></span>
-        <span class="particle" style="--x:20%;--delay:8.5s;--duration:12s;--drift:12px;--size:1px"></span>
-        <span class="particle" style="--x:46%;--delay:9.5s;--duration:11s;--drift:-24px;--size:2px"></span>
-        <span class="particle" style="--x:62%;--delay:3.8s;--duration:13s;--drift:14px;--size:1.5px"></span>
-        <span class="particle" style="--x:90%;--delay:6.5s;--duration:10s;--drift:-12px;--size:1px"></span>
-      </div>
-
-      <div class="frame grid hero__grid">
-        <div class="hero__intro">
+      <div class="frame hero__photoFrame">
+        <div class="hero__photoText">
           <p class="hero__eyebrow">Bethel Worship Center / IPC</p>
-          <h1 class="display">Surely the Lord is in this place.</h1>
-
-          <div class="scripture-block scripture-block--light scripture-block--stacked">
-            <span class="scripture-block__bar" aria-hidden="true"></span>
-            <p class="scripture-block__text">
-              "How awesome is this place..."
-              <span class="scripture-block__ref">Genesis 28:16-17</span>
-            </p>
+          <h1 class="display hero__photoTitle">A church alive in the Spirit.</h1>
+          <p class="hero__photoLead">
+            Sundays &nbsp;·&nbsp; English 9:30 AM &nbsp;·&nbsp; Malayalam 10:30 AM<br/>
+            <span class="hero__photoLead--soft">10 Tanglewylde Ave, Bronxville, NY 10708</span>
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="visit/">Plan a Visit</a>
+            <a class="btn btn--ghost-light" href="#" data-dialog-open="zoomDialog">Join on Zoom</a>
           </div>
         </div>
-
       </div>
 
-      <a class="threshold" href="#reveal">
-        <span class="threshold__label">
-          Step into Bethel
-          <span class="threshold__arrow" aria-hidden="true">↓</span>
-        </span>
+      <a class="hero__scrollHint" href="#this-week" aria-label="Scroll to this week">
+        <span class="hero__scrollLabel">This week at Bethel</span>
+        <span class="hero__scrollArrow" aria-hidden="true">↓</span>
       </a>
     </section>
 
-    <section class="stage stage--stone" id="reveal">
-      <div class="frame grid story__grid">
-        <div class="story__sticky">
-          <!-- <p class="kicker">Bethel Revealed</p> -->
-          <h2 class="h2">A place becomes holy when God meets us.</h2>
-          <p class="story__line" data-default="Bethel means &quot;House of God.&quot;">Bethel means "House of God."</p>
+    <!-- ============================================================
+         THIS WEEK — horizontal scroll strip
+         ============================================================ -->
+    <section class="stage stage--rhythm" id="this-week">
+      <div class="frame rhythm__head">
+        <div>
+          <p class="kicker">This week at Bethel</p>
+          <h2 class="h2">Come as you are. Stay as long as you want.</h2>
+        </div>
+        <a class="link" href="schedule/">See full schedule →</a>
+      </div>
 
-          <div class="scripture-block">
-            <span class="scripture-block__bar" aria-hidden="true"></span>
-            <p class="scripture-block__text">
-              "Surely the Lord is in this place."
-              <span class="scripture-block__ref">Genesis 28:16-17</span>
-            </p>
+      <div class="rhythm__rail" tabindex="0" aria-label="Weekly schedule">
+        <a class="rhythm__card" href="visit/" aria-label="Sunday Worship Service — plan a visit">
+          <div class="rhythm__photo" data-label="Sunday worship — congregation">
+            <span class="ph__chip">Photo</span>
+            <span class="ph__cap">Sunday worship</span>
           </div>
+          <div class="rhythm__meta">
+            <p class="rhythm__day">Sunday · English 9:30 AM · Malayalam 10:30 AM</p>
+            <h3 class="h3">Worship Service</h3>
+            <p>Two services every Sunday. Word, worship, and welcome — in person.</p>
+            <span class="rhythm__cta">Plan a visit →</span>
+          </div>
+        </a>
 
-          <a class="btn btn--ghost" href="prayer/">Prayer and altar</a>
+        <a class="rhythm__card" href="#" data-dialog-open="zoomDialog" aria-label="Bible Study Monday — join on Zoom">
+          <div class="rhythm__photo" data-label="Open Bible on a table">
+            <span class="ph__chip">Photo</span>
+            <span class="ph__cap">Bible study</span>
+          </div>
+          <div class="rhythm__meta">
+            <p class="rhythm__day">Monday · 7:30 PM</p>
+            <h3 class="h3">Bible Study</h3>
+            <p>Go deeper in Scripture together — online via Zoom.</p>
+            <span class="rhythm__cta">Join on Zoom →</span>
+          </div>
+        </a>
+
+        <a class="rhythm__card" href="#" data-dialog-open="zoomDialog" aria-label="Prayer Lines Tuesday and Wednesday — join on Zoom">
+          <div class="rhythm__photo" data-label="Hands folded in prayer">
+            <span class="ph__chip">Photo</span>
+            <span class="ph__cap">Prayer lines</span>
+          </div>
+          <div class="rhythm__meta">
+            <p class="rhythm__day">Tue + Wed · 8:00 PM</p>
+            <h3 class="h3">Prayer Lines</h3>
+            <p>Malayalam (Tue) and English (Wed). Intercession for our people.</p>
+            <span class="rhythm__cta">Join on Zoom →</span>
+          </div>
+        </a>
+
+        <a class="rhythm__card rhythm__card--accent" href="youth/" aria-label="Youth Night Friday — explore Youth ministry">
+          <div class="rhythm__photo" data-label="Youth raising hands at a youth night">
+            <span class="ph__chip">Photo</span>
+            <span class="ph__cap">Youth night</span>
+          </div>
+          <div class="rhythm__meta">
+            <p class="rhythm__day">Friday · 7:00 PM</p>
+            <h3 class="h3">Youth Night</h3>
+            <p>Middle &amp; high school. Worship, message, food, games.</p>
+            <span class="rhythm__cta">More about Youth →</span>
+          </div>
+        </a>
+
+        <a class="rhythm__card" href="#" data-dialog-open="zoomDialog" aria-label="Common Prayer Saturday — join on Zoom">
+          <div class="rhythm__photo" data-label="Candlelit prayer gathering">
+            <span class="ph__chip">Photo</span>
+            <span class="ph__cap">Common prayer</span>
+          </div>
+          <div class="rhythm__meta">
+            <p class="rhythm__day">Saturday · 8:00 PM</p>
+            <h3 class="h3">Common Prayer</h3>
+            <p>The whole family gathers for praise and prayer.</p>
+            <span class="rhythm__cta">Join on Zoom →</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         HIGHLIGHTS — feature photo + side thumbs, each links somewhere
+         ============================================================ -->
+    <section class="stage stage--mosaic" id="highlights">
+      <div class="frame mosaic__head">
+        <p class="kicker">Highlights</p>
+        <h2 class="h2">What's worth a closer look.</h2>
+        <p class="mosaic__lead">Sermons, slide decks, retreats, Sunday moments — tap anything to dive in.</p>
+      </div>
+
+      <div class="frame life-feature">
+        <div class="life-feature__stage" data-life-stage>
+          <a class="life-slide is-active" href="messages/" data-caption="The God Who Meets Us · Sunday sermon" data-type="Sermon">
+            <div class="life-slide__photo" data-label="Pastor preaching on Sunday">
+              <span class="ph__chip">Photo</span>
+              <span class="ph__cap">Sermon</span>
+            </div>
+          </a>
+          <a class="life-slide" href="messages/" data-caption="Altars and Awakenings · slide deck" data-type="Slides">
+            <div class="life-slide__photo" data-label="Sunday slide deck cover">
+              <span class="ph__chip">Photo</span>
+              <span class="ph__cap">Slides</span>
+            </div>
+          </a>
+          <a class="life-slide" href="youth/" data-caption="Youth Summer Retreat · last year" data-type="Event">
+            <div class="life-slide__photo" data-label="Youth at summer retreat">
+              <span class="ph__chip">Photo</span>
+              <span class="ph__cap">Youth retreat</span>
+            </div>
+          </a>
+          <a class="life-slide" href="visit/" data-caption="Sunday worship · come as you are" data-type="Service">
+            <div class="life-slide__photo" data-label="Sunday worship congregation, hands raised">
+              <span class="ph__chip">Photo</span>
+              <span class="ph__cap">Sunday</span>
+            </div>
+          </a>
+          <a class="life-slide" href="events/" data-caption="Annual Convention 2026 · save the date" data-type="Event">
+            <div class="life-slide__photo" data-label="Convention sanctuary packed">
+              <span class="ph__chip">Photo</span>
+              <span class="ph__cap">Convention</span>
+            </div>
+          </a>
+
+          <div class="life-feature__overlay">
+            <p class="life-feature__caption" data-life-caption>The God Who Meets Us · Sunday sermon</p>
+            <span class="life-feature__cta" aria-hidden="true">View →</span>
+          </div>
+          <div class="life-feature__progress" data-life-progress aria-hidden="true"></div>
         </div>
 
-        <div class="story__reveals">
-          <article class="reveal-card" data-reveal data-line="God marks the place.">
-            <div class="reveal-card__media">
-              <img src="assets/stone.svg" alt="Stone marker illustration" width="140" height="100" loading="lazy" decoding="async" />
-            </div>
-            <div class="reveal-card__content">
-              <h3 class="h3">Stone</h3>
-              <p class="reveal-card__text">He set a stone and marked the moment.</p>
-              <p class="reveal-card__ref">Genesis 28:18-19</p>
-              <div class="reveal-panel reveal-panel--static">
-                <p class="reveal-panel__scripture">Genesis 28:18-19 - Jacob set the stone and named the place Bethel.</p>
-                <p class="reveal-panel__meaning">Bethel begins when a moment with God is marked, not forgotten.</p>
-                <p class="reveal-panel__connection">We return to Bethel when we remember where God met us.</p>
-                <a class="reveal-panel__link" href="prayer/">Go to Prayer and Altar</a>
-              </div>
-            </div>
-          </article>
+        <div class="life-feature__thumbs" role="tablist" aria-label="Highlight selector">
+          <button class="life-thumb is-active" type="button" role="tab" aria-selected="true" data-life-target="0">
+            <span class="life-thumb__photo" data-label="Sermon">
+              <span class="ph__chip">Photo</span>
+            </span>
+            <span class="life-thumb__meta">
+              <span class="life-thumb__type">Sermon</span>
+              <span class="life-thumb__label">The God Who Meets Us</span>
+            </span>
+          </button>
+          <button class="life-thumb" type="button" role="tab" aria-selected="false" data-life-target="1">
+            <span class="life-thumb__photo" data-label="Slides">
+              <span class="ph__chip">Photo</span>
+            </span>
+            <span class="life-thumb__meta">
+              <span class="life-thumb__type">Slides</span>
+              <span class="life-thumb__label">Altars and Awakenings</span>
+            </span>
+          </button>
+          <button class="life-thumb" type="button" role="tab" aria-selected="false" data-life-target="2">
+            <span class="life-thumb__photo" data-label="Youth retreat">
+              <span class="ph__chip">Photo</span>
+            </span>
+            <span class="life-thumb__meta">
+              <span class="life-thumb__type">Event</span>
+              <span class="life-thumb__label">Youth Summer Retreat</span>
+            </span>
+          </button>
+          <button class="life-thumb" type="button" role="tab" aria-selected="false" data-life-target="3">
+            <span class="life-thumb__photo" data-label="Sunday">
+              <span class="ph__chip">Photo</span>
+            </span>
+            <span class="life-thumb__meta">
+              <span class="life-thumb__type">Service</span>
+              <span class="life-thumb__label">Sunday worship</span>
+            </span>
+          </button>
+          <button class="life-thumb" type="button" role="tab" aria-selected="false" data-life-target="4">
+            <span class="life-thumb__photo" data-label="Convention">
+              <span class="ph__chip">Photo</span>
+            </span>
+            <span class="life-thumb__meta">
+              <span class="life-thumb__type">Event</span>
+              <span class="life-thumb__label">Annual Convention 2026</span>
+            </span>
+          </button>
+        </div>
 
-          <article class="reveal-card" data-reveal data-line="God opens heaven.">
-            <div class="reveal-card__media">
-              <img src="assets/ladder.svg" alt="Ladder of light illustration" width="140" height="100" loading="lazy" decoding="async" />
-            </div>
-            <div class="reveal-card__content">
-              <h3 class="h3">Ladder and Light</h3>
-              <p class="reveal-card__text">He saw heaven open and light reaching down.</p>
-              <p class="reveal-card__ref">Genesis 28:12</p>
-              <div class="reveal-panel reveal-panel--static">
-                <p class="reveal-panel__scripture">Genesis 28:12 - A ladder reached heaven and angels ascended and descended.</p>
-                <p class="reveal-panel__meaning">God opens heaven and meets us in the ordinary.</p>
-                <p class="reveal-panel__connection">We look for His presence in our daily lives.</p>
-                <a class="reveal-panel__link" href="worship/">Go to Worship</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="reveal-card" data-reveal data-line="God invites response.">
-            <div class="reveal-card__media">
-              <img src="assets/oil.svg" alt="Oil and altar illustration" width="140" height="100" loading="lazy" decoding="async" />
-            </div>
-            <div class="reveal-card__content">
-              <h3 class="h3">Oil and Altar</h3>
-              <p class="reveal-card__text">He poured oil and worshiped the Lord.</p>
-              <p class="reveal-card__ref">Genesis 28:18</p>
-              <div class="reveal-panel reveal-panel--static">
-                <p class="reveal-panel__scripture">Genesis 28:18 - He poured oil on the stone and worshiped.</p>
-                <p class="reveal-panel__meaning">Encounter invites response and consecration.</p>
-                <p class="reveal-panel__connection">We still come to the altar with open hands.</p>
-                <a class="reveal-panel__link" href="prayer/">Go to Prayer and Altar</a>
-              </div>
-            </div>
-          </article>
+        <!-- Mobile-only: dot indicators replace the thumb column -->
+        <div class="life-feature__dots" role="tablist" aria-label="Highlight selector">
+          <button class="life-dot is-active" type="button" role="tab" aria-selected="true" data-life-target="0" aria-label="Highlight 1"></button>
+          <button class="life-dot" type="button" role="tab" aria-selected="false" data-life-target="1" aria-label="Highlight 2"></button>
+          <button class="life-dot" type="button" role="tab" aria-selected="false" data-life-target="2" aria-label="Highlight 3"></button>
+          <button class="life-dot" type="button" role="tab" aria-selected="false" data-life-target="3" aria-label="Highlight 4"></button>
+          <button class="life-dot" type="button" role="tab" aria-selected="false" data-life-target="4" aria-label="Highlight 5"></button>
         </div>
       </div>
     </section>
 
-    <section class="stage stage--light weekly-section" id="weekly">
-      <div class="frame grid weekly__grid">
-        <div class="weekly__panel weekly__panel--join">
-          <p class="panel__label">How to Join</p>
-          <p class="panel__value">Weekly gatherings happen on Zoom.</p>
-          <p class="panel__value panel__value--soft">Listen, pray, or join in.</p>
-          <button class="btn btn--primary" type="button" data-dialog-open="zoomDialog">Join Online</button>
+    <!-- ============================================================
+         MINISTRIES — alternating full-width bands
+         ============================================================ -->
+    <section class="ministries" id="ministries">
+      <div class="band band--dark band--right">
+        <div class="band__photo" data-label="Worship team mid-song, lights up">
+          <span class="ph__chip">Photo</span>
+          <span class="ph__cap">Worship</span>
         </div>
-
-        <div class="weekly__text">
-          <p class="kicker">Weekly Services</p>
-          <h2 class="h2">Weekly Prayer & Bible Gatherings</h2>
-          <p>Join us throughout the week for prayer, Scripture, and shared worship.</p>
-
-          <div class="weekly__list">
-            <div class="weekly__item">
-              <h3 class="h3">Bible Study</h3>
-              <p class="weekly__time">Monday / 7:30 PM</p>
-              <p>Delve into Scripture together and grow in faith.</p>
-            </div>
-            <div class="weekly__item">
-              <h3 class="h3">Prayer Lines</h3>
-              <p class="weekly__time">Tuesday and Wednesday / 8:00 PM</p>
-              <p>Malayalam and English prayer gatherings for reflection and intercession.</p>
-            </div>
-            <div class="weekly__item">
-              <h3 class="h3">Common Prayer</h3>
-              <p class="weekly__time">Saturday / 8:00 PM</p>
-              <p>A shared time of prayer and praise as a community.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <dialog class="zoom-dialog" id="zoomDialog" aria-labelledby="zoomTitle">
-        <div class="zoom-dialog__inner">
-          <div class="zoom-dialog__header">
-            <h3 class="h3" id="zoomTitle">Join Online</h3>
-            <button class="zoom-dialog__close" type="button" data-dialog-close>Close</button>
-          </div>
-          <p class="panel__value">Zoom ID 543 267 7916</p>
-          <p class="panel__value">Password 1234</p>
-          <p class="panel__value panel__value--soft">Open Zoom and enter the ID and password.</p>
-          <div class="zoom-dialog__actions">
-            <a class="btn btn--primary" href="https://zoom.us/j/5432677916" target="_blank" rel="noreferrer">Open Zoom</a>
-          </div>
-        </div>
-      </dialog>
-    </section>
-
-    <section class="stage stage--dark" id="presence">
-      <div class="frame grid worship__grid">
-        <div class="worship__text">
-          <p class="kicker">Worship and Presence</p>
+        <div class="band__text">
+          <p class="kicker">Worship</p>
           <h2 class="h2">Where the Spirit is, there is freedom.</h2>
-
-          <div class="scripture-block scripture-block--light">
-            <span class="scripture-block__bar" aria-hidden="true"></span>
-            <p class="scripture-block__text">
-              "Where the Spirit of the Lord is, there is freedom."
-              <span class="scripture-block__ref">2 Corinthians 3:17</span>
-            </p>
-          </div>
-
-          <div class="hero__actions">
-            <a class="btn btn--primary" href="messages/">Watch latest message</a>
-            <a class="btn btn--ghost-light" href="worship/">What worship is like</a>
-          </div>
+          <p>We worship like we mean it — Spirit-led, Word-anchored, and unhurried. Whether you sing or simply stand, you belong here.</p>
+          <a class="btn btn--ghost-light" href="worship/">What worship is like →</a>
         </div>
+      </div>
 
-        <div class="worship__media">
-          <img src="assets/fire.jpg" alt="Ember flame image" loading="lazy" decoding="async" />
+      <div class="band band--light band--left">
+        <div class="band__photo" data-label="Group of teens laughing together at youth night">
+          <span class="ph__chip">Photo</span>
+          <span class="ph__cap">Youth</span>
+        </div>
+        <div class="band__text">
+          <p class="kicker">Youth</p>
+          <h2 class="h2">A generation that knows whose they are.</h2>
+          <p>Friday nights, retreats, mentorship, missions. We raise students who love Jesus, love their friends, and love the Word.</p>
+          <a class="btn btn--ghost" href="youth/">Explore Youth ministry →</a>
+        </div>
+      </div>
+
+      <div class="band band--dark band--right">
+        <div class="band__photo" data-label="Bowed heads in a prayer circle">
+          <span class="ph__chip">Photo</span>
+          <span class="ph__cap">Prayer &amp; Altar</span>
+        </div>
+        <div class="band__text">
+          <p class="kicker">Prayer &amp; Altar</p>
+          <h2 class="h2">We pray first, and we keep praying.</h2>
+          <p>Three nights a week we gather online to intercede — for our families, our church, our city. The altar is open. Bring what you have.</p>
+          <a class="btn btn--ghost-light" href="prayer/">Pray with us →</a>
+        </div>
+      </div>
+
+      <div class="band band--light band--left">
+        <div class="band__photo" data-label="Volunteers loading boxes for a community outreach">
+          <span class="ph__chip">Photo</span>
+          <span class="ph__cap">Serve &amp; Go</span>
+        </div>
+        <div class="band__text">
+          <p class="kicker">Serve &amp; Go</p>
+          <h2 class="h2">Loving our neighborhood out loud.</h2>
+          <p>From food drives to short-term missions, Bethel doesn't just gather — we go. Find a team to serve with this season.</p>
+          <a class="btn btn--ghost" href="serve/">Find a team →</a>
         </div>
       </div>
     </section>
 
-    <section class="stage stage--light" id="invitation">
-      <div class="frame grid invitation__grid">
-        <div class="invitation__text">
-          <p class="kicker">Arrival Moment</p>
-          <h2 class="h2">Your encounter is waiting.</h2>
-
-          <div class="scripture-block">
-            <span class="scripture-block__bar" aria-hidden="true"></span>
-            <p class="scripture-block__text">
-              "Draw near to God, and He will draw near to you."
-              <span class="scripture-block__ref">James 4:8</span>
-            </p>
+    <!-- ============================================================
+         LATEST MESSAGE — featured tile + recent
+         ============================================================ -->
+    <section class="stage stage--light messages-feature" id="messages-feature">
+      <div class="frame">
+        <div class="messages-feature__head">
+          <div>
+            <p class="kicker">Latest message</p>
+            <h2 class="h2">Listen to this Sunday.</h2>
           </div>
-
-          <p>Step in this Sunday. We will be glad you came.</p>
-
-          <div class="hero__actions">
-            <a class="btn btn--primary" href="visit/">Plan a Visit</a>
-            <a class="btn btn--ghost" href="prayer/">Prayer Request</a>
-          </div>
+          <a class="link" href="messages/">All messages &amp; series →</a>
         </div>
 
-        <div class="invitation__panel">
-          <p class="panel__label">When you come</p>
-          <p class="panel__value">We will worship together.</p>
-          <p class="panel__value">Sunday 10:30 AM</p>
-          <p class="panel__value">Midweek Prayer Wed 7:00 PM</p>
-          <p class="panel__value">123 Bethel Way, Your City, NY</p>
-          <p class="panel__value panel__value--soft">We will pray with you if you need prayer.</p>
+        <a class="featured-message" href="messages/">
+          <div class="featured-message__media" data-label="Pastor preaching with title card overlay">
+            <span class="ph__chip">Video thumbnail</span>
+            <span class="ph__cap">Latest message</span>
+            <span class="featured-message__play" aria-hidden="true">▶</span>
+            <span class="featured-message__duration">42:18</span>
+          </div>
+          <div class="featured-message__meta">
+            <p class="featured-message__date">May 4, 2026 · Pastor Name</p>
+            <h3 class="featured-message__title">"Surely the Lord is in this place"</h3>
+            <p class="featured-message__ref">Genesis 28:10–22 · Encounter series, week 1</p>
+          </div>
+        </a>
+
+        <div class="recent-messages">
+          <a class="recent-card" href="messages/">
+            <div class="recent-card__media" data-label="Sermon thumbnail">
+              <span class="ph__chip">Thumbnail</span>
+            </div>
+            <p class="recent-card__date">Apr 27, 2026</p>
+            <h4 class="recent-card__title">The Ladder and the Light</h4>
+            <p class="recent-card__ref">Genesis 28:12</p>
+          </a>
+          <a class="recent-card" href="messages/">
+            <div class="recent-card__media" data-label="Sermon thumbnail">
+              <span class="ph__chip">Thumbnail</span>
+            </div>
+            <p class="recent-card__date">Apr 20, 2026</p>
+            <h4 class="recent-card__title">When God Wakes You Up</h4>
+            <p class="recent-card__ref">Genesis 28:16</p>
+          </a>
+          <a class="recent-card" href="messages/">
+            <div class="recent-card__media" data-label="Sermon thumbnail">
+              <span class="ph__chip">Thumbnail</span>
+            </div>
+            <p class="recent-card__date">Apr 13, 2026</p>
+            <h4 class="recent-card__title">Stones We Set</h4>
+            <p class="recent-card__ref">Genesis 28:18</p>
+          </a>
         </div>
       </div>
+    </section>
 
-      <div class="frame">
-        <p class="invitation__closing">Bethel is still a place where God meets people.</p>
+    <!-- ============================================================
+         PLAN A VISIT — split full-screen
+         ============================================================ -->
+    <section class="visit-split" id="visit">
+      <div class="visit-split__photo" data-label="Bethel building exterior or welcome team smiling">
+        <span class="ph__chip">Photo</span>
+        <span class="ph__cap">We'll be glad you came</span>
+      </div>
+
+      <div class="visit-split__text">
+        <p class="kicker">Plan a visit</p>
+        <h2 class="h2">Your seat is saved.</h2>
+        <p>We'd love to meet you this Sunday. Here's what to expect.</p>
+
+        <dl class="visit-facts">
+          <div class="visit-facts__row">
+            <dt>Sundays</dt>
+            <dd>English 9:30 AM &nbsp;·&nbsp; Malayalam 10:30 AM</dd>
+          </div>
+          <div class="visit-facts__row">
+            <dt>Where</dt>
+            <dd>10 Tanglewylde Ave, Bronxville, NY 10708</dd>
+          </div>
+          <div class="visit-facts__row">
+            <dt>Online</dt>
+            <dd>Join us on Zoom — <a href="#" data-dialog-open="zoomDialog">see details</a></dd>
+          </div>
+          <div class="visit-facts__row">
+            <dt>Kids</dt>
+            <dd>Check-in opens 15 minutes before each service.</dd>
+          </div>
+          <div class="visit-facts__row">
+            <dt>Dress</dt>
+            <dd>Wear whatever you'd wear to see a friend.</dd>
+          </div>
+        </dl>
+
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="visit/">Plan a Visit</a>
+          <a class="btn btn--ghost" href="prayer/">Need prayer?</a>
+        </div>
       </div>
     </section>
   </main>
+
+  <!-- Zoom dialog -->
+  <dialog class="zoom-dialog" id="zoomDialog" aria-labelledby="zoomTitle">
+    <div class="zoom-dialog__inner">
+      <div class="zoom-dialog__header">
+        <h3 class="h3" id="zoomTitle">Join us on Zoom</h3>
+        <button class="zoom-dialog__close" type="button" data-dialog-close aria-label="Close">Close</button>
+      </div>
+      <p>Join our services on Zoom and be part of a vibrant online congregation.</p>
+      <dl class="zoom-dialog__facts">
+        <div><dt>Zoom ID</dt><dd>543 267 7916</dd></div>
+        <div><dt>Password</dt><dd>1234</dd></div>
+      </dl>
+      <p class="panel__value panel__value--soft">Tap below to open Zoom — the meeting will load with the ID and password filled in.</p>
+      <div class="zoom-dialog__actions">
+        <a class="btn btn--primary" href="https://zoom.us/j/5432677916?pwd=1234" target="_blank" rel="noreferrer">Open Zoom</a>
+        <a class="btn btn--ghost" href="https://us04web.zoom.us/j/5432677916" target="_blank" rel="noreferrer">Open in browser</a>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Mobile-only sticky CTA bar -->
+  <div class="site-cta" aria-label="Quick actions">
+    <a class="site-cta__btn site-cta__btn--primary" href="visit/">
+      <span class="site-cta__strong">Plan a Visit</span>
+      <span class="site-cta__weak">Sun · 9:30 + 10:30</span>
+    </a>
+    <a class="site-cta__btn" href="messages/">
+      <span class="site-cta__strong">Messages</span>
+      <span class="site-cta__weak">Listen now</span>
+    </a>
+  </div>
 
   <footer class="footer">
     <div class="frame footer__grid">
@@ -313,9 +493,11 @@
         <div class="brand__sub">IPC / House of God / Gate of Heaven</div>
       </div>
       <div class="footer__links">
-        <a href="worship/">Worship</a>
-        <a href="prayer/">Prayer</a>
         <a href="messages/">Messages</a>
+        <a href="events/">Events</a>
+        <a href="youth/">Youth</a>
+        <a href="prayer/">Prayer</a>
+        <a href="serve/">Serve</a>
         <a href="visit/">Visit</a>
       </div>
     </div>

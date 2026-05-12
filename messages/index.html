@@ -2,12 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Bethel Worship Center | Messages</title>
   <meta name="description" content="Messages from Bethel Worship Center. The Word reveals Jesus and shapes our lives." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../assets/LogoSmallCircle.png" />
+  <link rel="apple-touch-icon" href="../assets/LogoSmallCircle.png" />
   <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
@@ -16,19 +18,15 @@
       <div class="nav__left">
         <a class="brand" href="../index.html">
           <span class="brand__mark" aria-hidden="true"></span>
-          <span class="brand__text">
-            <span class="brand__name">Bethel Worship Center</span>
-            <span class="brand__sub">IPC / Spirit-filled / Word-centered</span>
-          </span>
         </a>
       </div>
 
       <nav class="nav__center" aria-label="Primary">
-        <a href="../index.html">Bethel</a>
-        <a href="../worship/">Worship</a>
-        <a href="../prayer/">Prayer and Altar</a>
         <a href="../messages/" aria-current="page">Messages</a>
-        <a href="../serve/">Serve / Go</a>
+        <a href="../events/">Events</a>
+        <a href="../youth/">Youth</a>
+        <a href="../prayer/">Prayer</a>
+        <a href="../serve/">Serve</a>
         <a href="../visit/">Visit</a>
       </nav>
 
@@ -42,11 +40,11 @@
 
     <div id="mobileMenu" class="nav__mobile" hidden>
       <div class="frame nav__mobileInner">
-        <a href="../index.html">Bethel</a>
-        <a href="../worship/">Worship</a>
-        <a href="../prayer/">Prayer and Altar</a>
         <a href="../messages/" aria-current="page">Messages</a>
-        <a href="../serve/">Serve / Go</a>
+        <a href="../events/">Events</a>
+        <a href="../youth/">Youth</a>
+        <a href="../prayer/">Prayer</a>
+        <a href="../serve/">Serve</a>
         <a href="../visit/">Visit</a>
         <a class="btn btn--primary" href="../visit/">Plan a Visit</a>
       </div>
@@ -117,55 +115,130 @@
       </div>
     </section>
 
-    <!-- Message archive: dark, editorial list -->
+    <!-- Library: mixed-media — sermons, slides, notes, articles -->
     <section class="stage stage--dark" id="library">
       <div class="frame">
-        <p class="kicker">The library</p>
-        <h2 class="h2">More words to carry with you.</h2>
-
-        <div class="message-archive" style="margin-top:44px;">
-
-          <div class="message-archive__row" data-reveal>
-            <div>
-              <h3 class="message-archive__title">Altars and Awakenings</h3>
-              <p class="message-archive__ref">Romans 12:1–2</p>
-            </div>
-            <a class="btn btn--ghost-light btn--small" href="https://www.youtube.com" target="_blank" rel="noreferrer">Watch</a>
+        <div class="library__head">
+          <div>
+            <p class="kicker">The library</p>
+            <h2 class="h2">Words to carry with you.</h2>
+            <p class="library__lead">Sermons, slide decks, notes, and reflections — gathered for the road.</p>
           </div>
 
-          <div class="message-archive__row" data-reveal>
-            <div>
-              <h3 class="message-archive__title">The Freedom of the Spirit</h3>
-              <p class="message-archive__ref">2 Corinthians 3:17</p>
-            </div>
-            <a class="btn btn--ghost-light btn--small" href="https://www.youtube.com" target="_blank" rel="noreferrer">Watch</a>
+          <div class="library__filters" role="tablist" aria-label="Filter library by type">
+            <button class="library__chip is-active" type="button" role="tab" aria-selected="true" data-filter="all">All</button>
+            <button class="library__chip" type="button" role="tab" aria-selected="false" data-filter="sermon">Sermons</button>
+            <button class="library__chip" type="button" role="tab" aria-selected="false" data-filter="audio">Audio</button>
+            <button class="library__chip" type="button" role="tab" aria-selected="false" data-filter="slides">Slides</button>
+            <button class="library__chip" type="button" role="tab" aria-selected="false" data-filter="notes">Notes</button>
+            <button class="library__chip" type="button" role="tab" aria-selected="false" data-filter="article">Articles</button>
           </div>
+        </div>
 
-          <div class="message-archive__row" data-reveal>
-            <div>
-              <h3 class="message-archive__title">Send Me</h3>
-              <p class="message-archive__ref">Isaiah 6:8</p>
-            </div>
-            <a class="btn btn--ghost-light btn--small" href="https://www.youtube.com" target="_blank" rel="noreferrer">Watch</a>
-          </div>
+        <div class="library-grid" data-library-grid>
 
-          <div class="message-archive__row" data-reveal>
-            <div>
-              <h3 class="message-archive__title">The Stone and the Promise</h3>
-              <p class="message-archive__ref">Genesis 28:18–22</p>
+          <article class="library-card" data-type="sermon" data-reveal>
+            <div class="library-card__head">
+              <span class="library-chip library-chip--sermon">Sermon · Video</span>
+              <time class="library-card__date">May 4, 2026</time>
             </div>
-            <a class="btn btn--ghost-light btn--small" href="https://www.youtube.com" target="_blank" rel="noreferrer">Watch</a>
-          </div>
+            <h3 class="library-card__title">Altars and Awakenings</h3>
+            <p class="library-card__ref">Romans 12:1–2 · Pastor Johnson Abraham</p>
+            <p class="library-card__desc">A call to lay our lives on the altar — surrender is the doorway to every awakening.</p>
+            <a class="library-card__cta" href="https://www.youtube.com" target="_blank" rel="noreferrer">Watch →</a>
+          </article>
 
-          <div class="message-archive__row" data-reveal>
-            <div>
-              <h3 class="message-archive__title">Called and Kept</h3>
-              <p class="message-archive__ref">Jude 1:1</p>
+          <article class="library-card" data-type="slides" data-reveal>
+            <div class="library-card__head">
+              <span class="library-chip library-chip--slides">Slides · PPT</span>
+              <time class="library-card__date">May 4, 2026</time>
             </div>
-            <a class="btn btn--ghost-light btn--small" href="https://www.youtube.com" target="_blank" rel="noreferrer">Watch</a>
-          </div>
+            <h3 class="library-card__title">Altars and Awakenings — slide deck</h3>
+            <p class="library-card__ref">Sunday teaching slides · 24 slides</p>
+            <p class="library-card__desc">The verse-by-verse outline used in Sunday's message. Download for personal study.</p>
+            <a class="library-card__cta" href="#">Download .pptx →</a>
+          </article>
+
+          <article class="library-card" data-type="notes" data-reveal>
+            <div class="library-card__head">
+              <span class="library-chip library-chip--notes">Notes · PDF</span>
+              <time class="library-card__date">May 4, 2026</time>
+            </div>
+            <h3 class="library-card__title">Sermon notes &amp; discussion guide</h3>
+            <p class="library-card__ref">2-page PDF · for small groups</p>
+            <p class="library-card__desc">Discussion questions and scripture references to take into your week or small group.</p>
+            <a class="library-card__cta" href="#">Download PDF →</a>
+          </article>
+
+          <article class="library-card" data-type="sermon" data-reveal>
+            <div class="library-card__head">
+              <span class="library-chip library-chip--sermon">Sermon · Video</span>
+              <time class="library-card__date">Apr 27, 2026</time>
+            </div>
+            <h3 class="library-card__title">The Freedom of the Spirit</h3>
+            <p class="library-card__ref">2 Corinthians 3:17 · Dr. Geomon George</p>
+            <p class="library-card__desc">Where the Spirit of the Lord is, there is freedom. What does that look like in our daily lives?</p>
+            <a class="library-card__cta" href="https://www.youtube.com" target="_blank" rel="noreferrer">Watch →</a>
+          </article>
+
+          <article class="library-card" data-type="article" data-reveal>
+            <div class="library-card__head">
+              <span class="library-chip library-chip--article">Article</span>
+              <time class="library-card__date">Apr 22, 2026</time>
+            </div>
+            <h3 class="library-card__title">Why we pray together</h3>
+            <p class="library-card__ref">5 min read · Pastor Johnson Abraham</p>
+            <p class="library-card__desc">A short reflection on the practice of gathered prayer and why it has shaped Bethel from the beginning.</p>
+            <a class="library-card__cta" href="#">Read →</a>
+          </article>
+
+          <article class="library-card" data-type="audio" data-reveal>
+            <div class="library-card__head">
+              <span class="library-chip library-chip--audio">Audio · Bible Study</span>
+              <time class="library-card__date">Apr 21, 2026</time>
+            </div>
+            <h3 class="library-card__title">Bible Study — Genesis 28</h3>
+            <p class="library-card__ref">42 min · Monday Bible Study</p>
+            <p class="library-card__desc">A verse-by-verse study of Jacob's ladder and the meaning of Bethel — the house of God.</p>
+            <a class="library-card__cta" href="#">Listen →</a>
+          </article>
+
+          <article class="library-card" data-type="sermon" data-reveal>
+            <div class="library-card__head">
+              <span class="library-chip library-chip--sermon">Sermon · Video</span>
+              <time class="library-card__date">Apr 20, 2026</time>
+            </div>
+            <h3 class="library-card__title">Send Me</h3>
+            <p class="library-card__ref">Isaiah 6:8 · Dr. John Mammen</p>
+            <p class="library-card__desc">The prophet's response and ours. When God asks, "Whom shall I send?", what will we say?</p>
+            <a class="library-card__cta" href="https://www.youtube.com" target="_blank" rel="noreferrer">Watch →</a>
+          </article>
+
+          <article class="library-card" data-type="notes" data-reveal>
+            <div class="library-card__head">
+              <span class="library-chip library-chip--notes">Notes · Devotional</span>
+              <time class="library-card__date">Apr 15, 2026</time>
+            </div>
+            <h3 class="library-card__title">Weekly Devotional — Week 16</h3>
+            <p class="library-card__ref">7-day devotional · Genesis 28</p>
+            <p class="library-card__desc">A short scripture reading and reflection for each day of the week — print or read on your phone.</p>
+            <a class="library-card__cta" href="#">Download PDF →</a>
+          </article>
+
+          <article class="library-card" data-type="article" data-reveal>
+            <div class="library-card__head">
+              <span class="library-chip library-chip--article">Article</span>
+              <time class="library-card__date">Apr 8, 2026</time>
+            </div>
+            <h3 class="library-card__title">The God who is already there</h3>
+            <p class="library-card__ref">4 min read · Dr. Geomon George</p>
+            <p class="library-card__desc">"Surely the Lord is in this place, and I did not know it." A reflection on noticing God in the ordinary.</p>
+            <a class="library-card__cta" href="#">Read →</a>
+          </article>
 
         </div>
+
+        <p class="library__empty" data-library-empty hidden>No items in this category yet — check back soon.</p>
       </div>
     </section>
 
@@ -192,9 +265,11 @@
         <div class="brand__sub">IPC / House of God / Gate of Heaven</div>
       </div>
       <div class="footer__links">
-        <a href="../index.html">Bethel</a>
-        <a href="../worship/">Worship</a>
+        <a href="../messages/">Messages</a>
+        <a href="../events/">Events</a>
+        <a href="../youth/">Youth</a>
         <a href="../prayer/">Prayer</a>
+        <a href="../serve/">Serve</a>
         <a href="../visit/">Visit</a>
       </div>
     </div>

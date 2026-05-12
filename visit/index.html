@@ -2,12 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Bethel Worship Center | Visit</title>
   <meta name="description" content="Plan your visit to Bethel Worship Center. Service times, location, and what to expect." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../assets/LogoSmallCircle.png" />
+  <link rel="apple-touch-icon" href="../assets/LogoSmallCircle.png" />
   <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
@@ -16,19 +18,15 @@
       <div class="nav__left">
         <a class="brand" href="../index.html">
           <span class="brand__mark" aria-hidden="true"></span>
-          <span class="brand__text">
-            <span class="brand__name">Bethel Worship Center</span>
-            <span class="brand__sub">IPC / Spirit-filled / Word-centered</span>
-          </span>
         </a>
       </div>
 
       <nav class="nav__center" aria-label="Primary">
-        <a href="../index.html">Bethel</a>
-        <a href="../worship/">Worship</a>
-        <a href="../prayer/">Prayer and Altar</a>
         <a href="../messages/">Messages</a>
-        <a href="../serve/">Serve / Go</a>
+        <a href="../events/">Events</a>
+        <a href="../youth/">Youth</a>
+        <a href="../prayer/">Prayer</a>
+        <a href="../serve/">Serve</a>
         <a href="../visit/" aria-current="page">Visit</a>
       </nav>
 
@@ -42,11 +40,11 @@
 
     <div id="mobileMenu" class="nav__mobile" hidden>
       <div class="frame nav__mobileInner">
-        <a href="../index.html">Bethel</a>
-        <a href="../worship/">Worship</a>
-        <a href="../prayer/">Prayer and Altar</a>
         <a href="../messages/">Messages</a>
-        <a href="../serve/">Serve / Go</a>
+        <a href="../events/">Events</a>
+        <a href="../youth/">Youth</a>
+        <a href="../prayer/">Prayer</a>
+        <a href="../serve/">Serve</a>
         <a href="../visit/" aria-current="page">Visit</a>
         <a class="btn btn--primary" href="#plan">Plan a Visit</a>
       </div>
@@ -96,7 +94,8 @@
 
           <div class="hero__actions">
             <a class="btn btn--primary" href="#plan">See what to expect</a>
-            <a class="btn btn--ghost-light" href="https://maps.google.com/?q=123+Bethel+Way+Your+City+NY" target="_blank" rel="noreferrer">Get directions</a>
+            <a class="btn btn--ghost-light" href="https://maps.google.com/?q=10+Tanglewylde+Ave+Bronxville+NY+10708" target="_blank" rel="noreferrer">Get directions</a>
+            <a class="btn btn--ghost-light" href="#" data-dialog-open="zoomDialog">Join on Zoom</a>
           </div>
         </div>
       </div>
@@ -106,25 +105,20 @@
         <div class="frame">
           <div class="visit-strip__inner">
             <div class="visit-strip__item">
-              <span class="visit-strip__label">Sunday Worship</span>
-              <span class="visit-strip__value">10:30 AM</span>
+              <span class="visit-strip__label">English Service</span>
+              <span class="visit-strip__value">Sundays 9:30 – 10:30 AM</span>
             </div>
             <span class="visit-strip__sep" aria-hidden="true"></span>
             <div class="visit-strip__item">
-              <span class="visit-strip__label">Wednesday Prayer</span>
-              <span class="visit-strip__value">7:00 PM</span>
+              <span class="visit-strip__label">Malayalam Service</span>
+              <span class="visit-strip__value">Sundays 10:30 AM – 12:30 PM</span>
             </div>
             <span class="visit-strip__sep" aria-hidden="true"></span>
             <div class="visit-strip__item">
               <span class="visit-strip__label">Location</span>
-              <span class="visit-strip__value">123 Bethel Way, Your City, NY</span>
+              <span class="visit-strip__value">10 Tanglewylde Ave, Bronxville, NY 10708</span>
             </div>
-            <span class="visit-strip__sep" aria-hidden="true"></span>
-            <div class="visit-strip__item">
-              <span class="visit-strip__label">Contact</span>
-              <span class="visit-strip__value">hello@bethelwc.org</span>
-            </div>
-            <a class="btn btn--ghost-light btn--small visit-strip__cta" href="https://maps.google.com/?q=123+Bethel+Way+Your+City+NY" target="_blank" rel="noreferrer">Open in Maps →</a>
+            <a class="btn btn--ghost-light btn--small visit-strip__cta" href="https://maps.google.com/?q=10+Tanglewylde+Ave+Bronxville+NY+10708" target="_blank" rel="noreferrer">Open in Maps →</a>
           </div>
         </div>
       </div>
@@ -199,6 +193,26 @@
 
   </main>
 
+  <!-- Zoom dialog -->
+  <dialog class="zoom-dialog" id="zoomDialog" aria-labelledby="zoomTitle">
+    <div class="zoom-dialog__inner">
+      <div class="zoom-dialog__header">
+        <h3 class="h3" id="zoomTitle">Join us on Zoom</h3>
+        <button class="zoom-dialog__close" type="button" data-dialog-close aria-label="Close">Close</button>
+      </div>
+      <p>Join our services on Zoom and be part of a vibrant online congregation.</p>
+      <dl class="zoom-dialog__facts">
+        <div><dt>Zoom ID</dt><dd>543 267 7916</dd></div>
+        <div><dt>Password</dt><dd>1234</dd></div>
+      </dl>
+      <p class="panel__value panel__value--soft">Tap below to open Zoom — the meeting will load with the ID and password filled in.</p>
+      <div class="zoom-dialog__actions">
+        <a class="btn btn--primary" href="https://zoom.us/j/5432677916?pwd=1234" target="_blank" rel="noreferrer">Open Zoom</a>
+        <a class="btn btn--ghost" href="https://us04web.zoom.us/j/5432677916" target="_blank" rel="noreferrer">Open in browser</a>
+      </div>
+    </div>
+  </dialog>
+
   <footer class="footer">
     <div class="frame footer__grid">
       <div>
@@ -206,10 +220,12 @@
         <div class="brand__sub">IPC / House of God / Gate of Heaven</div>
       </div>
       <div class="footer__links">
-        <a href="../index.html">Bethel</a>
-        <a href="../worship/">Worship</a>
-        <a href="../prayer/">Prayer</a>
         <a href="../messages/">Messages</a>
+        <a href="../events/">Events</a>
+        <a href="../youth/">Youth</a>
+        <a href="../prayer/">Prayer</a>
+        <a href="../serve/">Serve</a>
+        <a href="../visit/">Visit</a>
       </div>
     </div>
     <div class="frame footer__fine">

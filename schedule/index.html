@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Schedule | Bethel Worship Center</title>
+  <meta name="description" content="The full weekly schedule at Bethel Worship Center — Sunday services, Bible study, prayer lines, youth night, and common prayer." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../assets/LogoSmallCircle.png" />
+  <link rel="apple-touch-icon" href="../assets/LogoSmallCircle.png" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="frame nav__grid">
+      <div class="nav__left">
+        <a class="brand" href="../index.html">
+          <span class="brand__mark" aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <nav class="nav__center" aria-label="Primary">
+        <a href="../messages/">Messages</a>
+        <a href="../events/">Events</a>
+        <a href="../youth/">Youth</a>
+        <a href="../prayer/">Prayer</a>
+        <a href="../serve/">Serve</a>
+        <a href="../visit/">Visit</a>
+      </nav>
+
+      <div class="nav__right">
+        <a class="btn btn--primary btn--small" href="../visit/">Plan a Visit</a>
+        <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="nav__mobile" hidden>
+      <div class="frame nav__mobileInner">
+        <a href="../messages/">Messages</a>
+        <a href="../events/">Events</a>
+        <a href="../youth/">Youth</a>
+        <a href="../prayer/">Prayer</a>
+        <a href="../serve/">Serve</a>
+        <a href="../visit/">Visit</a>
+        <a class="btn btn--primary" href="../visit/">Plan a Visit</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============================================================
+         HERO — compact intro
+         ============================================================ -->
+    <section class="schedule-hero">
+      <div class="frame schedule-hero__frame">
+        <p class="kicker">Schedule</p>
+        <h1 class="display schedule-hero__title">When we gather.</h1>
+        <p class="schedule-hero__lead">A typical week at Bethel — Sunday services in-person at Bronxville, and online gatherings throughout the week on Zoom.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="../visit/">Plan a Sunday visit</a>
+          <a class="btn btn--ghost" href="#" data-dialog-open="zoomDialog">Join on Zoom</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         WEEKLY CALENDAR GRID
+         ============================================================ -->
+    <section class="stage stage--light schedule-week-section">
+      <div class="frame">
+        <div class="schedule-week__head">
+          <div>
+            <p class="kicker">This week</p>
+            <h2 class="h2">Every week, the same rhythm.</h2>
+          </div>
+          <p class="schedule-week__hint">All times Eastern · Online gatherings via <a href="#" data-dialog-open="zoomDialog">Zoom</a></p>
+        </div>
+
+        <div class="schedule-week" role="list" aria-label="Weekly schedule">
+
+          <div class="schedule-day schedule-day--featured" role="listitem">
+            <p class="schedule-day__name">Sunday</p>
+            <p class="schedule-day__sub">In person · Bronxville</p>
+            <a class="schedule-event" href="../visit/">
+              <span class="schedule-event__time">9:30 AM</span>
+              <span class="schedule-event__title">English Service</span>
+              <span class="schedule-event__chip schedule-event__chip--inperson">In person</span>
+            </a>
+            <a class="schedule-event" href="../visit/">
+              <span class="schedule-event__time">10:30 AM</span>
+              <span class="schedule-event__title">Malayalam Service</span>
+              <span class="schedule-event__chip schedule-event__chip--inperson">In person</span>
+            </a>
+          </div>
+
+          <div class="schedule-day" role="listitem">
+            <p class="schedule-day__name">Monday</p>
+            <p class="schedule-day__sub">Online</p>
+            <a class="schedule-event" href="#" data-dialog-open="zoomDialog">
+              <span class="schedule-event__time">7:30 PM</span>
+              <span class="schedule-event__title">Bible Study</span>
+              <span class="schedule-event__chip schedule-event__chip--zoom">Zoom</span>
+            </a>
+          </div>
+
+          <div class="schedule-day" role="listitem">
+            <p class="schedule-day__name">Tuesday</p>
+            <p class="schedule-day__sub">Online</p>
+            <a class="schedule-event" href="#" data-dialog-open="zoomDialog">
+              <span class="schedule-event__time">8:00 PM</span>
+              <span class="schedule-event__title">Prayer Line · Malayalam</span>
+              <span class="schedule-event__chip schedule-event__chip--zoom">Zoom</span>
+            </a>
+          </div>
+
+          <div class="schedule-day" role="listitem">
+            <p class="schedule-day__name">Wednesday</p>
+            <p class="schedule-day__sub">Online</p>
+            <a class="schedule-event" href="#" data-dialog-open="zoomDialog">
+              <span class="schedule-event__time">8:00 PM</span>
+              <span class="schedule-event__title">Prayer Line · English</span>
+              <span class="schedule-event__chip schedule-event__chip--zoom">Zoom</span>
+            </a>
+          </div>
+
+          <div class="schedule-day schedule-day--empty" role="listitem">
+            <p class="schedule-day__name">Thursday</p>
+            <p class="schedule-day__sub">Rest</p>
+            <p class="schedule-day__empty">No scheduled gathering.</p>
+          </div>
+
+          <div class="schedule-day" role="listitem">
+            <p class="schedule-day__name">Friday</p>
+            <p class="schedule-day__sub">In person · Youth</p>
+            <a class="schedule-event" href="../youth/">
+              <span class="schedule-event__time">7:00 PM</span>
+              <span class="schedule-event__title">Youth Night</span>
+              <span class="schedule-event__chip schedule-event__chip--inperson">In person</span>
+            </a>
+          </div>
+
+          <div class="schedule-day" role="listitem">
+            <p class="schedule-day__name">Saturday</p>
+            <p class="schedule-day__sub">Online</p>
+            <a class="schedule-event" href="#" data-dialog-open="zoomDialog">
+              <span class="schedule-event__time">8:00 PM</span>
+              <span class="schedule-event__title">Common Prayer</span>
+              <span class="schedule-event__chip schedule-event__chip--zoom">Zoom</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         RECURRING EVENTS — detailed cards
+         ============================================================ -->
+    <section class="stage stage--dark schedule-detail-section">
+      <div class="frame">
+        <p class="kicker">The detail</p>
+        <h2 class="h2">A closer look at each gathering.</h2>
+
+        <div class="schedule-detail" style="margin-top: clamp(32px, 4vw, 56px);">
+
+          <article class="schedule-card">
+            <p class="schedule-card__day">Sundays</p>
+            <h3 class="schedule-card__title">Worship Service</h3>
+            <p class="schedule-card__times">English 9:30 AM &nbsp;·&nbsp; Malayalam 10:30 AM</p>
+            <p>Two Sunday services, one body. Word, worship, and welcome — followed by coffee and conversation.</p>
+            <p class="schedule-card__where">10 Tanglewylde Ave, Bronxville, NY 10708</p>
+            <div class="schedule-card__actions">
+              <a class="btn btn--primary btn--small" href="../visit/">Plan a Visit</a>
+              <a class="btn btn--ghost-light btn--small" href="https://maps.google.com/?q=10+Tanglewylde+Ave+Bronxville+NY+10708" target="_blank" rel="noreferrer">Directions</a>
+            </div>
+          </article>
+
+          <article class="schedule-card">
+            <p class="schedule-card__day">Mondays</p>
+            <h3 class="schedule-card__title">Bible Study</h3>
+            <p class="schedule-card__times">7:30 PM &nbsp;·&nbsp; on Zoom</p>
+            <p>Go deeper in Scripture together. Each week we move through a passage or theme — bring your Bible and your questions.</p>
+            <div class="schedule-card__actions">
+              <a class="btn btn--primary btn--small" href="#" data-dialog-open="zoomDialog">Join on Zoom</a>
+            </div>
+          </article>
+
+          <article class="schedule-card">
+            <p class="schedule-card__day">Tuesdays &amp; Wednesdays</p>
+            <h3 class="schedule-card__title">Prayer Lines</h3>
+            <p class="schedule-card__times">8:00 PM &nbsp;·&nbsp; on Zoom</p>
+            <p>Tuesday evenings are in Malayalam; Wednesday evenings in English. Two languages, one prayer — interceding for our families, our church, and our city.</p>
+            <div class="schedule-card__actions">
+              <a class="btn btn--primary btn--small" href="#" data-dialog-open="zoomDialog">Join on Zoom</a>
+            </div>
+          </article>
+
+          <article class="schedule-card">
+            <p class="schedule-card__day">Fridays</p>
+            <h3 class="schedule-card__title">Youth Night</h3>
+            <p class="schedule-card__times">7:00 PM &nbsp;·&nbsp; in person</p>
+            <p>Middle and high school students. Worship, message, food, games, and friendships that last. Bring a friend.</p>
+            <div class="schedule-card__actions">
+              <a class="btn btn--primary btn--small" href="../youth/">Youth ministry</a>
+            </div>
+          </article>
+
+          <article class="schedule-card">
+            <p class="schedule-card__day">Saturdays</p>
+            <h3 class="schedule-card__title">Common Prayer</h3>
+            <p class="schedule-card__times">8:00 PM &nbsp;·&nbsp; on Zoom</p>
+            <p>The whole family gathers online for praise and prayer — a way to end the week and prepare our hearts for Sunday.</p>
+            <div class="schedule-card__actions">
+              <a class="btn btn--primary btn--small" href="#" data-dialog-open="zoomDialog">Join on Zoom</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         POINTER TO EVENTS PAGE
+         ============================================================ -->
+    <section class="stage stage--light">
+      <div class="frame schedule-events-pointer">
+        <p class="kicker">Beyond the week</p>
+        <h2 class="h2">Special events, retreats, conventions.</h2>
+        <p>Conferences, the annual convention, youth retreats, Christmas Eve service, and more — the things that punctuate our year.</p>
+        <a class="btn btn--primary" href="../events/">See all events →</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Zoom dialog -->
+  <dialog class="zoom-dialog" id="zoomDialog" aria-labelledby="zoomTitle">
+    <div class="zoom-dialog__inner">
+      <div class="zoom-dialog__header">
+        <h3 class="h3" id="zoomTitle">Join us on Zoom</h3>
+        <button class="zoom-dialog__close" type="button" data-dialog-close aria-label="Close">Close</button>
+      </div>
+      <p>Join our services on Zoom and be part of a vibrant online congregation.</p>
+      <dl class="zoom-dialog__facts">
+        <div><dt>Zoom ID</dt><dd>543 267 7916</dd></div>
+        <div><dt>Password</dt><dd>1234</dd></div>
+      </dl>
+      <p class="panel__value panel__value--soft">Tap below to open Zoom — the meeting will load with the ID and password filled in.</p>
+      <div class="zoom-dialog__actions">
+        <a class="btn btn--primary" href="https://zoom.us/j/5432677916?pwd=1234" target="_blank" rel="noreferrer">Open Zoom</a>
+        <a class="btn btn--ghost" href="https://us04web.zoom.us/j/5432677916" target="_blank" rel="noreferrer">Open in browser</a>
+      </div>
+    </div>
+  </dialog>
+
+  <footer class="footer">
+    <div class="frame footer__grid">
+      <div>
+        <div class="brand__name">Bethel Worship Center</div>
+        <div class="brand__sub">IPC / House of God / Gate of Heaven</div>
+      </div>
+      <div class="footer__links">
+        <a href="../messages/">Messages</a>
+        <a href="../events/">Events</a>
+        <a href="../youth/">Youth</a>
+        <a href="../prayer/">Prayer</a>
+        <a href="../serve/">Serve</a>
+        <a href="../visit/">Visit</a>
+      </div>
+    </div>
+    <div class="frame footer__fine">
+      <span>(c) <span id="year"></span> Bethel Worship Center. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script src="../app.js"></script>
+</body>
+</html>

@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Events | Bethel Worship Center</title>
+  <meta name="description" content="Conventions, retreats, conferences, and special services at Bethel Worship Center." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../assets/LogoSmallCircle.png" />
+  <link rel="apple-touch-icon" href="../assets/LogoSmallCircle.png" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="frame nav__grid">
+      <div class="nav__left">
+        <a class="brand" href="../index.html">
+          <span class="brand__mark" aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <nav class="nav__center" aria-label="Primary">
+        <a href="../messages/">Messages</a>
+        <a href="../events/" aria-current="page">Events</a>
+        <a href="../youth/">Youth</a>
+        <a href="../prayer/">Prayer</a>
+        <a href="../serve/">Serve</a>
+        <a href="../visit/">Visit</a>
+      </nav>
+
+      <div class="nav__right">
+        <a class="btn btn--primary btn--small" href="../visit/">Plan a Visit</a>
+        <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="nav__mobile" hidden>
+      <div class="frame nav__mobileInner">
+        <a href="../messages/">Messages</a>
+        <a href="../events/" aria-current="page">Events</a>
+        <a href="../youth/">Youth</a>
+        <a href="../prayer/">Prayer</a>
+        <a href="../serve/">Serve</a>
+        <a href="../visit/">Visit</a>
+        <a class="btn btn--primary" href="../visit/">Plan a Visit</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============================================================
+         HERO — compact photo header
+         ============================================================ -->
+    <section class="stage stage--hero events-hero">
+      <div class="hero__media" aria-hidden="true">
+        <div class="events-hero__photo" data-label="Wide shot of a convention gathering">
+          <span class="ph__chip">Photo</span>
+        </div>
+      </div>
+      <div class="hero__overlay hero__overlay--photo" aria-hidden="true"></div>
+
+      <div class="frame events-hero__frame">
+        <div class="events-hero__text">
+          <p class="hero__eyebrow">Events at Bethel</p>
+          <h1 class="display events-hero__title">More than a Sunday.</h1>
+          <p class="hero__photoLead">Conventions, retreats, conferences, and seasons we mark together.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         FEATURED — next big event
+         ============================================================ -->
+    <section class="stage stage--light featured-event-section">
+      <div class="frame">
+        <p class="kicker">Featured · Next up</p>
+        <article class="featured-event">
+          <div class="featured-event__photo" data-label="Worshipers at the annual convention, packed sanctuary">
+            <span class="ph__chip">Photo</span>
+            <span class="featured-event__badge">Annual Convention</span>
+          </div>
+          <div class="featured-event__meta">
+            <p class="event-date event-date--big">
+              <span class="event-date__month">Jul</span>
+              <span class="event-date__day">18</span>
+              <span class="event-date__year">– 21, 2026</span>
+            </p>
+            <h2 class="h2 featured-event__title">Bethel Annual Convention 2026</h2>
+            <p class="featured-event__theme">Theme: "House of God, Gate of Heaven"</p>
+            <p>Four days of preaching, prayer, and worship with guest speakers from across the IPC family. Open to all.</p>
+            <ul class="featured-event__facts">
+              <li><strong>Where:</strong> Bethel main sanctuary &amp; fellowship hall</li>
+              <li><strong>Cost:</strong> Free · Registration helps us plan meals</li>
+              <li><strong>Childcare:</strong> Provided for all sessions</li>
+            </ul>
+            <div class="hero__actions">
+              <a class="btn btn--primary" href="#">Register</a>
+              <a class="btn btn--ghost" href="#">Full schedule</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         UPCOMING — grid of cards
+         ============================================================ -->
+    <section class="stage stage--rhythm upcoming-section">
+      <div class="frame">
+        <div class="rhythm__head">
+          <div>
+            <p class="kicker">Upcoming</p>
+            <h2 class="h2">What's on the calendar.</h2>
+          </div>
+          <a class="link" href="#">Subscribe to calendar →</a>
+        </div>
+
+        <div class="event-grid">
+          <article class="event-card">
+            <div class="event-card__photo" data-label="Youth at last year's retreat in the woods">
+              <span class="ph__chip">Photo</span>
+              <span class="event-card__tag event-card__tag--youth">Youth</span>
+            </div>
+            <p class="event-date">
+              <span class="event-date__month">Jun</span>
+              <span class="event-date__day">13</span>
+              <span class="event-date__year">– 15, 2026</span>
+            </p>
+            <h3 class="event-card__title">Youth Summer Retreat</h3>
+            <p class="event-card__where">Camp Selah, NY</p>
+            <p class="event-card__desc">3 days, 2 nights. Worship, teaching, lake, fire pits, and friends.</p>
+            <a class="link" href="#">Details &amp; sign-up →</a>
+          </article>
+
+          <article class="event-card">
+            <div class="event-card__photo" data-label="Women gathered in a circle around an open Bible">
+              <span class="ph__chip">Photo</span>
+              <span class="event-card__tag">Women</span>
+            </div>
+            <p class="event-date">
+              <span class="event-date__month">Jun</span>
+              <span class="event-date__day">28</span>
+              <span class="event-date__year">2026</span>
+            </p>
+            <h3 class="event-card__title">Women's Day of Prayer</h3>
+            <p class="event-card__where">Bethel · 9 AM – 4 PM</p>
+            <p class="event-card__desc">A full day of worship, teaching, and intercession for our sisters.</p>
+            <a class="link" href="#">Details →</a>
+          </article>
+
+          <article class="event-card">
+            <div class="event-card__photo" data-label="Outreach team handing out food in the neighborhood">
+              <span class="ph__chip">Photo</span>
+              <span class="event-card__tag">Outreach</span>
+            </div>
+            <p class="event-date">
+              <span class="event-date__month">Aug</span>
+              <span class="event-date__day">09</span>
+              <span class="event-date__year">2026</span>
+            </p>
+            <h3 class="event-card__title">Community Outreach Day</h3>
+            <p class="event-card__where">Neighborhood Park · 10 AM</p>
+            <p class="event-card__desc">Free meals, prayer tent, music, and games for kids. Volunteers needed.</p>
+            <a class="link" href="#">Volunteer →</a>
+          </article>
+
+          <article class="event-card">
+            <div class="event-card__photo" data-label="Men gathered around a breakfast table">
+              <span class="ph__chip">Photo</span>
+              <span class="event-card__tag">Men</span>
+            </div>
+            <p class="event-date">
+              <span class="event-date__month">Sep</span>
+              <span class="event-date__day">12</span>
+              <span class="event-date__year">2026</span>
+            </p>
+            <h3 class="event-card__title">Men's Breakfast &amp; Word</h3>
+            <p class="event-card__where">Bethel · 7:30 AM</p>
+            <p class="event-card__desc">Hot food, honest conversation, a short word from the Word.</p>
+            <a class="link" href="#">RSVP →</a>
+          </article>
+
+          <article class="event-card">
+            <div class="event-card__photo" data-label="A baptism in progress with congregation watching">
+              <span class="ph__chip">Photo</span>
+              <span class="event-card__tag">Worship</span>
+            </div>
+            <p class="event-date">
+              <span class="event-date__month">Oct</span>
+              <span class="event-date__day">04</span>
+              <span class="event-date__year">2026</span>
+            </p>
+            <h3 class="event-card__title">Baptism Sunday</h3>
+            <p class="event-card__where">During Sunday services</p>
+            <p class="event-card__desc">If you're ready to declare your faith publicly, talk to us.</p>
+            <a class="link" href="#">I'd like to be baptized →</a>
+          </article>
+
+          <article class="event-card">
+            <div class="event-card__photo" data-label="Candlelit Christmas Eve service">
+              <span class="ph__chip">Photo</span>
+              <span class="event-card__tag">Seasonal</span>
+            </div>
+            <p class="event-date">
+              <span class="event-date__month">Dec</span>
+              <span class="event-date__day">24</span>
+              <span class="event-date__year">2026</span>
+            </p>
+            <h3 class="event-card__title">Christmas Eve Service</h3>
+            <p class="event-card__where">Bethel · 6 PM &amp; 8 PM</p>
+            <p class="event-card__desc">Carols, candles, and the Christmas story. Bring family and friends.</p>
+            <a class="link" href="#">Details →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         ANNUAL RHYTHM — list of every recurring annual event
+         ============================================================ -->
+    <section class="stage stage--mosaic annual-rhythm-section">
+      <div class="frame">
+        <div class="mosaic__head">
+          <p class="kicker">Annual Rhythm</p>
+          <h2 class="h2">Markers of our year.</h2>
+          <p class="mosaic__lead">These come around every year. Plan with us.</p>
+        </div>
+
+        <ul class="annual-rhythm">
+          <li>
+            <span class="annual-rhythm__season">Winter</span>
+            <span class="annual-rhythm__name">New Year's Eve Service</span>
+            <span class="annual-rhythm__when">Dec 31</span>
+          </li>
+          <li>
+            <span class="annual-rhythm__season">Winter</span>
+            <span class="annual-rhythm__name">21-Day Fast &amp; Prayer</span>
+            <span class="annual-rhythm__when">Jan</span>
+          </li>
+          <li>
+            <span class="annual-rhythm__season">Spring</span>
+            <span class="annual-rhythm__name">Good Friday Service</span>
+            <span class="annual-rhythm__when">Mar / Apr</span>
+          </li>
+          <li>
+            <span class="annual-rhythm__season">Spring</span>
+            <span class="annual-rhythm__name">Easter Sunday</span>
+            <span class="annual-rhythm__when">Mar / Apr</span>
+          </li>
+          <li>
+            <span class="annual-rhythm__season">Summer</span>
+            <span class="annual-rhythm__name">Youth Summer Retreat</span>
+            <span class="annual-rhythm__when">Jun</span>
+          </li>
+          <li>
+            <span class="annual-rhythm__season">Summer</span>
+            <span class="annual-rhythm__name">Annual Convention</span>
+            <span class="annual-rhythm__when">Jul</span>
+          </li>
+          <li>
+            <span class="annual-rhythm__season">Summer</span>
+            <span class="annual-rhythm__name">Community Outreach Day</span>
+            <span class="annual-rhythm__when">Aug</span>
+          </li>
+          <li>
+            <span class="annual-rhythm__season">Fall</span>
+            <span class="annual-rhythm__name">Thanksgiving Service</span>
+            <span class="annual-rhythm__when">Nov</span>
+          </li>
+          <li>
+            <span class="annual-rhythm__season">Winter</span>
+            <span class="annual-rhythm__name">Christmas Eve Service</span>
+            <span class="annual-rhythm__when">Dec 24</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PAST EVENTS — recap gallery
+         ============================================================ -->
+    <section class="stage stage--light past-events-section">
+      <div class="frame">
+        <div class="messages-feature__head">
+          <div>
+            <p class="kicker">Recently</p>
+            <h2 class="h2">Looking back.</h2>
+          </div>
+          <a class="link" href="#">Photo archive →</a>
+        </div>
+
+        <div class="recent-messages">
+          <a class="recent-card" href="#">
+            <div class="recent-card__media" data-label="Past convention photo">
+              <span class="ph__chip">Photo</span>
+            </div>
+            <p class="recent-card__date">Mar 2026</p>
+            <h4 class="recent-card__title">Spring Conference</h4>
+            <p class="recent-card__ref">3 days · 12 sessions</p>
+          </a>
+          <a class="recent-card" href="#">
+            <div class="recent-card__media" data-label="Past youth retreat photo">
+              <span class="ph__chip">Photo</span>
+            </div>
+            <p class="recent-card__date">Jun 2025</p>
+            <h4 class="recent-card__title">Youth Retreat 2025</h4>
+            <p class="recent-card__ref">Camp Selah · 64 students</p>
+          </a>
+          <a class="recent-card" href="#">
+            <div class="recent-card__media" data-label="Past Christmas service">
+              <span class="ph__chip">Photo</span>
+            </div>
+            <p class="recent-card__date">Dec 2025</p>
+            <h4 class="recent-card__title">Christmas Eve 2025</h4>
+            <p class="recent-card__ref">Two services · packed sanctuary</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="frame footer__grid">
+      <div>
+        <div class="brand__name">Bethel Worship Center</div>
+        <div class="brand__sub">IPC / House of God / Gate of Heaven</div>
+      </div>
+      <div class="footer__links">
+        <a href="../messages/">Messages</a>
+        <a href="../events/">Events</a>
+        <a href="../youth/">Youth</a>
+        <a href="../prayer/">Prayer</a>
+        <a href="../serve/">Serve</a>
+        <a href="../visit/">Visit</a>
+      </div>
+    </div>
+    <div class="frame footer__fine">
+      <span>(c) <span id="year"></span> Bethel Worship Center. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script src="../app.js"></script>
+</body>
+</html>

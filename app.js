@@ -5,17 +5,27 @@ const toggle = document.querySelector(".nav__toggle");
 const menu = document.getElementById("mobileMenu");
 
 if (toggle && menu) {
+  const setMenu = (open) => {
+    toggle.setAttribute("aria-expanded", String(open));
+    menu.hidden = !open;
+    document.body.classList.toggle("menu-open", open);
+  };
+
   toggle.addEventListener("click", () => {
     const isOpen = toggle.getAttribute("aria-expanded") === "true";
-    toggle.setAttribute("aria-expanded", String(!isOpen));
-    menu.hidden = isOpen;
+    setMenu(!isOpen);
   });
 
   menu.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-      toggle.setAttribute("aria-expanded", "false");
-      menu.hidden = true;
-    });
+    link.addEventListener("click", () => setMenu(false));
+  });
+
+  // Close on Escape
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && toggle.getAttribute("aria-expanded") === "true") {
+      setMenu(false);
+      toggle.focus();
+    }
   });
 }
 
@@ -23,6 +33,202 @@ if (toggle && menu) {
 const year = document.getElementById("year");
 if (year) {
   year.textContent = new Date().getFullYear();
+}
+
+// Messages library — filter chips toggle which cards are shown
+const libraryGrid = document.querySelector("[data-library-grid]");
+if (libraryGrid) {
+  const chips = Array.from(document.querySelectorAll(".library__chip"));
+  const cards = Array.from(libraryGrid.querySelectorAll(".library-card"));
+  const empty = document.querySelector("[data-library-empty]");
+
+  chips.forEach((chip) => {
+    chip.addEventListener("click", () => {
+      const filter = chip.dataset.filter || "all";
+
+      chips.forEach((c) => {
+        const isActive = c === chip;
+        c.classList.toggle("is-active", isActive);
+        c.setAttribute("aria-selected", String(isActive));
+      });
+
+      let visibleCount = 0;
+      cards.forEach((card) => {
+        const match = filter === "all" || card.dataset.type === filter;
+        card.hidden = !match;
+        if (match) visibleCount++;
+      });
+
+      if (empty) empty.hidden = visibleCount > 0;
+    });
+  });
+}
+
+// Highlights feature — big photo + side thumbs (desktop) / dots (mobile).
+// Auto-advances every 8s. Slides are <a> tags; clicking the photo navigates.
+// Thumb/dot clicks swap the visible slide and pause auto-advance.
+const lifeStage = document.querySelector("[data-life-stage]");
+if (lifeStage) {
+  const slides = Array.from(lifeStage.querySelectorAll(".life-slide"));
+  const thumbs = Array.from(document.querySelectorAll(".life-thumb[data-life-target]"));
+  const dots = Array.from(document.querySelectorAll(".life-dot[data-life-target]"));
+  const caption = lifeStage.querySelector("[data-life-caption]");
+  const progress = lifeStage.querySelector("[data-life-progress]");
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  if (slides.length > 0) {
+    let activeIndex = slides.findIndex((s) => s.classList.contains("is-active"));
+    if (activeIndex < 0) activeIndex = 0;
+    let interactionTaken = false;
+    let timer = null;
+
+    const syncSelector = (collection, next) => {
+      collection.forEach((el, i) => {
+        const isActive = i === next;
+        el.classList.toggle("is-active", isActive);
+        el.setAttribute("aria-selected", String(isActive));
+      });
+    };
+
+    const setActive = (next) => {
+      if (next === activeIndex || next < 0 || next >= slides.length) return;
+      slides[activeIndex].classList.remove("is-active");
+      slides[next].classList.add("is-active");
+      syncSelector(thumbs, next);
+      syncSelector(dots, next);
+      if (caption) {
+        const text = slides[next].dataset.caption || "";
+        caption.textContent = text;
+      }
+      activeIndex = next;
+      restartProgress();
+    };
+
+    const restartProgress = () => {
+      if (!progress) return;
+      progress.classList.remove("is-running", "is-paused");
+      void progress.offsetWidth;
+      if (!interactionTaken && !reduceMotion) {
+        progress.classList.add("is-running");
+      } else {
+        progress.classList.add("is-paused");
+      }
+    };
+
+    const advance = () => {
+      const next = (activeIndex + 1) % slides.length;
+      setActive(next);
+    };
+
+    const startAuto = () => {
+      stopAuto();
+      if (interactionTaken || reduceMotion) return;
+      timer = setInterval(advance, 8000);
+      restartProgress();
+    };
+
+    const stopAuto = () => {
+      if (timer) { clearInterval(timer); timer = null; }
+    };
+
+    const wireSelector = (el, idx) => {
+      el.addEventListener("click", (event) => {
+        // Don't let dot/thumb taps inside the slide anchor trigger navigation
+        event.preventDefault();
+        interactionTaken = true;
+        stopAuto();
+        setActive(idx);
+        if (progress) {
+          progress.classList.remove("is-running");
+          progress.classList.add("is-paused");
+        }
+      });
+    };
+
+    thumbs.forEach((thumb, idx) => wireSelector(thumb, idx));
+    dots.forEach((dot, idx) => wireSelector(dot, idx));
+
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) stopAuto();
+      else startAuto();
+    });
+
+    lifeStage.addEventListener("mouseenter", stopAuto);
+    lifeStage.addEventListener("mouseleave", () => {
+      if (!interactionTaken) startAuto();
+    });
+
+    startAuto();
+  }
+}
+
+// Hero slideshow — fade between slides every N ms.
+// Safeguards: respects prefers-reduced-motion, pauses when tab hidden,
+// skips broken/unloaded images, waits for the next slide to be ready before showing.
+const slideshow = document.querySelector(".hero__slideshow");
+if (slideshow) {
+  const slides = Array.from(slideshow.querySelectorAll(".hero__slide"));
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const INTERVAL_MS = 7000;
+
+  if (slides.length > 1 && !reduceMotion) {
+    let currentIndex = slides.findIndex((s) => s.classList.contains("is-active"));
+    if (currentIndex < 0) currentIndex = 0;
+    let timer = null;
+
+    const isReady = (slide) => {
+      const img = slide.querySelector("img");
+      return img && img.complete && img.naturalWidth > 0;
+    };
+
+    // Mark broken images so we can skip them
+    slides.forEach((slide) => {
+      const img = slide.querySelector("img");
+      if (!img) return;
+      img.addEventListener("error", () => slide.dataset.broken = "true");
+    });
+
+    const findNextReady = (from) => {
+      for (let i = 1; i <= slides.length; i++) {
+        const idx = (from + i) % slides.length;
+        const slide = slides[idx];
+        if (slide.dataset.broken === "true") continue;
+        if (isReady(slide)) return idx;
+      }
+      return -1;
+    };
+
+    const advance = () => {
+      const nextIndex = findNextReady(currentIndex);
+      if (nextIndex < 0 || nextIndex === currentIndex) return;
+      slides[currentIndex].classList.remove("is-active");
+      slides[nextIndex].classList.add("is-active");
+      currentIndex = nextIndex;
+    };
+
+    const start = () => {
+      stop();
+      timer = setInterval(advance, INTERVAL_MS);
+    };
+    const stop = () => {
+      if (timer) { clearInterval(timer); timer = null; }
+    };
+
+    // Pause when the tab is hidden (saves CPU + battery on mobile)
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) stop();
+      else start();
+    });
+
+    // If first image isn't loaded yet, wait for it before starting
+    const firstImg = slides[currentIndex].querySelector("img");
+    if (firstImg && firstImg.complete) {
+      start();
+    } else if (firstImg) {
+      firstImg.addEventListener("load", start, { once: true });
+      firstImg.addEventListener("error", start, { once: true });
+    }
+  }
 }
 
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -36,7 +242,8 @@ dialogButtons.forEach((button) => {
     return;
   }
 
-  button.addEventListener("click", () => {
+  button.addEventListener("click", (event) => {
+    event.preventDefault();
     if (typeof dialog.showModal === "function") {
       dialog.showModal();
     } else {
