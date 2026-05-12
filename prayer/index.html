@@ -8,6 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="manifest" href="../manifest.json" />
+  <meta name="theme-color" content="#FFFFFF" />
   <link rel="icon" type="image/png" href="../assets/LogoSmallCircle.png" />
   <link rel="apple-touch-icon" href="../assets/LogoSmallCircle.png" />
   <link rel="stylesheet" href="../styles.css" />
@@ -234,17 +236,18 @@
             </div>
           </div>
 
-          <form class="prayer-form" action="#" method="post">
+          <form class="prayer-form" action="#" method="post" data-toast-on-submit>
             <label for="prayer-name">Your name</label>
-            <input id="prayer-name" name="name" type="text" autocomplete="name" placeholder="First and last name" />
+            <input id="prayer-name" name="name" type="text" autocomplete="name" inputmode="text" enterkeyhint="next" placeholder="First and last name" />
 
             <label for="prayer-email">Email address</label>
-            <input id="prayer-email" name="email" type="email" autocomplete="email" placeholder="For a response if you want one" />
+            <input id="prayer-email" name="email" type="email" autocomplete="email" inputmode="email" enterkeyhint="next" placeholder="For a response if you want one" />
 
             <label for="prayer-request">How can we pray?</label>
-            <textarea id="prayer-request" name="request" rows="5" required placeholder="Share as much or as little as you like."></textarea>
+            <textarea id="prayer-request" name="request" rows="5" required enterkeyhint="send" placeholder="Share as much or as little as you like."></textarea>
 
             <button class="btn btn--primary" type="submit">Send prayer request</button>
+            <p class="prayer-form__msg" data-form-msg hidden>Thank you — we'll be praying with you.</p>
           </form>
 
           <p style="text-align:center; color: var(--muted); font-style: italic; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.05rem;">

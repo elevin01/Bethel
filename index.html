@@ -9,6 +9,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="assets/BethelBackpng.png" fetchpriority="high" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#FFFFFF" />
   <link rel="icon" type="image/png" href="assets/LogoSmallCircle.png" />
   <link rel="apple-touch-icon" href="assets/LogoSmallCircle.png" />
   <link rel="stylesheet" href="styles.css" />
@@ -56,6 +58,16 @@
     <!-- ============================================================
          HERO — full-bleed photo background
          ============================================================ -->
+    <!-- Live-now badge — shown during service times only -->
+    <a class="live-badge" href="#" hidden data-live-badge>
+      <span class="live-badge__dot" aria-hidden="true"></span>
+      <span class="live-badge__inner">
+        <span class="live-badge__label">Live now</span>
+        <span class="live-badge__name" data-live-name>—</span>
+      </span>
+      <span class="live-badge__action" data-live-action>Join →</span>
+    </a>
+
     <section class="stage stage--hero hero--photo" id="top">
       <!-- Slideshow: rotates every 7s. Add/remove .hero__slide blocks to change rotation. -->
       <div class="hero__media hero__slideshow" aria-hidden="true">
@@ -474,8 +486,9 @@
     </div>
   </dialog>
 
-  <!-- Mobile-only sticky CTA bar -->
-  <div class="site-cta" aria-label="Quick actions">
+  <!-- Mobile-only sticky CTA bar. Starts hidden; the IntersectionObserver in app.js
+       removes .is-hidden when the hero's CTAs scroll out of view. -->
+  <div class="site-cta is-hidden" aria-label="Quick actions">
     <a class="site-cta__btn site-cta__btn--primary" href="visit/">
       <span class="site-cta__strong">Plan a Visit</span>
       <span class="site-cta__weak">Sun · 9:30 + 10:30</span>

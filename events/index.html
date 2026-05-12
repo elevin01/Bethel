@@ -8,6 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="manifest" href="../manifest.json" />
+  <meta name="theme-color" content="#FFFFFF" />
   <link rel="icon" type="image/png" href="../assets/LogoSmallCircle.png" />
   <link rel="apple-touch-icon" href="../assets/LogoSmallCircle.png" />
   <link rel="stylesheet" href="../styles.css" />
@@ -99,7 +101,15 @@
             </ul>
             <div class="hero__actions">
               <a class="btn btn--primary" href="#">Register</a>
-              <a class="btn btn--ghost" href="#">Full schedule</a>
+              <button class="btn btn--ghost" type="button"
+                data-ics
+                data-ics-title="Bethel Annual Convention 2026"
+                data-ics-start="2026-07-18T13:00:00Z"
+                data-ics-end="2026-07-22T01:00:00Z"
+                data-ics-location="10 Tanglewylde Ave, Bronxville, NY 10708"
+                data-ics-description="Four days of preaching, prayer, and worship with guest speakers from across the IPC family.">
+                Add to Calendar
+              </button>
             </div>
           </div>
         </article>

@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(sips -g pixelHeight -g pixelWidth /Users/emil07/Documents/Bethel/assets/LogoSmallCircle.png)",
+      "Bash(sips --resampleHeightWidth 512 512 /Users/emil07/Documents/Bethel/assets/LogoSmallCircle.png --out /Users/emil07/Documents/Bethel/assets/icon-512.png)",
+      "Bash(sips --resampleHeightWidth 192 192 /Users/emil07/Documents/Bethel/assets/LogoSmallCircle.png --out /Users/emil07/Documents/Bethel/assets/icon-192.png)"
+    ]
+  }
+}

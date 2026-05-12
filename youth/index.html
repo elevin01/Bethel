@@ -9,6 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="manifest" href="../manifest.json" />
+  <meta name="theme-color" content="#FFFFFF" />
   <link rel="icon" type="image/png" href="../assets/LogoSmallCircle.png" />
   <link rel="apple-touch-icon" href="../assets/LogoSmallCircle.png" />
   <link rel="stylesheet" href="../styles.css" />
@@ -278,9 +280,9 @@
 
         <form class="y-parent__form" onsubmit="event.preventDefault(); this.querySelector('.y-form__msg').hidden = false;">
           <p class="y-form__label">Get the weekly recap</p>
-          <input type="text" name="name" placeholder="Parent name" required aria-label="Parent name" />
-          <input type="email" name="email" placeholder="Email" required aria-label="Email" />
-          <input type="text" name="student" placeholder="Student name &amp; grade" aria-label="Student name and grade" />
+          <input type="text" name="name" placeholder="Parent name" required aria-label="Parent name" autocomplete="name" inputmode="text" enterkeyhint="next" />
+          <input type="email" name="email" placeholder="Email" required aria-label="Email" autocomplete="email" inputmode="email" enterkeyhint="next" />
+          <input type="text" name="student" placeholder="Student name &amp; grade" aria-label="Student name and grade" enterkeyhint="send" />
           <button class="btn btn--primary" type="submit">Sign me up</button>
           <p class="y-form__msg" hidden>Got it — we'll be in touch this week.</p>
         </form>
