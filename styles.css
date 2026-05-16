@@ -2878,8 +2878,22 @@ html:not(.js) .js-only { display: none; }
 }
 
 .hero__photoTitle {
-  margin: 8px 0 18px;
+  margin: 8px 0 14px;
   text-shadow: 0 4px 48px rgba(0, 0, 0, 0.6);
+}
+
+.hero__tagline {
+  margin: 0 0 22px;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-style: italic;
+  font-size: clamp(18px, 2vw, 26px);
+  font-weight: 500;
+  color: rgba(250, 250, 250, 0.82);
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 720px) {
+  .hero__tagline { font-size: clamp(16px, 4.5vw, 20px); margin-bottom: 16px; }
 }
 
 .hero__photoLead {
