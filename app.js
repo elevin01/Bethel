@@ -12,6 +12,41 @@ if ("serviceWorker" in navigator) {
   });
 }
 
+/* ============================================================
+   Link prefetching — pointerenter / touchstart starts loading
+   the target page before the user actually clicks. Pairs with
+   the Speculation Rules in <head> for browsers that don't support them.
+   ============================================================ */
+(() => {
+  const prefetched = new Set();
+
+  const prefetch = (href) => {
+    if (!href || prefetched.has(href)) return;
+    prefetched.add(href);
+    const link = document.createElement("link");
+    link.rel = "prefetch";
+    link.href = href;
+    link.as = "document";
+    document.head.appendChild(link);
+  };
+
+  const handler = (event) => {
+    const link = event.target.closest("a[href]");
+    if (!link) return;
+    const href = link.getAttribute("href");
+    if (!href || href.startsWith("#") || href.startsWith("javascript:")) return;
+    if (link.target && link.target !== "_self") return;
+    try {
+      const url = new URL(link.href, window.location.href);
+      if (url.origin !== window.location.origin) return;
+      prefetch(url.href);
+    } catch (_) { /* ignore */ }
+  };
+
+  document.addEventListener("pointerenter", handler, { capture: true, passive: true });
+  document.addEventListener("touchstart", handler, { capture: true, passive: true });
+})();
+
 // Mobile menu
 const toggle = document.querySelector(".nav__toggle");
 const menu = document.getElementById("mobileMenu");

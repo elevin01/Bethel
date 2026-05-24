@@ -9,6 +9,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="../assets/photos/youth-night.jpg" fetchpriority="high" />
+  <link rel="preload" as="image" href="../assets/photos/youth-drums.jpg" />
+  <link rel="prefetch" href="../index.html" />
+  <link rel="prefetch" href="../events/" />
   <link rel="manifest" href="../manifest.json" />
   <meta name="theme-color" content="#FFFFFF" />
   <link rel="icon" type="image/png" href="../assets/LogoSmallCircle.png" />
@@ -59,8 +63,8 @@
          HERO — full-bleed action photo, editorial display
          ============================================================ -->
     <section class="y-hero">
-      <div class="y-hero__photo" data-label="Youth night — students worshiping under stage lights">
-        <span class="ph__chip">Hero photo</span>
+      <div class="y-hero__photo" data-label="Youth night">
+        <img src="../assets/photos/youth-night.jpg" alt="" loading="eager" decoding="async" fetchpriority="high" />
       </div>
       <div class="y-hero__overlay" aria-hidden="true"></div>
 
@@ -115,8 +119,8 @@
          FRIDAY NIGHT FEATURE
          ============================================================ -->
     <section class="y-friday" id="friday">
-      <div class="y-friday__photo" data-label="Friday night service — band on stage, hands up">
-        <span class="ph__chip">Photo</span>
+      <div class="y-friday__photo" data-label="Friday night band">
+        <img src="../assets/photos/youth-drums.jpg" alt="" loading="lazy" decoding="async" />
         <span class="y-friday__bigNum" aria-hidden="true">07</span>
       </div>
       <div class="y-friday__text">
@@ -154,8 +158,8 @@
       <div class="y-next__inner">
         <span class="y-next__tag">Next up</span>
 
-        <div class="y-next__photo" data-label="Last year's retreat — bonfire and worship">
-          <span class="ph__chip">Photo</span>
+        <div class="y-next__photo" data-label="Youth group">
+          <img src="../assets/photos/youth-group.jpg" alt="" loading="lazy" decoding="async" />
         </div>
 
         <div class="y-next__body">
@@ -195,8 +199,8 @@
         <div class="y-pillars__grid">
           <article class="y-pillar">
             <span class="y-pillar__num" aria-hidden="true">01</span>
-            <div class="y-pillar__photo" data-label="Worship with hands raised">
-              <span class="ph__chip">Photo</span>
+            <div class="y-pillar__photo" data-label="Youth singing">
+              <img src="../assets/photos/youth-singing.jpg" alt="" loading="lazy" />
             </div>
             <h3 class="y-pillar__title">Worship</h3>
             <p>We sing like we believe it. Because we do.</p>
@@ -204,8 +208,8 @@
 
           <article class="y-pillar">
             <span class="y-pillar__num" aria-hidden="true">02</span>
-            <div class="y-pillar__photo" data-label="Open Bible, students taking notes">
-              <span class="ph__chip">Photo</span>
+            <div class="y-pillar__photo" data-label="Female youth preaching the Word">
+              <img src="../assets/photos/youth-preaching.jpg" alt="" loading="lazy" />
             </div>
             <h3 class="y-pillar__title">The Word</h3>
             <p>Real teaching from real Scripture. No fluff.</p>
@@ -213,8 +217,8 @@
 
           <article class="y-pillar">
             <span class="y-pillar__num" aria-hidden="true">03</span>
-            <div class="y-pillar__photo" data-label="Students serving in the community">
-              <span class="ph__chip">Photo</span>
+            <div class="y-pillar__photo" data-label="Youth night ending moment">
+              <img src="../assets/photos/youth-night.jpg" alt="" loading="lazy" />
             </div>
             <h3 class="y-pillar__title">Witness</h3>
             <p>Loving our friends, our school, our city — out loud.</p>
@@ -229,33 +233,33 @@
     <section class="y-gallery">
       <div class="frame y-gallery__head">
         <p class="y-kicker">From the field</p>
-        <h2 class="y-h1">Last <span class="y-h1__strike">summer</span> retreat.</h2>
+        <h2 class="y-h1">Real <span class="y-h1__strike">retreat</span> moments.</h2>
       </div>
 
       <div class="y-gallery__mosaic">
-        <div class="y-g-tile y-g-tile--xl" data-label="Group photo — sunset, hands up">
-          <span class="ph__chip">Photo</span>
+        <div class="y-g-tile y-g-tile--xl" data-label="Youth group photo">
+          <img src="../assets/photos/youth-group.jpg" alt="" loading="lazy" />
         </div>
-        <div class="y-g-tile y-g-tile--md" data-label="Worship in the chapel">
-          <span class="ph__chip">Photo</span>
+        <div class="y-g-tile y-g-tile--md" data-label="Youth choir worshipping">
+          <img src="../assets/photos/youth-choir.jpg" alt="" loading="lazy" />
         </div>
-        <div class="y-g-tile y-g-tile--sm" data-label="Lake jump">
-          <span class="ph__chip">Photo</span>
+        <div class="y-g-tile y-g-tile--sm" data-label="Drums">
+          <img src="../assets/photos/youth-drums.jpg" alt="" loading="lazy" />
         </div>
-        <div class="y-g-tile y-g-tile--sm" data-label="Fire pit talk">
-          <span class="ph__chip">Photo</span>
+        <div class="y-g-tile y-g-tile--sm" data-label="Keyboard">
+          <img src="../assets/photos/youth-keyboard.jpg" alt="" loading="lazy" />
         </div>
-        <div class="y-g-tile y-g-tile--md" data-label="Small group circle">
-          <span class="ph__chip">Photo</span>
+        <div class="y-g-tile y-g-tile--md" data-label="Singing">
+          <img src="../assets/photos/youth-singing.jpg" alt="" loading="lazy" />
         </div>
-        <div class="y-g-tile y-g-tile--lg" data-label="Cabin selfie squad">
-          <span class="ph__chip">Photo</span>
+        <div class="y-g-tile y-g-tile--lg" data-label="Youth night ending">
+          <img src="../assets/photos/youth-night.jpg" alt="" loading="lazy" />
         </div>
-        <div class="y-g-tile y-g-tile--sm" data-label="Late night talk">
-          <span class="ph__chip">Photo</span>
+        <div class="y-g-tile y-g-tile--sm" data-label="Preaching the Word">
+          <img src="../assets/photos/youth-preaching.jpg" alt="" loading="lazy" />
         </div>
-        <div class="y-g-tile y-g-tile--sm" data-label="Cafeteria laughs">
-          <span class="ph__chip">Photo</span>
+        <div class="y-g-tile y-g-tile--sm" data-label="Bible study">
+          <img src="../assets/photos/bible-study.jpg" alt="" loading="lazy" />
         </div>
       </div>
     </section>

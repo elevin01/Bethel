@@ -3,7 +3,14 @@
     "allow": [
       "Bash(sips -g pixelHeight -g pixelWidth /Users/emil07/Documents/Bethel/assets/LogoSmallCircle.png)",
       "Bash(sips --resampleHeightWidth 512 512 /Users/emil07/Documents/Bethel/assets/LogoSmallCircle.png --out /Users/emil07/Documents/Bethel/assets/icon-512.png)",
-      "Bash(sips --resampleHeightWidth 192 192 /Users/emil07/Documents/Bethel/assets/LogoSmallCircle.png --out /Users/emil07/Documents/Bethel/assets/icon-192.png)"
+      "Bash(sips --resampleHeightWidth 192 192 /Users/emil07/Documents/Bethel/assets/LogoSmallCircle.png --out /Users/emil07/Documents/Bethel/assets/icon-192.png)",
+      "Bash(awk '{print $9, $5}')",
+      "Bash(mv extra-2.jpg female-worship.jpg)",
+      "Bash(mv extra-3.jpg male-worship-drums.jpg)",
+      "Bash(mv extra-4.jpg female-lead-singing.jpg)",
+      "Bash(mv extra-5.jpg male-preaching.jpg)",
+      "Bash(mv extra-6.jpg male-speaking.jpg)",
+      "Bash(perl -i -pe 's|<span class=\"ph__chip\">Photo</span>|<img src=\"../assets/photos/placeholder.jpg\" alt=\"\" loading=\"lazy\" />|g' events/index.html)"
     ]
   }
 }

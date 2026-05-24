@@ -8,7 +8,32 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="assets/BethelBackpng.png" fetchpriority="high" />
+  <!-- Preload all hero slideshow images so rotation never shows a black frame -->
+  <link rel="preload" as="image" href="assets/photos/youth-choir.jpg" fetchpriority="high" />
+  <link rel="preload" as="image" href="assets/photos/youth-night.jpg" />
+  <link rel="preload" as="image" href="assets/photos/youth-group.jpg" />
+  <link rel="preload" as="image" href="assets/photos/sunday-school.jpg" />
+  <link rel="preload" as="image" href="assets/photos/bible-study.jpg" />
+  <link rel="preload" as="image" href="assets/photos/placeholder.jpg" />
+
+  <!-- Prefetch likely next pages so navigation feels instant -->
+  <link rel="prefetch" href="visit/" />
+  <link rel="prefetch" href="messages/" />
+  <link rel="prefetch" href="schedule/" />
+  <link rel="prefetch" href="youth/" />
+
+  <!-- Speculation Rules — prerender on hover/touch in supporting browsers -->
+  <script type="speculationrules">
+  {
+    "prerender": [{
+      "where": { "and": [
+        { "href_matches": "/*" },
+        { "not": { "href_matches": "/*#*" } }
+      ]},
+      "eagerness": "moderate"
+    }]
+  }
+  </script>
   <link rel="manifest" href="manifest.json" />
   <meta name="theme-color" content="#FFFFFF" />
   <link rel="icon" type="image/png" href="assets/LogoSmallCircle.png" />
@@ -72,29 +97,20 @@
       <!-- Slideshow: rotates every 7s. Add/remove .hero__slide blocks to change rotation. -->
       <div class="hero__media hero__slideshow" aria-hidden="true">
         <div class="hero__slide is-active">
-          <img
-            class="hero__image"
-            src="assets/BethelBackpng.png"
-            alt=""
-            width="1600"
-            height="900"
-            loading="eager"
-            decoding="async"
-            fetchpriority="high"
-          />
+          <img class="hero__image" src="assets/photos/youth-choir.jpg" alt="" loading="eager" decoding="async" fetchpriority="high" />
         </div>
         <div class="hero__slide">
-          <img
-            class="hero__image"
-            src="assets/fire.jpg"
-            alt=""
-            width="1600"
-            height="900"
-            loading="eager"
-            decoding="async"
-          />
+          <img class="hero__image" src="assets/photos/youth-night.jpg" alt="" loading="eager" decoding="async" />
         </div>
-        <!-- TODO: drop in more real photos as additional <div class="hero__slide"><img...></div> blocks -->
+        <div class="hero__slide">
+          <img class="hero__image" src="assets/photos/youth-group.jpg" alt="" loading="eager" decoding="async" />
+        </div>
+        <div class="hero__slide">
+          <img class="hero__image" src="assets/photos/sunday-school.jpg" alt="" loading="eager" decoding="async" />
+        </div>
+        <div class="hero__slide">
+          <img class="hero__image" src="assets/photos/bible-study.jpg" alt="" loading="eager" decoding="async" />
+        </div>
       </div>
       <div class="hero__overlay hero__overlay--photo" aria-hidden="true"></div>
 
@@ -133,9 +149,8 @@
 
       <div class="rhythm__rail" tabindex="0" aria-label="Weekly schedule">
         <a class="rhythm__card" href="visit/" aria-label="Sunday Worship Service — plan a visit">
-          <div class="rhythm__photo" data-label="Sunday worship — congregation">
-            <span class="ph__chip">Photo</span>
-            <span class="ph__cap">Sunday worship</span>
+          <div class="rhythm__photo" data-label="Sunday worship">
+            <img src="assets/photos/placeholder.jpg" alt="" loading="lazy" />
           </div>
           <div class="rhythm__meta">
             <p class="rhythm__day">Sunday · English 9:30 AM · Malayalam 10:30 AM</p>
@@ -146,9 +161,8 @@
         </a>
 
         <a class="rhythm__card" href="#" data-dialog-open="zoomDialog" aria-label="Bible Study Monday — join on Zoom">
-          <div class="rhythm__photo" data-label="Open Bible on a table">
-            <span class="ph__chip">Photo</span>
-            <span class="ph__cap">Bible study</span>
+          <div class="rhythm__photo" data-label="Bible study">
+            <img src="assets/photos/placeholder.jpg" alt="" loading="lazy" />
           </div>
           <div class="rhythm__meta">
             <p class="rhythm__day">Monday · 7:30 PM</p>
@@ -159,9 +173,8 @@
         </a>
 
         <a class="rhythm__card" href="#" data-dialog-open="zoomDialog" aria-label="Prayer Lines Tuesday and Wednesday — join on Zoom">
-          <div class="rhythm__photo" data-label="Hands folded in prayer">
-            <span class="ph__chip">Photo</span>
-            <span class="ph__cap">Prayer lines</span>
+          <div class="rhythm__photo" data-label="Prayer lines">
+            <img src="assets/photos/placeholder.jpg" alt="" loading="lazy" />
           </div>
           <div class="rhythm__meta">
             <p class="rhythm__day">Tue + Wed · 8:00 PM</p>
@@ -172,9 +185,8 @@
         </a>
 
         <a class="rhythm__card rhythm__card--accent" href="youth/" aria-label="Youth Night Friday — explore Youth ministry">
-          <div class="rhythm__photo" data-label="Youth raising hands at a youth night">
-            <span class="ph__chip">Photo</span>
-            <span class="ph__cap">Youth night</span>
+          <div class="rhythm__photo" data-label="Youth night">
+            <img src="assets/photos/placeholder.jpg" alt="" loading="lazy" />
           </div>
           <div class="rhythm__meta">
             <p class="rhythm__day">Friday · 7:00 PM</p>
@@ -185,9 +197,8 @@
         </a>
 
         <a class="rhythm__card" href="#" data-dialog-open="zoomDialog" aria-label="Common Prayer Saturday — join on Zoom">
-          <div class="rhythm__photo" data-label="Candlelit prayer gathering">
-            <span class="ph__chip">Photo</span>
-            <span class="ph__cap">Common prayer</span>
+          <div class="rhythm__photo" data-label="Common prayer">
+            <img src="assets/photos/placeholder.jpg" alt="" loading="lazy" />
           </div>
           <div class="rhythm__meta">
             <p class="rhythm__day">Saturday · 8:00 PM</p>
@@ -212,33 +223,28 @@
       <div class="frame life-feature">
         <div class="life-feature__stage" data-life-stage>
           <a class="life-slide is-active" href="messages/" data-caption="The God Who Meets Us · Sunday sermon" data-type="Sermon">
-            <div class="life-slide__photo" data-label="Pastor preaching on Sunday">
-              <span class="ph__chip">Photo</span>
-              <span class="ph__cap">Sermon</span>
+            <div class="life-slide__photo" data-label="Preaching the Word">
+              <img src="assets/photos/youth-preaching.jpg" alt="" loading="lazy" decoding="async" />
             </div>
           </a>
-          <a class="life-slide" href="messages/" data-caption="Altars and Awakenings · slide deck" data-type="Slides">
-            <div class="life-slide__photo" data-label="Sunday slide deck cover">
-              <span class="ph__chip">Photo</span>
-              <span class="ph__cap">Slides</span>
+          <a class="life-slide" href="messages/" data-caption="Bible Study · Monday nights on Zoom" data-type="Bible Study">
+            <div class="life-slide__photo" data-label="Bible study">
+              <img src="assets/photos/bible-study.jpg" alt="" loading="lazy" decoding="async" />
             </div>
           </a>
-          <a class="life-slide" href="youth/" data-caption="Youth Summer Retreat · last year" data-type="Event">
-            <div class="life-slide__photo" data-label="Youth at summer retreat">
-              <span class="ph__chip">Photo</span>
-              <span class="ph__cap">Youth retreat</span>
+          <a class="life-slide" href="youth/" data-caption="Youth night · Fridays at Bethel" data-type="Youth">
+            <div class="life-slide__photo" data-label="Youth at Friday night">
+              <img src="assets/photos/youth-group.jpg" alt="" loading="lazy" decoding="async" />
             </div>
           </a>
           <a class="life-slide" href="visit/" data-caption="Sunday worship · come as you are" data-type="Service">
-            <div class="life-slide__photo" data-label="Sunday worship congregation, hands raised">
-              <span class="ph__chip">Photo</span>
-              <span class="ph__cap">Sunday</span>
+            <div class="life-slide__photo" data-label="Sunday worship">
+              <img src="assets/photos/youth-choir.jpg" alt="" loading="lazy" decoding="async" />
             </div>
           </a>
-          <a class="life-slide" href="events/" data-caption="Annual Convention 2026 · save the date" data-type="Event">
-            <div class="life-slide__photo" data-label="Convention sanctuary packed">
-              <span class="ph__chip">Photo</span>
-              <span class="ph__cap">Convention</span>
+          <a class="life-slide" href="visit/" data-caption="Sunday school · the next generation" data-type="Kids">
+            <div class="life-slide__photo" data-label="Sunday school event">
+              <img src="assets/photos/sunday-school.jpg" alt="" loading="lazy" decoding="async" />
             </div>
           </a>
 
@@ -252,7 +258,7 @@
         <div class="life-feature__thumbs" role="tablist" aria-label="Highlight selector">
           <button class="life-thumb is-active" type="button" role="tab" aria-selected="true" data-life-target="0">
             <span class="life-thumb__photo" data-label="Sermon">
-              <span class="ph__chip">Photo</span>
+              <img src="assets/photos/youth-preaching.jpg" alt="" loading="lazy" />
             </span>
             <span class="life-thumb__meta">
               <span class="life-thumb__type">Sermon</span>
@@ -260,26 +266,26 @@
             </span>
           </button>
           <button class="life-thumb" type="button" role="tab" aria-selected="false" data-life-target="1">
-            <span class="life-thumb__photo" data-label="Slides">
-              <span class="ph__chip">Photo</span>
+            <span class="life-thumb__photo" data-label="Bible study">
+              <img src="assets/photos/bible-study.jpg" alt="" loading="lazy" />
             </span>
             <span class="life-thumb__meta">
-              <span class="life-thumb__type">Slides</span>
-              <span class="life-thumb__label">Altars and Awakenings</span>
+              <span class="life-thumb__type">Bible Study</span>
+              <span class="life-thumb__label">Monday nights on Zoom</span>
             </span>
           </button>
           <button class="life-thumb" type="button" role="tab" aria-selected="false" data-life-target="2">
-            <span class="life-thumb__photo" data-label="Youth retreat">
-              <span class="ph__chip">Photo</span>
+            <span class="life-thumb__photo" data-label="Youth">
+              <img src="assets/photos/youth-group.jpg" alt="" loading="lazy" />
             </span>
             <span class="life-thumb__meta">
-              <span class="life-thumb__type">Event</span>
-              <span class="life-thumb__label">Youth Summer Retreat</span>
+              <span class="life-thumb__type">Youth</span>
+              <span class="life-thumb__label">Friday Youth Night</span>
             </span>
           </button>
           <button class="life-thumb" type="button" role="tab" aria-selected="false" data-life-target="3">
-            <span class="life-thumb__photo" data-label="Sunday">
-              <span class="ph__chip">Photo</span>
+            <span class="life-thumb__photo" data-label="Sunday worship">
+              <img src="assets/photos/youth-choir.jpg" alt="" loading="lazy" />
             </span>
             <span class="life-thumb__meta">
               <span class="life-thumb__type">Service</span>
@@ -287,12 +293,12 @@
             </span>
           </button>
           <button class="life-thumb" type="button" role="tab" aria-selected="false" data-life-target="4">
-            <span class="life-thumb__photo" data-label="Convention">
-              <span class="ph__chip">Photo</span>
+            <span class="life-thumb__photo" data-label="Sunday school">
+              <img src="assets/photos/sunday-school.jpg" alt="" loading="lazy" />
             </span>
             <span class="life-thumb__meta">
-              <span class="life-thumb__type">Event</span>
-              <span class="life-thumb__label">Annual Convention 2026</span>
+              <span class="life-thumb__type">Kids</span>
+              <span class="life-thumb__label">Sunday School</span>
             </span>
           </button>
         </div>
@@ -313,9 +319,8 @@
          ============================================================ -->
     <section class="ministries" id="ministries">
       <div class="band band--dark band--right">
-        <div class="band__photo" data-label="Worship team mid-song, lights up">
-          <span class="ph__chip">Photo</span>
-          <span class="ph__cap">Worship</span>
+        <div class="band__photo" data-label="Worship">
+          <img src="assets/photos/female-lead-singing.jpg" alt="" loading="lazy" decoding="async" />
         </div>
         <div class="band__text">
           <p class="kicker">Worship</p>
@@ -326,9 +331,8 @@
       </div>
 
       <div class="band band--light band--left">
-        <div class="band__photo" data-label="Group of teens laughing together at youth night">
-          <span class="ph__chip">Photo</span>
-          <span class="ph__cap">Youth</span>
+        <div class="band__photo" data-label="Youth">
+          <img src="assets/photos/male-worship-drums.jpg" alt="" loading="lazy" decoding="async" />
         </div>
         <div class="band__text">
           <p class="kicker">Youth</p>
@@ -339,9 +343,8 @@
       </div>
 
       <div class="band band--dark band--right">
-        <div class="band__photo" data-label="Bowed heads in a prayer circle">
-          <span class="ph__chip">Photo</span>
-          <span class="ph__cap">Prayer &amp; Altar</span>
+        <div class="band__photo" data-label="Prayer &amp; Altar">
+          <img src="assets/photos/female-worship.jpg" alt="" loading="lazy" decoding="async" />
         </div>
         <div class="band__text">
           <p class="kicker">Prayer &amp; Altar</p>
@@ -352,9 +355,8 @@
       </div>
 
       <div class="band band--light band--left">
-        <div class="band__photo" data-label="Volunteers loading boxes for a community outreach">
-          <span class="ph__chip">Photo</span>
-          <span class="ph__cap">Serve &amp; Go</span>
+        <div class="band__photo" data-label="Serve &amp; Go">
+          <img src="assets/photos/placeholder.jpg" alt="" loading="lazy" decoding="async" />
         </div>
         <div class="band__text">
           <p class="kicker">Serve &amp; Go</p>
@@ -379,9 +381,8 @@
         </div>
 
         <a class="featured-message" href="messages/">
-          <div class="featured-message__media" data-label="Pastor preaching with title card overlay">
-            <span class="ph__chip">Video thumbnail</span>
-            <span class="ph__cap">Latest message</span>
+          <div class="featured-message__media" data-label="Latest message">
+            <img src="assets/photos/male-speaking.jpg" alt="" loading="lazy" decoding="async" />
             <span class="featured-message__play" aria-hidden="true">▶</span>
             <span class="featured-message__duration">42:18</span>
           </div>
@@ -394,24 +395,24 @@
 
         <div class="recent-messages">
           <a class="recent-card" href="messages/">
-            <div class="recent-card__media" data-label="Sermon thumbnail">
-              <span class="ph__chip">Thumbnail</span>
+            <div class="recent-card__media" data-label="The Ladder and the Light">
+              <img src="assets/photos/male-preaching.jpg" alt="" loading="lazy" />
             </div>
             <p class="recent-card__date">Apr 27, 2026</p>
             <h4 class="recent-card__title">The Ladder and the Light</h4>
             <p class="recent-card__ref">Genesis 28:12</p>
           </a>
           <a class="recent-card" href="messages/">
-            <div class="recent-card__media" data-label="Sermon thumbnail">
-              <span class="ph__chip">Thumbnail</span>
+            <div class="recent-card__media" data-label="When God Wakes You Up">
+              <img src="assets/photos/youth-preaching.jpg" alt="" loading="lazy" />
             </div>
             <p class="recent-card__date">Apr 20, 2026</p>
             <h4 class="recent-card__title">When God Wakes You Up</h4>
             <p class="recent-card__ref">Genesis 28:16</p>
           </a>
           <a class="recent-card" href="messages/">
-            <div class="recent-card__media" data-label="Sermon thumbnail">
-              <span class="ph__chip">Thumbnail</span>
+            <div class="recent-card__media" data-label="Stones We Set">
+              <img src="assets/photos/youth-singing.jpg" alt="" loading="lazy" />
             </div>
             <p class="recent-card__date">Apr 13, 2026</p>
             <h4 class="recent-card__title">Stones We Set</h4>
@@ -425,9 +426,8 @@
          PLAN A VISIT — split full-screen
          ============================================================ -->
     <section class="visit-split" id="visit">
-      <div class="visit-split__photo" data-label="Bethel building exterior or welcome team smiling">
-        <span class="ph__chip">Photo</span>
-        <span class="ph__cap">We'll be glad you came</span>
+      <div class="visit-split__photo" data-label="We'll be glad you came">
+        <img src="assets/photos/youth-group.jpg" alt="" loading="lazy" decoding="async" />
       </div>
 
       <div class="visit-split__text">
