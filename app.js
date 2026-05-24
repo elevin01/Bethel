@@ -712,7 +712,7 @@ if (pathNodes.length && pathDrawers.length) {
         "VERSION:2.0",
         "PRODID:-//Bethel Worship Center//EN",
         "BEGIN:VEVENT",
-        `UID:${Date.now()}@bethelwc.org`,
+        `UID:${Date.now()}@bwcny.org`,
         `DTSTAMP:${toIcsDate(new Date().toISOString())}`,
         `DTSTART:${toIcsDate(start)}`,
         `DTEND:${toIcsDate(end)}`,
@@ -749,9 +749,9 @@ if (pathNodes.length && pathDrawers.length) {
     { day: 0, start: "10:30", end: "12:30", name: "Malayalam Service", link: "visit/", type: "inperson" },
     { day: 1, start: "19:30", end: "21:00", name: "Bible Study",       link: null,      type: "zoom" },
     { day: 2, start: "20:00", end: "21:30", name: "Prayer Line · Malayalam", link: null, type: "zoom" },
-    { day: 3, start: "20:00", end: "21:30", name: "Prayer Line · English", link: null, type: "zoom" },
+    { day: 3, start: "20:00", end: "21:30", name: "Prayer Line · Youth & English", link: null, type: "zoom" },
     { day: 5, start: "19:00", end: "21:30", name: "Youth Night",       link: "youth/", type: "inperson" },
-    { day: 6, start: "20:00", end: "21:30", name: "Common Prayer",     link: null,     type: "zoom" },
+    { day: 6, start: "18:00", end: "20:00", name: "Saturday Bible Study", link: "visit/", type: "inperson" },
   ];
 
   const checkLive = () => {

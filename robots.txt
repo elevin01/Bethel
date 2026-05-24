@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /sw.js
+Disallow: /Photos-3-001/
+
+Sitemap: https://www.bwcny.org/sitemap.xml

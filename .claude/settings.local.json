@@ -10,7 +10,8 @@
       "Bash(mv extra-4.jpg female-lead-singing.jpg)",
       "Bash(mv extra-5.jpg male-preaching.jpg)",
       "Bash(mv extra-6.jpg male-speaking.jpg)",
-      "Bash(perl -i -pe 's|<span class=\"ph__chip\">Photo</span>|<img src=\"../assets/photos/placeholder.jpg\" alt=\"\" loading=\"lazy\" />|g' events/index.html)"
+      "Bash(perl -i -pe 's|<span class=\"ph__chip\">Photo</span>|<img src=\"../assets/photos/placeholder.jpg\" alt=\"\" loading=\"lazy\" />|g' events/index.html)",
+      "Bash(perl -i -pe ' *)"
     ]
   }
 }
