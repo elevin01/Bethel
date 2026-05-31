@@ -11,7 +11,11 @@
       "Bash(mv extra-5.jpg male-preaching.jpg)",
       "Bash(mv extra-6.jpg male-speaking.jpg)",
       "Bash(perl -i -pe 's|<span class=\"ph__chip\">Photo</span>|<img src=\"../assets/photos/placeholder.jpg\" alt=\"\" loading=\"lazy\" />|g' events/index.html)",
-      "Bash(perl -i -pe ' *)"
+      "Bash(perl -i -pe ' *)",
+      "Bash(sips -g pixelHeight -g pixelWidth \"/Users/emil07/Documents/Bethel/eventsphotos/AnnualConvention2026ConceptVarition3\\(v3\\).png\")",
+      "Bash(sips -s format jpeg -s formatOptions 85 -Z 1800 \"/Users/emil07/Documents/Bethel/eventsphotos/AnnualConvention2026ConceptVarition3\\(v3\\).png\" --out /Users/emil07/Documents/Bethel/assets/photos/convention-2026.jpg)",
+      "Bash(sips -g pixelHeight -g pixelWidth /Users/emil07/Documents/Bethel/eventsphotos/BethelWorsshipCenterSaturdayWnWFlyer.png)",
+      "Bash(sips -s format jpeg -s formatOptions 85 -Z 1800 /Users/emil07/Documents/Bethel/eventsphotos/BethelWorsshipCenterSaturdayWnWFlyer.png --out /Users/emil07/Documents/Bethel/assets/photos/saturday-bible-study.jpg)"
     ]
   }
 }

@@ -501,6 +501,60 @@ if (pathNodes.length && pathDrawers.length) {
 }
 
 /* ============================================================
+   Announcement bar — site-wide. Auto-shows until the user dismisses
+   it OR the event passes. Edit the EVENT constant below to swap in
+   future announcements; the same logic handles dates and dismiss.
+   ============================================================ */
+(() => {
+  const EVENT = {
+    key: "bwc-announce-convention-2026",
+    title: "Annual Convention 2026",
+    sub: "Jun 12–14 · Pastor Shaji Paul",
+    href: "/events/",
+    startDate: new Date("2026-06-12T18:30:00-04:00"),
+    endDate: new Date("2026-06-15T00:00:00-04:00"),
+  };
+
+  const now = new Date();
+  if (now > EVENT.endDate) return; // event over — never show again
+  try { if (localStorage.getItem(EVENT.key)) return; } catch (_) {} // user dismissed
+
+  // Countdown text
+  const msPerDay = 86400000;
+  const daysLeft = Math.ceil((EVENT.startDate - now) / msPerDay);
+  let countdown = "";
+  if (now >= EVENT.startDate && now < EVENT.endDate) countdown = " · happening now";
+  else if (daysLeft > 1) countdown = ` · in ${daysLeft} days`;
+  else if (daysLeft === 1) countdown = " · tomorrow";
+  else if (daysLeft === 0) countdown = " · today";
+
+  const bar = document.createElement("div");
+  bar.className = "announce";
+  bar.setAttribute("role", "region");
+  bar.setAttribute("aria-label", "Announcement");
+  bar.innerHTML = `
+    <a class="announce__link" href="${EVENT.href}">
+      <span class="announce__badge" aria-hidden="true">✦</span>
+      <span class="announce__text">
+        <strong class="announce__title">${EVENT.title}</strong>
+        <span class="announce__sub">${EVENT.sub}${countdown}</span>
+      </span>
+      <span class="announce__arrow" aria-hidden="true">Learn more →</span>
+    </a>
+    <button class="announce__close" type="button" aria-label="Dismiss announcement">×</button>
+  `;
+  document.body.prepend(bar);
+  document.body.classList.add("has-announce");
+
+  bar.querySelector(".announce__close").addEventListener("click", () => {
+    try { localStorage.setItem(EVENT.key, "1"); } catch (_) {}
+    bar.classList.add("is-dismissed");
+    document.body.classList.remove("has-announce");
+    setTimeout(() => bar.remove(), 300);
+  });
+})();
+
+/* ============================================================
    Bottom-sheet Zoom dialog (mobile)
    On mobile, the <dialog> becomes a bottom sheet with drag-to-dismiss.
    On desktop, the default centered-modal behavior is preserved.
@@ -751,7 +805,7 @@ if (pathNodes.length && pathDrawers.length) {
     { day: 2, start: "20:00", end: "21:30", name: "Prayer Line · Malayalam", link: null, type: "zoom" },
     { day: 3, start: "20:00", end: "21:30", name: "Prayer Line · Youth & English", link: null, type: "zoom" },
     { day: 5, start: "19:00", end: "21:30", name: "Youth Night",       link: "youth/", type: "inperson" },
-    { day: 6, start: "18:00", end: "20:00", name: "Saturday Bible Study", link: "visit/", type: "inperson" },
+    { day: 6, start: "19:00", end: "21:00", name: "Saturday Bible Study", link: "visit/", type: "inperson" },
   ];
 
   const checkLive = () => {

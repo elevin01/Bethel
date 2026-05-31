@@ -5483,6 +5483,120 @@ html:not(.js) .js-only { display: none; }
    (or progressively enhanced for any viewport when meaningful).
    ================================================================ */
 
+/* ── Announcement bar — site-wide top banner ──────────────────── */
+.announce {
+  position: relative;
+  z-index: 60;
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  color: var(--white);
+  background: linear-gradient(90deg, #9F4F26 0%, #B85C2E 50%, #C96B3D 100%);
+  overflow: hidden;
+  animation: announceIn 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1), 0 6px 18px rgba(184, 92, 46, 0.18);
+}
+
+@keyframes announceIn {
+  from { max-height: 0; opacity: 0; }
+  to   { max-height: 80px; opacity: 1; }
+}
+
+.announce.is-dismissed {
+  animation: announceOut 0.3s ease-in forwards;
+}
+@keyframes announceOut {
+  from { max-height: 80px; opacity: 1; }
+  to   { max-height: 0; opacity: 0; }
+}
+
+.announce__link {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 11px 22px;
+  color: var(--white);
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+  min-width: 0;
+  transition: background 0.15s ease;
+}
+
+.announce__link:hover { background: rgba(0, 0, 0, 0.08); }
+
+.announce__badge {
+  display: inline-flex;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.22);
+  font-size: 11px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.announce__text {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+  min-width: 0;
+  flex: 1;
+}
+
+.announce__title {
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.announce__sub {
+  font-weight: 500;
+  font-size: 13px;
+  opacity: 0.94;
+}
+
+.announce__arrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  padding-bottom: 1px;
+  flex-shrink: 0;
+}
+
+.announce__close {
+  border: none;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 22px;
+  line-height: 1;
+  width: 48px;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: color 0.15s ease, background 0.15s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.announce__close:hover { color: var(--white); background: rgba(0, 0, 0, 0.12); }
+
+/* When announce bar is showing, push the fixed live-now badge down so it
+   doesn't sit behind the sticky nav. The bar pushes nav down by ~46px. */
+body.has-announce .live-badge { top: 124px; }
+
+@media (max-width: 720px) {
+  .announce__link { padding: 10px 14px; gap: 10px; }
+  .announce__arrow { display: none; }
+  .announce__title { font-size: 11px; }
+  .announce__sub { font-size: 12px; }
+  .announce__close { width: 42px; }
+  body.has-announce .live-badge { top: 110px; }
+}
+
 /* ── Toast notification (used by share / form / etc.) ─────────── */
 .toast {
   position: fixed;
