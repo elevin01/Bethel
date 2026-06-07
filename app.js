@@ -510,7 +510,7 @@ if (pathNodes.length && pathDrawers.length) {
     key: "bwc-announce-convention-2026",
     title: "Annual Convention 2026",
     sub: "Jun 12–14 · Pastor Shaji Paul",
-    href: "/events/",
+    href: "/events/#convention-2026",
     startDate: new Date("2026-06-12T18:30:00-04:00"),
     endDate: new Date("2026-06-15T00:00:00-04:00"),
   };

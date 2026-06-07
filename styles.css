@@ -3714,6 +3714,448 @@ html:not(.js) .js-only { display: none; }
 }
 
 /* ================================================================
+   ABOUT PAGE — Vision · Pastors · Statement of Faith · Prayer
+   ================================================================ */
+
+/* Hero */
+.about-hero {
+  padding: clamp(120px, 16vh, 180px) 0 clamp(56px, 8vw, 96px);
+  background: linear-gradient(180deg, var(--sand) 0%, var(--stone) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-hero::before {
+  content: "";
+  position: absolute;
+  top: -40%;
+  right: -10%;
+  width: 60vw;
+  height: 60vw;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(184, 92, 46, 0.08), transparent 60%);
+  pointer-events: none;
+}
+
+.about-hero__frame { max-width: 760px; position: relative; }
+.about-hero__title { margin: 8px 0 16px; }
+.about-hero__lead {
+  color: rgba(10, 10, 10, 0.72);
+  font-size: clamp(15px, 1.3vw, 18px);
+  line-height: 1.65;
+  margin: 0 0 28px;
+  max-width: 640px;
+}
+
+/* Page-section anchor chips at the bottom of the hero */
+.about-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.about-nav__chip {
+  padding: 8px 16px;
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(10, 10, 10, 0.1);
+  border-radius: 999px;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease, color 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.about-nav__chip:hover {
+  background: var(--rust);
+  border-color: var(--rust);
+  color: var(--white);
+  transform: translateY(-1px);
+}
+
+/* Vision split */
+.vision-section { padding: clamp(72px, 9vw, 120px) 0; }
+
+.vision__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  gap: clamp(28px, 5vw, 72px);
+  align-items: center;
+}
+
+.vision__intro .h2 {
+  margin: 6px 0 0;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: clamp(28px, 3.4vw, 44px);
+  line-height: 1.18;
+  color: var(--ink);
+  position: relative;
+  padding-left: 18px;
+  border-left: 3px solid var(--rust);
+}
+
+.vision__body p {
+  font-size: clamp(16px, 1.3vw, 18px);
+  line-height: 1.75;
+  color: rgba(10, 10, 10, 0.78);
+  margin: 0 0 18px;
+  max-width: 560px;
+}
+
+@media (max-width: 1100px) {
+  .vision__layout { grid-template-columns: 1fr; gap: 24px; }
+}
+
+/* Statement of Faith — editorial creed list on dark */
+.creed-section {
+  padding: clamp(80px, 10vw, 140px) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* subtle rust glow at section top */
+.creed-section::before {
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80vw;
+  height: 70vw;
+  max-width: 1200px;
+  max-height: 800px;
+  background: radial-gradient(ellipse at center, rgba(184, 92, 46, 0.10), transparent 65%);
+  pointer-events: none;
+}
+
+.creed__head {
+  max-width: 760px;
+  margin: 0 auto clamp(48px, 6vw, 80px);
+  text-align: center;
+  position: relative;
+}
+
+.creed__head .kicker { color: var(--rust-bright); }
+
+.creed__h2 {
+  color: var(--white);
+  font-size: clamp(36px, 5vw, 64px);
+  line-height: 1.05;
+  margin: 12px 0 18px;
+}
+.creed__h2 em {
+  font-style: italic;
+  color: var(--rust-bright);
+  font-weight: 500;
+}
+
+.creed__lead {
+  color: rgba(250, 250, 250, 0.7);
+  font-size: clamp(15px, 1.2vw, 17px);
+  line-height: 1.7;
+  margin: 0 auto 28px;
+  max-width: 580px;
+}
+
+/* Quick-jump pill nav */
+.creed__pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 760px;
+}
+
+.creed__pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(250, 250, 250, 0.85);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.creed__pill span {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-style: italic;
+  font-size: 14px;
+  color: var(--rust-bright);
+  font-weight: 600;
+}
+
+.creed__pill:hover {
+  background: rgba(184, 92, 46, 0.18);
+  border-color: rgba(184, 92, 46, 0.55);
+  color: var(--white);
+  transform: translateY(-1px);
+}
+
+/* The numbered creed list */
+.creed {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 980px;
+  position: relative;
+}
+
+/* Vertical guide line through the markers — connects 01 → 02 → ... visually */
+.creed::before {
+  content: "";
+  position: absolute;
+  top: clamp(60px, 7vw, 100px);
+  bottom: clamp(60px, 7vw, 100px);
+  left: clamp(28px, 5.5vw, 60px);
+  width: 1px;
+  background: linear-gradient(180deg,
+    transparent,
+    rgba(184, 92, 46, 0.35) 6%,
+    rgba(184, 92, 46, 0.35) 94%,
+    transparent);
+}
+
+.creed__item {
+  display: grid;
+  grid-template-columns: clamp(60px, 11vw, 120px) minmax(0, 1fr);
+  gap: clamp(24px, 4vw, 56px);
+  padding: clamp(40px, 5vw, 64px) 0;
+  position: relative;
+  align-items: start;
+  scroll-margin-top: 100px;
+  transition: background 0.25s ease, padding 0.25s ease;
+}
+
+.creed__item:not(:last-child) {
+  border-bottom: 1px dashed rgba(184, 92, 46, 0.18);
+}
+
+.creed__item:hover { background: rgba(184, 92, 46, 0.04); }
+
+/* Marker column: number on top, icon below, vertically stacked, centered */
+.creed__marker {
+  display: grid;
+  gap: 14px;
+  justify-items: center;
+  align-content: start;
+  position: relative;
+  z-index: 1;
+}
+
+.creed__num {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(48px, 6.5vw, 96px);
+  line-height: 0.9;
+  color: var(--rust-bright);
+  letter-spacing: -0.02em;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+  position: relative;
+  transition: transform 0.25s var(--ease);
+}
+
+.creed__item:hover .creed__num { transform: scale(1.04); }
+
+/* Icon in a circular chip below the number */
+.creed__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(36px, 4vw, 44px);
+  height: clamp(36px, 4vw, 44px);
+  border-radius: 50%;
+  background: var(--night);
+  color: var(--rust-bright);
+  border: 1px solid rgba(184, 92, 46, 0.45);
+  box-shadow: 0 0 0 5px var(--night);  /* "cuts" the guide line cleanly */
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.creed__icon svg {
+  width: 56%;
+  height: 56%;
+}
+
+/* Content column */
+.creed__content {
+  display: grid;
+  gap: 16px;
+  padding-top: clamp(6px, 1vw, 12px);
+}
+
+.creed__title {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(28px, 3.2vw, 42px);
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.1;
+  color: var(--white);
+  letter-spacing: -0.005em;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+/* Subtle rust accent bar under each title */
+.creed__title::after {
+  content: "";
+  display: block;
+  width: 44px;
+  height: 2px;
+  background: var(--rust);
+  margin-top: 12px;
+  border-radius: 2px;
+}
+
+.creed__text {
+  margin: 0;
+  font-size: clamp(15px, 1.15vw, 17px);
+  line-height: 1.78;
+  color: rgba(250, 250, 250, 0.78);
+  max-width: 64ch;
+}
+
+.creed__refs {
+  font-family: "Inter", sans-serif;
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--rust-bright);
+  padding-top: 18px;
+  border-top: 1px solid rgba(184, 92, 46, 0.25);
+  margin: 8px 0 0;
+  line-height: 1.7;
+}
+
+@media (max-width: 720px) {
+  .creed::before { display: none; }
+  .creed__item {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 32px 0;
+  }
+  .creed__marker {
+    grid-auto-flow: column;
+    justify-items: start;
+    align-items: center;
+    gap: 16px;
+  }
+  .creed__num { font-size: 56px; }
+  .creed__icon { box-shadow: none; }
+  .creed__pills { gap: 6px; }
+  .creed__pill { font-size: 11px; padding: 6px 12px; }
+}
+
+/* Pastors section on About uses pastors__layout (already defined). Override the
+   light-section coloring tweaks if needed. */
+.about-hero ~ #pastors .pastors__intro .kicker { color: var(--muted); }
+
+/* Prayer callout */
+.prayer-callout { padding: clamp(72px, 9vw, 120px) 0; }
+
+.prayer-callout__layout {
+  display: grid;
+  grid-template-columns: minmax(0, auto) minmax(0, 1fr);
+  gap: clamp(28px, 4vw, 56px);
+  align-items: start;
+  max-width: 1080px;
+}
+
+.prayer-callout__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(72px, 8vw, 110px);
+  height: clamp(72px, 8vw, 110px);
+  border-radius: 50%;
+  color: var(--rust);
+  background: rgba(184, 92, 46, 0.1);
+  border: 1px solid rgba(184, 92, 46, 0.25);
+}
+
+.prayer-callout__icon svg {
+  width: 60%;
+  height: 60%;
+}
+
+.prayer-callout__body { display: grid; gap: 14px; }
+
+.prayer-callout__body .h2 { margin: 0; }
+
+.prayer-callout__body > p {
+  color: rgba(10, 10, 10, 0.74);
+  font-size: clamp(15px, 1.2vw, 17px);
+  line-height: 1.7;
+  margin: 0;
+  max-width: 620px;
+}
+
+.prayer-callout__quote {
+  margin: 12px 0 4px;
+  padding: 16px 20px;
+  background: rgba(184, 92, 46, 0.06);
+  border-left: 3px solid var(--rust);
+  border-radius: var(--radius);
+}
+
+.prayer-callout__quote p {
+  margin: 0;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-style: italic;
+  font-size: clamp(16px, 1.4vw, 19px);
+  line-height: 1.55;
+  color: rgba(10, 10, 10, 0.82);
+}
+
+.prayer-callout__quote cite {
+  display: block;
+  margin-top: 8px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--rust);
+}
+
+@media (max-width: 720px) {
+  .prayer-callout__layout { grid-template-columns: 1fr; justify-items: start; gap: 18px; }
+}
+
+/* Close section */
+.about-close {
+  max-width: 640px;
+  margin: 0 auto;
+  display: grid;
+  gap: 16px;
+  justify-items: center;
+  text-align: center;
+}
+
+.about-close p {
+  color: rgba(10, 10, 10, 0.72);
+  font-size: clamp(15px, 1.2vw, 17px);
+  margin: 0;
+}
+
+/* ================================================================
    SCHEDULE PAGE — weekly calendar
    ================================================================ */
 
@@ -5499,14 +5941,14 @@ html:not(.js) .js-only { display: none; }
 
 @keyframes announceIn {
   from { max-height: 0; opacity: 0; }
-  to   { max-height: 80px; opacity: 1; }
+  to   { max-height: 140px; opacity: 1; }
 }
 
 .announce.is-dismissed {
   animation: announceOut 0.3s ease-in forwards;
 }
 @keyframes announceOut {
-  from { max-height: 80px; opacity: 1; }
+  from { max-height: 140px; opacity: 1; }
   to   { max-height: 0; opacity: 0; }
 }
 
@@ -5586,15 +6028,18 @@ html:not(.js) .js-only { display: none; }
 
 /* When announce bar is showing, push the fixed live-now badge down so it
    doesn't sit behind the sticky nav. The bar pushes nav down by ~46px. */
-body.has-announce .live-badge { top: 124px; }
+body.has-announce .live-badge { top: 128px; }
 
 @media (max-width: 720px) {
-  .announce__link { padding: 10px 14px; gap: 10px; }
+  /* Bigger, more legible bar on phones */
+  .announce__link { padding: 14px 16px; gap: 12px; }
+  .announce__badge { width: 28px; height: 28px; font-size: 14px; }
   .announce__arrow { display: none; }
-  .announce__title { font-size: 11px; }
-  .announce__sub { font-size: 12px; }
-  .announce__close { width: 42px; }
-  body.has-announce .live-badge { top: 110px; }
+  .announce__title { font-size: 13px; }
+  .announce__sub { font-size: 14px; line-height: 1.35; }
+  .announce__close { width: 48px; font-size: 26px; }
+  /* Bigger bar = taller. Push the live-now badge down to clear it. */
+  body.has-announce .live-badge { top: 148px; }
 }
 
 /* ── Toast notification (used by share / form / etc.) ─────────── */
@@ -5650,8 +6095,8 @@ body.has-announce .live-badge { top: 124px; }
 /* ── Live-now badge (homepage) ────────────────────────────────── */
 .live-badge {
   position: fixed;
-  z-index: 45;
-  top: 76px;
+  z-index: 55;        /* above .nav (50) so the sticky nav can never clip it */
+  top: 84px;
   right: 14px;
   display: inline-flex;
   align-items: center;
@@ -5720,7 +6165,7 @@ body.has-announce .live-badge { top: 124px; }
 .live-badge:active { transform: scale(0.97); }
 
 @media (max-width: 720px) {
-  .live-badge { top: 64px; right: 10px; padding: 7px 12px 7px 10px; }
+  .live-badge { top: 76px; right: 10px; padding: 8px 14px 8px 12px; }
   .live-badge__name { max-width: 20ch; }
 }
 

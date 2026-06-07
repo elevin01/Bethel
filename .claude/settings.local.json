@@ -15,7 +15,16 @@
       "Bash(sips -g pixelHeight -g pixelWidth \"/Users/emil07/Documents/Bethel/eventsphotos/AnnualConvention2026ConceptVarition3\\(v3\\).png\")",
       "Bash(sips -s format jpeg -s formatOptions 85 -Z 1800 \"/Users/emil07/Documents/Bethel/eventsphotos/AnnualConvention2026ConceptVarition3\\(v3\\).png\" --out /Users/emil07/Documents/Bethel/assets/photos/convention-2026.jpg)",
       "Bash(sips -g pixelHeight -g pixelWidth /Users/emil07/Documents/Bethel/eventsphotos/BethelWorsshipCenterSaturdayWnWFlyer.png)",
-      "Bash(sips -s format jpeg -s formatOptions 85 -Z 1800 /Users/emil07/Documents/Bethel/eventsphotos/BethelWorsshipCenterSaturdayWnWFlyer.png --out /Users/emil07/Documents/Bethel/assets/photos/saturday-bible-study.jpg)"
+      "Bash(sips -s format jpeg -s formatOptions 85 -Z 1800 /Users/emil07/Documents/Bethel/eventsphotos/BethelWorsshipCenterSaturdayWnWFlyer.png --out /Users/emil07/Documents/Bethel/assets/photos/saturday-bible-study.jpg)",
+      "Bash(python3 -c ' *)",
+      "Bash(python3)",
+      "Bash(awk '/nav__center/,/<\\\\/nav>/' index.html)",
+      "Bash(awk '/footer__links/,/<\\\\/div>/' index.html)",
+      "Bash(xargs ls -lt)",
+      "Bash(find . -maxdepth 2 -type f \\\\\\( -name \"*.jpg\" -o -name \"*.jpeg\" -o -name \"*.png\" -o -name \"*.webp\" -o -name \"*.HEIC\" -o -name \"*.heic\" \\\\\\) -newer /tmp 2>/dev/null *)",
+      "Read(//private/tmp/**)",
+      "Bash(xargs stat -f \"%Sm %N\" -t \"%Y-%m-%d %H:%M\")",
+      "Bash(sips -s format jpeg \"Photos-3-001/20250809_164833.heic\" --out \"assets/photos/events-hero.jpg\" --resampleWidth 1800 -s formatOptions 82)"
     ]
   }
 }

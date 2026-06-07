@@ -3,7 +3,7 @@
    - Cache-first for images (rarely change) + static assets
    - Network-first for HTML (always try fresh) with offline fallback */
 
-const CACHE_VERSION = "bwc-v3";
+const CACHE_VERSION = "bwc-v6";
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
 const RUNTIME_CACHE = `${CACHE_VERSION}-runtime`;
@@ -83,17 +83,19 @@ self.addEventListener("fetch", (event) => {
     return;
   }
 
-  // Cache-first for everything else (CSS, JS, fonts)
+  // Stale-while-revalidate for everything else (CSS, JS, fonts):
+  // serve cached version instantly for fast paint, refresh in background
+  // so the next load sees the new file.
   event.respondWith(
     caches.match(request).then((cached) => {
-      if (cached) return cached;
-      return fetch(request).then((response) => {
+      const networkFetch = fetch(request).then((response) => {
         if (response.ok && response.type === "basic") {
           const copy = response.clone();
           caches.open(RUNTIME_CACHE).then((cache) => cache.put(request, copy));
         }
         return response;
       }).catch(() => cached);
+      return cached || networkFetch;
     })
   );
 });
