@@ -41,3 +41,9 @@ The existing meeting ID and passcode are preserved on `/online/` so visitors can
 The meeting host should review the recurring meeting in Zoom, enable a Waiting Room with host admission, and update its passcode if needed. After any change, supply the official invitation link and current joining instructions for `/online/`. A passcode published on a public website should not be treated as a private access control. Do not claim that a Waiting Room is active without checking the meeting settings.
 
 Official guidance: [Zoom meeting security options](https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0059862).
+
+## Verification of this revision
+
+The Netlify PR preview was checked in Chromium at 320, 390, 768, and 1440 CSS pixels across all 12 pages (48 layouts). No horizontal overflow, failed images, or main-heading count errors were found. Axe WCAG A/AA checks returned no violations on the 12 pages at 390 pixels. Menu opening, Escape/focus return, native FAQ expansion, and a real PowerPoint download passed. Local links, anchors, JSON-LD parsing, sitemap XML, JavaScript syntax, and whitespace checks passed. Automated checks supplement visual inspection; they are not a complete accessibility certification.
+
+The temporary preview review page and its test dependency are removed from the final branch contents.
