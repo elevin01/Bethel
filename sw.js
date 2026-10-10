@@ -3,10 +3,13 @@
    - Cache-first for images (rarely change) + static assets
    - Network-first for HTML (always try fresh) with offline fallback */
 
-const CACHE_VERSION = "bwc-v6";
+const CACHE_VERSION = "bwc-v7-welcome";
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
 const RUNTIME_CACHE = `${CACHE_VERSION}-runtime`;
+
+const SITE_ROOT = new URL(".", self.location.href);
+const localUrl = (path) => new URL(path.replace(/^\//, ""), SITE_ROOT).href;
 
 const PRECACHE = [
   "/",
@@ -18,14 +21,10 @@ const PRECACHE = [
   "/assets/bwc-logo.png",
   "/assets/icon-192.png",
   "/assets/icon-512.png",
-  // Homepage hero photos — load instantly on revisit
-  "/assets/photos/youth-choir.jpg",
-  "/assets/photos/youth-night.jpg",
-  "/assets/photos/youth-group.jpg",
-  "/assets/photos/sunday-school.jpg",
-  "/assets/photos/bible-study.jpg",
-  "/assets/photos/placeholder.jpg",
-];
+  "/welcome.css",
+  "/assets/images/family-640.webp",
+  "/assets/images/family-1400.webp",
+].map(localUrl);
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
@@ -57,11 +56,12 @@ self.addEventListener("fetch", (event) => {
     event.respondWith(
       fetch(request)
         .then((response) => {
+          if (!response.ok) return response;
           const copy = response.clone();
           caches.open(RUNTIME_CACHE).then((cache) => cache.put(request, copy));
           return response;
         })
-        .catch(() => caches.match(request).then((cached) => cached || caches.match("/index.html")))
+        .catch(() => caches.match(request).then((cached) => cached || caches.match(localUrl("index.html"))))
     );
     return;
   }
@@ -77,7 +77,7 @@ self.addEventListener("fetch", (event) => {
             caches.open(IMAGE_CACHE).then((cache) => cache.put(request, copy));
           }
           return response;
-        }).catch(() => cached);
+        }).catch(() => cached || Response.error());
       })
     );
     return;
@@ -94,7 +94,7 @@ self.addEventListener("fetch", (event) => {
           caches.open(RUNTIME_CACHE).then((cache) => cache.put(request, copy));
         }
         return response;
-      }).catch(() => cached);
+      }).catch(() => cached || Response.error());
       return cached || networkFetch;
     })
   );

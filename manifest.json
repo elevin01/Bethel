@@ -1,14 +1,14 @@
 {
   "name": "Bethel Worship Center",
   "short_name": "Bethel",
-  "description": "Bethel Worship Center (IPC) — a Spirit-filled, Word-centered family in Bronxville, NY.",
-  "id": "/",
-  "start_url": "/",
-  "scope": "/",
+  "description": "Bethel Worship Center (IPC) \u2014 a Spirit-filled, Word-centered family in Bronxville, NY.",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#FFFFFF",
-  "theme_color": "#FFFFFF",
+  "background_color": "#fbf8f2",
+  "theme_color": "#fbf8f2",
   "icons": [
     {
       "src": "assets/icon-192.png",
@@ -26,18 +26,33 @@
   "shortcuts": [
     {
       "name": "Plan a Visit",
-      "url": "/visit/",
-      "icons": [{ "src": "assets/icon-192.png", "sizes": "192x192" }]
+      "url": "./visit/",
+      "icons": [
+        {
+          "src": "assets/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
     },
     {
-      "name": "Latest Message",
-      "url": "/ministry/",
-      "icons": [{ "src": "assets/icon-192.png", "sizes": "192x192" }]
+      "name": "Bible Study Resources",
+      "url": "./ministry/",
+      "icons": [
+        {
+          "src": "assets/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
     },
     {
       "name": "Schedule",
-      "url": "/schedule/",
-      "icons": [{ "src": "assets/icon-192.png", "sizes": "192x192" }]
+      "url": "./schedule/",
+      "icons": [
+        {
+          "src": "assets/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
     }
   ]
 }
