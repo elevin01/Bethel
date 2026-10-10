@@ -22,6 +22,10 @@ The homepage uses a full-width Bethel worship photo, direct sans-serif typograph
 
 References studied for composition and visitor information: [Austin Stone](https://www.austinstone.org/), [Bridgetown](https://bridgetown.church/), and [VIVE](https://vivechurch.org/). All congregation imagery is from Bethel's existing source; no other church's photography is used.
 
+Interior pages use distinct layouts: photographic openings for church life, an arrival guide for visitors, weekly schedule rows, and a study download list. Keep service information close to the relevant action and avoid adding the same generic closing section to every page.
+
+All navigation and action arrows are inline SVGs with the shared `.w-icon` class, `aria-hidden="true"`, and `focusable="false"`. Use the forward, external-link, down, or download path that matches the destination. Do not substitute Unicode arrows: mobile platforms can render them as colorful emoji.
+
 ## Content and search
 
 - `/bible-study/` provides the Monday online and Saturday in-person study details.
@@ -44,6 +48,6 @@ Official guidance: [Zoom meeting security options](https://support.zoom.com/hc/e
 
 ## Verification of this revision
 
-The Netlify PR preview was checked in Chromium at 320, 390, 768, and 1440 CSS pixels across all 12 pages (48 layouts). No horizontal overflow, failed images, or main-heading count errors were found. Axe WCAG A/AA checks returned no violations on the 12 pages at 390 pixels. Menu opening, Escape/focus return, native FAQ expansion, and a real PowerPoint download passed. Local links, anchors, JSON-LD parsing, sitemap XML, JavaScript syntax, and whitespace checks passed. Automated checks supplement visual inspection; they are not a complete accessibility certification.
+The Netlify PR preview was checked in Chromium at 320, 390, 768, and 1440 CSS pixels across all 12 pages (48 layouts). No horizontal overflow, failed images, main-heading count errors, or remaining text arrows were found. All 89 action icons are SVGs hidden from screen readers. Axe WCAG A/AA checks returned no violations on the 12 pages at 390 pixels. Menu opening, Escape/focus return, native FAQ expansion, and a real PowerPoint download passed. Local links, anchors, JSON-LD parsing, sitemap XML, JavaScript syntax, and whitespace checks passed. Automated checks supplement visual inspection; they are not a complete accessibility certification.
 
 The temporary preview review page and its test dependency are removed from the final branch contents.
