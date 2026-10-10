@@ -18,7 +18,7 @@ From the repository root, run `python3 -m http.server 8000`, then open `http://l
 
 ## Design direction
 
-The homepage uses a full-width Bethel worship photo, direct sans-serif typography, Sunday times, and the lower-level venue details. Mobile uses a portrait worship photo from the same existing collection. “Life at Bethel” introduces youth and Bible study; “Life is better shared” accompanies the outdoor congregation photo. The posed church-family photo sits beside the Sunday introduction.
+The homepage uses a full-width Bethel worship photo, direct sans-serif typography, Sunday times, and the lower-level venue details. Mobile uses a portrait worship photo from the same existing collection. “Life at Bethel” introduces youth and Bible study; “Life is better shared” accompanies the outdoor congregation photo. The Sunday introduction uses a heading and welcome copy in two columns, stacking on phones. The posed church-family photo is omitted from the homepage and its sharing metadata.
 
 References studied for composition and visitor information: [Austin Stone](https://www.austinstone.org/), [Bridgetown](https://bridgetown.church/), and [VIVE](https://vivechurch.org/). All congregation imagery is from Bethel's existing source; no other church's photography is used.
 

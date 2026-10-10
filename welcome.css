@@ -91,8 +91,7 @@
 /* Sundays and church life */
 .w-sunday { display: grid; grid-template-columns: .9fr 1.1fr; align-items: center; gap: 9%; }
 .w-sunday-copy > p:not(.w-eyebrow) { max-width: 440px; margin-top: 25px; color: var(--subtle); font-size: 15px; }
-.w-sunday figure img { width: 100%; height: auto; aspect-ratio: 5 / 4; object-fit: cover; }
-.w-sunday figcaption { margin-top: 12px; color: var(--subtle); font-size: 11px; }
+.w-sunday-copy > p:first-child:not(.w-eyebrow) { margin-top: 0; }
 .w-section-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 36px; margin-bottom: 46px; }
 .w-section-head > p { max-width: 320px; font-size: 14px; line-height: 1.9; color: var(--subtle); }
 .w-life-grid { display: grid; grid-template-columns: 1.13fr 1fr; gap: 42px; }
@@ -283,7 +282,6 @@
  .w-sunday { grid-template-columns: 1fr; gap: 36px; }
  .w-sunday-copy h2 { font-size: 44px; }
  .w-sunday-copy > p:not(.w-eyebrow) { font-size: 14px; margin-top: 22px; }
- .w-sunday figure img { aspect-ratio: 4 / 3; }
  .w-section-head { display: block; margin-bottom: 34px; }
  .w-section-head > p { margin-top: 20px; max-width: 100%; font-size: 13px; }
  .w-life-grid { grid-template-columns: 1fr; gap: 42px; }
