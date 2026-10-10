@@ -20,7 +20,7 @@
 <link href="../assets/LogoSmallCircle.png" rel="icon" type="image/png"/>
 <link href="../assets/LogoSmallCircle.png" rel="apple-touch-icon"/>
 <link href="../styles.css" rel="stylesheet"/>
-<link href="../welcome.css?v=9" rel="stylesheet"/>
+<link href="../welcome.css?v=10" rel="stylesheet"/>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@graph": [
@@ -178,9 +178,7 @@
 <div class="site-nav-actions">
 <a class="w-button w-button--primary" href="../visit/">
       Plan a visit
-      <span aria-hidden="true">
-       ↗
-      </span>
+      <svg aria-hidden="true" class="w-icon" fill="none" focusable="false" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="20"><path d="M5 12h14m-6-6 6 6-6 6"></path></svg>
 </a>
 <button aria-controls="mobileMenu" aria-expanded="false" aria-label="Open menu" class="nav__toggle">
 <span>
@@ -222,33 +220,26 @@
 </nav>
 </header>
 <main id="main" tabindex="-1">
-<section class="w-page-hero w-wrap">
-<div>
+<section class="w-visit-hero">
+<div class="w-visit-intro">
 <p class="w-eyebrow">
       Your first visit
      </p>
-<h1>Your first Sunday.</h1>
-<p class="w-lead">Join us at 10 Tanglewylde Avenue in Bronxville, on the lower level of Golden Sword Church. Here’s what to know before your first Sunday.</p>
+<h1>Your first<br/>Sunday.</h1>
+<p class="w-lead">10 Tanglewylde Avenue, Bronxville. You’ll find us on the lower level of Golden Sword Church.</p>
 <div class="w-actions">
-<a class="w-button w-button--primary" href="https://maps.google.com/?q=10+Tanglewylde+Ave+Bronxville+NY+10708" rel="noreferrer" target="_blank">
+<a class="w-button w-button--light" href="https://maps.google.com/?q=10+Tanglewylde+Ave+Bronxville+NY+10708" rel="noreferrer" target="_blank">
        Get directions
-       <span aria-hidden="true">
-        ↗
-       </span>
+       <svg aria-hidden="true" class="w-icon" fill="none" focusable="false" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="20"><path d="M7 17 17 7M7 7h10v10"></path></svg>
 </a>
-<a class="w-button w-button--outline" href="../online/">
-       Join on Zoom
-       <span aria-hidden="true">
-        ↗
-       </span>
-</a>
+
 </div>
 </div>
-<figure>
-<img alt="The Bethel congregation together" class="" decoding="async" fetchpriority="high" height="1050" loading="eager" sizes="(max-width: 720px) 92vw, 55vw" src="../assets/images/family-1400.webp" srcset="../assets/images/family-640.webp 640w, ../assets/images/family-1400.webp 1400w" width="1400"/>
+<figure class="w-visit-photo">
+<img alt="The Bethel congregation together" class="" decoding="async" fetchpriority="high" height="1050" loading="eager" sizes="(max-width: 720px) 100vw, 56vw" src="../assets/images/family-1400.webp" srcset="../assets/images/family-640.webp 640w, ../assets/images/family-1400.webp 1400w" width="1400"/>
 </figure>
 </section>
-<section class="w-service-strip">
+<section class="w-service-strip w-service-strip--visit">
 <div class="w-wrap">
 <div>
 <small>
@@ -286,11 +277,9 @@
 <h2>What to expect.</h2>
 </div>
 </div>
-<div class="w-info-grid">
-<article>
-<span>
-       01 / ARRIVING
-      </span>
+<div class="w-arrival-steps">
+<article><span class="w-arrival-number">01</span><div>
+
 <h3>
        Find us downstairs.
       </h3>
@@ -298,42 +287,36 @@
        We meet in the lower level of Golden Sword Church at 10 Tanglewylde Avenue. Look for Bethel Worship Center when you arrive.
       </p>
 <a class="w-inline" href="https://maps.google.com/?q=10+Tanglewylde+Ave+Bronxville+NY+10708" rel="noreferrer" target="_blank">
-       Open the map ↗
-      </a>
-</article>
-<article>
-<span>
-       02 / WORSHIP
-      </span>
+       Open the map <svg aria-hidden="true" class="w-icon" fill="none" focusable="false" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="20"><path d="M7 17 17 7M7 7h10v10"></path></svg>
+</a>
+</div></article>
+<article><span class="w-arrival-number">02</span><div>
+
 <h3>
        Join in at your own pace.
       </h3>
 <p>
        Expect singing, prayer, and a message from the Bible. You’re welcome to participate or take it all in as you get comfortable.
       </p>
-</article>
-<article>
-<span>
-       03 / FAMILIES
-      </span>
+</div></article>
+<article><span class="w-arrival-number">03</span><div>
+
 <h3>
        Little ones are welcome.
       </h3>
 <p>
        Children worship with their families. We don’t currently offer a separate children’s program or nursery.
       </p>
-</article>
-<article>
-<span>
-       04 / PARKING
-      </span>
+</div></article>
+<article><span class="w-arrival-number">04</span><div>
+
 <h3>
        Around the neighborhood.
       </h3>
 <p>
        Street and metered parking are available nearby. Check posted signs when you park, and leave a few extra minutes to find your way in.
       </p>
-</article>
+</div></article>
 </div>
 </section>
 <section class="w-section w-cream">
@@ -383,21 +366,7 @@
 </div>
 </div>
 </section>
-<section class="w-invitation">
-<div class="w-wrap">
-<p class="w-eyebrow">You’re welcome here</p>
-<h2>Join us this Sunday.</h2>
-<p>
-      English at 9:30 AM · Malayalam at 10:30 AM
-     </p>
-<a class="w-button w-button--primary" href="../visit/">
-      Plan your visit
-      <span aria-hidden="true">
-       ↗
-      </span>
-</a>
-</div>
-</section>
+<section class="w-next-step"><div class="w-wrap"><div><h2>See you on Sunday.</h2><p>English at 9:30 AM · Malayalam at 10:30 AM</p></div><a class="w-button w-button--primary" href="https://maps.google.com/?q=10+Tanglewylde+Ave+Bronxville+NY+10708">Get directions<svg aria-hidden="true" class="w-icon" fill="none" focusable="false" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="20"><path d="M7 17 17 7M7 7h10v10"></path></svg></a></div></section>
 </main>
 <footer class="site-footer">
 <div class="w-wrap footer-main">
@@ -426,8 +395,8 @@
 <a href="https://maps.google.com/?q=10+Tanglewylde+Ave+Bronxville+NY+10708" rel="noreferrer" target="_blank">
       10 Tanglewylde Ave
       <br/>
-      Bronxville, NY 10708 ↗
-     </a>
+      Bronxville, NY 10708 <svg aria-hidden="true" class="w-icon" fill="none" focusable="false" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="20"><path d="M7 17 17 7M7 7h10v10"></path></svg>
+</a>
 <p class="footer-small">
       Lower level of Golden Sword Church
      </p>
@@ -466,7 +435,7 @@
     </span>
 </div>
 </footer>
-<script defer="" src="../app.js?v=9">
+<script defer="" src="../app.js?v=10">
 </script>
 </body>
 </html>
