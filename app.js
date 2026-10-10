@@ -48,26 +48,6 @@
     });
   }
 
-  document.querySelectorAll('[data-dialog-open]').forEach((trigger) => {
-    const dialog = document.getElementById(trigger.dataset.dialogOpen);
-    if (!dialog) return;
-    trigger.addEventListener('click', (event) => {
-      event.preventDefault();
-      dialog.showModal();
-    });
-  });
-  document.querySelectorAll('dialog').forEach((dialog) => {
-    dialog.querySelectorAll('[data-dialog-close]').forEach((button) => {
-      button.addEventListener('click', () => dialog.close());
-    });
-    dialog.addEventListener('click', (event) => {
-      if (event.target !== dialog) return;
-      const rect = dialog.getBoundingClientRect();
-      if (event.clientX < rect.left || event.clientX > rect.right ||
-          event.clientY < rect.top || event.clientY > rect.bottom) dialog.close();
-    });
-  });
-
   const year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
 

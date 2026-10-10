@@ -3,7 +3,7 @@
    - Cache-first for images (rarely change) + static assets
    - Network-first for HTML (always try fresh) with offline fallback */
 
-const CACHE_VERSION = "bwc-v7-welcome";
+const CACHE_VERSION = "bwc-v8-community";
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
 const RUNTIME_CACHE = `${CACHE_VERSION}-runtime`;
@@ -15,15 +15,15 @@ const PRECACHE = [
   "/",
   "/index.html",
   "/styles.css",
-  "/app.js",
+  "/app.js?v=8",
   "/manifest.json",
   "/assets/LogoSmallCircle.png",
   "/assets/bwc-logo.png",
   "/assets/icon-192.png",
   "/assets/icon-512.png",
-  "/welcome.css",
-  "/assets/images/family-640.webp",
-  "/assets/images/family-1400.webp",
+  "/welcome.css?v=8",
+  "/assets/images/gathering-640.webp",
+  "/assets/images/gathering-1400.webp",
 ].map(localUrl);
 
 self.addEventListener("install", (event) => {

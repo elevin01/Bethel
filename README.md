@@ -1,6 +1,6 @@
 # Bethel Worship Center
 
-Static website for [bwcny.org](https://www.bwcny.org). No package installation or build step is required.
+Static website for [bwcny.org](https://bwcny.org). No package installation or build step is required.
 
 ## Local preview
 
@@ -8,22 +8,36 @@ From the repository root, run `python3 -m http.server 8000`, then open `http://l
 
 ## Editing the site
 
-- Pages are ordinary HTML in the root and the named page directories.
-- `welcome.css` contains the shared welcoming theme and responsive layouts. `styles.css` supplies base and retained About-page styles.
-- `app.js` handles the mobile menu, accessible Zoom dialog, footer year, and About-page reveals.
-- `assets/images/` contains responsive WebP photos. Original congregation photos remain in `assets/photos/`. See `PHOTO-CREDITS.md` for the stock photo source.
-- Fonts are self-hosted in `assets/fonts/`, with their licenses included.
-- The schedule, navigation, and footer appear on multiple pages. Keep times and links consistent when editing them.
-- Increase `CACHE_VERSION` in `sw.js` when publishing asset changes so returning visitors receive the new assets.
+- Pages are ordinary HTML in the root and the named page directories. The existing `/youth/`, `/visit/`, and `/about/` URLs remain intact. `/ministries/youth/` redirects to `/youth/` on Netlify.
+- `welcome.css` contains the shared theme and responsive layouts. `styles.css` supplies base and retained About-page styles.
+- `app.js` handles mobile navigation, the footer year, and statement-of-faith reveals. Essential content, links, and native FAQs work without JavaScript.
+- `assets/images/` contains responsive WebP photos. Originals remain in `assets/photos/`. See `PHOTO-CREDITS.md` for the stock Bible photo source.
+- Fonts are self-hosted with their licenses included.
+- Schedules, navigation, and footers appear on multiple pages. Keep visible times and structured data consistent.
+- Increase `CACHE_VERSION` in `sw.js` and the version query on changed CSS/JS references when publishing asset changes. This avoids pairing new HTML with a previous service worker's cached design.
 
-## Content and connections
+## Design direction
 
-The Resources page links to the three study presentations that exist in `assets/ppt/`. The June 2026 convention is archived on the Events page. Add future events only when dates and details are confirmed.
+The homepage uses a full-width Bethel worship photo, direct sans-serif typography, Sunday times, and the lower-level venue details. Mobile uses a portrait worship photo from the same existing collection. “Life at Bethel” introduces youth and Bible study; “Life is better shared” accompanies the outdoor congregation photo. The posed church-family photo sits beside the Sunday introduction.
 
-Prayer and youth pages direct visitors to the existing gatherings and pastors. They do not collect submissions: a monitored recipient and working delivery service must be configured before adding online forms. The prior demo submission handlers and sample sermon links have been removed.
+References studied for composition and visitor information: [Austin Stone](https://www.austinstone.org/), [Bridgetown](https://bridgetown.church/), and [VIVE](https://vivechurch.org/). All congregation imagery is from Bethel's existing source; no other church's photography is used.
 
-The Zoom dialog uses the meeting ID and passcode previously published on the site. If these change, update the shared dialog markup on every page.
+## Content and search
 
-## Refresh verification
+- `/bible-study/` provides the Monday online and Saturday in-person study details.
+- `/online/` is the single page for the Zoom link, meeting details, and online gathering schedule; it replaces the duplicated modal markup.
+- `/ministry/` links to the three real study presentations in `assets/ppt/`. Add a sermon archive only after recordings, titles, speakers, and dates are supplied. No fabricated sermon entries or placeholder players are published.
+- The June 2026 convention remains clearly archived. Add future events only when dates and details are confirmed.
+- Prayer and youth pages direct visitors to gatherings and pastors. Online forms require a monitored recipient and working delivery service.
+- Each page has a unique title and description, an apex-domain canonical URL, sharing metadata, and JSON-LD for the church, organization, website, and page. Interior pages include breadcrumbs. Sunday worship periods match the visible schedule.
+- The previous geographic coordinates were not verified for the venue and have been omitted. The full postal address, named host church, and address-based map link are provided. Add precise coordinates only after confirming the entrance location.
+- Keep `sitemap.xml` synchronized with indexable pages and meaningful content changes. Local wording describes a Bronxville church serving Yonkers and Westchester; it does not imply separate campuses.
+- Structured data helps describe the content. It does not guarantee a search feature or map ranking. Do not invent dated event instances to obtain event rich results.
 
-Browser checks cover all 10 pages at 320, 390, 768, and 1440 CSS pixels, including overflow, images, fonts, local anchors, and page headings. Mobile navigation, Escape handling, the Zoom dialog, native FAQs, and a real presentation download were exercised. Automated accessibility checks supplement visual review; they are not a complete accessibility certification.
+## Zoom host follow-up
+
+The existing meeting ID and passcode are preserved on `/online/` so visitors can still join. Website edits do **not** change Zoom account security.
+
+The meeting host should review the recurring meeting in Zoom, enable a Waiting Room with host admission, and update its passcode if needed. After any change, supply the official invitation link and current joining instructions for `/online/`. A passcode published on a public website should not be treated as a private access control. Do not claim that a Waiting Room is active without checking the meeting settings.
+
+Official guidance: [Zoom meeting security options](https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0059862).
