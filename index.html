@@ -1,831 +1,336 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Bethel Worship Center — Church in Bronxville, NY · English &amp; Malayalam Services</title>
-  <meta name="description" content="Bethel Worship Center (IPC) is a Spirit-filled, Word-centered church in Bronxville, NY serving Westchester County. Sunday English service 9:30 AM, Malayalam service 10:30 AM. Weekly Bible study, prayer lines, and youth night — in person and on Zoom." />
-  <meta name="keywords" content="church Bronxville NY, Malayalam church Westchester, IPC church near me, Pentecostal church Bronxville, Bible study Bronxville, Bible study Yonkers, youth ministry Westchester, Sunday service Bronxville, churches near me, Malayalam church New York" />
-  <meta name="author" content="Bethel Worship Center" />
-  <meta name="robots" content="index, follow, max-image-preview:large" />
-  <link rel="canonical" href="https://www.bwcny.org/" />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Bethel Worship Center" />
-  <meta property="og:title" content="Bethel Worship Center — Church in Bronxville, NY" />
-  <meta property="og:description" content="A Spirit-filled, Word-centered church serving Bronxville and Westchester County. English &amp; Malayalam Sunday services, weekly Bible study, prayer lines, and youth night." />
-  <meta property="og:url" content="https://www.bwcny.org/" />
-  <meta property="og:image" content="https://www.bwcny.org/assets/photos/youth-choir.jpg" />
-  <meta property="og:image:alt" content="Bethel Worship Center congregation in worship" />
-  <meta property="og:locale" content="en_US" />
-  <meta property="og:locale:alternate" content="ml_IN" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Bethel Worship Center — Church in Bronxville, NY" />
-  <meta name="twitter:description" content="A Spirit-filled, Word-centered church serving Bronxville &amp; Westchester. English &amp; Malayalam Sunday services." />
-  <meta name="twitter:image" content="https://www.bwcny.org/assets/photos/youth-choir.jpg" />
-
-  <!-- Geo -->
-  <meta name="geo.region" content="US-NY" />
-  <meta name="geo.placename" content="Bronxville, NY" />
-  <meta name="geo.position" content="40.9396;-73.8345" />
-  <meta name="ICBM" content="40.9396, -73.8345" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <!-- Preload all hero slideshow images so rotation never shows a black frame -->
-  <link rel="preload" as="image" href="assets/photos/youth-choir.jpg" fetchpriority="high" />
-  <link rel="preload" as="image" href="assets/photos/youth-night.jpg" />
-  <link rel="preload" as="image" href="assets/photos/youth-group.jpg" />
-  <link rel="preload" as="image" href="assets/photos/sunday-school.jpg" />
-  <link rel="preload" as="image" href="assets/photos/bible-study.jpg" />
-  <link rel="preload" as="image" href="assets/photos/placeholder.jpg" />
-
-  <!-- Prefetch likely next pages so navigation feels instant -->
-  <link rel="prefetch" href="visit/" />
-  <link rel="prefetch" href="ministry/" />
-  <link rel="prefetch" href="schedule/" />
-  <link rel="prefetch" href="youth/" />
-
-  <!-- Speculation Rules — prerender on hover/touch in supporting browsers -->
-  <script type="speculationrules">
-  {
-    "prerender": [{
-      "where": { "and": [
-        { "href_matches": "/*" },
-        { "not": { "href_matches": "/*#*" } }
-      ]},
-      "eagerness": "moderate"
-    }]
-  }
-  </script>
-  <link rel="manifest" href="manifest.json" />
-  <meta name="theme-color" content="#FFFFFF" />
-  <link rel="icon" type="image/png" href="assets/LogoSmallCircle.png" />
-  <link rel="apple-touch-icon" href="assets/LogoSmallCircle.png" />
-  <link rel="stylesheet" href="styles.css" />
-
-  <!-- Structured data — Church / LocalBusiness for local search -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Church",
-    "@id": "https://www.bwcny.org/#church",
-    "name": "Bethel Worship Center",
-    "alternateName": ["Bethel Worship Center IPC", "BWC Bronxville"],
-    "description": "Bethel Worship Center (IPC) is a Spirit-filled, Word-centered Pentecostal church in Bronxville, NY serving Westchester County with English and Malayalam Sunday services, weekly Bible study, prayer lines, and youth night.",
-    "url": "https://www.bwcny.org/",
-    "logo": "https://www.bwcny.org/assets/bwc-logo.png",
-    "image": [
-      "https://www.bwcny.org/assets/photos/youth-choir.jpg",
-      "https://www.bwcny.org/assets/photos/youth-night.jpg",
-      "https://www.bwcny.org/assets/photos/sunday-school.jpg"
-    ],
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "10 Tanglewylde Ave",
-      "addressLocality": "Bronxville",
-      "addressRegion": "NY",
-      "postalCode": "10708",
-      "addressCountry": "US"
+<meta charset="utf-8"/>
+<link href="./assets/fonts/fonts.css" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<title>Bethel Worship Center | Pentecostal Church in Bronxville, NY</title>
+<meta content="A Pentecostal church in Bronxville welcoming Yonkers and Westchester. English worship Sundays at 9:30 AM; Malayalam at 10:30 AM. Plan your visit." name="description"/>
+<meta content="Bethel Worship Center" name="author"/>
+<meta content="index, follow, max-image-preview:large" name="robots"/>
+<link href="https://bwcny.org/" rel="canonical"/>
+<!-- Open Graph -->
+<meta content="website" property="og:type"/>
+<meta content="Bethel Worship Center" property="og:site_name"/>
+<meta content="Bethel Worship Center | Pentecostal Church in Bronxville, NY" property="og:title"/>
+<meta content="A Pentecostal church in Bronxville welcoming Yonkers and Westchester. English worship Sundays at 9:30 AM; Malayalam at 10:30 AM. Plan your visit." property="og:description"/>
+<meta content="https://bwcny.org/" property="og:url"/>
+<meta content="https://bwcny.org/assets/images/family-1400.webp" property="og:image"/>
+<meta content="The Bethel Worship Center church family" property="og:image:alt"/>
+<meta content="en_US" property="og:locale"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Bethel Worship Center | Pentecostal Church in Bronxville, NY" name="twitter:title"/>
+<meta content="A Pentecostal church in Bronxville welcoming Yonkers and Westchester. English worship Sundays at 9:30 AM; Malayalam at 10:30 AM. Plan your visit." name="twitter:description"/>
+<meta content="https://bwcny.org/assets/images/family-1400.webp" name="twitter:image"/>
+<!-- Geo -->
+<link href="manifest.json" rel="manifest"/>
+<meta content="#ffffff" name="theme-color"/>
+<link href="assets/LogoSmallCircle.png" rel="icon" type="image/png"/>
+<link href="assets/LogoSmallCircle.png" rel="apple-touch-icon"/>
+<link href="styles.css" rel="stylesheet"/>
+<link href="./welcome.css?v=10" rel="stylesheet"/>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://bwcny.org/#organization",
+      "name": "Bethel Worship Center",
+      "alternateName": "Bethel Worship Center IPC",
+      "url": "https://bwcny.org/",
+      "logo": "https://bwcny.org/assets/bwc-logo.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "10 Tanglewylde Ave",
+        "addressLocality": "Bronxville",
+        "addressRegion": "NY",
+        "postalCode": "10708",
+        "addressCountry": "US"
+      },
+      "location": {
+        "@id": "https://bwcny.org/#church"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Bronxville"
+        },
+        {
+          "@type": "City",
+          "name": "Yonkers"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Westchester County, New York"
+        }
+      ]
     },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 40.9396,
-      "longitude": -73.8345
+    {
+      "@type": "Church",
+      "@id": "https://bwcny.org/#church",
+      "name": "Bethel Worship Center",
+      "url": "https://bwcny.org/",
+      "description": "Pentecostal church with English and Malayalam worship on the lower level of Golden Sword Church in Bronxville, New York.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "10 Tanglewylde Ave",
+        "addressLocality": "Bronxville",
+        "addressRegion": "NY",
+        "postalCode": "10708",
+        "addressCountry": "US"
+      },
+      "containedInPlace": {
+        "@type": "Church",
+        "name": "Golden Sword Church",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "10 Tanglewylde Ave",
+          "addressLocality": "Bronxville",
+          "addressRegion": "NY",
+          "postalCode": "10708",
+          "addressCountry": "US"
+        }
+      },
+      "image": "https://bwcny.org/assets/images/gathering-1400.webp",
+      "logo": "https://bwcny.org/assets/bwc-logo.png",
+      "hasMap": "https://maps.google.com/?q=10+Tanglewylde+Ave+Bronxville+NY+10708",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "https://schema.org/Sunday",
+          "opens": "09:30",
+          "closes": "10:30",
+          "name": "English Sunday worship"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "https://schema.org/Sunday",
+          "opens": "10:30",
+          "closes": "12:30",
+          "name": "Malayalam Sunday worship"
+        }
+      ]
     },
-    "areaServed": [
-      { "@type": "City", "name": "Bronxville" },
-      { "@type": "City", "name": "Yonkers" },
-      { "@type": "City", "name": "Mount Vernon" },
-      { "@type": "City", "name": "Tuckahoe" },
-      { "@type": "City", "name": "Eastchester" },
-      { "@type": "City", "name": "New Rochelle" },
-      { "@type": "City", "name": "White Plains" },
-      { "@type": "AdministrativeArea", "name": "Westchester County, NY" }
-    ],
-    "knowsLanguage": ["en", "ml"],
-    "religion": "Christianity",
-    "denomination": "Pentecostal",
-    "subjectOf": {
-      "@type": "CreativeWork",
-      "name": "India Pentecostal Church (IPC)"
-    },
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": "Sunday",
-        "opens": "09:30",
-        "closes": "12:30",
-        "name": "Sunday Worship (English &amp; Malayalam)"
+    {
+      "@type": "WebSite",
+      "@id": "https://bwcny.org/#website",
+      "url": "https://bwcny.org/",
+      "name": "Bethel Worship Center",
+      "publisher": {
+        "@id": "https://bwcny.org/#organization"
       }
-    ],
-    "event": [
-      {
-        "@type": "Event",
-        "name": "English Sunday Service",
-        "description": "Weekly English worship service.",
-        "startDate": "2026-05-31T09:30-04:00",
-        "endDate": "2026-05-31T10:30-04:00",
-        "eventSchedule": {
-          "@type": "Schedule",
-          "byDay": "https://schema.org/Sunday",
-          "startTime": "09:30:00",
-          "endTime": "10:30:00",
-          "scheduleTimezone": "America/New_York",
-          "repeatFrequency": "P1W"
-        },
-        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-        "eventStatus": "https://schema.org/EventScheduled",
-        "location": {
-          "@type": "Place",
-          "name": "Bethel Worship Center",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "10 Tanglewylde Ave",
-            "addressLocality": "Bronxville",
-            "addressRegion": "NY",
-            "postalCode": "10708",
-            "addressCountry": "US"
-          }
-        },
-        "isAccessibleForFree": true,
-        "inLanguage": "en"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://bwcny.org/#webpage",
+      "url": "https://bwcny.org/",
+      "name": "Bethel Worship Center | Pentecostal Church in Bronxville, NY",
+      "description": "A Pentecostal church in Bronxville welcoming Yonkers and Westchester. English worship Sundays at 9:30 AM; Malayalam at 10:30 AM. Plan your visit.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://bwcny.org/#website"
       },
-      {
-        "@type": "Event",
-        "name": "Malayalam Sunday Service",
-        "description": "Weekly Malayalam worship service.",
-        "startDate": "2026-05-31T10:30-04:00",
-        "endDate": "2026-05-31T12:30-04:00",
-        "eventSchedule": {
-          "@type": "Schedule",
-          "byDay": "https://schema.org/Sunday",
-          "startTime": "10:30:00",
-          "endTime": "12:30:00",
-          "scheduleTimezone": "America/New_York",
-          "repeatFrequency": "P1W"
-        },
-        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-        "eventStatus": "https://schema.org/EventScheduled",
-        "location": {
-          "@type": "Place",
-          "name": "Bethel Worship Center",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "10 Tanglewylde Ave",
-            "addressLocality": "Bronxville",
-            "addressRegion": "NY",
-            "postalCode": "10708",
-            "addressCountry": "US"
-          }
-        },
-        "isAccessibleForFree": true,
-        "inLanguage": "ml"
-      },
-      {
-        "@type": "Event",
-        "name": "Bible Study",
-        "description": "Weekly online Bible study on Zoom.",
-        "startDate": "2026-06-01T19:30-04:00",
-        "endDate": "2026-06-01T21:00-04:00",
-        "eventSchedule": {
-          "@type": "Schedule",
-          "byDay": "https://schema.org/Monday",
-          "startTime": "19:30:00",
-          "endTime": "21:00:00",
-          "scheduleTimezone": "America/New_York",
-          "repeatFrequency": "P1W"
-        },
-        "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
-        "eventStatus": "https://schema.org/EventScheduled",
-        "location": {
-          "@type": "VirtualLocation",
-          "url": "https://zoom.us/j/5432677916"
-        },
-        "isAccessibleForFree": true
-      },
-      {
-        "@type": "Event",
-        "name": "Prayer Line · Malayalam",
-        "description": "Tuesday evening prayer line in Malayalam, via Zoom.",
-        "startDate": "2026-06-02T20:00-04:00",
-        "endDate": "2026-06-02T21:30-04:00",
-        "eventSchedule": {
-          "@type": "Schedule",
-          "byDay": "https://schema.org/Tuesday",
-          "startTime": "20:00:00",
-          "endTime": "21:30:00",
-          "scheduleTimezone": "America/New_York",
-          "repeatFrequency": "P1W"
-        },
-        "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
-        "eventStatus": "https://schema.org/EventScheduled",
-        "location": { "@type": "VirtualLocation", "url": "https://zoom.us/j/5432677916" },
-        "isAccessibleForFree": true,
-        "inLanguage": "ml"
-      },
-      {
-        "@type": "Event",
-        "name": "Prayer Line · Youth & English",
-        "description": "Wednesday evening Youth and English prayer line, via Zoom.",
-        "startDate": "2026-06-03T20:00-04:00",
-        "endDate": "2026-06-03T21:30-04:00",
-        "eventSchedule": {
-          "@type": "Schedule",
-          "byDay": "https://schema.org/Wednesday",
-          "startTime": "20:00:00",
-          "endTime": "21:30:00",
-          "scheduleTimezone": "America/New_York",
-          "repeatFrequency": "P1W"
-        },
-        "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
-        "eventStatus": "https://schema.org/EventScheduled",
-        "location": { "@type": "VirtualLocation", "url": "https://zoom.us/j/5432677916" },
-        "isAccessibleForFree": true,
-        "inLanguage": "en"
-      },
-      {
-        "@type": "Event",
-        "name": "Youth Night",
-        "description": "Friday night gathering for middle and high school students — worship, message, food, games.",
-        "startDate": "2026-05-29T19:00-04:00",
-        "endDate": "2026-05-29T21:30-04:00",
-        "eventSchedule": {
-          "@type": "Schedule",
-          "byDay": "https://schema.org/Friday",
-          "startTime": "19:00:00",
-          "endTime": "21:30:00",
-          "scheduleTimezone": "America/New_York",
-          "repeatFrequency": "P1W"
-        },
-        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-        "eventStatus": "https://schema.org/EventScheduled",
-        "location": {
-          "@type": "Place",
-          "name": "Bethel Worship Center",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "10 Tanglewylde Ave",
-            "addressLocality": "Bronxville",
-            "addressRegion": "NY",
-            "postalCode": "10708",
-            "addressCountry": "US"
-          }
-        },
-        "isAccessibleForFree": true,
-        "audience": { "@type": "Audience", "audienceType": "Youth (grades 6–12)" }
-      },
-      {
-        "@type": "Event",
-        "name": "Saturday Bible Study",
-        "description": "Saturday evening in-person Bible study at Bethel Worship Center, Bronxville. Working through the books of the Bible together.",
-        "startDate": "2026-06-06T19:00-04:00",
-        "endDate": "2026-06-06T21:00-04:00",
-        "eventSchedule": {
-          "@type": "Schedule",
-          "byDay": "https://schema.org/Saturday",
-          "startTime": "19:00:00",
-          "endTime": "21:00:00",
-          "scheduleTimezone": "America/New_York",
-          "repeatFrequency": "P1W"
-        },
-        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-        "eventStatus": "https://schema.org/EventScheduled",
-        "location": {
-          "@type": "Place",
-          "name": "Bethel Worship Center",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "10 Tanglewylde Ave",
-            "addressLocality": "Bronxville",
-            "addressRegion": "NY",
-            "postalCode": "10708",
-            "addressCountry": "US"
-          }
-        },
-        "isAccessibleForFree": true
+      "about": {
+        "@id": "https://bwcny.org/#church"
       }
-    ],
-    "employee": [
-      { "@type": "Person", "name": "Pastor Johnson Abraham", "jobTitle": "Pastor" },
-      { "@type": "Person", "name": "Dr. Geomon George", "jobTitle": "Pastor" },
-      { "@type": "Person", "name": "Dr. John Mammen", "jobTitle": "Pastor" }
-    ]
-  }
-  </script>
-
-  <!-- Structured data — WebSite + SearchAction so Google can show a sitelinks search box -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "@id": "https://www.bwcny.org/#website",
-    "url": "https://www.bwcny.org/",
-    "name": "Bethel Worship Center",
-    "publisher": { "@id": "https://www.bwcny.org/#church" }
-  }
-  </script>
-</head>
-<body>
-  <header class="nav">
-    <div class="frame nav__grid">
-      <div class="nav__left">
-        <a class="brand" href="index.html" aria-current="page">
-          <span class="brand__mark" aria-hidden="true"></span>
-        </a>
-      </div>
-
-      <nav class="nav__center" aria-label="Primary">
-        <a href="about/">About</a>
-        <a href="ministry/">Ministry</a>
-        <a href="events/">Events</a>
-        <a href="youth/">Youth</a>
-        <a href="prayer/">Prayer</a>
-        <a href="serve/">Serve</a>
-        <a href="visit/">Visit</a>
-      </nav>
-
-      <div class="nav__right">
-        <a class="btn btn--primary btn--small" href="visit/">Plan a Visit</a>
-        <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </div>
-
-    <div id="mobileMenu" class="nav__mobile" hidden>
-      <div class="frame nav__mobileInner">
-        <a href="about/">About</a>
-        <a href="ministry/">Ministry</a>
-        <a href="events/">Events</a>
-        <a href="youth/">Youth</a>
-        <a href="prayer/">Prayer</a>
-        <a href="serve/">Serve</a>
-        <a href="visit/">Visit</a>
-        <a class="btn btn--primary" href="visit/">Plan a Visit</a>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <!-- ============================================================
-         HERO — full-bleed photo background
-         ============================================================ -->
-    <!-- Live-now badge — shown during service times only -->
-    <a class="live-badge" href="#" hidden data-live-badge>
-      <span class="live-badge__dot" aria-hidden="true"></span>
-      <span class="live-badge__inner">
-        <span class="live-badge__label">Live now</span>
-        <span class="live-badge__name" data-live-name>—</span>
+    }
+  ]
+}</script></head>
+<body class="welcome-site page-home">
+<a class="skip-link" href="#main">
+   Skip to content
+  </a>
+<header class="site-header">
+<div class="w-wrap site-nav">
+<a aria-label="Bethel Worship Center home" class="site-brand" href="./">
+<img alt="Bethel Worship Center" height="348" src="./assets/bwc-logo.png" width="956"/>
+</a>
+<nav aria-label="Primary" class="site-links">
+<a href="./about/">
+      Our church
+     </a>
+<a href="./schedule/">
+      Gatherings
+     </a>
+<a href="./ministry/">
+      Resources
+     </a>
+<a href="./youth/">
+      Youth
+     </a>
+<a href="./prayer/">
+      Prayer
+     </a>
+</nav>
+<div class="site-nav-actions">
+<a class="w-button w-button--primary" href="./visit/">
+      Plan a visit
+      <svg aria-hidden="true" class="w-icon" fill="none" focusable="false" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="20"><path d="M5 12h14m-6-6 6 6-6 6"></path></svg>
+</a>
+<button aria-controls="mobileMenu" aria-expanded="false" aria-label="Open menu" class="nav__toggle">
+<span>
+</span>
+<span>
+</span>
+<span>
+</span>
+</button>
+</div>
+</div>
+<nav aria-label="Mobile navigation" class="site-menu" hidden="" id="mobileMenu">
+<div class="w-wrap">
+<a href="./about/">
+      Our church
+     </a>
+<a href="./schedule/">
+      Gatherings
+     </a>
+<a href="./ministry/">
+      Resources
+     </a>
+<a href="./youth/">
+      Youth
+     </a>
+<a href="./prayer/">
+      Prayer
+     </a>
+<a href="./events/">
+      Events
+     </a>
+<a href="./serve/">
+      Serve with us
+     </a>
+<a href="./visit/">
+      Plan a visit
+     </a>
+<a href="./bible-study/">Bible study</a><a href="./online/">Join online</a></div>
+</nav>
+</header>
+<main id="main" tabindex="-1">
+<section aria-labelledby="home-heading" class="w-home-hero">
+<picture class="w-hero-media">
+<source media="(max-width: 720px)" sizes="100vw" srcset="./assets/images/prayer-640.webp 640w, ./assets/images/prayer-1400.webp 1350w"/>
+<img alt="Bethel church members leading worship together" decoding="async" fetchpriority="high" height="653" loading="eager" sizes="100vw" src="./assets/images/gathering-1400.webp" srcset="./assets/images/gathering-640.webp 640w, ./assets/images/gathering-1400.webp 1400w" width="1400"/>
+</picture>
+<div class="w-wrap w-hero-content">
+<p class="w-eyebrow">Bethel Worship Center · Bronxville, NY</p>
+<h1 id="home-heading">Welcome to<br/>Bethel.</h1>
+<p class="w-hero-invite">Come worship with us this Sunday.</p>
+<div class="w-actions"><a class="w-button w-button--light" href="./visit/">Plan a visit<svg aria-hidden="true" class="w-icon" fill="none" focusable="false" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="20"><path d="M5 12h14m-6-6 6 6-6 6"></path></svg></a><a class="w-button w-button--glass" href="./about/">Get to know us<svg aria-hidden="true" class="w-icon" fill="none" focusable="false" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="20"><path d="M5 12h14m-6-6 6 6-6 6"></path></svg></a></div>
+</div>
+<div class="w-wrap w-hero-details">
+<div><span class="w-detail-label">Every Sunday</span><p><strong>9:30 AM</strong> English <span class="w-time-divider">/</span> <strong>10:30 AM</strong> Malayalam</p></div>
+<a class="w-hero-location" href="https://maps.google.com/?q=10+Tanglewylde+Ave+Bronxville+NY+10708" rel="noreferrer" target="_blank"><span class="w-detail-label">10 Tanglewylde Ave · Bronxville</span><p>Lower level of Golden Sword Church <svg aria-hidden="true" class="w-icon" fill="none" focusable="false" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="20"><path d="M7 17 17 7M7 7h10v10"></path></svg></p></a>
+</div>
+</section>
+<section class="w-section w-wrap w-sunday">
+<div class="w-sunday-copy"><p class="w-eyebrow">A church in your neighborhood</p><h2>Join us<br/>this Sunday.</h2>
+<p>We’re a Pentecostal church in Bronxville, welcoming people from Yonkers and across Westchester. We worship in English and Malayalam, study the Bible, and pray together.</p>
+<p>Coming for the first time? We’d love to meet you.</p>
+<div class="w-actions"><a class="w-button w-button--primary" href="./visit/">What to expect<svg aria-hidden="true" class="w-icon" fill="none" focusable="false" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="20"><path d="M5 12h14m-6-6 6 6-6 6"></path></svg></a><a class="w-button w-button--text" href="./about/#faith">What we believe<svg aria-hidden="true" class="w-icon" fill="none" focusable="false" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="20"><path d="M5 12h14m-6-6 6 6-6 6"></path></svg></a></div></div>
+<figure><img alt="The Bethel church family gathered together" decoding="async" height="1050" loading="lazy" sizes="(max-width: 720px) 90vw, 50vw" src="./assets/images/family-1400.webp" srcset="./assets/images/family-640.webp 640w, ./assets/images/family-1400.webp 1400w" width="1400"/><figcaption>Our church family, here in Bronxville.</figcaption></figure>
+</section>
+<section aria-labelledby="life-heading" class="w-section w-life"><div class="w-wrap">
+<div class="w-section-head"><div><p class="w-eyebrow">Find your community</p><h2 id="life-heading">Life at Bethel.</h2></div><p>Time in the Word. Time with each other.<br/>There’s more to the week.</p></div>
+<div class="w-life-grid">
+<a class="w-life-card" href="./youth/"><img alt="Bethel youth together after a church gathering" decoding="async" height="653" loading="lazy" sizes="(max-width: 720px) 90vw, 50vw" src="./assets/images/youth-1400.webp" srcset="./assets/images/youth-640.webp 640w, ./assets/images/youth-1400.webp 1400w" width="1400"/><div><div><small>Fridays · 7:00 PM</small><h3>Youth at Bethel</h3></div><svg aria-hidden="true" class="w-icon" fill="none" focusable="false" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="20"><path d="M5 12h14m-6-6 6 6-6 6"></path></svg></div><p>Worship, Scripture, and friendships that grow along the way.</p></a>
+<a class="w-life-card" href="./bible-study/"><img alt="Bethel members reading and discussing the Bible together" decoding="async" height="1050" loading="lazy" sizes="(max-width: 720px) 90vw, 50vw" src="./assets/images/study-1400.webp" srcset="./assets/images/study-640.webp 640w, ./assets/images/study-1400.webp 1400w" width="1400"/><div><div><small>Monday online · Saturday in person</small><h3>Open the Word together</h3></div><svg aria-hidden="true" class="w-icon" fill="none" focusable="false" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="20"><path d="M5 12h14m-6-6 6 6-6 6"></path></svg></div><p>Join a Bible study, ask questions, and keep learning.</p></a>
+</div>
+</div></section>
+<section class="w-community">
+<img alt="Bethel members enjoying an outdoor church gathering" decoding="async" height="852" loading="lazy" sizes="(max-width: 720px) 90vw, 50vw" src="./assets/images/community-1400.webp" srcset="./assets/images/community-640.webp 640w, ./assets/images/community-1400.webp 1400w" width="1400"/>
+<div class="w-wrap"><p class="w-eyebrow">Make yourself at home</p><h2>Life is<br/>better shared.</h2><a class="w-button w-button--light" href="./events/">Find a gathering<svg aria-hidden="true" class="w-icon" fill="none" focusable="false" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="20"><path d="M5 12h14m-6-6 6 6-6 6"></path></svg></a></div>
+</section>
+<section class="w-section w-wrap w-week">
+<div><p class="w-eyebrow">You’re invited</p><h2>This week<br/>at Bethel.</h2><p>Make time for worship, conversation, and prayer. Join us in Bronxville or online.</p><a class="w-button w-button--text" href="./schedule/">Full weekly schedule<svg aria-hidden="true" class="w-icon" fill="none" focusable="false" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="20"><path d="M5 12h14m-6-6 6 6-6 6"></path></svg></a><span class="w-small">All times Eastern</span></div>
+<div class="w-week-list">
+<a href="./visit/"><span class="w-day">SUN</span><div><h3>Sunday worship</h3><p>English 9:30 AM · Malayalam 10:30 AM</p></div><svg aria-hidden="true" class="w-icon" fill="none" focusable="false" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="20"><path d="M5 12h14m-6-6 6 6-6 6"></path></svg></a>
+<a href="./bible-study/#online-study"><span class="w-day">MON</span><div><h3>Bible study</h3><p>7:30 PM · Online</p></div><svg aria-hidden="true" class="w-icon" fill="none" focusable="false" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="20"><path d="M5 12h14m-6-6 6 6-6 6"></path></svg></a>
+<a href="./prayer/"><span class="w-day">TUE<br/>WED</span><div><h3>Prayer gatherings</h3><p>8:00 PM · Online</p></div><svg aria-hidden="true" class="w-icon" fill="none" focusable="false" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="20"><path d="M5 12h14m-6-6 6 6-6 6"></path></svg></a>
+<a href="./youth/"><span class="w-day">FRI</span><div><h3>Youth night</h3><p>7:00 PM · In person</p></div><svg aria-hidden="true" class="w-icon" fill="none" focusable="false" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="20"><path d="M5 12h14m-6-6 6 6-6 6"></path></svg></a>
+<a href="./bible-study/#saturday-study"><span class="w-day">SAT</span><div><h3>Bible study</h3><p>7:00 PM · In person</p></div><svg aria-hidden="true" class="w-icon" fill="none" focusable="false" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="20"><path d="M5 12h14m-6-6 6 6-6 6"></path></svg></a>
+</div>
+</section>
+<section class="w-section w-visit-band"><div class="w-wrap w-visit-home">
+<div><p class="w-eyebrow">Your first visit</p><h2>We’ll see<br/>you here.</h2><address>10 Tanglewylde Avenue<br/>Bronxville, NY 10708</address><p>Find Bethel on the <strong>lower level of Golden Sword Church.</strong> Allow a few extra minutes for nearby street or metered parking.</p><div class="w-actions"><a class="w-button w-button--primary" href="https://maps.google.com/?q=10+Tanglewylde+Ave+Bronxville+NY+10708">Get directions<svg aria-hidden="true" class="w-icon" fill="none" focusable="false" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="20"><path d="M7 17 17 7M7 7h10v10"></path></svg></a><a class="w-button w-button--text" href="./visit/">Plan your Sunday<svg aria-hidden="true" class="w-icon" fill="none" focusable="false" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="20"><path d="M5 12h14m-6-6 6 6-6 6"></path></svg></a></div></div>
+<div class="w-faq">
+<details open=""><summary>Which service should I come to?</summary><p>Our English service begins at 9:30 AM and our Malayalam service at 10:30 AM. Choose the language you’re most comfortable with.</p></details>
+<details><summary>Can I bring my children?</summary><p>Yes. Children are welcome to worship with their families. We don’t currently have a separate nursery or children’s program.</p></details>
+<details><summary>Do I need to sign up?</summary><p>No registration is needed. Come to the service you’d like to attend.</p></details>
+<a class="w-inline" href="./visit/#questions">More about your first visit <svg aria-hidden="true" class="w-icon" fill="none" focusable="false" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="20"><path d="M5 12h14m-6-6 6 6-6 6"></path></svg></a>
+</div>
+</div></section>
+</main>
+<footer class="site-footer">
+<div class="w-wrap footer-main">
+<div>
+<a class="footer-brand" href="./">
+      Bethel Worship Center
+      <span>
+       A church family in Bronxville, New York.
       </span>
-      <span class="live-badge__action" data-live-action>Join →</span>
-    </a>
-
-    <section class="stage stage--hero hero--photo" id="top">
-      <!-- Slideshow: rotates every 7s. Add/remove .hero__slide blocks to change rotation. -->
-      <div class="hero__media hero__slideshow" aria-hidden="true">
-        <div class="hero__slide is-active">
-          <img class="hero__image" src="assets/photos/youth-choir.jpg" alt="Bethel Worship Center congregation in worship, Bronxville NY" loading="eager" decoding="async" fetchpriority="high" />
-        </div>
-        <div class="hero__slide">
-          <img class="hero__image" src="assets/photos/youth-night.jpg" alt="Youth night gathering at Bethel Worship Center" loading="eager" decoding="async" />
-        </div>
-        <div class="hero__slide">
-          <img class="hero__image" src="assets/photos/youth-group.jpg" alt="Bethel Worship Center youth group" loading="eager" decoding="async" />
-        </div>
-        <div class="hero__slide">
-          <img class="hero__image" src="assets/photos/sunday-school.jpg" alt="Sunday school at Bethel Worship Center, Bronxville" loading="eager" decoding="async" />
-        </div>
-        <div class="hero__slide">
-          <img class="hero__image" src="assets/photos/bible-study.jpg" alt="Weekly Bible study at Bethel Worship Center" loading="eager" decoding="async" />
-        </div>
-      </div>
-      <div class="hero__overlay hero__overlay--photo" aria-hidden="true"></div>
-
-      <div class="frame hero__photoFrame">
-        <div class="hero__photoText">
-          <p class="hero__eyebrow">Welcome to</p>
-          <h1 class="display hero__photoTitle">Bethel Worship Center</h1>
-          <p class="hero__photoLead">
-            Sundays &nbsp;·&nbsp; English 9:30 AM &nbsp;·&nbsp; Malayalam 10:30 AM<br/>
-            <span class="hero__photoLead--soft">10 Tanglewylde Ave, Bronxville, NY 10708</span>
-          </p>
-          <div class="hero__actions">
-            <a class="btn btn--primary" href="visit/">Plan a Visit</a>
-            <a class="btn btn--ghost-light" href="#" data-dialog-open="zoomDialog">Join on Zoom</a>
-          </div>
-        </div>
-      </div>
-
-      <a class="hero__scrollHint" href="#this-week" aria-label="Scroll to this week">
-        <span class="hero__scrollLabel">This week at Bethel</span>
-        <span class="hero__scrollArrow" aria-hidden="true">↓</span>
-      </a>
-    </section>
-
-    <!-- ============================================================
-         THIS WEEK — horizontal scroll strip
-         ============================================================ -->
-    <section class="stage stage--rhythm" id="this-week">
-      <div class="frame rhythm__head">
-        <div>
-          <p class="kicker">This week at Bethel</p>
-          <h2 class="h2">Come as you are. Stay as long as you want.</h2>
-        </div>
-        <a class="link" href="schedule/">See full schedule →</a>
-      </div>
-
-      <div class="rhythm__rail" tabindex="0" aria-label="Weekly schedule">
-        <a class="rhythm__card" href="visit/" aria-label="Sunday Worship Service — plan a visit">
-          <div class="rhythm__photo" data-label="Sunday worship">
-            <img src="assets/photos/placeholder.jpg" alt="Bethel Worship Center community" loading="lazy" />
-          </div>
-          <div class="rhythm__meta">
-            <p class="rhythm__day">Sunday · English 9:30 AM · Malayalam 10:30 AM</p>
-            <h3 class="h3">Worship Service</h3>
-            <p>Two services every Sunday. Word, worship, welcome. Come in person.</p>
-            <span class="rhythm__cta">Plan a visit →</span>
-          </div>
-        </a>
-
-        <a class="rhythm__card" href="#" data-dialog-open="zoomDialog" aria-label="Bible Study Monday — join on Zoom">
-          <div class="rhythm__photo" data-label="Bible study">
-            <img src="assets/photos/placeholder.jpg" alt="Bethel Worship Center community" loading="lazy" />
-          </div>
-          <div class="rhythm__meta">
-            <p class="rhythm__day">Monday · 7:30 PM</p>
-            <h3 class="h3">Bible Study</h3>
-            <p>We go deeper in Scripture together, online on Zoom.</p>
-            <span class="rhythm__cta">Join on Zoom →</span>
-          </div>
-        </a>
-
-        <a class="rhythm__card" href="#" data-dialog-open="zoomDialog" aria-label="Prayer Lines Tuesday and Wednesday — join on Zoom">
-          <div class="rhythm__photo" data-label="Prayer lines">
-            <img src="assets/photos/placeholder.jpg" alt="Bethel Worship Center community" loading="lazy" />
-          </div>
-          <div class="rhythm__meta">
-            <p class="rhythm__day">Tue + Wed · 8:00 PM</p>
-            <h3 class="h3">Prayer Lines</h3>
-            <p>Malayalam (Tue) and Youth &amp; English (Wed). Intercession on Zoom.</p>
-            <span class="rhythm__cta">Join on Zoom →</span>
-          </div>
-        </a>
-
-        <a class="rhythm__card rhythm__card--accent" href="youth/" aria-label="Youth Night Friday — explore Youth ministry">
-          <div class="rhythm__photo" data-label="Youth night">
-            <img src="assets/photos/placeholder.jpg" alt="Bethel Worship Center community" loading="lazy" />
-          </div>
-          <div class="rhythm__meta">
-            <p class="rhythm__day">Friday · 7:00 PM</p>
-            <h3 class="h3">Youth Night</h3>
-            <p>Middle &amp; high school. Worship, message, food, games.</p>
-            <span class="rhythm__cta">More about Youth →</span>
-          </div>
-        </a>
-
-        <a class="rhythm__card" href="visit/" aria-label="Saturday Bible Study — in person, 7:00 PM">
-          <div class="rhythm__photo" data-label="Saturday Bible Study">
-            <img src="assets/photos/saturday-bible-study.jpg" alt="Bethel Worship Center Saturday Bible Study flyer — 7:00 PM" loading="lazy" />
-          </div>
-          <div class="rhythm__meta">
-            <p class="rhythm__day">Saturday · 7:00 PM</p>
-            <h3 class="h3">Bible Study</h3>
-            <p>We work through the books of the Bible together, in person at Bethel.</p>
-            <span class="rhythm__cta">Plan a visit →</span>
-          </div>
-        </a>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         HIGHLIGHTS — feature photo + side thumbs, each links somewhere
-         ============================================================ -->
-    <section class="stage stage--mosaic" id="highlights">
-      <div class="frame mosaic__head">
-        <p class="kicker">Highlights</p>
-        <h2 class="h2">What's worth a closer look.</h2>
-        <p class="mosaic__lead">Sermons, slide decks, retreats, Sunday moments. Tap anything to dive in.</p>
-      </div>
-
-      <div class="frame life-feature">
-        <div class="life-feature__stage" data-life-stage>
-          <a class="life-slide" href="ministry/" data-caption="The God Who Meets Us · Sunday sermon" data-type="Sermon">
-            <div class="life-slide__photo" data-label="Preaching the Word">
-              <img src="assets/photos/youth-preaching.jpg" alt="Preaching the Word at Bethel Worship Center" loading="lazy" decoding="async" />
-            </div>
-          </a>
-          <a class="life-slide" href="ministry/" data-caption="Bible Study · Monday nights on Zoom" data-type="Bible Study">
-            <div class="life-slide__photo" data-label="Bible study">
-              <img src="assets/photos/bible-study.jpg" alt="Weekly Bible study at Bethel Worship Center" loading="lazy" decoding="async" />
-            </div>
-          </a>
-          <a class="life-slide" href="youth/" data-caption="Youth night · Fridays at Bethel" data-type="Youth">
-            <div class="life-slide__photo" data-label="Youth at Friday night">
-              <img src="assets/photos/youth-group.jpg" alt="Bethel Worship Center youth group" loading="lazy" decoding="async" />
-            </div>
-          </a>
-          <a class="life-slide" href="visit/" data-caption="Sunday worship · come as you are" data-type="Service">
-            <div class="life-slide__photo" data-label="Sunday worship">
-              <img src="assets/photos/youth-choir.jpg" alt="Bethel Worship Center congregation in worship, Bronxville NY" loading="lazy" decoding="async" />
-            </div>
-          </a>
-          <a class="life-slide is-active" href="events/" data-caption="Annual Convention 2026 · June 12–14 · Pastor Shaji Paul" data-type="Convention">
-            <div class="life-slide__photo" data-label="Bethel Annual Convention 2026 poster">
-              <img src="assets/photos/convention-2026.jpg" alt="Bethel Annual Convention 2026 — Pastor Shaji Paul ministering, June 12–14" loading="lazy" decoding="async" />
-            </div>
-          </a>
-
-          <div class="life-feature__overlay">
-            <p class="life-feature__caption" data-life-caption>Annual Convention 2026 · June 12–14 · Pastor Shaji Paul</p>
-            <span class="life-feature__cta" aria-hidden="true">View →</span>
-          </div>
-          <div class="life-feature__progress" data-life-progress aria-hidden="true"></div>
-        </div>
-
-        <div class="life-feature__thumbs" role="tablist" aria-label="Highlight selector">
-          <button class="life-thumb" type="button" role="tab" aria-selected="false" data-life-target="0">
-            <span class="life-thumb__photo" data-label="Sermon">
-              <img src="assets/photos/youth-preaching.jpg" alt="Preaching the Word at Bethel Worship Center" loading="lazy" />
-            </span>
-            <span class="life-thumb__meta">
-              <span class="life-thumb__type">Sermon</span>
-              <span class="life-thumb__label">The God Who Meets Us</span>
-            </span>
-          </button>
-          <button class="life-thumb" type="button" role="tab" aria-selected="false" data-life-target="1">
-            <span class="life-thumb__photo" data-label="Bible study">
-              <img src="assets/photos/bible-study.jpg" alt="Weekly Bible study at Bethel Worship Center" loading="lazy" />
-            </span>
-            <span class="life-thumb__meta">
-              <span class="life-thumb__type">Bible Study</span>
-              <span class="life-thumb__label">Monday nights on Zoom</span>
-            </span>
-          </button>
-          <button class="life-thumb" type="button" role="tab" aria-selected="false" data-life-target="2">
-            <span class="life-thumb__photo" data-label="Youth">
-              <img src="assets/photos/youth-group.jpg" alt="Bethel Worship Center youth group" loading="lazy" />
-            </span>
-            <span class="life-thumb__meta">
-              <span class="life-thumb__type">Youth</span>
-              <span class="life-thumb__label">Friday Youth Night</span>
-            </span>
-          </button>
-          <button class="life-thumb" type="button" role="tab" aria-selected="false" data-life-target="3">
-            <span class="life-thumb__photo" data-label="Sunday worship">
-              <img src="assets/photos/youth-choir.jpg" alt="Bethel Worship Center congregation in worship, Bronxville NY" loading="lazy" />
-            </span>
-            <span class="life-thumb__meta">
-              <span class="life-thumb__type">Service</span>
-              <span class="life-thumb__label">Sunday worship</span>
-            </span>
-          </button>
-          <button class="life-thumb is-active" type="button" role="tab" aria-selected="true" data-life-target="4">
-            <span class="life-thumb__photo" data-label="Convention 2026">
-              <img src="assets/photos/convention-2026.jpg" alt="Bethel Annual Convention 2026 poster" loading="lazy" />
-            </span>
-            <span class="life-thumb__meta">
-              <span class="life-thumb__type">Convention</span>
-              <span class="life-thumb__label">June 12–14, 2026</span>
-            </span>
-          </button>
-        </div>
-
-        <!-- Mobile-only: dot indicators replace the thumb column -->
-        <div class="life-feature__dots" role="tablist" aria-label="Highlight selector">
-          <button class="life-dot" type="button" role="tab" aria-selected="false" data-life-target="0" aria-label="Highlight 1"></button>
-          <button class="life-dot" type="button" role="tab" aria-selected="false" data-life-target="1" aria-label="Highlight 2"></button>
-          <button class="life-dot" type="button" role="tab" aria-selected="false" data-life-target="2" aria-label="Highlight 3"></button>
-          <button class="life-dot" type="button" role="tab" aria-selected="false" data-life-target="3" aria-label="Highlight 4"></button>
-          <button class="life-dot is-active" type="button" role="tab" aria-selected="true" data-life-target="4" aria-label="Highlight 5"></button>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         MINISTRIES — alternating full-width bands
-         ============================================================ -->
-    <section class="ministries" id="ministries">
-      <div class="band band--dark band--right">
-        <div class="band__photo" data-label="Worship">
-          <img src="assets/photos/female-lead-singing.jpg" alt="Worship leader singing at Bethel Worship Center" loading="lazy" decoding="async" />
-        </div>
-        <div class="band__text">
-          <p class="kicker">Worship</p>
-          <h2 class="h2">Where the Spirit is, there is freedom.</h2>
-          <p>We worship like we mean it. Spirit-led, Word-anchored, unhurried. Whether you sing or simply stand, you belong here.</p>
-          <a class="btn btn--ghost-light" href="worship/">What worship is like →</a>
-        </div>
-      </div>
-
-      <div class="band band--light band--left">
-        <div class="band__photo" data-label="Youth">
-          <img src="assets/photos/male-worship-drums.jpg" alt="Worship band at Bethel Worship Center" loading="lazy" decoding="async" />
-        </div>
-        <div class="band__text">
-          <p class="kicker">Youth</p>
-          <h2 class="h2">A generation that knows whose they are.</h2>
-          <p>Friday nights, retreats, mentorship, missions. We raise students who love Jesus, love their friends, and love the Word.</p>
-          <a class="btn btn--ghost" href="youth/">Explore Youth ministry →</a>
-        </div>
-      </div>
-
-      <div class="band band--dark band--right">
-        <div class="band__photo" data-label="Prayer &amp; Altar">
-          <img src="assets/photos/female-worship.jpg" alt="Worship at Bethel Worship Center" loading="lazy" decoding="async" />
-        </div>
-        <div class="band__text">
-          <p class="kicker">Prayer &amp; Altar</p>
-          <h2 class="h2">We pray first, and we keep praying.</h2>
-          <p>Three nights a week we gather online to intercede for our families, our church, our city. The altar is open. Bring what you have.</p>
-          <a class="btn btn--ghost-light" href="prayer/">Pray with us →</a>
-        </div>
-      </div>
-
-      <div class="band band--light band--left">
-        <div class="band__photo" data-label="Serve &amp; Go">
-          <img src="assets/photos/placeholder.jpg" alt="Bethel Worship Center community" loading="lazy" decoding="async" />
-        </div>
-        <div class="band__text">
-          <p class="kicker">Serve &amp; Go</p>
-          <h2 class="h2">Loving our neighborhood out loud.</h2>
-          <p>From food drives to short-term missions, Bethel doesn't just gather. We go. Find a team to serve with this season.</p>
-          <a class="btn btn--ghost" href="serve/">Find a team →</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         LATEST MESSAGE — featured tile + recent
-         ============================================================ -->
-    <section class="stage stage--light messages-feature" id="messages-feature">
-      <div class="frame">
-        <div class="messages-feature__head">
-          <div>
-            <p class="kicker">Latest message</p>
-            <h2 class="h2">Listen to this Sunday.</h2>
-          </div>
-          <a class="link" href="ministry/">All messages &amp; series →</a>
-        </div>
-
-        <a class="featured-message" href="ministry/">
-          <div class="featured-message__media" data-label="Latest message">
-            <img src="assets/photos/male-speaking.jpg" alt="Sermon at Bethel Worship Center" loading="lazy" decoding="async" />
-            <span class="featured-message__play" aria-hidden="true">▶</span>
-            <span class="featured-message__duration">42:18</span>
-          </div>
-          <div class="featured-message__meta">
-            <p class="featured-message__date">May 4, 2026 · Pastor Name</p>
-            <h3 class="featured-message__title">"Surely the Lord is in this place"</h3>
-            <p class="featured-message__ref">Genesis 28:10–22 · Encounter series, week 1</p>
-          </div>
-        </a>
-
-        <div class="recent-messages">
-          <a class="recent-card" href="ministry/">
-            <div class="recent-card__media" data-label="The Ladder and the Light">
-              <img src="assets/photos/male-preaching.jpg" alt="Preaching at Bethel Worship Center, Bronxville NY" loading="lazy" />
-            </div>
-            <p class="recent-card__date">Apr 27, 2026</p>
-            <h4 class="recent-card__title">The Ladder and the Light</h4>
-            <p class="recent-card__ref">Genesis 28:12</p>
-          </a>
-          <a class="recent-card" href="ministry/">
-            <div class="recent-card__media" data-label="When God Wakes You Up">
-              <img src="assets/photos/youth-preaching.jpg" alt="Preaching the Word at Bethel Worship Center" loading="lazy" />
-            </div>
-            <p class="recent-card__date">Apr 20, 2026</p>
-            <h4 class="recent-card__title">When God Wakes You Up</h4>
-            <p class="recent-card__ref">Genesis 28:16</p>
-          </a>
-          <a class="recent-card" href="ministry/">
-            <div class="recent-card__media" data-label="Stones We Set">
-              <img src="assets/photos/youth-singing.jpg" alt="Youth singing in worship at Bethel" loading="lazy" />
-            </div>
-            <p class="recent-card__date">Apr 13, 2026</p>
-            <h4 class="recent-card__title">Stones We Set</h4>
-            <p class="recent-card__ref">Genesis 28:18</p>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         PLAN A VISIT — split full-screen
-         ============================================================ -->
-    <section class="visit-split" id="visit">
-      <div class="visit-split__photo" data-label="We'll be glad you came">
-        <img src="assets/photos/youth-group.jpg" alt="Bethel Worship Center youth group" loading="lazy" decoding="async" />
-      </div>
-
-      <div class="visit-split__text">
-        <p class="kicker">Plan a visit</p>
-        <h2 class="h2">Your seat is saved.</h2>
-        <p>We'd love to meet you this Sunday. Here's what to expect.</p>
-
-        <dl class="visit-facts">
-          <div class="visit-facts__row">
-            <dt>Sundays</dt>
-            <dd>English 9:30 AM &nbsp;·&nbsp; Malayalam 10:30 AM</dd>
-          </div>
-          <div class="visit-facts__row">
-            <dt>Where</dt>
-            <dd>10 Tanglewylde Ave, Bronxville, NY 10708 (lower level of Golden Sword Church)</dd>
-          </div>
-          <div class="visit-facts__row">
-            <dt>Online</dt>
-            <dd>Join us on Zoom. <a href="#" data-dialog-open="zoomDialog">See details</a></dd>
-          </div>
-          <div class="visit-facts__row">
-            <dt>Parking</dt>
-            <dd>Street parking; metered spots down the block (meters are off on Sundays).</dd>
-          </div>
-          <div class="visit-facts__row">
-            <dt>Kids</dt>
-            <dd>We're a small congregation, so kids worship with their families. No separate kids' program yet.</dd>
-          </div>
-          <div class="visit-facts__row">
-            <dt>Dress</dt>
-            <dd>Wear whatever you'd wear to see a friend.</dd>
-          </div>
-        </dl>
-
-        <div class="hero__actions">
-          <a class="btn btn--primary" href="visit/">Plan a Visit</a>
-          <a class="btn btn--ghost" href="prayer/">Need prayer?</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Zoom dialog -->
-  <dialog class="zoom-dialog" id="zoomDialog" aria-labelledby="zoomTitle">
-    <div class="zoom-dialog__inner">
-      <div class="zoom-dialog__header">
-        <h3 class="h3" id="zoomTitle">Join us on Zoom</h3>
-        <button class="zoom-dialog__close" type="button" data-dialog-close aria-label="Close">Close</button>
-      </div>
-      <p>Join our services on Zoom and be part of a vibrant online congregation.</p>
-      <dl class="zoom-dialog__facts">
-        <div><dt>Zoom ID</dt><dd>543 267 7916</dd></div>
-        <div><dt>Password</dt><dd>1234</dd></div>
-      </dl>
-      <p class="panel__value panel__value--soft">Tap below to open Zoom. The meeting will load with the ID and password filled in.</p>
-      <div class="zoom-dialog__actions">
-        <a class="btn btn--primary" href="https://zoom.us/j/5432677916?pwd=1234" target="_blank" rel="noreferrer">Open Zoom</a>
-        <a class="btn btn--ghost" href="https://us04web.zoom.us/j/5432677916" target="_blank" rel="noreferrer">Open in browser</a>
-      </div>
-    </div>
-  </dialog>
-
-  <!-- Mobile-only sticky CTA bar. Starts hidden; the IntersectionObserver in app.js
-       removes .is-hidden when the hero's CTAs scroll out of view. -->
-  <div class="site-cta is-hidden" aria-label="Quick actions">
-    <a class="site-cta__btn site-cta__btn--primary" href="visit/">
-      <span class="site-cta__strong">Plan a Visit</span>
-      <span class="site-cta__weak">Sun · 9:30 + 10:30</span>
-    </a>
-    <a class="site-cta__btn" href="ministry/">
-      <span class="site-cta__strong">Ministry</span>
-      <span class="site-cta__weak">Listen now</span>
-    </a>
-  </div>
-
-  <footer class="footer">
-    <div class="frame footer__grid">
-      <div class="footer__nap" itemscope itemtype="https://schema.org/Church">
-        <div class="brand__name" itemprop="name">Bethel Worship Center</div>
-        <div class="brand__sub">IPC / Pentecostal church in Bronxville, NY</div>
-        <address class="footer__address" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-          <span itemprop="streetAddress">10 Tanglewylde Ave</span>,
-          <span itemprop="addressLocality">Bronxville</span>,
-          <span itemprop="addressRegion">NY</span>
-          <span itemprop="postalCode">10708</span>
-        </address>
-        <p class="footer__hours">
-          <strong>Sundays:</strong>
-          English 9:30 AM &nbsp;·&nbsp; Malayalam 10:30 AM
-        </p>
-        <p class="footer__serving">Serving Bronxville, Yonkers, Mount Vernon, Tuckahoe, Eastchester, and Westchester County, NY.</p>
-      </div>
-      <div class="footer__links">
-        <a href="about/">About</a>
-        <a href="ministry/">Ministry</a>
-        <a href="events/">Events</a>
-        <a href="youth/">Youth</a>
-        <a href="prayer/">Prayer</a>
-        <a href="serve/">Serve</a>
-        <a href="visit/">Visit</a>
-      </div>
-    </div>
-    <div class="frame footer__fine">
-      <span>(c) <span id="year"></span> Bethel Worship Center · 10 Tanglewylde Ave, Bronxville, NY 10708 · All rights reserved.</span>
-    </div>
-  </footer>
-
-  <script src="app.js"></script>
+</a>
+<p>
+      Following Jesus. Growing together.
+      <br/>
+      Welcoming you.
+     </p>
+</div>
+<div>
+<h2>
+      Come worship with us
+     </h2>
+<p>
+      Sunday · English 9:30 AM
+      <br/>
+      Sunday · Malayalam 10:30 AM
+     </p>
+<a href="https://maps.google.com/?q=10+Tanglewylde+Ave+Bronxville+NY+10708" rel="noreferrer" target="_blank">
+      10 Tanglewylde Ave
+      <br/>
+      Bronxville, NY 10708 <svg aria-hidden="true" class="w-icon" fill="none" focusable="false" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="20"><path d="M7 17 17 7M7 7h10v10"></path></svg>
+</a>
+<p class="footer-small">
+      Lower level of Golden Sword Church
+     </p>
+</div>
+<nav aria-label="Footer">
+<h2>
+      Find your way
+     </h2>
+<a href="./about/">
+      Our church &amp; beliefs
+     </a>
+<a href="./schedule/">
+      Weekly gatherings
+     </a>
+<a href="./events/">
+      Events &amp; church life
+     </a>
+<a href="./serve/">
+      Serve with us
+     </a>
+<a href="./prayer/">
+      Pray with us
+     </a>
+<a href="./bible-study/">Bible study</a><a href="./online/">Join online</a></nav>
+</div>
+<div class="w-wrap footer-bottom">
+<span>
+     ©
+     <span id="year">
+      2026
+     </span>
+     Bethel Worship Center
+    </span>
+<span>
+     IPC · Pentecostal · English &amp; Malayalam
+    </span>
+</div>
+</footer>
+<script defer="" src="./app.js?v=10">
+</script>
 </body>
 </html>
