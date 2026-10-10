@@ -16,7 +16,7 @@
   --sand: #fff;
   --stone: #f3f3ef;
 }
-.welcome-site { background: var(--paper); color: var(--text); font-size: 16px; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+.welcome-site { min-height: 100%; height: auto; background: var(--paper); color: var(--text); font-size: 16px; line-height: 1.65; -webkit-font-smoothing: antialiased; }
 .welcome-site main:focus { outline: none; }
 .welcome-site [hidden] { display: none !important; }
 .welcome-site figure { margin: 0; }
@@ -61,8 +61,8 @@
 .site-links a[aria-current]::after { content: ''; position: absolute; right: 0; left: 0; bottom: 6px; height: 1px; background: currentColor; }
 .site-nav-actions { display: flex; align-items: center; gap: 14px; margin-left: 12px; }
 .site-nav-actions .w-button { min-height: 44px; padding: 10px 18px; font-size: 12px; gap: 20px; }
-.site-header .nav__toggle { display: none; position: static; width: 44px; height: 44px; padding: 11px; border: 1px solid var(--line); border-radius: 3px; background: transparent; box-shadow: none; }
-.site-header .nav__toggle span { display: block; width: 20px; height: 1.5px; margin-block: 4px; background: var(--text); }
+.site-header .nav__toggle { display: none; position: relative; width: 44px; height: 44px; padding: 11px; border: 1px solid var(--line); border-radius: 3px; background: transparent; box-shadow: none; }
+.site-header .nav__toggle span { display: block; width: 20px; height: 1.5px; margin: 0 0 0 -10px; background: var(--text); }
 .site-menu { position: absolute; top: 100%; left: 0; right: 0; max-height: calc(100dvh - 74px); overflow: auto; border-top: 1px solid var(--line); background: #fff; }
 .site-menu .w-wrap { display: grid; padding: 16px 0 28px; }
 .site-menu a { padding: 12px 0; border-bottom: 1px solid var(--line); font-size: 17px; }
