@@ -94,15 +94,17 @@
 .w-sunday-copy > p:first-child:not(.w-eyebrow) { margin-top: 0; }
 .w-section-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 36px; margin-bottom: 46px; }
 .w-section-head > p { max-width: 320px; font-size: 14px; line-height: 1.9; color: var(--subtle); }
-.w-life-grid { display: grid; grid-template-columns: 1.13fr 1fr; gap: 42px; }
-.w-life-card { display: block; }
-.w-life-card > img { width: 100%; height: 350px; object-fit: cover; transition: filter .2s; }
-.w-life-card:first-child > img { object-position: center; }
+.w-life-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 52px 30px; }
+.w-life-card { display: block; min-width: 0; }
+.w-life-card > img { width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; transition: filter .2s; }
+.w-life-card:first-child > img { object-position: center 32%; }
 .w-life-card:hover > img { filter: brightness(1.06); }
-.w-life-card > div { display: flex; justify-content: space-between; align-items: center; gap: 24px; margin-top: 24px; }
-.w-life-card small { display: block; margin-bottom: 10px; color: var(--subtle); font-size: 10px; text-transform: uppercase; letter-spacing: .07em; }
+.w-life-card > div { display: flex; justify-content: space-between; align-items: center; gap: 14px; margin-top: 22px; }
+.w-life-card small { display: block; min-height: 30px; margin-bottom: 8px; color: var(--subtle); font-size: 9px; text-transform: uppercase; letter-spacing: .06em; line-height: 1.65; }
+.w-life-card h3 { font-size: 26px; }
 .w-life-card > div > span { font-size: 26px; }
-.w-life-card > p { margin-top: 14px; color: var(--subtle); font-size: 14px; }
+.w-life-card > p { margin-top: 14px; color: var(--subtle); font-size: 13px; }
+.w-life .w-section-head .w-inline { margin-top: 14px; }
 .w-community { position: relative; display: flex; align-items: flex-end; min-height: 580px; color: #fff; isolation: isolate; background: var(--forest); }
 .w-community > img { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; object-position: center 50%; }
 .w-community::after { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(0deg,#152315ba,#15231505 90%), linear-gradient(90deg,#15231570,transparent); }
@@ -224,8 +226,7 @@
  .w-hero-details { gap: 20px; }
  .w-hero-details p { font-size: 12px; }
  .w-sunday, .w-page-hero { gap: 6%; }
- .w-life-grid { gap: 28px; }
- .w-life-card > img { height: 300px; }
+ .w-life-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 42px 28px; }
  .w-info-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 45px; }
  .w-three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
  .w-week { gap: 8%; }
@@ -285,9 +286,9 @@
  .w-section-head { display: block; margin-bottom: 34px; }
  .w-section-head > p { margin-top: 20px; max-width: 100%; font-size: 13px; }
  .w-life-grid { grid-template-columns: 1fr; gap: 42px; }
- .w-life-card > img { height: auto; aspect-ratio: 4 / 3; }
+ .w-life-card > img { aspect-ratio: 3 / 2; }
  .w-life-card > div { margin-top: 20px; }
- .w-life-card small { font-size: 9px; }
+ .w-life-card small { min-height: 0; font-size: 9px; }
  .w-life-card h3 { font-size: 25px; }
  .w-life-card > p { font-size: 13px; margin-top: 12px; }
  .w-community { min-height: 480px; }
