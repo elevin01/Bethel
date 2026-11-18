@@ -29,6 +29,16 @@ The latest visual system is implemented in `reform.css`, linked after the existi
 
 See `PHOTO-CREDITS.md` for image attribution; avoid unverified events or fabricated sermon placeholders.
 
+### Depth and motion revision
+
+The second pass moves away from the inherited green monochrome: the primary surfaces are **midnight/navy ink and warm ivory**, with **burnished copper, sunlit gold, blush, muted lavender, and blue-grey** used selectively. The contrast gives individual page sections their own atmosphere without introducing unrelated bright brand colors.
+
+- **Hand-drawn SVG:** the homepage opening includes an animated architectural arch, rotating dotted halo, and light tracing. An illustrated emblem is embedded in the Sunday invitation. The six gathering cards each have a separate line icon (worship, Scripture, prayer, youth, study, events).
+- **Architectural background:** `assets/decor/arch-field.svg` is a locally hosted repeating etching used at low opacity behind specific sections, inner-page title bands, and the footer. No raster texture, external illustration, or font service is used.
+- **Orchestrated motion:** `ambient.js` progressively reveals below-the-fold sections via IntersectionObserver, adds a very subtle pointer parallax to the hero drawing on fine-pointer devices, and animates a small visual scroll-progress indicator beneath the mobile gallery.
+- **Accessible defaults:** all illustrations are decorative and marked `aria-hidden`; content is never dependent on the animation script. Motion is disabled for visitors using reduced-motion preferences. Animations affect transforms and opacity; no autoplay video or large libraries.
+- **Performance:** `sw.js` cache version and precache entries are updated for both CSS and the new SVG/JS assets. HTML and page content remain on their existing paths.
+
 ## Content and search
 
 - `/bible-study/` provides the Monday online and Saturday in-person study details.
@@ -51,6 +61,6 @@ Official guidance: [Zoom meeting security options](https://support.zoom.com/hc/e
 
 ## Preview and visual QA
 
-This is a proposed design direction. Review the PR preview before merging. Check 320, 390, 768, 1024, and 1440 CSS pixel widths on the homepage and representative interior pages; specifically review image crop, gallery scrolling, mobile menu keyboard behavior, native FAQ expansion, and footer wrapping. Confirm the six gathering links, English and Malayalam times, address, downloads, and structured data remain intact. Test reduced-motion settings and reload after service worker installation.
+This is a proposed design direction. Review the PR preview before merging. Check 320, 390, 768, 1024, and 1440 CSS pixel widths on the homepage and representative interior pages; specifically review image crop, animated ornament placement, gallery scrolling/progress, mobile menu keyboard behavior, native FAQ expansion, and footer wrapping. Confirm the six gathering links, English and Malayalam times, address, downloads, and structured data remain intact. Test reduced-motion settings and reload after service worker installation.
 
 Run `python3 -m http.server 8000` in the repository root for a local preview.
