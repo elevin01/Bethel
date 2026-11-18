@@ -1,0 +1,137 @@
+/* BETHEL / CONTENT-FIRST VISUAL GUIDES
+   Use illustration only when it helps explain a step or gathering. */
+
+/* Universal purposeful inline symbol, kept outside the image gallery. */
+.welcome-site .w-guide-icon {
+  display: block;
+  width: 33px;
+  height: 33px;
+  flex-shrink: 0;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.65;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Visiting: four practical questions, four clear visual cues. */
+.page-visit .w-arrival-steps {
+  gap: 20px;
+  align-items: stretch;
+}
+.page-visit .w-arrival-steps article {
+  grid-template-columns: 78px minmax(0,1fr);
+  align-items: start;
+  gap: 20px;
+  padding: 30px;
+  border: 1px solid #dbd4cc;
+  border-radius: 5px;
+  background: linear-gradient(155deg,#fffaf4,#f5f0ed);
+  box-shadow: 0 15px 40px rgba(42,32,51,.055);
+  transition: border-color .25s ease, transform .3s ease;
+}
+.page-visit .w-arrival-steps article:nth-child(2) { background: linear-gradient(155deg,#f6f2f5,#eeebf3); }
+.page-visit .w-arrival-steps article:nth-child(3) { background: linear-gradient(155deg,#fff8f1,#f6eae2); }
+.page-visit .w-arrival-steps article:nth-child(4) { background: linear-gradient(155deg,#f3f6f9,#eaf0f5); }
+.page-visit .w-arrival-steps article:hover { border-color: #c6a99f; transform: translateY(-2px); }
+.page-visit .w-arrival-symbol {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  align-items: start;
+}
+.page-visit .w-arrival-number {
+  font: 600 17px/1 'Cormorant Garamond',Georgia,serif;
+  letter-spacing: .02em;
+  color: #94503c;
+}
+.page-visit .w-arrival-symbol .w-guide-icon {
+  width: 65px;
+  height: 65px;
+  padding: 15px;
+  color: #985e50;
+  border: 1px solid #d9b8aa;
+  border-radius: 14px;
+  background: rgba(255,255,255,.48);
+}
+.page-visit .w-arrival-steps article:nth-child(2) .w-guide-icon { color: #7b6a9d; border-color: #c5b8d5; }
+.page-visit .w-arrival-steps article:nth-child(4) .w-guide-icon { color: #537590; border-color: #b4c9d6; }
+.page-visit .w-arrival-steps h3 { font: 600 clamp(30px,3vw,40px)/1.05 'Cormorant Garamond',Georgia,serif; color: #1e2a3d; }
+.page-visit .w-arrival-steps p { margin-top: 13px; font-size: 14px; line-height: 1.8; color: #536073; }
+.page-visit .w-arrival-steps .w-inline { margin-top: 14px; font-weight: 600; }
+.page-visit .w-faq { border-top-color: #cbbec0; }
+.page-visit .w-faq details { border-bottom-color: #cbbec0; }
+.page-visit .w-faq details[open] { border-left: 2px solid #ad735f; padding-left: 14px; }
+.page-visit .w-faq summary { color: #23334e; font-weight: 600; }
+
+/* Worship: the three parts of the experience become a readable trio. */
+.page-worship .w-info-grid.w-three {
+  gap: 18px;
+}
+.page-worship .w-info-grid.w-three article {
+  padding: clamp(26px,3vw,40px);
+  border: 1px solid #ded7d0;
+  background: #f8f2ed;
+  border-radius: 5px;
+}
+.page-worship .w-info-grid.w-three article:nth-child(2) { background: #eef0f5; }
+.page-worship .w-info-grid.w-three article:nth-child(3) { background: #f4edf2; }
+.page-worship .w-info-grid.w-three article > span { margin-bottom: 22px; color: #98513c; font-weight: 700; }
+.page-worship .w-info-grid.w-three .w-guide-icon { width: 56px; height: 56px; margin-bottom: 18px; color: #ad6e5b; }
+.page-worship .w-info-grid.w-three article:nth-child(2) .w-guide-icon { color: #607caa; }
+.page-worship .w-info-grid.w-three article:nth-child(3) .w-guide-icon { color: #937aa6; }
+.page-worship .w-info-grid.w-three h3 { font: 600 clamp(31px,3vw,41px)/1.04 'Cormorant Garamond',Georgia,serif; color: #1e2a3d; }
+.page-worship .w-info-grid.w-three p { margin-top: 17px; color: #4f5e70; font-size: 14px; line-height: 1.85; }
+
+/* Bible study: show how people participate, not just when. */
+.page-bible-study .w-study-list article > .w-eyebrow,
+.page-prayer .w-gathering-list article > span {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.page-bible-study .w-study-list .w-guide-icon,
+.page-prayer .w-gathering-list .w-guide-icon {
+  width: 34px;
+  height: 34px;
+  padding: 6px;
+  border-radius: 9px;
+  background: #fae7d8;
+  color: #98513c;
+  border: 1px solid #e9c4b2;
+}
+.page-bible-study .w-study-list article:nth-child(2) .w-guide-icon,
+.page-prayer .w-gathering-list article:nth-child(2) .w-guide-icon {
+  background: #edeafa;
+  color: #79689c;
+  border-color: #d6c9e7;
+}
+.page-prayer .w-gathering-list article:nth-child(3) .w-guide-icon {
+  background: #e7eef4;
+  color: #547696;
+  border-color: #b9ccd9;
+}
+.page-bible-study .w-study-list h3,
+.page-prayer .w-gathering-list h3 { color: #263550; }
+.page-bible-study .w-study-list article,
+.page-prayer .w-gathering-list article { border-top-color: #d2c9c8; }
+.page-bible-study .w-study-list article > p:not(.w-eyebrow),
+.page-prayer .w-gathering-list article > p { color: #5d6677; line-height: 1.8; }
+
+/* On small screens, the utility icons sit beside the content instead of stealing vertical space. */
+@media (max-width: 900px) {
+  .page-visit .w-arrival-steps article { padding: 23px; grid-template-columns: 66px minmax(0,1fr); gap: 15px; }
+  .page-visit .w-arrival-symbol .w-guide-icon { width: 57px; height: 57px; padding: 13px; }
+}
+@media (max-width: 720px) {
+  .page-visit .w-arrival-steps article { grid-template-columns: 53px minmax(0,1fr); gap: 16px; padding: 21px 17px; }
+  .page-visit .w-arrival-symbol .w-guide-icon { width: 50px; height: 50px; padding: 10px; }
+  .page-visit .w-arrival-number { font-size: 16px; }
+  .page-visit .w-arrival-steps h3 { font-size: 30px; }
+  .page-worship .w-info-grid.w-three { grid-template-columns: 1fr; }
+  .page-worship .w-info-grid.w-three article { padding: 27px; }
+  .page-prayer .w-gathering-list article > span { font-size: 10px; line-height: 1.5; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .page-visit .w-arrival-steps article { transition: none; transform: none !important; }
+}

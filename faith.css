@@ -1,0 +1,355 @@
+/* BETHEL / THE FAITH READING ROOM
+   Icons belong beside the doctrine they explain, not on top of photography.
+   The complete statement remains visible, linkable and readable without JS. */
+
+.page-about .creed-section {
+  --faith-panel: #22304a;
+  --faith-outline: rgba(247, 235, 220, .17);
+  --faith-muted: #cdd4df;
+  padding: clamp(82px, 9vw, 130px) 0 clamp(100px, 11vw, 160px);
+  background:
+    radial-gradient(ellipse at 14% 2%, rgba(184, 120, 109, .16), transparent 36%),
+    radial-gradient(ellipse at 91% 65%, rgba(126, 137, 190, .14), transparent 39%),
+    linear-gradient(165deg, #151f34, #1e2a46 58%, #171e32);
+  color: #f9f6f1;
+}
+.page-about .creed-section::before {
+  inset: 0 0 0 auto;
+  top: 0;
+  left: auto;
+  width: 41%;
+  height: 100%;
+  max-height: none;
+  max-width: none;
+  transform: none;
+  border-radius: 0;
+  opacity: .12;
+  background: url('./assets/decor/arch-field.svg') center top / 480px auto repeat;
+  pointer-events: none;
+  mask-image: linear-gradient(90deg, transparent, black 72%);
+}
+.page-about .creed-section > .frame {
+  position: relative;
+  width: min(89%, 1320px);
+  z-index: 1;
+}
+.page-about .creed__head {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(270px, .65fr);
+  gap: clamp(26px, 5vw, 76px);
+  max-width: none;
+  align-items: end;
+  margin: 0 0 clamp(52px, 6.5vw, 94px);
+  text-align: left;
+}
+.page-about .creed__head .kicker {
+  grid-column: 1 / -1;
+  margin: 0 0 -8px;
+  font: 700 11px/1.5 'Inter',sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  color: #e8b88b;
+}
+.page-about .creed__h2 {
+  margin: 0;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(72px, 9vw, 142px);
+  line-height: .83;
+  font-weight: 600;
+  letter-spacing: -.054em;
+  color: #fff9f3;
+  text-wrap: balance;
+}
+.page-about .creed__lead {
+  max-width: 32ch;
+  margin: 0 0 6px;
+  font: 400 clamp(16px, 1.35vw, 19px)/1.75 'Inter', sans-serif;
+  letter-spacing: -.008em;
+  color: #e1e4eb;
+}
+.page-about .creed__layout {
+  display: grid;
+  grid-template-columns: minmax(195px, 245px) minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(26px, 4vw, 64px);
+}
+.page-about .creed__index {
+  position: sticky;
+  top: 125px;
+  align-self: start;
+  border-top: 1px solid rgba(234, 195, 157, .5);
+  padding-top: 21px;
+}
+.page-about .creed__index-label {
+  margin: 0 0 23px;
+  color: #e9bf92;
+  font: 700 10px/1.5 'Inter', sans-serif;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+.page-about .creed__pills {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 5px;
+  max-width: none;
+  margin: 0;
+  justify-content: stretch;
+}
+.page-about .creed__pill {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 13px;
+  padding: 12px 12px;
+  min-height: 48px;
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  background: transparent;
+  color: #d9deeb;
+  font: 500 12px/1.4 'Inter',sans-serif;
+  letter-spacing: 0;
+  text-align: left;
+  text-wrap: balance;
+  transition: color .24s ease, background .24s ease, border-color .24s ease;
+}
+.page-about .creed__pill:hover, .page-about .creed__pill:focus-visible {
+  background: rgba(255,255,255,.065);
+  color: #fff;
+  transform: none;
+}
+.page-about .creed__pill[aria-current="location"] {
+  color: #fff;
+  background: rgba(248, 215, 181, .095);
+  border-color: rgba(244, 193, 147, .34);
+}
+.page-about .creed__pill span {
+  flex: 0 0 25px;
+  color: #dcae85;
+  font: 600 16px/1 'Cormorant Garamond', Georgia, serif;
+  letter-spacing: -.02em;
+}
+.page-about .creed__reading { min-width: 0; }
+.page-about .creed {
+  max-width: none;
+  display: grid;
+  gap: 22px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.page-about .creed::before { display: none; }
+.page-about .creed__item {
+  --doctrine-accent: #efc08f;
+  --doctrine-rgb: 239,192,143;
+  position: relative;
+  display: grid;
+  grid-template-columns: clamp(148px, 19vw, 208px) minmax(0,1fr);
+  gap: 0;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  scroll-margin-top: 116px;
+  background: rgba(31,45,68,.9);
+  border: 1px solid var(--faith-outline);
+  border-radius: 7px;
+  box-shadow: 0 12px 32px rgba(8,14,32,.085);
+  transition: border-color .3s ease, background .3s ease;
+}
+.page-about .creed__item:nth-child(2) { --doctrine-accent: #a9c8df; --doctrine-rgb: 169,200,223; }
+.page-about .creed__item:nth-child(3) { --doctrine-accent: #bfb0dc; --doctrine-rgb: 191,176,220; }
+.page-about .creed__item:nth-child(4) { --doctrine-accent: #efaf93; --doctrine-rgb: 239,175,147; }
+.page-about .creed__item:nth-child(5) { --doctrine-accent: #d4a6b9; --doctrine-rgb: 212,166,185; }
+.page-about .creed__item:nth-child(6) { --doctrine-accent: #b6c4e3; --doctrine-rgb: 182,196,227; }
+.page-about .creed__item:not(:last-child) { border-bottom: 1px solid var(--faith-outline); }
+.page-about .creed__item:hover, .page-about .creed__item:focus-within {
+  background: #273652;
+  border-color: rgba(var(--doctrine-rgb),.45);
+}
+.page-about .creed__marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 0;
+  padding: 31px 19px 32px;
+  background:
+    radial-gradient(ellipse at 48% 58%, rgba(var(--doctrine-rgb), .16), transparent 61%),
+    linear-gradient(160deg,rgba(var(--doctrine-rgb),.085),rgba(var(--doctrine-rgb),.015));
+  border-right: 1px solid rgba(var(--doctrine-rgb),.14);
+}
+.page-about .creed__num {
+  align-self: flex-start;
+  color: var(--doctrine-accent);
+  font: 500 30px/1 'Cormorant Garamond', Georgia, serif;
+  font-style: normal;
+  text-shadow: none;
+}
+.page-about .creed__item:hover .creed__num { transform: none; }
+.page-about .creed__icon {
+  display: grid;
+  place-items: center;
+  width: clamp(92px, 10vw, 126px);
+  height: clamp(92px, 10vw, 126px);
+  margin: 20px auto;
+  padding: 22px;
+  color: var(--doctrine-accent);
+  border: 1px solid rgba(var(--doctrine-rgb),.4);
+  border-radius: 50%;
+  background: radial-gradient(circle,rgba(var(--doctrine-rgb),.095),transparent 80%);
+  box-shadow: 0 0 0 11px rgba(var(--doctrine-rgb),.037), inset 0 0 27px rgba(var(--doctrine-rgb),.08);
+  transition: transform .55s cubic-bezier(.22,.76,.28,1), border-color .3s ease;
+}
+.page-about .creed__icon svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+@media (hover: hover) {
+  .page-about .creed__item:hover .creed__icon {
+    transform: scale(1.065);
+    border-color: rgba(var(--doctrine-rgb),.8);
+  }
+}
+.page-about .creed__icon-caption {
+  margin-top: auto;
+  color: rgba(var(--doctrine-rgb),.85);
+  font: 700 10px/1.4 'Inter', sans-serif;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+.page-about .creed__content {
+  display: block;
+  min-width: 0;
+  padding: clamp(26px, 3vw, 43px) clamp(23px, 3.4vw, 48px) 33px;
+}
+.page-about .creed__title {
+  padding: 0;
+  margin: 0 0 20px;
+  color: #fffaf5;
+  font: 600 clamp(40px, 4vw, 57px)/.99 'Cormorant Garamond',Georgia,serif;
+  letter-spacing: -.033em;
+}
+.page-about .creed__title::after { display: none; }
+.page-about .creed__summary {
+  margin: 0 0 23px;
+  padding-left: 16px;
+  border-left: 2px solid var(--doctrine-accent);
+  color: #f7e6d3;
+  font: 500 clamp(17px, 1.7vw, 21px)/1.5 'Inter',sans-serif;
+  letter-spacing: -.03em;
+  max-width: 42ch;
+}
+.page-about .creed__summary-label {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--doctrine-accent);
+  font: 700 10px/1.4 'Inter',sans-serif;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+.page-about .creed__text {
+  max-width: 64ch;
+  margin: 0 0 15px;
+  color: #e4e7ed;
+  font: 400 14px/1.84 'Inter',sans-serif;
+  letter-spacing: -.008em;
+  text-wrap: pretty;
+}
+.page-about .creed__text + .creed__text { margin-top: 9px; }
+.page-about .creed__refs {
+  display: block;
+  margin: 24px 0 0;
+  padding-top: 19px;
+  border-top: 1px solid rgba(var(--doctrine-rgb),.2);
+  color: #d1d6e0;
+  font: 600 11px/1.8 'Inter',sans-serif;
+  letter-spacing: .01em;
+  text-transform: none;
+}
+.page-about .creed__refs-label {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--doctrine-accent);
+  font: 700 10px/1.4 'Inter',sans-serif;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+/* This section is for sustained reading; don't animate complete paragraphs. */
+.page-about .creed__item[data-reveal],
+.page-about .creed__item[data-reveal].is-visible { opacity: 1; transform: none; }
+
+/* Quiet but legible next section transition. */
+.page-about #pastors {
+  background: linear-gradient(145deg,#fbf7f0,#f0e7e1);
+}
+.page-about #pastors .pastors__intro h2 { color: #1e2a3d; }
+.page-about #pastors .pastors__lead { color: #535d70; line-height: 1.85; }
+.page-about #pastors .pastor-label__role { color: #98513c; }
+
+@media (max-width: 1080px) {
+  .page-about .creed__layout { grid-template-columns: 196px minmax(0, 1fr); gap: 22px; }
+  .page-about .creed__item { grid-template-columns: 128px minmax(0, 1fr); }
+  .page-about .creed__icon { width: 91px; height: 91px; padding: 18px; }
+  .page-about .creed__content { padding: 27px; }
+  .page-about .creed__title { font-size: 45px; }
+  .page-about .creed__summary { font-size: 17px; }
+}
+@media (max-width: 820px) {
+  .page-about .creed__head { grid-template-columns: 1fr; gap: 19px; }
+  .page-about .creed__head .kicker { grid-column: auto; margin-bottom: 0; }
+  .page-about .creed__lead { max-width: 57ch; }
+  .page-about .creed__layout { display: block; }
+  .page-about .creed__index {
+    position: static;
+    border: 0;
+    padding: 0;
+    margin-bottom: 32px;
+  }
+  .page-about .creed__index-label { margin-bottom: 13px; }
+  .page-about .creed__pills { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 7px; }
+  .page-about .creed__pill { min-height: 50px; padding: 10px; }
+}
+@media (max-width: 620px) {
+  .page-about .creed-section { padding: 73px 0 95px; }
+  .page-about .creed-section > .frame { width: 88%; }
+  .page-about .creed__h2 { font-size: clamp(66px, 15vw, 101px); }
+  .page-about .creed__lead { font-size: 15px; }
+  .page-about .creed__pills { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .page-about .creed__pill { font-size: 11px; min-height: 50px; }
+  .page-about .creed { gap: 17px; }
+  .page-about .creed__item { grid-template-columns: 1fr; }
+  .page-about .creed__marker {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 22px;
+    padding: 17px 21px;
+    border-right: 0;
+    border-bottom: 1px solid rgba(var(--doctrine-rgb),.18);
+  }
+  .page-about .creed__num { flex: 0 0 36px; font-size: 25px; align-self: center; }
+  .page-about .creed__icon { width: 62px; height: 62px; padding: 13px; margin: 0; box-shadow: none; }
+  .page-about .creed__icon-caption { margin-left: auto; font-size: 9px; text-align: right; }
+  .page-about .creed__content { padding: 23px 22px 25px; }
+  .page-about .creed__title { font-size: 42px; margin-bottom: 16px; }
+  .page-about .creed__summary { font-size: 16px; margin-bottom: 19px; padding-left: 13px; }
+  .page-about .creed__text { font-size: 14px; line-height: 1.8; }
+  .page-about .creed__refs { font-size: 10.5px; }
+}
+@media (max-width: 370px) {
+  .page-about .creed__pills { grid-template-columns: 1fr 1fr; }
+  .page-about .creed__pill { gap: 8px; padding: 8px 6px; }
+  .page-about .creed__marker { gap: 11px; padding: 15px; }
+  .page-about .creed__content { padding-inline: 17px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .page-about .creed__icon,
+  .page-about .creed__pill { transition: none !important; }
+}
