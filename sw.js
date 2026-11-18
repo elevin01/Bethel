@@ -3,7 +3,7 @@
    - Cache-first for images (rarely change) + static assets
    - Network-first for HTML (always try fresh) with offline fallback */
 
-const CACHE_VERSION = "bwc-v12-life-gatherings";
+const CACHE_VERSION = "bwc-v13-editorial-reform";
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
 const RUNTIME_CACHE = `${CACHE_VERSION}-runtime`;
@@ -22,6 +22,7 @@ const PRECACHE = [
   "/assets/icon-192.png",
   "/assets/icon-512.png",
   "/welcome.css?v=12",
+  "/reform.css?v=1",
   "/assets/images/gathering-640.webp",
   "/assets/images/gathering-1400.webp",
 ].map(localUrl);

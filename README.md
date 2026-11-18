@@ -9,22 +9,25 @@ From the repository root, run `python3 -m http.server 8000`, then open `http://l
 ## Editing the site
 
 - Pages are ordinary HTML in the root and the named page directories. The existing `/youth/`, `/visit/`, and `/about/` URLs remain intact. `/ministries/youth/` redirects to `/youth/` on Netlify.
-- `welcome.css` contains the shared theme and responsive layouts. `styles.css` supplies base and retained About-page styles.
+- `reform.css` is the current visual layer; `welcome.css` contains the shared layouts, and `styles.css` supplies base and retained About-page styles.
 - `app.js` handles mobile navigation, the footer year, and statement-of-faith reveals. Essential content, links, and native FAQs work without JavaScript.
 - `assets/images/` contains responsive WebP photos. Originals remain in `assets/photos/`. See `PHOTO-CREDITS.md` for the stock Bible photo source.
 - Fonts are self-hosted with their licenses included.
 - Schedules, navigation, and footers appear on multiple pages. Keep visible times and structured data consistent.
 - Increase `CACHE_VERSION` in `sw.js` and the version query on changed CSS/JS references when publishing asset changes. This avoids pairing new HTML with a previous service worker's cached design.
 
-## Design direction
+## Editorial visual reform (November 2026)
 
-The homepage uses a full-width Bethel worship photo, direct sans-serif typography, Sunday times, and the lower-level venue details. Mobile uses a portrait worship photo from the same existing collection. “Life at Bethel” shows six photo cards covering Sunday worship, Monday Bible study, Tuesday/Wednesday prayer, Friday youth, Saturday Bible study, and church events; “Life is better shared” accompanies the outdoor congregation photo. The Sunday introduction uses a heading and welcome copy in two columns, stacking on phones. The posed church-family photo is omitted from the homepage and its sharing metadata.
+The latest visual system is implemented in `reform.css`, linked after the existing styles on all 12 pages. This gives the church a focused, reversible design experiment without rewriting URLs, content, forms or page-specific behavior. The palette uses warm ivory, forest green, parchment and restrained copper. Self-hosted Cormorant Garamond display typography is paired with readable Inter navigation and body text; no external font or JavaScript dependencies are introduced.
 
-References studied for composition and visitor information: [Austin Stone](https://www.austinstone.org/), [Bridgetown](https://bridgetown.church/), and [VIVE](https://vivechurch.org/). The main congregation imagery is from Bethel's existing source. The homepage activity cards also use illustrative stock photography credited in `PHOTO-CREDITS.md`.
+- The homepage opens as an asymmetric editorial image composition: a clear invitation, Sunday worship times and the venue remain visible before scrolling.
+- All six "Life at Bethel" links remain; their photos now form an asymmetric gallery on desktop and a snap-scrolling carousel with the next card visible on phones.
+- The Sunday invitation, community image, weekly schedule, first-visit FAQs, and closing footer have distinct visual rhythms instead of repeating a default card pattern.
+- Existing interior-page heroes, schedules, downloadable study resources, and visitor guidance share the typography, spacing and interaction design.
+- Motion is restrained, with an optional entrance reveal and hover feedback, disabled when a visitor prefers reduced motion.
+- No posed congregation group photo was reintroduced to the homepage. Action arrows remain inline SVGs, never emoji.
 
-Interior pages use distinct layouts: photographic openings for church life, an arrival guide for visitors, weekly schedule rows, and a study download list. Keep service information close to the relevant action and avoid adding the same generic closing section to every page.
-
-All navigation and action arrows are inline SVGs with the shared `.w-icon` class, `aria-hidden="true"`, and `focusable="false"`. Use the forward, external-link, down, or download path that matches the destination. Do not substitute Unicode arrows: mobile platforms can render them as colorful emoji.
+See `PHOTO-CREDITS.md` for image attribution; avoid unverified events or fabricated sermon placeholders.
 
 ## Content and search
 
@@ -46,8 +49,8 @@ The meeting host should review the recurring meeting in Zoom, enable a Waiting R
 
 Official guidance: [Zoom meeting security options](https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0059862).
 
-## Verification of this revision
+## Preview and visual QA
 
-The Netlify PR preview was checked in Chromium at 320, 390, 768, and 1440 CSS pixels across all 12 pages (48 layouts). No horizontal overflow, failed images, main-heading count errors, or remaining text arrows were found. All 89 action icons are SVGs hidden from screen readers. Axe WCAG A/AA checks returned no violations on the 12 pages at 390 pixels. Menu opening, Escape/focus return, native FAQ expansion, and a real PowerPoint download passed. Local links, anchors, JSON-LD parsing, sitemap XML, JavaScript syntax, and whitespace checks passed. Automated checks supplement visual inspection; they are not a complete accessibility certification.
+This is a proposed design direction. Review the PR preview before merging. Check 320, 390, 768, 1024, and 1440 CSS pixel widths on the homepage and representative interior pages; specifically review image crop, gallery scrolling, mobile menu keyboard behavior, native FAQ expansion, and footer wrapping. Confirm the six gathering links, English and Malayalam times, address, downloads, and structured data remain intact. Test reduced-motion settings and reload after service worker installation.
 
-The temporary preview review page and its test dependency are removed from the final branch contents.
+Run `python3 -m http.server 8000` in the repository root for a local preview.
