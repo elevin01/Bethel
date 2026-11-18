@@ -170,7 +170,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 24px;
   min-width: 0;
   padding: 31px 19px 32px;
   background:
@@ -191,7 +192,7 @@
   place-items: center;
   width: clamp(92px, 10vw, 126px);
   height: clamp(92px, 10vw, 126px);
-  margin: 20px auto;
+  margin: 10px auto 0;
   padding: 22px;
   color: var(--doctrine-accent);
   border: 1px solid rgba(var(--doctrine-rgb),.4);

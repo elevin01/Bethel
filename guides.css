@@ -84,11 +84,11 @@
 .page-worship .w-info-grid.w-three p { margin-top: 17px; color: #4f5e70; font-size: 14px; line-height: 1.85; }
 
 /* Bible study: show how people participate, not just when. */
-.page-bible-study .w-study-list article > .w-eyebrow,
-.page-prayer .w-gathering-list article > span {
+.page-bible-study .w-study-list h3,
+.page-prayer .w-gathering-list h3 {
   display: flex;
-  gap: 12px;
   align-items: center;
+  gap: 14px;
 }
 .page-bible-study .w-study-list .w-guide-icon,
 .page-prayer .w-gathering-list .w-guide-icon {
