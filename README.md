@@ -37,6 +37,7 @@ This is an art-directed website for a real local congregation, not a dashboard o
 - `/bible-study/` and `/prayer/`: purpose-built schedule layouts that emphasize when, what and how to join.
 - `/ministry/`: study slides organized as an editorial downloadable archive, with filenames and files unchanged.
 - `/events/`: real photographs and confirmed weekly events remain central; archived 2026 convention remains correctly dated.
+- `/about/#pastors`, `/youth/`, `/serve/`, and `/online/`: dedicated editorial treatments for the real pastor photo, youth Friday nights and parent guidance, serving inquiries, and practical Zoom access.
 - Homepage photo composition, six Life at Bethel destinations, service times and venue details remain; avoid adding unrelated ornaments or posed group-photo hero imagery.
 
 ### Implementation
@@ -44,6 +45,7 @@ This is an art-directed website for a real local congregation, not a dashboard o
 - `reform.css`: typography, color, background etching and shared composition.
 - `faith.css`: wholly distinct long-form beliefs chapters.
 - `guides.css`: purposeful layouts for actual information on Visit, Worship, Prayer, Bible Study, Events and Resources.
+- `interiors.css`: independent page art direction for pastors, youth, serve, online joining and archived convention content.
 - `assets/decor/arch-field.svg`: lightweight, low-opacity atmospheric texture.
 - `assets/faith/*.svg`: six custom illustrations, locally hosted; no image search downloads or external dependency.
 - `welcome.css` and `styles.css` remain the pre-existing base. `app.js` continues to handle navigation and footer year.
@@ -71,7 +73,7 @@ Official guidance: [Zoom meeting security options](https://support.zoom.com/hc/e
 
 ## Preview and visual QA
 
-Use the Netlify preview from PR #3. Most important: view `/about/#faith` at 320, 390, 768, 1024 and 1440 CSS px. Check image cropping / legibility, alternating chapter order, native anchor scrolling, reading width and the 6 chapter references. Check `/visit/`, `/worship/`, `/bible-study/`, `/prayer/`, `/events/` and `/ministry/` for content spacing and actual links. Confirm the existing site header/menu, service times, mobile gallery, FAQ, resources and address remain usable.
+Use the Netlify preview from PR #3. Most important: view `/about/#faith` at 320, 390, 768, 1024 and 1440 CSS px. Check image cropping / legibility, alternating chapter order, native anchor scrolling, reading width and the 6 chapter references. Check `/visit/`, `/worship/`, `/bible-study/`, `/prayer/`, `/events/`, `/ministry/`, `/online/`, `/youth/`, `/serve/` and `/about/#pastors` for content spacing and actual links. Confirm the existing site header/menu, service times, mobile gallery, FAQ, resources and address remain usable.
 
 Static HTML checks and CSS parsing are not substitutes for a browser-rendered accessibility/visual audit. No such browser audit is claimed in this iteration.
 

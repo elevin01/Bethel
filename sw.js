@@ -3,7 +3,7 @@
    - Cache-first for images (rarely change) + static assets
    - Network-first for HTML (always try fresh) with offline fallback */
 
-const CACHE_VERSION = "bwc-v17-editorial-atlas";
+const CACHE_VERSION = "bwc-v18-composed-interiors";
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
 const RUNTIME_CACHE = `${CACHE_VERSION}-runtime`;
@@ -25,6 +25,7 @@ const PRECACHE = [
   "/reform.css?v=3",
   "/faith.css?v=3",
   "/guides.css?v=3",
+  "/interiors.css?v=1",
   "/assets/decor/arch-field.svg",
   "/assets/faith/01-scripture.svg",
   "/assets/faith/02-baptism.svg",
