@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 760" fill="none">
+  <title>Subtle architectural arch pattern</title>
+  <defs>
+    <pattern id="chapel" width="240" height="300" patternUnits="userSpaceOnUse">
+      <path d="M12 300V145C12 85 60 37 120 37S228 85 228 145V300" stroke="#B87B65" stroke-opacity=".56" stroke-width="1.6"/>
+      <path d="M33 300V148C33 100 72 61 120 61S207 100 207 148V300" stroke="#C49B8C" stroke-opacity=".53" stroke-width=".85"/>
+      <path d="M54 300V151C54 114 84 84 120 84S186 114 186 151V300" stroke="#A69BC1" stroke-opacity=".52" stroke-width=".85"/>
+      <path d="M120 0v37m0 47v217M12 241h216" stroke="#B87B65" stroke-opacity=".19" stroke-width=".8"/>
+      <path d="M45 283h150m-150-17h150M2 300h236" stroke="#826E93" stroke-opacity=".27" stroke-width=".7"/>
+      <circle cx="120" cy="144" r="7" stroke="#B87B65" stroke-opacity=".5" stroke-width=".8"/>
+      <circle cx="120" cy="144" r="2.1" fill="#B87B65" fill-opacity=".4"/>
+      <path d="M104 144h32m-16-16v32" stroke="#B87B65" stroke-opacity=".4" stroke-width=".8"/>
+      <circle cx="12" cy="37" r="2" fill="#A69BC1" fill-opacity=".5"/>
+      <circle cx="228" cy="37" r="2" fill="#A69BC1" fill-opacity=".5"/>
+    </pattern>
+  </defs>
+  <rect width="600" height="760" fill="url(#chapel)"/>
+</svg>
