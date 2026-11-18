@@ -31,7 +31,7 @@
 <link href="assets/LogoSmallCircle.png" rel="apple-touch-icon"/>
 <link href="styles.css" rel="stylesheet"/>
 <link href="./welcome.css?v=12" rel="stylesheet"/>
-<link href="./reform.css?v=1" rel="stylesheet"/>
+<link href="./reform.css?v=2" rel="stylesheet"/>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@graph": [
@@ -215,6 +215,32 @@
 <source media="(max-width: 720px)" sizes="100vw" srcset="./assets/images/prayer-640.webp 640w, ./assets/images/prayer-1400.webp 1350w"/>
 <img alt="Bethel church members leading worship together" decoding="async" fetchpriority="high" height="653" loading="eager" sizes="100vw" src="./assets/images/gathering-1400.webp" srcset="./assets/images/gathering-640.webp 640w, ./assets/images/gathering-1400.webp 1400w" width="1400"/>
 </picture>
+<svg class="bwc-hero-ornament" viewBox="0 0 700 700" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+<defs>
+<linearGradient id="bwc-arch-stroke" x1="130" y1="70" x2="570" y2="650" gradientUnits="userSpaceOnUse"><stop stop-color="#FFF4DE" stop-opacity=".63"/><stop offset=".53" stop-color="#F5BB93" stop-opacity=".9"/><stop offset="1" stop-color="#B4A6C9" stop-opacity=".42"/></linearGradient>
+<radialGradient id="bwc-art-halo"><stop stop-color="#F6C793" stop-opacity=".26"/><stop offset="1" stop-color="#F6C793" stop-opacity="0"/></radialGradient>
+</defs>
+<circle cx="350" cy="342" r="266" fill="url(#bwc-art-halo)" opacity=".48"/>
+<path class="bwc-arch-line" d="M126 625V292C126 165 226 69 350 69s224 96 224 223v333"/>
+<path class="bwc-arch-line" d="M169 625V299c0-103 81-186 181-186s181 83 181 186v326"/>
+<path class="bwc-arch-muted" d="M213 625V300c0-76 61-137 137-137s137 61 137 137v325"/>
+<path class="bwc-arch-muted" d="M253 625V304c0-54 43-97 97-97s97 43 97 97v321"/>
+<path class="bwc-arch-line bwc-arch-trace" d="M126 625V292C126 165 226 69 350 69s224 96 224 223v333"/>
+<g class="bwc-halo-wheel" stroke="#F6D4B7" stroke-opacity=".48" stroke-width="1">
+<circle cx="350" cy="342" r="91" stroke-dasharray="1 16"/>
+<circle cx="350" cy="342" r="123" stroke-dasharray="2 22"/>
+<path d="M350 197v29m0 232v29M205 342h29m232 0h29M247 239l20 20m166 166 20 20m0-206-20 20M267 425l-20 20"/>
+</g>
+<g class="bwc-light-pulse">
+<circle cx="350" cy="342" r="38" stroke="#FBE3C3" stroke-opacity=".6"/>
+<circle cx="350" cy="342" r="5.5" fill="#F8C899"/>
+<path d="M350 312v60m-30-30h60" stroke="#FCE6C7" stroke-width="1.7"/>
+<path d="m350 278 12 48 48 16-48 12-12 49-12-49-48-12 48-16 12-48Z" stroke="#F5CDA4" stroke-opacity=".85"/>
+</g>
+<path d="M88 626h524M107 646h486" stroke="#F5D6BB" stroke-opacity=".26" stroke-width="1"/>
+<circle cx="126" cy="625" r="3" fill="#E8BC9B"/><circle cx="574" cy="625" r="3" fill="#E8BC9B"/>
+<circle cx="350" cy="69" r="4" fill="#F5D9B8"/>
+</svg>
 <div class="w-wrap w-hero-content">
 <p class="w-eyebrow">Bethel Worship Center · Bronxville, NY</p>
 <h1 id="home-heading">Come as<br/><em>you are.</em></h1>
@@ -228,7 +254,16 @@
 </div>
 </section>
 <section class="w-section w-wrap w-sunday">
-<div class="w-sunday-copy"><p class="w-eyebrow">A church in your neighborhood</p><h2>Join us<br/><em>this Sunday.</em></h2></div>
+<div class="w-sunday-copy"><p class="w-eyebrow">A church in your neighborhood</p><h2>Join us<br/><em>this Sunday.</em></h2><svg class="bwc-sunday-seal" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+<g class="bwc-seal-ray" stroke="currentColor" stroke-width="1">
+<circle cx="80" cy="80" r="69" stroke-opacity=".65"/><circle cx="80" cy="80" r="59" stroke-opacity=".55"/>
+<path d="M80 2v15m0 126v15M2 80h15m126 0h15M25 25l11 11m88 88 11 11m0-110-11 11M36 124l-11 11"/>
+<circle cx="80" cy="80" r="50" stroke-dasharray="2 10"/>
+</g>
+<path d="M80 39v82M39 80h82" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+<path d="M80 52c7 18 15 23 28 28-13 6-21 14-28 28-6-14-14-22-28-28 14-5 22-11 28-28Z" stroke="currentColor" stroke-width="1.4"/>
+<circle cx="80" cy="80" r="5" fill="currentColor"/>
+</svg></div>
 <div class="w-sunday-copy">
 <p>We’re a Pentecostal church in Bronxville, welcoming people from Yonkers and across Westchester. We worship in English and Malayalam, study the Bible, and pray together.</p>
 <p>Coming for the first time? We’d love to meet you.</p>
@@ -238,13 +273,14 @@
 <div class="w-section-head"><div><p class="w-eyebrow">Find your community</p><h2 id="life-heading">Life at Bethel.</h2></div><p>Worship, Bible study, prayer, and time together.<br/><a class="w-inline" href="./schedule/">Full weekly schedule <svg aria-hidden="true" class="w-icon" fill="none" focusable="false" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewBox="0 0 24 24" width="20"><path d="M5 12h14m-6-6 6 6-6 6"></path></svg></a></p></div>
 <p class="w-life-swipe" aria-hidden="true">Swipe to explore gatherings</p>
 <div class="w-life-grid">
-<a class="w-life-card" href="./worship/"><img alt="Worship at Bethel" decoding="async" height="1050" loading="lazy" sizes="(max-width: 720px) 88vw, (max-width: 1100px) 43vw, 28vw" src="./assets/images/worship-1400.webp" srcset="./assets/images/worship-640.webp 640w, ./assets/images/worship-1400.webp 1400w" width="1400"/><div><div><small>Sunday · In person</small><h3>Sunday worship</h3></div><svg aria-hidden="true" class="w-icon" fill="none" focusable="false" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewBox="0 0 24 24" width="20"><path d="M5 12h14m-6-6 6 6-6 6"></path></svg></div><p>English at 9:30 AM. Malayalam at 10:30 AM.</p></a>
-<a class="w-life-card" href="./bible-study/#online-study"><img alt="An open Bible beside a cup of coffee and a phone" decoding="async" height="1125" loading="lazy" sizes="(max-width: 720px) 88vw, (max-width: 1100px) 43vw, 28vw" src="./assets/images/stock-bible-study-900.webp" srcset="./assets/images/stock-bible-study-480.webp 480w, ./assets/images/stock-bible-study-900.webp 900w" width="900"/><div><div><small>Monday · 7:30 PM · Zoom</small><h3>Bible study online</h3></div><svg aria-hidden="true" class="w-icon" fill="none" focusable="false" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewBox="0 0 24 24" width="20"><path d="M5 12h14m-6-6 6 6-6 6"></path></svg></div><p>Open your Bible and join the conversation from home.</p></a>
-<a class="w-life-card" href="./prayer/"><img alt="Two people praying over an open Bible" decoding="async" height="619" loading="lazy" sizes="(max-width: 720px) 88vw, (max-width: 1100px) 43vw, 28vw" src="./assets/images/stock-prayer-900.webp" srcset="./assets/images/stock-prayer-480.webp 480w, ./assets/images/stock-prayer-900.webp 900w" width="900"/><div><div><small>Tuesday &amp; Wednesday · 8:00 PM · Zoom</small><h3>Prayer gatherings</h3></div><svg aria-hidden="true" class="w-icon" fill="none" focusable="false" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewBox="0 0 24 24" width="20"><path d="M5 12h14m-6-6 6 6-6 6"></path></svg></div><p>Malayalam on Tuesdays. Youth &amp; English on Wednesdays.</p></a>
-<a class="w-life-card" href="./youth/"><img alt="Bethel youth together after a church gathering" decoding="async" height="653" loading="lazy" sizes="(max-width: 720px) 88vw, (max-width: 1100px) 43vw, 28vw" src="./assets/images/youth-1400.webp" srcset="./assets/images/youth-640.webp 640w, ./assets/images/youth-1400.webp 1400w" width="1400"/><div><div><small>Friday · 7:00 PM · Grades 6–12</small><h3>Youth at Bethel</h3></div><svg aria-hidden="true" class="w-icon" fill="none" focusable="false" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewBox="0 0 24 24" width="20"><path d="M5 12h14m-6-6 6 6-6 6"></path></svg></div><p>Worship, time in the Word, and Friday nights together.</p></a>
-<a class="w-life-card" href="./bible-study/#saturday-study"><img alt="Bethel members reading and discussing the Bible together" decoding="async" height="1050" loading="lazy" sizes="(max-width: 720px) 88vw, (max-width: 1100px) 43vw, 28vw" src="./assets/images/study-1400.webp" srcset="./assets/images/study-640.webp 640w, ./assets/images/study-1400.webp 1400w" width="1400"/><div><div><small>Saturday · 7:00 PM · In person</small><h3>Bible study at Bethel</h3></div><svg aria-hidden="true" class="w-icon" fill="none" focusable="false" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewBox="0 0 24 24" width="20"><path d="M5 12h14m-6-6 6 6-6 6"></path></svg></div><p>Read Scripture, ask questions, and learn with one another.</p></a>
-<a class="w-life-card" href="./events/"><img alt="Hands raised during a worship gathering" decoding="async" height="600" loading="lazy" sizes="(max-width: 720px) 88vw, (max-width: 1100px) 43vw, 28vw" src="./assets/images/stock-worship-900.webp" srcset="./assets/images/stock-worship-480.webp 480w, ./assets/images/stock-worship-900.webp 900w" width="900"/><div><div><small>Conventions &amp; church gatherings</small><h3>Events &amp; church life</h3></div><svg aria-hidden="true" class="w-icon" fill="none" focusable="false" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewBox="0 0 24 24" width="20"><path d="M5 12h14m-6-6 6 6-6 6"></path></svg></div><p>Explore gatherings and moments from life around Bethel.</p></a>
+<a class="w-life-card" href="./worship/"><img alt="Worship at Bethel" decoding="async" height="1050" loading="lazy" sizes="(max-width: 720px) 88vw, (max-width: 1100px) 43vw, 28vw" src="./assets/images/worship-1400.webp" srcset="./assets/images/worship-640.webp 640w, ./assets/images/worship-1400.webp 1400w" width="1400"/><svg class="bwc-life-glyph" viewBox="0 0 24 24" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="4.3"/><path d="M12 1.8v3M12 19.2v3M1.8 12h3M19.2 12h3M4.7 4.7l2.1 2.1m10.4 10.4 2.1 2.1m0-14.6-2.1 2.1M6.8 17.2l-2.1 2.1"/></svg><div><div><small>Sunday · In person</small><h3>Sunday worship</h3></div><svg aria-hidden="true" class="w-icon" fill="none" focusable="false" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewBox="0 0 24 24" width="20"><path d="M5 12h14m-6-6 6 6-6 6"></path></svg></div><p>English at 9:30 AM. Malayalam at 10:30 AM.</p></a>
+<a class="w-life-card" href="./bible-study/#online-study"><img alt="An open Bible beside a cup of coffee and a phone" decoding="async" height="1125" loading="lazy" sizes="(max-width: 720px) 88vw, (max-width: 1100px) 43vw, 28vw" src="./assets/images/stock-bible-study-900.webp" srcset="./assets/images/stock-bible-study-480.webp 480w, ./assets/images/stock-bible-study-900.webp 900w" width="900"/><svg class="bwc-life-glyph" viewBox="0 0 24 24" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M12 6.5C9.1 4.9 5.5 4.4 2.5 5.1v13.5c3.2-.8 6.6-.3 9.5 1.3m0-13.4c2.9-1.6 6.5-2.1 9.5-1.4v13.5c-3.2-.8-6.6-.3-9.5 1.3m0-13.4v13.4"/></svg><div><div><small>Monday · 7:30 PM · Zoom</small><h3>Bible study online</h3></div><svg aria-hidden="true" class="w-icon" fill="none" focusable="false" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewBox="0 0 24 24" width="20"><path d="M5 12h14m-6-6 6 6-6 6"></path></svg></div><p>Open your Bible and join the conversation from home.</p></a>
+<a class="w-life-card" href="./prayer/"><img alt="Two people praying over an open Bible" decoding="async" height="619" loading="lazy" sizes="(max-width: 720px) 88vw, (max-width: 1100px) 43vw, 28vw" src="./assets/images/stock-prayer-900.webp" srcset="./assets/images/stock-prayer-480.webp 480w, ./assets/images/stock-prayer-900.webp 900w" width="900"/><svg class="bwc-life-glyph" viewBox="0 0 24 24" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M12 20.5s-8.5-5.5-8.5-11.5a4.5 4.5 0 0 1 8.5-2 4.5 4.5 0 0 1 8.5 2c0 6-8.5 11.5-8.5 11.5Z"/><path d="M12 9.4v5.1m-2.6-2.5h5.2"/></svg><div><div><small>Tuesday &amp; Wednesday · 8:00 PM · Zoom</small><h3>Prayer gatherings</h3></div><svg aria-hidden="true" class="w-icon" fill="none" focusable="false" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewBox="0 0 24 24" width="20"><path d="M5 12h14m-6-6 6 6-6 6"></path></svg></div><p>Malayalam on Tuesdays. Youth &amp; English on Wednesdays.</p></a>
+<a class="w-life-card" href="./youth/"><img alt="Bethel youth together after a church gathering" decoding="async" height="653" loading="lazy" sizes="(max-width: 720px) 88vw, (max-width: 1100px) 43vw, 28vw" src="./assets/images/youth-1400.webp" srcset="./assets/images/youth-640.webp 640w, ./assets/images/youth-1400.webp 1400w" width="1400"/><svg class="bwc-life-glyph" viewBox="0 0 24 24" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.5 14 9l6.8 3-6.8 2.2L12 21l-2.1-6.8L3 12l6.9-3L12 2.5Z"/><path d="M19.5 3v3.5M17.8 4.8h3.5M4.5 17.5V21M2.8 19.2h3.5"/></svg><div><div><small>Friday · 7:00 PM · Grades 6–12</small><h3>Youth at Bethel</h3></div><svg aria-hidden="true" class="w-icon" fill="none" focusable="false" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewBox="0 0 24 24" width="20"><path d="M5 12h14m-6-6 6 6-6 6"></path></svg></div><p>Worship, time in the Word, and Friday nights together.</p></a>
+<a class="w-life-card" href="./bible-study/#saturday-study"><img alt="Bethel members reading and discussing the Bible together" decoding="async" height="1050" loading="lazy" sizes="(max-width: 720px) 88vw, (max-width: 1100px) 43vw, 28vw" src="./assets/images/study-1400.webp" srcset="./assets/images/study-640.webp 640w, ./assets/images/study-1400.webp 1400w" width="1400"/><svg class="bwc-life-glyph" viewBox="0 0 24 24" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M4.2 4.3h13.1a2.6 2.6 0 0 1 2.6 2.6v13.4H7a2.8 2.8 0 0 1-2.8-2.8V4.3Z"/><path d="M4.2 17.2H20M8 8h7m-7 3.4h7M12 4.3v12.9"/></svg><div><div><small>Saturday · 7:00 PM · In person</small><h3>Bible study at Bethel</h3></div><svg aria-hidden="true" class="w-icon" fill="none" focusable="false" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewBox="0 0 24 24" width="20"><path d="M5 12h14m-6-6 6 6-6 6"></path></svg></div><p>Read Scripture, ask questions, and learn with one another.</p></a>
+<a class="w-life-card" href="./events/"><img alt="Hands raised during a worship gathering" decoding="async" height="600" loading="lazy" sizes="(max-width: 720px) 88vw, (max-width: 1100px) 43vw, 28vw" src="./assets/images/stock-worship-900.webp" srcset="./assets/images/stock-worship-480.webp 480w, ./assets/images/stock-worship-900.webp 900w" width="900"/><svg class="bwc-life-glyph" viewBox="0 0 24 24" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><rect x="3.3" y="5.3" width="17.4" height="15.3" rx="2"/><path d="M7.3 2.9v4.6m9.4-4.6v4.6M3.5 10h17"/><path d="m8.3 15.3 2.3 2.2 5.2-5.1"/></svg><div><div><small>Conventions &amp; church gatherings</small><h3>Events &amp; church life</h3></div><svg aria-hidden="true" class="w-icon" fill="none" focusable="false" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewBox="0 0 24 24" width="20"><path d="M5 12h14m-6-6 6 6-6 6"></path></svg></div><p>Explore gatherings and moments from life around Bethel.</p></a>
 </div>
+<div class="bwc-life-meter" aria-hidden="true"><span></span></div>
 </div></section>
 <section class="w-community">
 <img alt="Bethel members enjoying an outdoor church gathering" decoding="async" height="852" loading="lazy" sizes="(max-width: 720px) 90vw, 50vw" src="./assets/images/community-1400.webp" srcset="./assets/images/community-640.webp 640w, ./assets/images/community-1400.webp 1400w" width="1400"/>
@@ -339,5 +375,6 @@
 </footer>
 <script defer="" src="./app.js?v=10">
 </script>
+<script defer src="./ambient.js?v=1"></script>
 </body>
 </html>
