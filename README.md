@@ -9,7 +9,7 @@ From the repository root, run `python3 -m http.server 8000`, then open `http://l
 ## Editing the site
 
 - Pages are ordinary HTML in the root and the named page directories. The existing `/youth/`, `/visit/`, and `/about/` URLs remain intact. `/ministries/youth/` redirects to `/youth/` on Netlify.
-- `reform.css` is the current visual layer; `welcome.css` contains the shared layouts, and `styles.css` supplies base and retained About-page styles.
+- `reform.css` is the shared visual layer; `faith.css` and `guides.css` are content-focused additions. `welcome.css` contains the shared layouts, and `styles.css` supplies base and retained About-page styles.
 - `app.js` handles mobile navigation, the footer year, and statement-of-faith reveals. Essential content, links, and native FAQs work without JavaScript.
 - `assets/images/` contains responsive WebP photos. Originals remain in `assets/photos/`. See `PHOTO-CREDITS.md` for the stock Bible photo source.
 - Fonts are self-hosted with their licenses included.
@@ -18,26 +18,34 @@ From the repository root, run `python3 -m http.server 8000`, then open `http://l
 
 ## Editorial visual reform (November 2026)
 
-The latest visual system is implemented in `reform.css`, linked after the existing styles on all 12 pages. This gives the church a focused, reversible design experiment without rewriting URLs, content, forms or page-specific behavior. The palette uses warm ivory, forest green, parchment and restrained copper. Self-hosted Cormorant Garamond display typography is paired with readable Inter navigation and body text; no external font or JavaScript dependencies are introduced.
+This PR is a **content-first visual experiment**. The shared identity uses midnight blue, warm ivory, copper, soft gold and restrained lavender. Self-hosted Cormorant Garamond display typography is paired with Inter for body copy, navigation, times and directions. The photo-led homepage retains six Life at Bethel destinations, Sunday service times, the venue and mobile gallery.
 
-- The homepage opens as an asymmetric editorial image composition: a clear invitation, Sunday worship times and the venue remain visible before scrolling.
-- All six "Life at Bethel" links remain; their photos now form an asymmetric gallery on desktop and a snap-scrolling carousel with the next card visible on phones.
-- The Sunday invitation, community image, weekly schedule, first-visit FAQs, and closing footer have distinct visual rhythms instead of repeating a default card pattern.
-- Existing interior-page heroes, schedules, downloadable study resources, and visitor guidance share the typography, spacing and interaction design.
-- Motion is restrained, with an optional entrance reveal and hover feedback, disabled when a visitor prefers reduced motion.
-- No posed congregation group photo was reintroduced to the homepage. Action arrows remain inline SVGs, never emoji.
+The design's depth comes from the lightweight local `assets/decor/arch-field.svg` pattern used behind selected sections, fine borders, and layered light. We deliberately **removed** the animated hero ornament, rotating Sunday seal, decorative icons on photography, parallax, global scroll reveals and gallery meter after feedback. Illustrations should help someone understand actual content, not fill empty space.
 
-See `PHOTO-CREDITS.md` for image attribution; avoid unverified events or fabricated sermon placeholders.
+### Focus: the Statement of Faith
 
-### Depth and motion revision
+- `faith.css` redesigns **About → What we believe** as a readable, six-chapter reading room: a chapter index, six prominent **doctrine-specific hand-drawn inline SVGs**, concise “At a glance” summaries, full original teaching text, and Scripture references.
+- The original six doctrines, order, anchors (`#creed-01` through `#creed-06`), and references are preserved. Summaries are navigation aids, not replacements for the complete statement.
+- `faith-nav.js` highlights the current chapter as the visitor reads. Navigation links are native anchors; content remains fully visible when scripts are disabled. The mobile index reflows to two or three columns.
+- The design avoids long auto-animated text sections; only icon hover transitions and current-location changes are used, with motion preferences respected.
 
-The second pass moves away from the inherited green monochrome: the primary surfaces are **midnight/navy ink and warm ivory**, with **burnished copper, sunlit gold, blush, muted lavender, and blue-grey** used selectively. The contrast gives individual page sections their own atmosphere without introducing unrelated bright brand colors.
+### Practical visual guides
 
-- **Hand-drawn SVG:** the homepage opening includes an animated architectural arch, rotating dotted halo, and light tracing. An illustrated emblem is embedded in the Sunday invitation. The six gathering cards each have a separate line icon (worship, Scripture, prayer, youth, study, events).
-- **Architectural background:** `assets/decor/arch-field.svg` is a locally hosted repeating etching used at low opacity behind specific sections, inner-page title bands, and the footer. No raster texture, external illustration, or font service is used.
-- **Orchestrated motion:** `ambient.js` progressively reveals below-the-fold sections via IntersectionObserver, adds a very subtle pointer parallax to the hero drawing on fine-pointer devices, and animates a small visual scroll-progress indicator beneath the mobile gallery.
-- **Accessible defaults:** all illustrations are decorative and marked `aria-hidden`; content is never dependent on the animation script. Motion is disabled for visitors using reduced-motion preferences. Animations affect transforms and opacity; no autoplay video or large libraries.
-- **Performance:** `sw.js` cache version and precache entries are updated for both CSS and the new SVG/JS assets. HTML and page content remain on their existing paths.
+- `guides.css` adds meaningful illustrations beside the four first-visit steps, three parts of Sunday worship, Monday/Saturday Bible-study options, and prayer gatherings.
+- Every illustration is an inline SVG with `aria-hidden`; it accompanies, never replaces, text.
+- No fabricated events, new ministry programs, forms or claims have been introduced.
+
+### Files and upkeep
+
+- `reform.css`: site-wide typography, responsive layouts and photographic editorial theme.
+- `faith.css`: Statement of Faith reading interface.
+- `guides.css`: first-visit, worship, study and prayer comprehension aids.
+- `faith-nav.js`: optional accessible active-chapter indicator.
+- `assets/decor/arch-field.svg`: faint architectural background texture.
+- `welcome.css` and `styles.css` remain the base layers; `app.js` still handles the mobile menu and footer year.
+- Versioned CSS/JS links and the `sw.js` cache version must be kept aligned.
+
+See `PHOTO-CREDITS.md` for image attribution.
 
 ## Content and search
 
@@ -61,6 +69,8 @@ Official guidance: [Zoom meeting security options](https://support.zoom.com/hc/e
 
 ## Preview and visual QA
 
-This is a proposed design direction. Review the PR preview before merging. Check 320, 390, 768, 1024, and 1440 CSS pixel widths on the homepage and representative interior pages; specifically review image crop, animated ornament placement, gallery scrolling/progress, mobile menu keyboard behavior, native FAQ expansion, and footer wrapping. Confirm the six gathering links, English and Malayalam times, address, downloads, and structured data remain intact. Test reduced-motion settings and reload after service worker installation.
+Review the Netlify PR preview at 320, 390, 768, 1024 and 1440 CSS pixels, especially **About → What we believe** (chapter index, long doctrines, Scripture references), Visit (four steps/FAQ), Worship, Bible Study and Prayer. Check mobile navigation and gallery swipe, visual contrast, horizontal overflow, anchor focus/scroll offsets, reduced-motion settings and service-worker reload behavior.
 
-Run `python3 -m http.server 8000` in the repository root for a local preview.
+Automated structural checks, HTML link checks, CSS balance and JavaScript syntax tests do not replace a browser-rendered visual or accessibility audit. This PR stays unmerged for review.
+
+Run `python3 -m http.server 8000` from the repository root to preview locally.
