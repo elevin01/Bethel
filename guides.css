@@ -1,137 +1,402 @@
-/* BETHEL / CONTENT-FIRST VISUAL GUIDES
-   Use illustration only when it helps explain a step or gathering. */
+/*
+ * BETHEL / THE PRACTICAL PAGES
+ * Visual hierarchy comes from rhythm, type and real content.
+ * No tiny pictogram badges or generic pastel card collections.
+ */
 
-/* Universal purposeful inline symbol, kept outside the image gallery. */
-.welcome-site .w-guide-icon {
-  display: block;
-  width: 33px;
-  height: 33px;
-  flex-shrink: 0;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.65;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+/* 01. First-visit guide: an ordered wayfinding narrative. */
+.page-visit #plan {
+  position: relative;
+  padding-block: clamp(90px, 10vw, 145px);
 }
-
-/* Visiting: four practical questions, four clear visual cues. */
+.page-visit #plan .w-section-head {
+  align-items: flex-end;
+  padding-bottom: clamp(39px, 5vw, 75px);
+  margin-bottom: 0;
+}
+.page-visit #plan h2 {
+  max-width: 880px;
+  font: 600 clamp(69px, 8vw, 120px)/.84 'Cormorant Garamond',Georgia,serif;
+  letter-spacing: -.05em;
+  color: #243047;
+}
 .page-visit .w-arrival-steps {
-  gap: 20px;
-  align-items: stretch;
+  display: block;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid #c9bdb5;
 }
 .page-visit .w-arrival-steps article {
-  grid-template-columns: 78px minmax(0,1fr);
+  --wayfinding-accent: #a05e4a;
+  display: grid;
+  grid-template-columns: minmax(100px, .27fr) minmax(0,1fr);
+  gap: clamp(29px, 5vw, 90px);
   align-items: start;
-  gap: 20px;
-  padding: 30px;
-  border: 1px solid #dbd4cc;
-  border-radius: 5px;
-  background: linear-gradient(155deg,#fffaf4,#f5f0ed);
-  box-shadow: 0 15px 40px rgba(42,32,51,.055);
-  transition: border-color .25s ease, transform .3s ease;
+  padding: clamp(38px, 5vw, 72px) 0;
+  margin: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  border-bottom: 1px solid #c9bdb5;
+  box-shadow: none;
+  transition: padding-left .28s ease;
 }
-.page-visit .w-arrival-steps article:nth-child(2) { background: linear-gradient(155deg,#f6f2f5,#eeebf3); }
-.page-visit .w-arrival-steps article:nth-child(3) { background: linear-gradient(155deg,#fff8f1,#f6eae2); }
-.page-visit .w-arrival-steps article:nth-child(4) { background: linear-gradient(155deg,#f3f6f9,#eaf0f5); }
-.page-visit .w-arrival-steps article:hover { border-color: #c6a99f; transform: translateY(-2px); }
+.page-visit .w-arrival-steps article:nth-child(2) { --wayfinding-accent: #7d739a; }
+.page-visit .w-arrival-steps article:nth-child(3) { --wayfinding-accent: #ad7461; }
+.page-visit .w-arrival-steps article:nth-child(4) { --wayfinding-accent: #5c7c9f; }
+@media (hover: hover) and (pointer: fine) {
+  .page-visit .w-arrival-steps article:hover {
+    padding-left: 14px;
+    border-bottom-color: var(--wayfinding-accent);
+  }
+}
 .page-visit .w-arrival-symbol {
   display: flex;
-  flex-direction: column;
-  gap: 13px;
-  align-items: start;
+  align-items: baseline;
+  gap: 10px;
+  padding: 0;
+  background: transparent;
+  border: 0;
 }
 .page-visit .w-arrival-number {
-  font: 600 17px/1 'Cormorant Garamond',Georgia,serif;
-  letter-spacing: .02em;
-  color: #94503c;
+  color: var(--wayfinding-accent);
+  font: 500 clamp(78px, 9vw, 130px)/.75 'Cormorant Garamond', Georgia,serif;
+  letter-spacing: -.08em;
 }
-.page-visit .w-arrival-symbol .w-guide-icon {
-  width: 65px;
-  height: 65px;
-  padding: 15px;
-  color: #985e50;
-  border: 1px solid #d9b8aa;
-  border-radius: 14px;
-  background: rgba(255,255,255,.48);
+.page-visit .w-arrival-symbol::after {
+  content: '/ 04';
+  align-self: flex-start;
+  padding-top: 8px;
+  color: #8a8389;
+  font: 700 11px/1 'Inter',system-ui,sans-serif;
+  letter-spacing: .08em;
 }
-.page-visit .w-arrival-steps article:nth-child(2) .w-guide-icon { color: #7b6a9d; border-color: #c5b8d5; }
-.page-visit .w-arrival-steps article:nth-child(4) .w-guide-icon { color: #537590; border-color: #b4c9d6; }
-.page-visit .w-arrival-steps h3 { font: 600 clamp(30px,3vw,40px)/1.05 'Cormorant Garamond',Georgia,serif; color: #1e2a3d; }
-.page-visit .w-arrival-steps p { margin-top: 13px; font-size: 14px; line-height: 1.8; color: #536073; }
-.page-visit .w-arrival-steps .w-inline { margin-top: 14px; font-weight: 600; }
-.page-visit .w-faq { border-top-color: #cbbec0; }
-.page-visit .w-faq details { border-bottom-color: #cbbec0; }
-.page-visit .w-faq details[open] { border-left: 2px solid #ad735f; padding-left: 14px; }
-.page-visit .w-faq summary { color: #23334e; font-weight: 600; }
+.page-visit .w-arrival-steps article > div:last-child {
+  min-width: 0;
+  padding-top: 7px;
+}
+.page-visit .w-arrival-steps h3 {
+  max-width: 820px;
+  margin: 0;
+  color: #243047;
+  font: 600 clamp(40px, 4.7vw, 68px)/.96 'Cormorant Garamond',Georgia,serif;
+  letter-spacing: -.046em;
+}
+.page-visit .w-arrival-steps p {
+  max-width: 60ch;
+  margin: 21px 0 0;
+  color: #586175;
+  font: 400 16px/1.83 'Inter',system-ui,sans-serif;
+}
+.page-visit .w-arrival-steps .w-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 22px;
+  padding-bottom: 5px;
+  color: #9d5947;
+  font-weight: 600;
+}
+.page-visit .w-faq { border-top-color: #cdbfc0; }
+.page-visit .w-faq details { border-bottom-color: #cdbfc0; }
+.page-visit .w-faq details[open] { padding-left: 17px; border-left: 2px solid #ac6e58; }
+.page-visit .w-faq summary { color: #263650; font-weight: 600; }
+.page-visit .w-faq p { font-size: 15px; line-height: 1.82; }
 
-/* Worship: the three parts of the experience become a readable trio. */
+/* 02. Worship: a real order of gathering instead of three app tiles. */
+.page-worship .w-worship-story { padding-block: clamp(95px, 9vw, 145px); }
+.page-worship .w-worship-story h2 {
+  color: #253047;
+  font-size: clamp(71px, 7.8vw, 112px);
+}
 .page-worship .w-info-grid.w-three {
-  gap: 18px;
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 0;
+  border-top: 1px solid #c7b9b6;
+  border-bottom: 1px solid #c7b9b6;
 }
 .page-worship .w-info-grid.w-three article {
-  padding: clamp(26px,3vw,40px);
-  border: 1px solid #ded7d0;
-  background: #f8f2ed;
-  border-radius: 5px;
+  --order-accent:#a25e4e;
+  position: relative;
+  min-width: 0;
+  display: block;
+  padding: clamp(37px, 4.6vw, 68px) clamp(17px,3vw,45px) clamp(45px, 5.4vw, 78px);
+  border: 0;
+  border-right: 1px solid #c7b9b6;
+  background: transparent;
 }
-.page-worship .w-info-grid.w-three article:nth-child(2) { background: #eef0f5; }
-.page-worship .w-info-grid.w-three article:nth-child(3) { background: #f4edf2; }
-.page-worship .w-info-grid.w-three article > span { margin-bottom: 22px; color: #98513c; font-weight: 700; }
-.page-worship .w-info-grid.w-three .w-guide-icon { width: 56px; height: 56px; margin-bottom: 18px; color: #ad6e5b; }
-.page-worship .w-info-grid.w-three article:nth-child(2) .w-guide-icon { color: #607caa; }
-.page-worship .w-info-grid.w-three article:nth-child(3) .w-guide-icon { color: #937aa6; }
-.page-worship .w-info-grid.w-three h3 { font: 600 clamp(31px,3vw,41px)/1.04 'Cormorant Garamond',Georgia,serif; color: #1e2a3d; }
-.page-worship .w-info-grid.w-three p { margin-top: 17px; color: #4f5e70; font-size: 14px; line-height: 1.85; }
+.page-worship .w-info-grid.w-three article:first-child { padding-left: 0; }
+.page-worship .w-info-grid.w-three article:last-child { padding-right: 0; border-right: 0; }
+.page-worship .w-info-grid.w-three article:nth-child(2) { --order-accent:#7385a5; }
+.page-worship .w-info-grid.w-three article:nth-child(3) { --order-accent:#9a779b; }
+.page-worship .w-info-grid.w-three article > span {
+  display: block;
+  margin-bottom: clamp(55px, 7vw, 115px);
+  font: 700 11px/1.4 'Inter',system-ui,sans-serif;
+  color: var(--order-accent);
+  letter-spacing: .13em;
+}
+.page-worship .w-info-grid.w-three article::after {
+  content: '';
+  position: absolute;
+  top: clamp(95px, 9vw, 170px);
+  left: clamp(17px,3vw,45px);
+  width: 38px;
+  height: 1px;
+  background: var(--order-accent);
+  opacity: .8;
+}
+.page-worship .w-info-grid.w-three article:first-child::after { left: 0; }
+.page-worship .w-info-grid.w-three h3 {
+  color: #26344d;
+  font: 600 clamp(40px,4.1vw,61px)/.97 'Cormorant Garamond',Georgia,serif;
+  letter-spacing: -.045em;
+}
+.page-worship .w-info-grid.w-three p {
+  margin-top: 23px;
+  max-width: 31ch;
+  color: #5e6779;
+  font: 400 15px/1.85 'Inter',system-ui,sans-serif;
+}
 
-/* Bible study: show how people participate, not just when. */
-.page-bible-study .w-study-list h3,
+/* 03. Weekly studies: treat the two meeting formats as clear destinations. */
+.page-bible-study .w-study-list {
+  border-top: 1px solid #c7bac0;
+}
+.page-bible-study .w-study-list article {
+  display: grid;
+  grid-template-columns: minmax(150px,.35fr) minmax(0,1fr) auto;
+  gap: 12px clamp(24px, 4.5vw, 75px);
+  align-items: start;
+  padding: clamp(45px, 6vw, 80px) 0;
+  border-bottom: 1px solid #c7bac0;
+  background: transparent;
+}
+.page-bible-study .w-study-list .w-eyebrow {
+  display: block;
+  grid-column: 1;
+  grid-row: 1 / 3;
+  padding-top: 12px;
+  color: #9c584b;
+  font: 700 11px/1.5 'Inter',system-ui,sans-serif;
+  letter-spacing: .12em;
+}
+.page-bible-study .w-study-list article:nth-child(2) .w-eyebrow { color: #687d9f; }
+.page-bible-study .w-study-list h3 {
+  grid-column: 2;
+  grid-row: 1;
+  margin: 0;
+  color: #26334a;
+  font: 600 clamp(43px, 5.1vw, 70px)/.93 'Cormorant Garamond',Georgia,serif;
+  letter-spacing: -.045em;
+}
+.page-bible-study .w-study-list article > p:not(.w-eyebrow) {
+  grid-column: 2;
+  grid-row: 2;
+  margin: 0;
+  max-width: 50ch;
+  color: #5e6878;
+  font: 400 15px/1.85 'Inter',system-ui,sans-serif;
+}
+.page-bible-study .w-study-list .w-button {
+  grid-column: 3;
+  grid-row: 1 / 3;
+  align-self: center;
+  justify-self: end;
+  white-space: nowrap;
+}
+
+/* 04. Prayer: warm, unhurried editorial schedule rather than cards. */
+.page-prayer .w-prayer-gatherings { padding-block: clamp(90px, 9vw, 132px); }
+.page-prayer .w-prayer-gatherings h2 { color: #27334a; }
+.page-prayer .w-gathering-list { border-top: 1px solid #c9bcc2; }
+.page-prayer .w-gathering-list article {
+  display: grid;
+  grid-template-columns: minmax(156px,.37fr) minmax(0,1fr) auto;
+  gap: 12px clamp(23px, 4vw, 68px);
+  align-items: start;
+  padding: clamp(37px, 4vw, 63px) 0;
+  border: 0;
+  border-bottom: 1px solid #c9bcc2;
+  background: transparent;
+}
+.page-prayer .w-gathering-list article > span {
+  grid-column: 1;
+  grid-row: 1 / 3;
+  padding-top: 10px;
+  color: #9d5847;
+  font: 700 11px/1.55 'Inter',system-ui,sans-serif;
+  letter-spacing: .12em;
+}
+.page-prayer .w-gathering-list article:nth-child(2) > span { color: #826c96; }
+.page-prayer .w-gathering-list article:nth-child(3) > span { color: #5c7691; }
 .page-prayer .w-gathering-list h3 {
-  display: flex;
-  align-items: center;
-  gap: 14px;
+  grid-column: 2;
+  grid-row: 1;
+  margin: 0;
+  color: #26334a;
+  font: 600 clamp(39px, 4.5vw, 66px)/.94 'Cormorant Garamond',Georgia,serif;
+  letter-spacing: -.04em;
 }
-.page-bible-study .w-study-list .w-guide-icon,
-.page-prayer .w-gathering-list .w-guide-icon {
-  width: 34px;
-  height: 34px;
-  padding: 6px;
-  border-radius: 9px;
-  background: #fae7d8;
-  color: #98513c;
-  border: 1px solid #e9c4b2;
+.page-prayer .w-gathering-list p {
+  grid-column: 2;
+  grid-row: 2;
+  margin: 0;
+  max-width: 48ch;
+  color: #5e6678;
+  font: 400 15px/1.8 'Inter',system-ui,sans-serif;
 }
-.page-bible-study .w-study-list article:nth-child(2) .w-guide-icon,
-.page-prayer .w-gathering-list article:nth-child(2) .w-guide-icon {
-  background: #edeafa;
-  color: #79689c;
-  border-color: #d6c9e7;
+.page-prayer .w-gathering-list .w-button {
+  grid-column: 3;
+  grid-row: 1 / 3;
+  justify-self: end;
+  align-self: center;
+  white-space: nowrap;
 }
-.page-prayer .w-gathering-list article:nth-child(3) .w-guide-icon {
-  background: #e7eef4;
-  color: #547696;
-  border-color: #b9ccd9;
+.page-prayer .w-prayer-gatherings .w-quote {
+  margin-top: clamp(72px, 8vw, 125px);
+  padding-top: 53px;
+  border-top: 1px solid #ccc0c4;
+  color: #29374d;
 }
-.page-bible-study .w-study-list h3,
-.page-prayer .w-gathering-list h3 { color: #263550; }
-.page-bible-study .w-study-list article,
-.page-prayer .w-gathering-list article { border-top-color: #d2c9c8; }
-.page-bible-study .w-study-list article > p:not(.w-eyebrow),
-.page-prayer .w-gathering-list article > p { color: #5d6677; line-height: 1.8; }
 
-/* On small screens, the utility icons sit beside the content instead of stealing vertical space. */
-@media (max-width: 900px) {
-  .page-visit .w-arrival-steps article { padding: 23px; grid-template-columns: 66px minmax(0,1fr); gap: 15px; }
-  .page-visit .w-arrival-symbol .w-guide-icon { width: 57px; height: 57px; padding: 13px; }
+/* 05. Resource library: three actual study files presented like an archive. */
+.page-ministry #library { padding-block: clamp(90px,10vw,145px); }
+.page-ministry #library h2 { color: #26324b; }
+.page-ministry .w-download-row {
+  grid-template-columns: 100px minmax(0,1fr) auto;
+  gap: clamp(19px,3.8vw,65px);
+  align-items: center;
+  padding: clamp(32px,4vw,54px) 0;
+  border-color: #c9bfc0;
+  transition: padding-left .25s ease, background .25s ease;
+}
+.page-ministry .w-download-row:first-child { border-top: 1px solid #c9bfc0; }
+.page-ministry .w-download-row:hover { padding-left: 14px; background: rgba(245,233,225,.42); }
+.page-ministry .w-download-row .w-resource-number {
+  padding: 0;
+  color: #a36153;
+  font: 500 clamp(67px,7vw,101px)/.8 'Cormorant Garamond',Georgia,serif;
+  letter-spacing: -.07em;
+}
+.page-ministry .w-download-row:nth-child(2) .w-resource-number { color: #75799f; }
+.page-ministry .w-download-row:nth-child(3) .w-resource-number { color: #b08b68; }
+.page-ministry .w-download-copy small { color: #945e52; font: 700 10px/1.5 'Inter',sans-serif; letter-spacing: .14em; }
+.page-ministry .w-download-copy h3 {
+  color: #26334a;
+  font: 600 clamp(55px,6vw,86px)/.9 'Cormorant Garamond',Georgia,serif;
+  letter-spacing: -.045em;
+}
+.page-ministry .w-download-copy p { margin-top: 14px; max-width: 55ch; font-size: 15px; line-height: 1.7; color: #596677; }
+.page-ministry .w-download-action { color: #8f4d3f; font-weight: 600; }
+
+/* 06. Events are photographs of real gatherings, not stock-icon tiles. */
+.page-events .w-event-row {
+  grid-template-columns: minmax(205px, .35fr) 1fr;
+  align-items: center;
+  gap: clamp(27px, 5vw, 80px);
+  padding-block: clamp(30px, 3.5vw, 52px);
+  border-bottom-color: #cbc0c1;
+}
+.page-events .w-event-row:first-child { border-top: 1px solid #cbc0c1; }
+.page-events .w-event-row > img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4/3;
+  height: auto;
+  object-fit: cover;
+  filter: saturate(.87);
+  transition: filter .35s ease;
+}
+.page-events .w-event-row:hover > img { filter: saturate(1.07); }
+.page-events .w-event-copy small { color: #995848; font-size: 10px; letter-spacing: .11em; font-weight: 700; }
+.page-events .w-event-copy h3 {
+  color: #26334a;
+  font: 600 clamp(46px, 5vw, 77px)/.94 'Cormorant Garamond',Georgia,serif;
+  letter-spacing: -.045em;
+}
+.page-events .w-event-copy .w-inline { color: #91503e; font-weight: 600; }
+
+/* Responsive: preserve readable content, never force horizontal scroll. */
+@media (max-width: 1080px) {
+  .page-bible-study .w-study-list article,
+  .page-prayer .w-gathering-list article { grid-template-columns: minmax(120px,.3fr) minmax(0,1fr); }
+  .page-bible-study .w-study-list .w-button,
+  .page-prayer .w-gathering-list .w-button {
+    grid-column: 2;
+    grid-row: 3;
+    justify-self: start;
+    margin-top: 12px;
+  }
+  .page-ministry .w-download-row { grid-template-columns: 82px minmax(0,1fr); }
+  .page-ministry .w-download-action { grid-column: 2; justify-self: start; }
 }
 @media (max-width: 720px) {
-  .page-visit .w-arrival-steps article { grid-template-columns: 53px minmax(0,1fr); gap: 16px; padding: 21px 17px; }
-  .page-visit .w-arrival-symbol .w-guide-icon { width: 50px; height: 50px; padding: 10px; }
-  .page-visit .w-arrival-number { font-size: 16px; }
-  .page-visit .w-arrival-steps h3 { font-size: 30px; }
-  .page-worship .w-info-grid.w-three { grid-template-columns: 1fr; }
-  .page-worship .w-info-grid.w-three article { padding: 27px; }
-  .page-prayer .w-gathering-list article > span { font-size: 10px; line-height: 1.5; }
+  .page-visit #plan { padding-block: 76px 90px; }
+  .page-visit #plan h2 { font-size: clamp(70px, 14vw, 93px); }
+  .page-visit .w-arrival-steps article {
+    grid-template-columns: 74px minmax(0,1fr);
+    gap: 18px;
+    padding: 33px 0;
+  }
+  .page-visit .w-arrival-number { font-size: 65px; }
+  .page-visit .w-arrival-symbol::after { font-size: 9px; padding-top: 3px; }
+  .page-visit .w-arrival-steps h3 { font-size: clamp(38px, 9vw, 52px); }
+  .page-visit .w-arrival-steps p { font-size: 14px; margin-top: 15px; }
+  .page-worship .w-info-grid.w-three { display: block; }
+  .page-worship .w-info-grid.w-three article,
+  .page-worship .w-info-grid.w-three article:first-child,
+  .page-worship .w-info-grid.w-three article:last-child {
+    padding: 38px 0 44px;
+    border-right: 0;
+    border-bottom: 1px solid #c7b9b6;
+  }
+  .page-worship .w-info-grid.w-three article:last-child { border-bottom: 0; }
+  .page-worship .w-info-grid.w-three article > span { margin-bottom: 53px; }
+  .page-worship .w-info-grid.w-three article::after,
+  .page-worship .w-info-grid.w-three article:first-child::after { left: 0; top: 77px; }
+  .page-worship .w-info-grid.w-three h3 { font-size: 51px; }
+  .page-bible-study .w-study-list article,
+  .page-prayer .w-gathering-list article { display: grid; grid-template-columns: 1fr; gap: 16px; padding-block: 35px; }
+  .page-bible-study .w-study-list .w-eyebrow,
+  .page-prayer .w-gathering-list article > span {
+    grid-column: 1; grid-row: auto;
+    padding: 0; font-size: 10px; margin: 0;
+  }
+  .page-bible-study .w-study-list h3,
+  .page-prayer .w-gathering-list h3 { grid-column: 1; grid-row: auto; font-size: 47px; }
+  .page-bible-study .w-study-list article > p:not(.w-eyebrow),
+  .page-prayer .w-gathering-list p { grid-column: 1; grid-row: auto; font-size: 14px; margin: 0; }
+  .page-bible-study .w-study-list .w-button,
+  .page-prayer .w-gathering-list .w-button {
+    grid-column: 1; grid-row: auto; margin-top: 6px;
+    align-self: start; justify-self: start;
+  }
+  .page-ministry .w-download-row {
+    grid-template-columns: 55px minmax(0,1fr);
+    gap: 12px 15px;
+    padding-block: 31px;
+  }
+  .page-ministry .w-download-row .w-resource-number { font-size: 59px; }
+  .page-ministry .w-download-copy h3 { font-size: clamp(48px,11vw,64px); }
+  .page-ministry .w-download-copy p { font-size: 13px; }
+  .page-ministry .w-download-action { grid-column: 2; margin-top: 10px; }
+  .page-events .w-event-row { grid-template-columns: 108px minmax(0,1fr); gap: 17px; }
+  .page-events .w-event-row > img { aspect-ratio: 3/4; height: auto; }
+  .page-events .w-event-copy h3 { font-size: clamp(33px, 8vw, 47px); }
+  .page-events .w-event-copy small { font-size: 9px; }
+}
+@media (max-width: 370px) {
+  .page-visit .w-arrival-steps article { grid-template-columns: 58px 1fr; gap: 12px; }
+  .page-visit .w-arrival-number { font-size: 54px; }
+  .page-visit .w-arrival-symbol::after { display: none; }
+  .page-ministry .w-download-row { grid-template-columns: 45px 1fr; }
+  .page-events .w-event-row { grid-template-columns: 91px 1fr; }
+  .page-events .w-event-copy h3 { font-size: 30px; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .page-visit .w-arrival-steps article { transition: none; transform: none !important; }
+  .page-visit .w-arrival-steps article,
+  .page-ministry .w-download-row,
+  .page-events .w-event-row > img { transition: none !important; }
 }

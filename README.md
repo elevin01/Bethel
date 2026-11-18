@@ -9,43 +9,45 @@ From the repository root, run `python3 -m http.server 8000`, then open `http://l
 ## Editing the site
 
 - Pages are ordinary HTML in the root and the named page directories. The existing `/youth/`, `/visit/`, and `/about/` URLs remain intact. `/ministries/youth/` redirects to `/youth/` on Netlify.
-- `reform.css` is the shared visual layer; `faith.css` and `guides.css` are content-focused additions. `welcome.css` contains the shared layouts, and `styles.css` supplies base and retained About-page styles.
-- `app.js` handles mobile navigation, the footer year, and statement-of-faith reveals. Essential content, links, and native FAQs work without JavaScript.
+- `reform.css` is the shared visual layer; `faith.css` and `guides.css` author the narrative and practical layouts. `welcome.css` and `styles.css` supply the established structural base.
+- `app.js` handles mobile navigation and the footer year. Essential content, chapter links and native FAQs work without JavaScript.
 - `assets/images/` contains responsive WebP photos. Originals remain in `assets/photos/`. See `PHOTO-CREDITS.md` for the stock Bible photo source.
 - Fonts are self-hosted with their licenses included.
 - Schedules, navigation, and footers appear on multiple pages. Keep visible times and structured data consistent.
 - Increase `CACHE_VERSION` in `sw.js` and the version query on changed CSS/JS references when publishing asset changes. This avoids pairing new HTML with a previous service worker's cached design.
 
-## Editorial visual reform (November 2026)
+## Design direction — visual storytelling with purpose (November 2026)
 
-This PR is a **content-first visual experiment**. The shared identity uses midnight blue, warm ivory, copper, soft gold and restrained lavender. Self-hosted Cormorant Garamond display typography is paired with Inter for body copy, navigation, times and directions. The photo-led homepage retains six Life at Bethel destinations, Sunday service times, the venue and mobile gallery.
+This is an art-directed website for a real local congregation, not a dashboard or a generic SaaS landing page. The identity blends deep navy, copper, warm paper and muted lilac, with original Bethel photography and a restrained architectural etching as the recurring backdrop. Display headings use the existing self-hosted Cormorant Garamond; information uses Inter. No third-party animation or font library is loaded.
 
-The design's depth comes from the lightweight local `assets/decor/arch-field.svg` pattern used behind selected sections, fine borders, and layered light. We deliberately **removed** the animated hero ornament, rotating Sunday seal, decorative icons on photography, parallax, global scroll reveals and gallery meter after feedback. Illustrations should help someone understand actual content, not fill empty space.
+**References studied for design decisions:** [Bridgetown Church / Belief](https://bridgetown.church/belief) for editorial faith long-form, [Church of the City NYC / Beliefs](https://church.nyc/beliefs) for meaningful doctrinal visual explanation, and [BibleProject](https://bibleproject.com/about/) for subject-led Christian illustration and a clear hierarchy. This website creates its own original visuals and keeps its own theology; it is not a copy of the referenced sites.
 
-### Focus: the Statement of Faith
+### Statement of Faith as an illustrated publication
 
-- `faith.css` redesigns **About → What we believe** as a readable, six-chapter reading room: a chapter index, six prominent **doctrine-specific hand-drawn inline SVGs**, concise “At a glance” summaries, full original teaching text, and Scripture references.
-- The original six doctrines, order, anchors (`#creed-01` through `#creed-06`), and references are preserved. Summaries are navigation aids, not replacements for the complete statement.
-- `faith-nav.js` highlights the current chapter as the visitor reads. Navigation links are native anchors; content remains fully visible when scripts are disabled. The mobile index reflows to two or three columns.
-- The design avoids long auto-animated text sections; only icon hover transitions and current-location changes are used, with motion preferences respected.
+- `/about/#faith` is six full-width editorial chapters rather than six identical dashboard-style cards. Alternating compositions, contrasting chapter atmospheres and original art plates give each teaching room to breathe.
+- The opening spread acts as a cover and contents page, with direct anchor links to every doctrine. Each chapter has its actual teaching (unchanged), Scripture references (unchanged), a concise thematic subheading and a link to the next chapter.
+- Original SVG art lives in `assets/faith/01-scripture.svg` through `06-holiness.svg`. The plates interpret Scripture, water and the Spirit, the Trinity, the cross and resurrection, repentance, and spiritual growth. They are large illustration compositions rather than icon badges.
+- Readability is prioritized over tricks. Nothing hides behind an accordion, on-scroll JavaScript or hover effect. The responsive design rearranges the art and teaching into a comfortable single column on phones. Reduced-motion preferences are respected.
+- All six original doctrine headings, nine original teaching paragraphs and six reference lists must remain verbatim, including the existing anchors `#creed-01` through `#creed-06`.
 
-### Practical visual guides
+### The rest of the content
 
-- `guides.css` adds meaningful illustrations beside the four first-visit steps, three parts of Sunday worship, Monday/Saturday Bible-study options, and prayer gatherings.
-- Every illustration is an inline SVG with `aria-hidden`; it accompanies, never replaces, text.
-- No fabricated events, new ministry programs, forms or claims have been introduced.
+- `/visit/`: a four-step wayfinding sequence with spacious number/heading/body hierarchy rather than four illustrated cards.
+- `/worship/`: an open three-part description of worship, Scripture and prayer.
+- `/bible-study/` and `/prayer/`: purpose-built schedule layouts that emphasize when, what and how to join.
+- `/ministry/`: study slides organized as an editorial downloadable archive, with filenames and files unchanged.
+- `/events/`: real photographs and confirmed weekly events remain central; archived 2026 convention remains correctly dated.
+- Homepage photo composition, six Life at Bethel destinations, service times and venue details remain; avoid adding unrelated ornaments or posed group-photo hero imagery.
 
-### Files and upkeep
+### Implementation
 
-- `reform.css`: site-wide typography, responsive layouts and photographic editorial theme.
-- `faith.css`: Statement of Faith reading interface.
-- `guides.css`: first-visit, worship, study and prayer comprehension aids.
-- `faith-nav.js`: optional accessible active-chapter indicator.
-- `assets/decor/arch-field.svg`: faint architectural background texture.
-- `welcome.css` and `styles.css` remain the base layers; `app.js` still handles the mobile menu and footer year.
-- Versioned CSS/JS links and the `sw.js` cache version must be kept aligned.
-
-See `PHOTO-CREDITS.md` for image attribution.
+- `reform.css`: typography, color, background etching and shared composition.
+- `faith.css`: wholly distinct long-form beliefs chapters.
+- `guides.css`: purposeful layouts for actual information on Visit, Worship, Prayer, Bible Study, Events and Resources.
+- `assets/decor/arch-field.svg`: lightweight, low-opacity atmospheric texture.
+- `assets/faith/*.svg`: six custom illustrations, locally hosted; no image search downloads or external dependency.
+- `welcome.css` and `styles.css` remain the pre-existing base. `app.js` continues to handle navigation and footer year.
+- The global animation script, faith-nav script, decorative hero drawing, rotating seal and little icon badges were intentionally removed. Interactions are limited to deliberate hover feedback and native anchor navigation.
 
 ## Content and search
 
@@ -69,8 +71,8 @@ Official guidance: [Zoom meeting security options](https://support.zoom.com/hc/e
 
 ## Preview and visual QA
 
-Review the Netlify PR preview at 320, 390, 768, 1024 and 1440 CSS pixels, especially **About → What we believe** (chapter index, long doctrines, Scripture references), Visit (four steps/FAQ), Worship, Bible Study and Prayer. Check mobile navigation and gallery swipe, visual contrast, horizontal overflow, anchor focus/scroll offsets, reduced-motion settings and service-worker reload behavior.
+Use the Netlify preview from PR #3. Most important: view `/about/#faith` at 320, 390, 768, 1024 and 1440 CSS px. Check image cropping / legibility, alternating chapter order, native anchor scrolling, reading width and the 6 chapter references. Check `/visit/`, `/worship/`, `/bible-study/`, `/prayer/`, `/events/` and `/ministry/` for content spacing and actual links. Confirm the existing site header/menu, service times, mobile gallery, FAQ, resources and address remain usable.
 
-Automated structural checks, HTML link checks, CSS balance and JavaScript syntax tests do not replace a browser-rendered visual or accessibility audit. This PR stays unmerged for review.
+Static HTML checks and CSS parsing are not substitutes for a browser-rendered accessibility/visual audit. No such browser audit is claimed in this iteration.
 
-Run `python3 -m http.server 8000` from the repository root to preview locally.
+Run `python3 -m http.server 8000` in the repository root to preview locally.

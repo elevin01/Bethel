@@ -3,7 +3,7 @@
    - Cache-first for images (rarely change) + static assets
    - Network-first for HTML (always try fresh) with offline fallback */
 
-const CACHE_VERSION = "bwc-v16-content-placement";
+const CACHE_VERSION = "bwc-v17-editorial-atlas";
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
 const RUNTIME_CACHE = `${CACHE_VERSION}-runtime`;
@@ -23,10 +23,15 @@ const PRECACHE = [
   "/assets/icon-512.png",
   "/welcome.css?v=12",
   "/reform.css?v=3",
-  "/faith.css?v=2",
-  "/guides.css?v=2",
-  "/faith-nav.js?v=1",
+  "/faith.css?v=3",
+  "/guides.css?v=3",
   "/assets/decor/arch-field.svg",
+  "/assets/faith/01-scripture.svg",
+  "/assets/faith/02-baptism.svg",
+  "/assets/faith/03-trinity.svg",
+  "/assets/faith/04-savior.svg",
+  "/assets/faith/05-repentance.svg",
+  "/assets/faith/06-holiness.svg",
   "/assets/images/gathering-640.webp",
   "/assets/images/gathering-1400.webp",
   "/assets/images/prayer-640.webp",
