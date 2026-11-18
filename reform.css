@@ -6,9 +6,9 @@
   --paper: #faf6ef;
   --cream: #eee8e5;
   --forest: #1b2a46;
-  --clay: #b66b4e;
+  --clay: #98513c;
   --text: #1e2a3d;
-  --subtle: #657084;
+  --subtle: #5b6575;
   --line: #ddd7ce;
   --night: #14233b;
   --night-deep: #101a2f;
@@ -94,7 +94,7 @@
   letter-spacing: .008em;
   transition: color .25s ease;
 }
-.site-links a:hover, .site-links a[aria-current] { color: #b66b4e; }
+.site-links a:hover, .site-links a[aria-current] { color: #98513c; }
 .site-links a[aria-current]::after { height: 2px; bottom: 3px; }
 .site-nav-actions .w-button {
   background: var(--forest);
@@ -225,7 +225,7 @@
   color: var(--subtle);
 }
 .page-home .w-sunday h2 { font-size: clamp(78px, 8vw, 125px); line-height: .84; }
-.page-home .w-sunday h2 em { font-weight: 500; font-style: italic; color: #b66b4e; }
+.page-home .w-sunday h2 em { font-weight: 500; font-style: italic; color: #98513c; }
 .page-home .w-sunday .w-sunday-copy:nth-child(2) {
   border-left: 1px solid var(--line);
   padding-left: clamp(30px, 4.5vw, 74px);
@@ -414,7 +414,7 @@
   font-size: 10px;
   line-height: 1.15;
   text-align: center;
-  color: #a45f49;
+  color: #94503c;
 }
 
 /* 06 / The address and visitor questions finish in a confident, calm key. */
@@ -602,7 +602,7 @@
   .page-home .w-life .w-section-head { display: block; margin-bottom: 29px; }
   .page-home .w-life .w-section-head h2 { font-size: clamp(74px, 15vw, 99px); }
   .page-home .w-life .w-section-head > p { margin-top: 18px; font-size: 13px; }
-  .w-life-swipe { display: block; margin-top: 20px; font-size: 10px; color: #a05e50; letter-spacing: .14em; text-transform: uppercase; font-weight: 700; }
+  .w-life-swipe { display: block; margin-top: 20px; font-size: 10px; color: #97523b; letter-spacing: .14em; text-transform: uppercase; font-weight: 700; }
   .page-home .w-life-grid {
     display: grid;
     grid-auto-flow: column;
