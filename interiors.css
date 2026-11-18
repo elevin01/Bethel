@@ -1,0 +1,281 @@
+/*
+ * BETHEL / INTERIOR PAGE ART DIRECTION
+ * Each destination has its own emphasis; no generic tile engine.
+ */
+
+/* Church leadership: a real photo, names, and a clear welcome. */
+.page-about #pastors {
+  background: linear-gradient(145deg,#f9f3eb,#eee6e2);
+}
+.page-about #pastors .pastors__layout {
+  gap: clamp(36px, 6vw, 100px);
+  align-items: center;
+}
+.page-about #pastors .pastors__intro .kicker {
+  color: #965743;
+  letter-spacing: .18em;
+}
+.page-about #pastors .pastors__intro .h2 {
+  font: 600 clamp(72px, 7vw, 109px)/.85 'Cormorant Garamond',Georgia,serif;
+  letter-spacing: -.052em;
+  color: #233049;
+}
+.page-about #pastors .pastors__lead {
+  max-width: 45ch;
+  margin-top: 17px;
+  color: #515a6b;
+  font-size: 16px;
+  line-height: 1.9;
+}
+.page-about #pastors .pastors__cta {
+  border-radius: 2px;
+  border-color: #bfa79c;
+  padding: 15px 20px;
+  color: #263249;
+  font-weight: 600;
+}
+.page-about #pastors .pastors-photo__img {
+  border-radius: 1px;
+  border-color: #b8aaa5;
+  box-shadow: 18px 20px 0 rgba(166,130,118,.12), 0 22px 48px rgba(27,33,52,.12);
+}
+.page-about #pastors .pastors-photo__names {
+  border-top: 1px solid #cbbdb9;
+  margin-top: 26px;
+  padding: 20px 0 0;
+  gap: 16px;
+}
+.page-about #pastors .pastor-label__role { color: #935742; letter-spacing: .13em; }
+.page-about #pastors .pastor-label__name {
+  font-size: clamp(21px,2vw,29px);
+  color: #283349;
+}
+
+/* Youth: make the real Friday gathering the centerpiece, parent info the calmer anchor. */
+.page-youth .w-youth-story {
+  align-items: center;
+  gap: clamp(40px, 7vw, 120px);
+  padding-block: clamp(100px, 11vw, 160px);
+}
+.page-youth .w-youth-story .w-story-photo {
+  position: relative;
+  isolation: isolate;
+}
+.page-youth .w-youth-story .w-story-photo::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  right: -22px;
+  bottom: -22px;
+  width: 70%;
+  height: 70%;
+  background: #e4c6b3;
+}
+.page-youth .w-youth-story .w-story-photo img { width: 100%; min-height: 430px; object-fit: cover; filter: saturate(.88); }
+.page-youth .w-youth-story h2 {
+  font: 600 clamp(76px, 7vw, 111px)/.86 'Cormorant Garamond',Georgia,serif;
+  letter-spacing: -.05em;
+  color: #26334c;
+}
+.page-youth .w-youth-story > div:last-child > p:not(.w-eyebrow) {
+  margin-top: 22px;
+  color: #5a6375;
+  font-size: 16px;
+  line-height: 1.85;
+}
+.page-youth .w-parent-note {
+  position: relative;
+  isolation: isolate;
+  background:
+    radial-gradient(ellipse at 92% 6%, rgba(173,132,141,.2),transparent 48%),
+    linear-gradient(120deg,#18243c,#302b45);
+  color: #fcf7ef;
+}
+.page-youth .w-parent-note::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: .12;
+  pointer-events: none;
+  background: url('./assets/decor/arch-field.svg') right top / 660px auto repeat;
+  mask-image: linear-gradient(90deg, transparent, black);
+}
+.page-youth .w-parent-note .w-eyebrow { color: #f0c495; }
+.page-youth .w-parent-note h2 {
+  font-size: clamp(84px, 8vw, 118px);
+  color: #fff8ee;
+}
+.page-youth .w-parent-note p:not(.w-eyebrow) { color: #e7e3e9; font-size: 16px; line-height: 1.9; }
+.page-youth .w-parent-note .w-button--text { color: #f6e6d5; border-color: #e9cbaa; }
+
+/* Serve: this is an invitation to talk, not a fabricated volunteer marketplace. */
+.page-serve .w-serve-story {
+  position: relative;
+  padding-block: clamp(110px, 12vw, 190px);
+  gap: clamp(45px, 9vw, 145px);
+}
+.page-serve .w-serve-story::before {
+  content: '';
+  position: absolute;
+  width: 90px;
+  height: 2px;
+  top: clamp(69px,8vw,120px);
+  left: 0;
+  background: linear-gradient(90deg,#9d6457,#b5a3c0);
+}
+.page-serve .w-serve-story h2 {
+  font: 600 clamp(84px, 8vw, 125px)/.86 'Cormorant Garamond',Georgia,serif;
+  letter-spacing: -.05em;
+  color: #26334a;
+}
+.page-serve .w-serve-story > div:last-child {
+  padding-left: clamp(23px,3vw,47px);
+  border-left: 1px solid #ceb8b1;
+}
+.page-serve .w-serve-story > div:last-child > p {
+  color: #536074;
+  font-size: 17px;
+  line-height: 1.88;
+}
+.page-serve .w-serve-story .w-button--text { margin-top: 28px; color: #9d5947; border-color: #bba195; }
+
+/* Online meetings: large practical access surface, clearly separated from schedule. */
+.page-online .w-online-room {
+  background: linear-gradient(125deg,#f4e9e2,#edeaf1);
+  padding-block: clamp(90px, 9vw, 145px);
+}
+.page-online .w-online-layout {
+  grid-template-columns: .95fr 1.05fr;
+  align-items: start;
+  gap: clamp(40px, 7vw, 110px);
+}
+.page-online .w-online-layout h1 {
+  font: 600 clamp(97px, 9vw, 142px)/.78 'Cormorant Garamond',Georgia,serif;
+  letter-spacing: -.055em;
+  color: #26334c;
+}
+.page-online .w-online-layout .w-lead { max-width: 47ch; font-size: 16px; color: #596274; }
+.page-online .w-online-times {
+  margin-top: clamp(55px, 6vw, 95px);
+  border-top: 1px solid #c3b8b9;
+}
+.page-online .w-online-times h2 {
+  margin: 0;
+  padding: 16px 0 22px;
+  font: 700 11px/1.4 'Inter',system-ui,sans-serif;
+  letter-spacing: .17em;
+  color: #92584c;
+}
+.page-online .w-online-times > div {
+  display: grid;
+  grid-template-columns: minmax(90px,.37fr) 1fr;
+  padding: 17px 0;
+  border-top: 1px solid #cec2c4;
+  gap: 20px;
+}
+.page-online .w-online-times > div > span {
+  color: #985a50;
+  font: 600 24px/1.2 'Cormorant Garamond',Georgia,serif;
+}
+.page-online .w-online-times > div p { margin: 0; font-size: 14px; color: #364359; }
+.page-online .w-online-times > div strong { margin-top: 3px; color: #273550; font: 600 24px/1.2 'Cormorant Garamond',Georgia,serif; }
+.page-online .w-online-details {
+  position: relative;
+  padding: clamp(32px, 4vw, 65px);
+  border: 1px solid #61728c;
+  border-top: 5px solid #dca77f;
+  background:
+    radial-gradient(ellipse at 95% 5%,rgba(191,144,134,.16),transparent 48%),
+    #192841;
+  color: #fdf8f1;
+  box-shadow: 24px 30px 0 rgba(53,64,92,.08), 0 24px 58px rgba(35,36,65,.18);
+}
+.page-online .w-online-details h2 {
+  margin: 0;
+  color: #fff8ee;
+  font: 600 clamp(45px, 5vw, 73px)/.94 'Cormorant Garamond',Georgia,serif;
+  letter-spacing: -.035em;
+}
+.page-online .w-online-details > p { color: #d7dce7; font-size: 14px; line-height: 1.85; }
+.page-online .w-online-details .w-meeting-info {
+  border-color: #8b97ab;
+  margin-block: 35px;
+  padding-block: 24px;
+  color: #f2ecdf;
+}
+.page-online .w-online-details .w-meeting-info summary { color: #f8e2bf; font-weight: 600; }
+.page-online .w-online-details .w-meeting-info dt { color: #bdc7d4; }
+.page-online .w-online-details .w-meeting-info dd { color: #fff9ed; }
+.page-online .w-online-details .w-button--primary {
+  margin-top: 12px;
+  background: #f4d3b2;
+  color: #182842;
+}
+.page-online .w-online-details .w-button--primary:hover { background: white; }
+.page-online .w-online-details .w-small { margin-top: 14px; color: #bec9d7; font-size: 11px; }
+.page-online .w-online-photo > .w-wrap { min-height: 430px; }
+
+/* Archived events deserve clarity: a poster, not an "upcoming" tile. */
+.page-events #convention-2026 {
+  background: linear-gradient(135deg,#e8e1de,#f0e9e2);
+}
+.page-events #convention-2026 .w-archive { gap: clamp(45px, 8vw, 130px); }
+.page-events #convention-2026 .w-archive figure {
+  padding: clamp(15px, 2.5vw, 35px);
+  background: #faf4e9;
+  box-shadow: 0 24px 58px rgba(43,38,59,.12);
+}
+.page-events #convention-2026 .w-archive img { max-height: 740px; width: 100%; object-fit: contain; }
+.page-events #convention-2026 .w-archive h2 {
+  color: #27334b;
+  font: 600 clamp(80px, 7.4vw, 120px)/.86 'Cormorant Garamond',Georgia,serif;
+  letter-spacing: -.05em;
+}
+.page-events #convention-2026 .w-archive > div > p:not(.w-eyebrow) {
+  color: #586175;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+@media (max-width: 1100px) {
+  .page-online .w-online-layout { grid-template-columns: 1fr; gap: 45px; }
+  .page-online .w-online-layout > div:first-child { max-width: 660px; }
+  .page-online .w-online-details { max-width: 760px; }
+}
+@media (max-width: 720px) {
+  .page-about #pastors .pastors__intro .h2 { font-size: 78px; }
+  .page-about #pastors .pastors-photo__img { box-shadow: 8px 10px 0 rgba(166,130,118,.12); }
+  .page-about #pastors .pastors-photo__names { margin-top: 22px; }
+  .page-youth .w-youth-story { gap: 36px; padding-block: 82px; }
+  .page-youth .w-youth-story .w-story-photo img { min-height: 0; height: 310px; }
+  .page-youth .w-youth-story .w-story-photo::after { right: -9px; bottom: -10px; }
+  .page-youth .w-youth-story h2 { font-size: 76px; }
+  .page-youth .w-parent-note h2 { font-size: 87px; }
+  .page-youth .w-parent-note p:not(.w-eyebrow) { font-size: 15px; }
+  .page-serve .w-serve-story { padding-block: 98px; gap: 32px; }
+  .page-serve .w-serve-story h2 { font-size: 78px; }
+  .page-serve .w-serve-story > div:last-child { padding-left: 20px; }
+  .page-serve .w-serve-story > div:last-child > p { font-size: 15px; }
+  .page-online .w-online-room { padding-block: 74px; }
+  .page-online .w-online-layout h1 { font-size: 98px; }
+  .page-online .w-online-details { padding: 31px 24px; box-shadow: 9px 13px 0 rgba(53,64,92,.08); }
+  .page-online .w-online-details h2 { font-size: 50px; }
+  .page-online .w-online-times > div > span { font-size: 22px; }
+  .page-online .w-online-times > div strong { font-size: 22px; }
+  .page-online .w-online-photo > .w-wrap { min-height: 330px; }
+  .page-events #convention-2026 .w-archive { gap: 36px; }
+  .page-events #convention-2026 .w-archive h2 { font-size: 74px; }
+}
+@media (max-width: 380px) {
+  .page-about #pastors .pastors__intro .h2 { font-size: 68px; }
+  .page-youth .w-youth-story h2, .page-youth .w-parent-note h2 { font-size: 68px; }
+  .page-serve .w-serve-story h2 { font-size: 65px; }
+  .page-online .w-online-layout h1 { font-size: 83px; }
+  .page-online .w-online-details h2 { font-size: 43px; }
+  .page-online .w-online-times > div { grid-template-columns: 75px 1fr; gap: 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .page-youth .w-youth-story .w-story-photo img,
+  .page-events #convention-2026 .w-archive img { transition: none !important; }
+}

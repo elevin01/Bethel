@@ -1,0 +1,445 @@
+/*
+ * BETHEL / THE SIX FOUNDATIONS
+ * Editorial chapter system. Inspired by art-directed Christian teaching sites,
+ * but with original doctrinal art plates and Bethel's own complete wording.
+ * This stylesheet intentionally avoids badges, dashboards and boxed cards.
+ */
+.faith-feature {
+  --faith-ink: #232c3f;
+  --faith-paper: #eee5d9;
+  --faith-gold: #c68f6b;
+  color: var(--faith-ink);
+}
+.faith-feature__opening {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: #eee5d9;
+  color: #242d40;
+  padding: clamp(78px, 9.5vw, 140px) 0 clamp(74px, 8vw, 112px);
+}
+.faith-feature__opening::before {
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  inset: -10% -5% -5% 48%;
+  z-index: -1;
+  opacity: .09;
+  background: url('./assets/decor/arch-field.svg') center top / 550px auto repeat;
+  mask-image: linear-gradient(90deg, transparent, black 52%);
+}
+.faith-feature__opening::after {
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  width: 57vw;
+  height: 57vw;
+  min-width: 420px;
+  min-height: 420px;
+  top: -25vw;
+  right: -16vw;
+  z-index: -1;
+  border: 1px solid #bb9f8d45;
+  border-radius: 50%;
+  box-shadow: 0 0 0 90px #b6988014, 0 0 0 200px #987d7312;
+}
+.faith-feature__opening > .w-wrap,
+.faith-chapter__inner,
+.faith-feature__chapters { position: relative; }
+.faith-feature__overline,
+.faith-feature__contents-head,
+.faith-chapter__folio,
+.faith-chapter__visual-caption,
+.faith-chapter__eyebrow,
+.faith-chapter__scripture > span {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  font: 700 10px/1.5 'Inter',system-ui,sans-serif;
+  letter-spacing: .17em;
+  text-transform: uppercase;
+}
+.faith-feature__overline {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #4c4b524f;
+  color: #7b5c53;
+}
+.faith-feature__opening-grid {
+  display: grid;
+  grid-template-columns: 1.45fr .55fr;
+  align-items: end;
+  gap: 7%;
+  padding: clamp(55px, 7vw, 103px) 0 clamp(65px, 8vw, 115px);
+}
+.faith-feature__kicker {
+  margin: 0 0 30px;
+  color: #97553f;
+  font: 700 11px/1.4 'Inter',system-ui,sans-serif;
+  letter-spacing: .23em;
+  text-transform: uppercase;
+}
+.welcome-site .faith-feature__opening h2 {
+  max-width: 860px;
+  margin: 0;
+  font: 600 clamp(104px, 12vw, 187px)/.72 'Cormorant Garamond',Georgia,serif;
+  letter-spacing: -.063em;
+  color: #273149;
+}
+.welcome-site .faith-feature__opening h2 em {
+  display: inline-block;
+  padding-top: .06em;
+  color: #ab6b59;
+  font-weight: 500;
+  font-style: italic;
+}
+.faith-feature__opening-copy {
+  padding-bottom: 3px;
+  max-width: 360px;
+}
+.faith-feature__count {
+  display: block;
+  margin-bottom: 20px;
+  color: #a56e57;
+  font: 500 clamp(90px, 11vw, 143px)/.74 'Cormorant Garamond',Georgia,serif;
+  letter-spacing: -.08em;
+}
+.faith-feature__count small {
+  display: block;
+  margin: 17px 0 0;
+  color: #605b61;
+  font: 700 10px/1.4 'Inter',system-ui,sans-serif;
+  letter-spacing: .22em;
+}
+.faith-feature__opening-copy > p {
+  max-width: 35ch;
+  margin: 0;
+  color: #50576a;
+  font: 400 clamp(15px, 1.28vw, 17px)/1.88 'Inter',system-ui,sans-serif;
+}
+.faith-feature__contents {
+  border-top: 1px solid #9f8c7d8a;
+}
+.faith-feature__contents-head {
+  padding: 20px 0 34px;
+  color: #665b57;
+}
+.faith-feature__contents-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  border-top: 1px solid #cec0b4;
+  border-left: 1px solid #cec0b4;
+}
+.faith-feature__contents-link {
+  display: flex;
+  align-items: center;
+  gap: clamp(12px, 1.6vw, 23px);
+  min-width: 0;
+  min-height: clamp(80px, 8vw, 118px);
+  padding: 18px clamp(14px, 2vw, 29px);
+  border-right: 1px solid #cec0b4;
+  border-bottom: 1px solid #cec0b4;
+  background: rgba(255,255,255,.12);
+  color: #273149;
+  text-decoration: none;
+  transition: background .25s ease, color .25s ease;
+}
+.faith-feature__contents-link:hover, .faith-feature__contents-link:focus-visible {
+  color: #673e43;
+  background: #f9f0e8;
+}
+.faith-feature__contents-num {
+  flex: 0 0 40px;
+  align-self: center;
+  color: #ab6b59;
+  font: 500 35px/1 'Cormorant Garamond',Georgia,serif;
+  letter-spacing: -.06em;
+}
+.faith-feature__contents-name {
+  flex: 1;
+  min-width: 0;
+  font: 600 clamp(21px, 2.4vw, 31px)/1.05 'Cormorant Garamond',Georgia,serif;
+  letter-spacing: -.025em;
+}
+.faith-feature__contents-link svg {
+  flex: 0 0 18px;
+  width: 18px;
+  height: 18px;
+  color: #a36c5b;
+  transform: rotate(90deg);
+  transition: transform .3s cubic-bezier(.16,.8,.2,1);
+}
+.faith-feature__contents-link:hover svg { transform: rotate(90deg) translateX(4px); }
+
+/* Six open spreads, not six templated cards. A continuous visual essay. */
+.faith-feature__chapters {
+  display: block;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.faith-chapter {
+  --chapter-paper: #f7f0e7;
+  --chapter-ink: #273149;
+  --chapter-muted: #525d6c;
+  --chapter-rule: #c7b7a9;
+  --chapter-accent: #a56851;
+  --chapter-meta: #9c5a45;
+  position: relative;
+  isolation: isolate;
+  color: var(--chapter-ink);
+  background: var(--chapter-paper);
+  scroll-margin-top: 85px;
+}
+.faith-chapter--02 {
+  --chapter-paper: #1e3048;
+  --chapter-ink: #fbf7f2;
+  --chapter-muted: #dae4eb;
+  --chapter-rule: #879bad75;
+  --chapter-accent: #a6c9da;
+  --chapter-meta: #bcd5e5;
+}
+.faith-chapter--03 {
+  --chapter-paper: #f2ecf0;
+  --chapter-ink: #332e46;
+  --chapter-muted: #655e74;
+  --chapter-rule: #c4b6cd;
+  --chapter-accent: #886e9f;
+  --chapter-meta: #80648e;
+}
+.faith-chapter--04 {
+  --chapter-paper: #392c3a;
+  --chapter-ink: #fcf4eb;
+  --chapter-muted: #e7d7d7;
+  --chapter-rule: #aa899a7a;
+  --chapter-accent: #f0b594;
+  --chapter-meta: #efc6a8;
+}
+.faith-chapter--05 {
+  --chapter-paper: #f1e5db;
+  --chapter-ink: #382d3d;
+  --chapter-muted: #675968;
+  --chapter-rule: #c7aeaa;
+  --chapter-accent: #aa675b;
+  --chapter-meta: #9d5c4e;
+}
+.faith-chapter--06 {
+  --chapter-paper: #1e3044;
+  --chapter-ink: #fdf5ed;
+  --chapter-muted: #dce0e0;
+  --chapter-rule: #839fad78;
+  --chapter-accent: #e0c99d;
+  --chapter-meta: #ead4ab;
+}
+.faith-chapter::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: radial-gradient(circle at 91% 11%,currentColor 0%,transparent 1%);
+  opacity: .017;
+  pointer-events: none;
+}
+.faith-chapter__inner {
+  display: grid;
+  grid-template-columns: minmax(0,.97fr) minmax(0,1fr);
+  gap: clamp(54px, 7vw, 125px);
+  align-items: center;
+  padding-block: clamp(95px, 10vw, 157px);
+}
+.faith-chapter:nth-child(even) .faith-chapter__visual { order: 2; }
+.faith-chapter:nth-child(even) .faith-chapter__writing { order: 1; }
+.faith-chapter__visual {
+  min-width: 0;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  background: #e1c4a7;
+  box-shadow: 0 27px 65px rgba(11,15,27,.16);
+  transform: translateZ(0);
+}
+.faith-chapter--02 .faith-chapter__visual, .faith-chapter--06 .faith-chapter__visual { box-shadow: 0 32px 70px rgba(4,8,18,.26); }
+.faith-chapter__visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 720 / 760;
+  object-fit: cover;
+  transition: transform 1.3s cubic-bezier(.17,.7,.26,1);
+}
+@media (hover: hover) and (pointer: fine) {
+  .faith-chapter__visual:hover img { transform: scale(1.027); }
+}
+.faith-chapter__folio {
+  position: absolute;
+  z-index: 1;
+  top: clamp(16px, 2.2vw, 30px);
+  left: clamp(17px, 2.2vw, 31px);
+  right: clamp(17px, 2.2vw, 31px);
+  color: rgba(41,38,49,.74);
+  font-size: 9px;
+  letter-spacing: .12em;
+  pointer-events: none;
+}
+.faith-chapter--04 .faith-chapter__folio, .faith-chapter--06 .faith-chapter__folio { color: #f3e5d9c7; }
+.faith-chapter__visual-caption {
+  position: absolute;
+  z-index: 1;
+  bottom: clamp(19px, 2.3vw, 32px);
+  left: clamp(17px, 2.2vw, 31px);
+  right: clamp(17px, 2.2vw, 31px);
+  color: #583b3e;
+  font-size: 9px;
+  letter-spacing: .12em;
+  pointer-events: none;
+}
+.faith-chapter--02 .faith-chapter__visual-caption { color: #31546e; }
+.faith-chapter--04 .faith-chapter__visual-caption, .faith-chapter--06 .faith-chapter__visual-caption { color: #f0d4b8; }
+.faith-chapter__visual-caption span:last-child {
+  font: 500 48px/1 'Cormorant Garamond', Georgia, serif;
+  letter-spacing: -.07em;
+}
+.faith-chapter__writing { min-width: 0; padding-block: 3px; }
+.faith-chapter__eyebrow {
+  color: var(--chapter-meta);
+  border-bottom: 1px solid var(--chapter-rule);
+  padding-bottom: 17px;
+  margin-bottom: clamp(26px, 3vw, 48px);
+}
+.welcome-site .faith-chapter__title {
+  max-width: 700px;
+  margin: 0;
+  color: var(--chapter-ink);
+  font: 600 clamp(65px, 6.7vw, 107px)/.81 'Cormorant Garamond',Georgia,serif;
+  letter-spacing: -.058em;
+  overflow-wrap: normal;
+  text-wrap: balance;
+}
+.faith-chapter__thesis {
+  margin: 25px 0 24px;
+  color: var(--chapter-accent);
+  font: italic 500 clamp(29px, 3.2vw, 43px)/1.05 'Cormorant Garamond', Georgia, serif;
+  letter-spacing: -.025em;
+}
+.faith-chapter__body {
+  max-width: 58ch;
+  padding-top: 28px;
+  border-top: 1px solid var(--chapter-rule);
+}
+.faith-chapter__body p,
+.faith-chapter__body .creed__text {
+  margin: 0 0 19px;
+  max-width: 58ch;
+  color: var(--chapter-muted);
+  font: 400 clamp(15px, 1.12vw, 17px)/1.93 'Inter',system-ui,sans-serif;
+  letter-spacing: -.01em;
+  text-wrap: pretty;
+}
+.faith-chapter__scripture {
+  margin-top: 31px;
+  padding-top: 22px;
+  border-top: 1px solid var(--chapter-rule);
+}
+.faith-chapter__scripture > span {
+  display: block;
+  color: var(--chapter-accent);
+  margin-bottom: 7px;
+  font-size: 10px;
+}
+.faith-chapter__scripture p {
+  margin: 0;
+  color: var(--chapter-muted);
+  font: 500 12px/1.8 'Inter',system-ui,sans-serif;
+  letter-spacing: .014em;
+}
+.faith-chapter__continue {
+  display: inline-flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 37px;
+  border-bottom: 1px solid var(--chapter-rule);
+  padding-bottom: 9px;
+  color: var(--chapter-ink);
+  text-decoration: none;
+  font: 600 12px/1.5 'Inter',system-ui,sans-serif;
+  transition: border-color .2s, color .2s;
+}
+.faith-chapter__continue:hover {
+  color: var(--chapter-accent);
+  border-bottom-color: var(--chapter-accent);
+}
+.faith-chapter__continue svg { transition: transform .25s ease; }
+.faith-chapter__continue:hover svg { transform: translateX(5px); }
+
+/* Chapter typography, touch sizes and illustration scale are tuned separately
+   for narrower screens. The reading content is never hidden behind animation. */
+@media (max-width: 1140px) {
+  .faith-feature__opening-grid { grid-template-columns: 1.1fr .6fr; gap: 5%; }
+  .welcome-site .faith-feature__opening h2 { font-size: clamp(95px, 11vw, 144px); }
+  .faith-chapter__inner { gap: 44px; grid-template-columns: minmax(0,.93fr) minmax(0,1.07fr); }
+  .welcome-site .faith-chapter__title { font-size: clamp(57px, 6.3vw, 82px); }
+  .faith-chapter__thesis { font-size: 31px; }
+}
+@media (max-width: 860px) {
+  .faith-feature__opening { padding-top: 80px; }
+  .faith-feature__opening-grid { grid-template-columns: 1fr; gap: 34px; padding-block: 65px 68px; }
+  .welcome-site .faith-feature__opening h2 { font-size: clamp(94px, 15vw, 140px); }
+  .faith-feature__opening-copy { max-width: 580px; display: grid; grid-template-columns: auto 1fr; gap: 25px; align-items: end; }
+  .faith-feature__count { margin: 0; font-size: 90px; }
+  .faith-feature__contents-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .faith-feature__contents-name { font-size: 27px; }
+  .faith-chapter__inner { display: grid; grid-template-columns: 1fr; gap: 38px; padding-block: 85px; }
+  .faith-chapter__visual { max-width: 620px; width: 100%; margin-inline: auto; }
+  .faith-chapter:nth-child(even) .faith-chapter__visual { order: 0; }
+  .faith-chapter:nth-child(even) .faith-chapter__writing { order: 0; }
+  .faith-chapter__writing { max-width: 710px; width: 100%; margin-inline: auto; }
+  .welcome-site .faith-chapter__title { font-size: clamp(70px, 10vw, 104px); }
+  .faith-chapter__body p { font-size: 16px; }
+}
+@media (max-width: 560px) {
+  .faith-feature__opening { padding-block: 59px 65px; }
+  .faith-feature__overline { font-size: 9px; line-height: 1.6; letter-spacing: .09em; }
+  .faith-feature__overline span:last-child { text-align: right; }
+  .faith-feature__opening-grid { padding-block: 57px 64px; }
+  .faith-feature__kicker { margin-bottom: 24px; font-size: 10px; }
+  .welcome-site .faith-feature__opening h2 { font-size: clamp(78px, 17vw, 112px); }
+  .faith-feature__opening-copy { grid-template-columns: 1fr; gap: 22px; }
+  .faith-feature__count { font-size: 76px; }
+  .faith-feature__count small { margin-top: 10px; }
+  .faith-feature__opening-copy > p { font-size: 15px; }
+  .faith-feature__contents-head { padding-block: 19px; font-size: 9px; letter-spacing: .08em; }
+  .faith-feature__contents-grid { grid-template-columns: 1fr 1fr; }
+  .faith-feature__contents-link { gap: 9px; min-height: 84px; padding: 13px 10px; }
+  .faith-feature__contents-num { flex-basis: 20px; font-size: 24px; }
+  .faith-feature__contents-name { font-size: clamp(20px, 5vw, 25px); }
+  .faith-feature__contents-link svg { display: none; }
+  .faith-chapter__inner { gap: 34px; padding-block: 66px 78px; }
+  .faith-chapter__folio { top: 13px; left: 13px; right: 13px; font-size: 8px; }
+  .faith-chapter__visual-caption { bottom: 13px; left: 13px; right: 13px; font-size: 8px; }
+  .faith-chapter__visual-caption span:last-child { font-size: 37px; }
+  .faith-chapter__eyebrow { font-size: 9px; margin-bottom: 27px; }
+  .welcome-site .faith-chapter__title { font-size: clamp(63px, 14vw, 84px); }
+  .faith-chapter__thesis { font-size: 30px; margin: 22px 0; }
+  .faith-chapter__body { padding-top: 23px; }
+  .faith-chapter__body p, .faith-chapter__body .creed__text { font-size: 15px; line-height: 1.87; }
+  .faith-chapter__scripture { margin-top: 24px; }
+  .faith-chapter__continue { margin-top: 30px; }
+}
+@media (max-width: 350px) {
+  .welcome-site .faith-feature__opening h2 { font-size: 68px; }
+  .faith-feature__contents-head span:last-child { display: none; }
+  .faith-feature__contents-link { padding: 12px 8px; gap: 7px; }
+  .faith-feature__contents-name { font-size: 19px; }
+  .welcome-site .faith-chapter__title { font-size: 58px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .faith-chapter__visual img, .faith-feature__contents-link svg, .faith-chapter__continue svg { transition: none !important; transform: none !important; }
+}
+@media print {
+  .faith-feature__opening { padding-block: 22px 30px; }
+  .faith-feature__opening::before, .faith-feature__opening::after { display: none; }
+  .faith-chapter { color: #1e2a3d !important; background: white !important; break-inside: avoid; }
+  .faith-chapter__inner { grid-template-columns: 210px 1fr; gap: 24px; padding-block: 35px; }
+  .faith-chapter__visual { box-shadow: none; }
+  .faith-chapter__continue, .faith-feature__contents { display: none; }
+}
